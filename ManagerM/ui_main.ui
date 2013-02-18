@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ui_main</class>
+ <widget class="QMainWindow" name="ui_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>836</width>
+    <height>723</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>836</width>
+    <height>723</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>120</red>
+        <green>120</green>
+        <blue>120</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>ManagerM</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Icons.qrc">
+    <normaloff>:/Iconos/Iconos/Configure_alt_1.png</normaloff>:/Iconos/Iconos/Configure_alt_1.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/Iconos/Iconos/fondo1.png);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="1" column="1">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0" colspan="5">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>85</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>85</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Inicio</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>418</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_usuario">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="palette">
+             <palette>
+              <active>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>170</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>170</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>120</red>
+                  <green>120</green>
+                  <blue>120</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>120</red>
+                  <green>120</green>
+                  <blue>120</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>user</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_usuario">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/Iconos/Iconos/Personal.png</normaloff>:/Iconos/Iconos/Personal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_compras">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Windows_Marketplace (1).png</normaloff>:/Iconos/Iconos/Windows_Marketplace (1).png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_ventas">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Android_Market.png</normaloff>:/Iconos/Iconos/Android_Market.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_articulo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Tune-Up_Utilities.png</normaloff>:/Iconos/Iconos/Tune-Up_Utilities.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_colaboradores">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/myspace_alt.png</normaloff>:/Iconos/Iconos/myspace_alt.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_facturacion">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Journal.png</normaloff>:/Iconos/Iconos/Journal.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_sistema">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Services.png</normaloff>:/Iconos/Iconos/Services.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>1505</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="3">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Facebook.png</normaloff>:/Iconos/Iconos/Facebook.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Twitter.png</normaloff>:/Iconos/Iconos/Twitter.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Gmail.png</normaloff>:/Iconos/Iconos/Gmail.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>80</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButton_showMenuBar">
+        <property name="maximumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Iconos/Iconos/fondo1.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="shortcut">
+         <string>Alt+M</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>78</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="4">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>17</width>
+          <height>308</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>50</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>50</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="1">
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>50</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="2">
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>50</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>836</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de_ManagerM"/>
+   </widget>
+   <widget class="QMenu" name="menuVentana">
+    <property name="title">
+     <string>Ventana</string>
+    </property>
+    <addaction name="actionPantalla_Completa"/>
+   </widget>
+   <widget class="QMenu" name="menuUsuario">
+    <property name="title">
+     <string>Usuario</string>
+    </property>
+    <addaction name="actionCerrar_Sesion"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuVer">
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>170</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>170</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>170</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>170</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="title">
+     <string>Ver</string>
+    </property>
+    <widget class="QMenu" name="menuPersonas">
+     <property name="title">
+      <string>Personas</string>
+     </property>
+     <addaction name="actionCliente"/>
+     <addaction name="actionColaborador"/>
+     <addaction name="actionUsuarios"/>
+    </widget>
+    <widget class="QMenu" name="menuEmpresas">
+     <property name="title">
+      <string>Empresas</string>
+     </property>
+     <addaction name="actionEmpresas_2"/>
+     <addaction name="actionTiendas"/>
+    </widget>
+    <addaction name="menuPersonas"/>
+    <addaction name="menuEmpresas"/>
+    <addaction name="actionVentas"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionEditar"/>
+    <addaction name="actionEliminar"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuUsuario"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuVer"/>
+   <addaction name="menuVentana"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAcerca_de_ManagerM">
+   <property name="text">
+    <string>Acerca de ManagerM...</string>
+   </property>
+  </action>
+  <action name="actionPantalla_Completa">
+   <property name="text">
+    <string>Pantalla Completa</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionInicial_Sesion">
+   <property name="text">
+    <string>Inicial Sesion</string>
+   </property>
+  </action>
+  <action name="actionCerrar_Sesion">
+   <property name="text">
+    <string>Cerrar Sesion</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionVentas">
+   <property name="text">
+    <string>Ventas</string>
+   </property>
+  </action>
+  <action name="actionCliente">
+   <property name="text">
+    <string>Cliente</string>
+   </property>
+  </action>
+  <action name="actionColaborador">
+   <property name="text">
+    <string>Colaborador</string>
+   </property>
+  </action>
+  <action name="actionNuevo">
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionEditar">
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </action>
+  <action name="actionEliminar">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionEmpresas_2">
+   <property name="text">
+    <string>Empresas</string>
+   </property>
+  </action>
+  <action name="actionTiendas">
+   <property name="text">
+    <string>Tiendas</string>
+   </property>
+  </action>
+  <action name="actionUsuarios">
+   <property name="text">
+    <string>Usuarios</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

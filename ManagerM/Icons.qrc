@@ -1,0 +1,52 @@
+<RCC>
+    <qresource prefix="/Iconos">
+        <file>Iconos/2403.png</file>
+        <file>Iconos/1361145253_Pin.png</file>
+        <file>Iconos/Administrative_Tools.png</file>
+        <file>Iconos/Android_Market.png</file>
+        <file>Iconos/BitLocker.png</file>
+        <file>Iconos/Command_Prompt.png</file>
+        <file>Iconos/Configure.png</file>
+        <file>Iconos/Configure_alt.png</file>
+        <file>Iconos/Configure_alt_1.png</file>
+        <file>Iconos/Configure_alt_2.png</file>
+        <file>Iconos/Contacts_Folder.png</file>
+        <file>Iconos/Control_Panel.png</file>
+        <file>Iconos/Facebook.png</file>
+        <file>Iconos/Facebook_alt_5.png</file>
+        <file>Iconos/fondo.jpg</file>
+        <file>Iconos/fondo1.png</file>
+        <file>Iconos/fondo2.png</file>
+        <file>Iconos/Gmail.png</file>
+        <file>Iconos/Google_Sketchup.png</file>
+        <file>Iconos/Journal.png</file>
+        <file>Iconos/Live_Hotmail_alt.png</file>
+        <file>Iconos/Live_Messenger.png</file>
+        <file>Iconos/Live_Messenger_alt.png</file>
+        <file>Iconos/Live_Messenger_alt_2.png</file>
+        <file>Iconos/Mac_Spaces.png</file>
+        <file>Iconos/main_icon.png</file>
+        <file>Iconos/myspace_alt.png</file>
+        <file>Iconos/Parental_Controls.png</file>
+        <file>Iconos/Personal.png</file>
+        <file>Iconos/Power_-_Log_Off.png</file>
+        <file>Iconos/Recent_Items.png</file>
+        <file>Iconos/RegEdit.png</file>
+        <file>Iconos/Search.png</file>
+        <file>Iconos/Search_alt.png</file>
+        <file>Iconos/Services.png</file>
+        <file>Iconos/Skype.png</file>
+        <file>Iconos/Sticky_Notes.png</file>
+        <file>Iconos/Tune-Up_Utilities.png</file>
+        <file>Iconos/Twitter.png</file>
+        <file>Iconos/Twitter_alt_1.png</file>
+        <file>Iconos/User_No-Frame.png</file>
+        <file>Iconos/Wifi_b3.png</file>
+        <file>Iconos/Windows_Card_Space.png</file>
+        <file>Iconos/Windows_Marketplace (1).png</file>
+        <file>Iconos/Windows_Marketplace.png</file>
+        <file>Iconos/Windows_Mobility_Center.png</file>
+        <file>Iconos/YouTube_alt_1.png</file>
+        <file>Iconos/Zoom_Out.png</file>
+    </qresource>
+</RCC>
