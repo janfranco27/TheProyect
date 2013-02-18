@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_main.ui'
 **
-** Created: Sun 17. Feb 22:28:27 2013
+** Created: Mon 18. Feb 14:21:08 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -23,7 +23,7 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
-#include <QtGui/QStatusBar>
+#include <QtGui/QToolBar>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -47,6 +47,10 @@ public:
     QAction *actionUsuarios;
     QWidget *centralWidget;
     QGridLayout *gridLayout_4;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *horizontalSpacer_5;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
@@ -70,10 +74,6 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QSpacerItem *verticalSpacer;
     QSpacerItem *verticalSpacer_3;
-    QSpacerItem *verticalSpacer_2;
-    QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_4;
-    QSpacerItem *horizontalSpacer_5;
     QMenuBar *menuBar;
     QMenu *menuAyuda;
     QMenu *menuVentana;
@@ -82,7 +82,7 @@ public:
     QMenu *menuPersonas;
     QMenu *menuEmpresas;
     QMenu *menuEditar;
-    QStatusBar *statusBar;
+    QToolBar *toolBar;
 
     void setupUi(QMainWindow *ui_main)
     {
@@ -101,21 +101,27 @@ public:
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
         QBrush brush1(QColor(255, 255, 255, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        QBrush brush2(QColor(120, 120, 120, 255));
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        QBrush brush2(QColor(0, 45, 62, 255));
         brush2.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
         ui_main->setPalette(palette);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Configure_alt_1.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_main->setWindowIcon(icon);
-        ui_main->setStyleSheet(QString::fromUtf8("background-image: url(:/Iconos/Iconos/fondo1.png);"));
+        ui_main->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 45, 62);"));
+        ui_main->setDocumentMode(false);
         actionAcerca_de_ManagerM = new QAction(ui_main);
         actionAcerca_de_ManagerM->setObjectName(QString::fromUtf8("actionAcerca_de_ManagerM"));
         actionPantalla_Completa = new QAction(ui_main);
@@ -150,6 +156,22 @@ public:
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        verticalSpacer_2 = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_4->addItem(verticalSpacer_2, 2, 1, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_4->addItem(horizontalSpacer_4, 1, 0, 1, 1);
+
+        verticalSpacer_4 = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_4->addItem(verticalSpacer_4, 0, 1, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_4->addItem(horizontalSpacer_5, 1, 2, 1, 1);
+
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setSpacing(6);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
@@ -160,13 +182,22 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush1);
-        QBrush brush3(QColor(85, 170, 255, 255));
-        brush3.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Text, brush3);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush2);
+        QBrush brush4(QColor(85, 170, 255, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Text, brush4);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush2);
         palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush3);
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush4);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush3);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush2);
         label->setPalette(palette1);
         QFont font;
         font.setFamily(QString::fromUtf8("Segoe UI"));
@@ -175,6 +206,7 @@ public:
         font.setWeight(50);
         label->setFont(font);
         label->setStyleSheet(QString::fromUtf8(""));
+        label->setInputMethodHints(Qt::ImhNone);
 
         horizontalLayout_2->addWidget(label);
 
@@ -195,13 +227,22 @@ public:
         label_usuario->setMinimumSize(QSize(70, 0));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush1);
-        QBrush brush4(QColor(0, 170, 255, 255));
-        brush4.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::Text, brush4);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush2);
+        QBrush brush5(QColor(0, 170, 255, 255));
+        brush5.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush2);
         palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush2);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush2);
         label_usuario->setPalette(palette2);
         QFont font1;
         font1.setFamily(QString::fromUtf8("Segoe UI"));
@@ -218,6 +259,7 @@ public:
         pushButton_usuario->setSizePolicy(sizePolicy);
         pushButton_usuario->setMinimumSize(QSize(50, 50));
         pushButton_usuario->setMaximumSize(QSize(50, 50));
+        pushButton_usuario->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/Personal.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_usuario->setIcon(icon1);
@@ -233,7 +275,7 @@ public:
         gridLayout_3->addLayout(horizontalLayout_2, 0, 0, 1, 5);
 
         gridLayout = new QGridLayout();
-        gridLayout->setSpacing(6);
+        gridLayout->setSpacing(10);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         pushButton_compras = new QPushButton(centralWidget);
         pushButton_compras->setObjectName(QString::fromUtf8("pushButton_compras"));
@@ -241,6 +283,9 @@ public:
         pushButton_compras->setSizePolicy(sizePolicy);
         pushButton_compras->setMinimumSize(QSize(150, 150));
         pushButton_compras->setMaximumSize(QSize(150, 150));
+        pushButton_compras->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_compras->setMouseTracking(false);
+        pushButton_compras->setFocusPolicy(Qt::WheelFocus);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Marketplace (1).png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_compras->setIcon(icon2);
@@ -255,6 +300,7 @@ public:
         pushButton_ventas->setSizePolicy(sizePolicy);
         pushButton_ventas->setMinimumSize(QSize(150, 150));
         pushButton_ventas->setMaximumSize(QSize(150, 150));
+        pushButton_ventas->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/Android_Market.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_ventas->setIcon(icon3);
@@ -269,6 +315,7 @@ public:
         pushButton_articulo->setSizePolicy(sizePolicy);
         pushButton_articulo->setMinimumSize(QSize(150, 150));
         pushButton_articulo->setMaximumSize(QSize(150, 150));
+        pushButton_articulo->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/Tune-Up_Utilities.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_articulo->setIcon(icon4);
@@ -283,6 +330,7 @@ public:
         pushButton_colaboradores->setSizePolicy(sizePolicy);
         pushButton_colaboradores->setMinimumSize(QSize(150, 150));
         pushButton_colaboradores->setMaximumSize(QSize(150, 150));
+        pushButton_colaboradores->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/myspace_alt.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_colaboradores->setIcon(icon5);
@@ -297,6 +345,7 @@ public:
         pushButton_facturacion->setSizePolicy(sizePolicy);
         pushButton_facturacion->setMinimumSize(QSize(150, 150));
         pushButton_facturacion->setMaximumSize(QSize(150, 150));
+        pushButton_facturacion->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/Iconos/Iconos/Journal.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_facturacion->setIcon(icon6);
@@ -311,6 +360,7 @@ public:
         pushButton_sistema->setSizePolicy(sizePolicy);
         pushButton_sistema->setMinimumSize(QSize(150, 150));
         pushButton_sistema->setMaximumSize(QSize(150, 150));
+        pushButton_sistema->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon7;
         icon7.addFile(QString::fromUtf8(":/Iconos/Iconos/Services.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_sistema->setIcon(icon7);
@@ -327,7 +377,7 @@ public:
         gridLayout_3->addItem(horizontalSpacer_2, 3, 1, 1, 1);
 
         gridLayout_2 = new QGridLayout();
-        gridLayout_2->setSpacing(6);
+        gridLayout_2->setSpacing(10);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         pushButton_7 = new QPushButton(centralWidget);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
@@ -335,6 +385,7 @@ public:
         pushButton_7->setSizePolicy(sizePolicy);
         pushButton_7->setMinimumSize(QSize(80, 80));
         pushButton_7->setMaximumSize(QSize(80, 80));
+        pushButton_7->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon8;
         icon8.addFile(QString::fromUtf8(":/Iconos/Iconos/Facebook.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_7->setIcon(icon8);
@@ -351,6 +402,7 @@ public:
         pushButton_8->setSizePolicy(sizePolicy);
         pushButton_8->setMinimumSize(QSize(80, 80));
         pushButton_8->setMaximumSize(QSize(80, 80));
+        pushButton_8->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/Iconos/Iconos/Twitter.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_8->setIcon(icon9);
@@ -367,6 +419,7 @@ public:
         pushButton_9->setSizePolicy(sizePolicy);
         pushButton_9->setMinimumSize(QSize(80, 80));
         pushButton_9->setMaximumSize(QSize(80, 80));
+        pushButton_9->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon10;
         icon10.addFile(QString::fromUtf8(":/Iconos/Iconos/Gmail.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_9->setIcon(icon10);
@@ -403,26 +456,21 @@ public:
 
         gridLayout_4->addLayout(gridLayout_3, 1, 1, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_4->addItem(verticalSpacer_2, 2, 1, 1, 1);
-
-        horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_4->addItem(horizontalSpacer_4, 1, 0, 1, 1);
-
-        verticalSpacer_4 = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_4->addItem(verticalSpacer_4, 0, 1, 1, 1);
-
-        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_4->addItem(horizontalSpacer_5, 1, 2, 1, 1);
-
         ui_main->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ui_main);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 836, 21));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        menuBar->setPalette(palette3);
         menuAyuda = new QMenu(menuBar);
         menuAyuda->setObjectName(QString::fromUtf8("menuAyuda"));
         menuVentana = new QMenu(menuBar);
@@ -431,16 +479,17 @@ public:
         menuUsuario->setObjectName(QString::fromUtf8("menuUsuario"));
         menuVer = new QMenu(menuBar);
         menuVer->setObjectName(QString::fromUtf8("menuVer"));
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush1);
-        QBrush brush5(QColor(170, 170, 255, 255));
-        brush5.setStyle(Qt::SolidPattern);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush5);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush5);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush5);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush5);
-        menuVer->setPalette(palette3);
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush2);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        menuVer->setPalette(palette4);
         menuPersonas = new QMenu(menuVer);
         menuPersonas->setObjectName(QString::fromUtf8("menuPersonas"));
         menuEmpresas = new QMenu(menuVer);
@@ -448,9 +497,9 @@ public:
         menuEditar = new QMenu(menuBar);
         menuEditar->setObjectName(QString::fromUtf8("menuEditar"));
         ui_main->setMenuBar(menuBar);
-        statusBar = new QStatusBar(ui_main);
-        statusBar->setObjectName(QString::fromUtf8("statusBar"));
-        ui_main->setStatusBar(statusBar);
+        toolBar = new QToolBar(ui_main);
+        toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        ui_main->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menuBar->addAction(menuUsuario->menuAction());
         menuBar->addAction(menuEditar->menuAction());
@@ -489,9 +538,11 @@ public:
         actionInicial_Sesion->setText(QApplication::translate("ui_main", "Inicial Sesion", 0, QApplication::UnicodeUTF8));
         actionCerrar_Sesion->setText(QApplication::translate("ui_main", "Cerrar Sesion", 0, QApplication::UnicodeUTF8));
         actionSalir->setText(QApplication::translate("ui_main", "Salir", 0, QApplication::UnicodeUTF8));
+        actionSalir->setShortcut(QApplication::translate("ui_main", "Ctrl+Q", 0, QApplication::UnicodeUTF8));
         actionVentas->setText(QApplication::translate("ui_main", "Ventas", 0, QApplication::UnicodeUTF8));
         actionCliente->setText(QApplication::translate("ui_main", "Cliente", 0, QApplication::UnicodeUTF8));
         actionColaborador->setText(QApplication::translate("ui_main", "Colaborador", 0, QApplication::UnicodeUTF8));
+        actionColaborador->setShortcut(QApplication::translate("ui_main", "Ctrl+C", 0, QApplication::UnicodeUTF8));
         actionNuevo->setText(QApplication::translate("ui_main", "Nuevo", 0, QApplication::UnicodeUTF8));
         actionEditar->setText(QApplication::translate("ui_main", "Editar", 0, QApplication::UnicodeUTF8));
         actionEliminar->setText(QApplication::translate("ui_main", "Eliminar", 0, QApplication::UnicodeUTF8));
@@ -500,12 +551,45 @@ public:
         actionUsuarios->setText(QApplication::translate("ui_main", "Usuarios", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_main", "Inicio", 0, QApplication::UnicodeUTF8));
         label_usuario->setText(QApplication::translate("ui_main", "user", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        pushButton_usuario->setToolTip(QApplication::translate("ui_main", "Usuario", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_usuario->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_compras->setToolTip(QApplication::translate("ui_main", "Compras", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_STATUSTIP
+        pushButton_compras->setStatusTip(QString());
+#endif // QT_NO_STATUSTIP
+#ifndef QT_NO_WHATSTHIS
+        pushButton_compras->setWhatsThis(QString());
+#endif // QT_NO_WHATSTHIS
+#ifndef QT_NO_ACCESSIBILITY
+        pushButton_compras->setAccessibleName(QString());
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        pushButton_compras->setAccessibleDescription(QString());
+#endif // QT_NO_ACCESSIBILITY
         pushButton_compras->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_ventas->setToolTip(QApplication::translate("ui_main", "Ventas", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_ventas->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_articulo->setToolTip(QApplication::translate("ui_main", "Articulos", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_articulo->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_colaboradores->setToolTip(QApplication::translate("ui_main", "Colaboradores", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_colaboradores->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_facturacion->setToolTip(QApplication::translate("ui_main", "Facturacion", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_facturacion->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        pushButton_sistema->setToolTip(QApplication::translate("ui_main", "Ajustes", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         pushButton_sistema->setText(QString());
         pushButton_7->setText(QString());
         pushButton_8->setText(QString());
@@ -519,6 +603,7 @@ public:
         menuPersonas->setTitle(QApplication::translate("ui_main", "Personas", 0, QApplication::UnicodeUTF8));
         menuEmpresas->setTitle(QApplication::translate("ui_main", "Empresas", 0, QApplication::UnicodeUTF8));
         menuEditar->setTitle(QApplication::translate("ui_main", "Editar", 0, QApplication::UnicodeUTF8));
+        toolBar->setWindowTitle(QApplication::translate("ui_main", "toolBar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

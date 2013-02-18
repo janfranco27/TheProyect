@@ -26,8 +26,8 @@
    <string>Inicial Sesion</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Iconos/icons.qrc">
-    <normaloff>:/iconos/main_icon.png</normaloff>:/iconos/main_icon.png</iconset>
+   <iconset resource="Icons.qrc">
+    <normaloff>:/Iconos/Iconos/Personal.png</normaloff>:/Iconos/Iconos/Personal.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -149,6 +149,15 @@
          <property name="text">
           <string>Aceptar</string>
          </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -178,7 +187,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="Iconos/icons.qrc"/>
+  <include location="Icons.qrc"/>
  </resources>
  <connections/>
 </ui>

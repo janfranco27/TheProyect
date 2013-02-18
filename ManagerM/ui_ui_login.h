@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_login.ui'
 **
-** Created: Sun 17. Feb 22:05:26 2013
+** Created: Mon 18. Feb 14:04:50 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -51,7 +51,7 @@ public:
         ui_login->setMinimumSize(QSize(270, 117));
         ui_login->setMaximumSize(QSize(270, 117));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/iconos/main_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Personal.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_login->setWindowIcon(icon);
         gridLayout_2 = new QGridLayout(ui_login);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
@@ -108,6 +108,9 @@ public:
 
         pushButton_aceptar = new QPushButton(ui_login);
         pushButton_aceptar->setObjectName(QString::fromUtf8("pushButton_aceptar"));
+        pushButton_aceptar->setCheckable(false);
+        pushButton_aceptar->setAutoDefault(true);
+        pushButton_aceptar->setDefault(true);
 
         horizontalLayout_3->addWidget(pushButton_aceptar);
 
