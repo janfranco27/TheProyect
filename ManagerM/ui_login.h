@@ -31,6 +31,8 @@ private slots:
 
     void on_pushButton_aceptar_clicked();
 
+    void on_lineEdit_contrasenia_returnPressed();
+
 private:
     Ui::ui_login *ui;
 };

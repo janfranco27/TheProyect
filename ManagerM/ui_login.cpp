@@ -60,3 +60,8 @@ void ui_login::on_pushButton_aceptar_clicked()
         QMessageBox::information(this,"Error","Usuario no valido");
     }
 }
+
+void ui_login::on_lineEdit_contrasenia_returnPressed()
+{
+    on_pushButton_aceptar_clicked();
+}
