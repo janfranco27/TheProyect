@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_colaborador.ui'
 **
-** Created: Sun 17. Feb 22:05:26 2013
+** Created: Thu 21. Feb 17:26:29 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -33,6 +33,7 @@ public:
     {
         if (ui_colaborador->objectName().isEmpty())
             ui_colaborador->setObjectName(QString::fromUtf8("ui_colaborador"));
+        ui_colaborador->setWindowModality(Qt::ApplicationModal);
         ui_colaborador->resize(693, 372);
         pushButton = new QPushButton(ui_colaborador);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));

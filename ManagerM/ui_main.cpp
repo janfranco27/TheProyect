@@ -71,3 +71,11 @@ void ui_main::on_pushButton_showMenuBar_clicked()
         ui->menuBar->hide();
     }
 }
+
+void ui_main::on_pushButton_sistema_clicked()
+{
+    ui_opciones* form_opciones = new ui_opciones;
+    form_opciones->show();
+
+
+}

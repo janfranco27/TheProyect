@@ -23,8 +23,10 @@ SOURCES += main.cpp\
     object_e_usuario.cpp \
     sistema.cpp \
     freequery.cpp \
-    object_general.cpp \
-    ui_colaborador.cpp
+    ui_colaborador.cpp \
+    ui_opciones.cpp \
+    ui_opciones_articulo.cpp \
+    object_e_grupo.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -38,11 +40,16 @@ HEADERS  += ui_main.h \
     sistema.h \
     freequery.h \
     object_general.h \
-    ui_colaborador.h
+    ui_colaborador.h \
+    ui_opciones.h \
+    ui_opciones_articulo.h \
+    object_e_grupo.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
-    ui_colaborador.ui
+    ui_colaborador.ui \
+    ui_opciones.ui \
+    ui_opciones_articulo.ui
 
 RESOURCES += \
     Icons.qrc

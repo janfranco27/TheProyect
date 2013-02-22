@@ -9,10 +9,14 @@ INPUT(
 ./release\object_e_usuario.o
 ./release\sistema.o
 ./release\freequery.o
-./release\object_general.o
 ./release\ui_colaborador.o
+./release\ui_opciones.o
+./release\ui_opciones_articulo.o
+./release\object_e_grupo.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
+./release\moc_ui_opciones.o
+./release\moc_ui_opciones_articulo.o
 ./release\qrc_Icons.o
 );

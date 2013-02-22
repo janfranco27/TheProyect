@@ -1,13 +1,10 @@
 #ifndef OBJECT_E_USUARIO_H
 #define OBJECT_E_USUARIO_H
 
-//#include "share_include.h"
 #include "object_general.h"
 
 class object_e_usuario:public object_general
 {
-
-
 
 private:
 	_QSTR md_o_pk_dni;

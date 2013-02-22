@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QSqlQueryModel>
+
 namespace Ui {
 class ui_colaborador;
 }

@@ -7,9 +7,7 @@ class object_general
 {
 public:
 
-  object_general();
-
-
+  object_general(){}
 
 private:
 
@@ -25,5 +23,6 @@ private:
   //virtual bool mf_enable() = 0;
 
 };
+
 
 #endif // OBJECT_GENERAL_H

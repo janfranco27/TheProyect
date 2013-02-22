@@ -30,6 +30,8 @@ private slots:
 
     void on_pushButton_showMenuBar_clicked();
 
+    void on_pushButton_sistema_clicked();
+
 private:
     Ui::ui_main *ui;
 };

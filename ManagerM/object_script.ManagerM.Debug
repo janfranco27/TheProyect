@@ -9,10 +9,14 @@ INPUT(
 ./debug\object_e_usuario.o
 ./debug\sistema.o
 ./debug\freequery.o
-./debug\object_general.o
 ./debug\ui_colaborador.o
+./debug\ui_opciones.o
+./debug\ui_opciones_articulo.o
+./debug\object_e_grupo.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
+./debug\moc_ui_opciones.o
+./debug\moc_ui_opciones_articulo.o
 ./debug\qrc_Icons.o
 );

@@ -1,6 +1,8 @@
 #ifndef SHARE_INCLUDE_H
 #define SHARE_INCLUDE_H
 
+
+
 //LANGUAGE INCLUDES - NAMESPACE
 
 //INCLUDES
@@ -55,14 +57,24 @@ using namespace std;
 #include "freequery.h"
 #include "sistema.h"
 
+#include "object_general.h"
+
 #include "object_e_usuario.h"
+#include "object_e_grupo.h"
+
+
+
+
 
 #include "ui_login.h"
-#
+#include "ui_opciones.h"
+#include "ui_opciones_articulo.h"
+
 //NAMESPACES
 
 //using namespace module_log;
 //using namespace module_dbconnection;
 using namespace module_session;
+
 
 #endif // SHARE_INCLUDE_H

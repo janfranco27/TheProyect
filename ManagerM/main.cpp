@@ -2,9 +2,11 @@
 #include "ui_main.h"
 
 #include "share_include.h"
+
 using namespace module_log;
 using namespace module_dbconnection;
 using namespace module_session;
+
 
 int main(int argc, char *argv[])
 {

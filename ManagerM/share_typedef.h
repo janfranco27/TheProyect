@@ -13,6 +13,8 @@ typedef const QString _COMENT;
 typedef vector<vector<QVariant> > TUPLES;
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+enum opciones_categoria{articulo,banco,base_datos,general};
+
 //MACROS DEL SISTEMA
 
 //APP MANAGERM
@@ -89,7 +91,7 @@ typedef vector<vector<QVariant> > TUPLES;
 
     //base de datos
 
-    #define C_DB_FILE_CONFIG_NAME "\database"
+    #define C_DB_FILE_CONFIG_NAME "database"
 
     //login
 
