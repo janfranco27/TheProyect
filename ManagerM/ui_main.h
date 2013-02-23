@@ -34,6 +34,9 @@ private slots:
 
 private:
     Ui::ui_main *ui;
+protected:
+    void keyPressEvent(QKeyEvent *);
+    void keyReleaseEvent(QKeyEvent *);
 };
 
 #endif // UI_MAIN_H

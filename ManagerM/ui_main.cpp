@@ -79,3 +79,23 @@ void ui_main::on_pushButton_sistema_clicked()
 
 
 }
+
+void ui_main::keyPressEvent(QKeyEvent *event)
+{
+    /*
+    if(event->key() == Qt::Key_Alt)
+    {
+        ui->menuBar->setHidden(!(ui->menuBar->isHidden()));
+        qDebug()<<"Press ALT"<<endl;
+    }
+    */
+}
+
+void ui_main::keyReleaseEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Alt)
+    {
+        ui->menuBar->setHidden(!(ui->menuBar->isHidden()));
+        qDebug()<<"Release ALT"<<endl;
+    }
+}
