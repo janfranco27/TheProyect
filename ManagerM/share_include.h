@@ -67,12 +67,17 @@ using namespace std;
 
 
 #include "ui_login.h"
-#include "ui_opciones.h"
+
+#include "ui_opciones_base_datos.h"
 #include "ui_opciones_articulo.h"
+
+
+#include "ui_opciones.h"
+
 
 //NAMESPACES
 
-//using namespace module_log;
+using namespace module_log;
 //using namespace module_dbconnection;
 using namespace module_session;
 

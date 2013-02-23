@@ -101,6 +101,9 @@ void system_log::write()
     md_log_file.close();
     md_log_file_error.close();
 
+    md_state = "";
+    md_comment = "";
+
 }
 
 void system_log::write(_STR comment)
@@ -126,5 +129,8 @@ void system_log::write(_STR comment)
 
     md_log_file.close();
     md_log_file_error.close();
+
+    md_state = "";
+    md_comment = "";
 }
 

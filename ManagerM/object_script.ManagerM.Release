@@ -13,10 +13,12 @@ INPUT(
 ./release\ui_opciones.o
 ./release\ui_opciones_articulo.o
 ./release\object_e_grupo.o
+./release\ui_opciones_base_datos.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
 ./release\moc_ui_opciones.o
 ./release\moc_ui_opciones_articulo.o
+./release\moc_ui_opciones_base_datos.o
 ./release\qrc_Icons.o
 );

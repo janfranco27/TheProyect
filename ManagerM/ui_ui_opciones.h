@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones.ui'
 **
-** Created: Thu 21. Feb 20:14:56 2013
+** Created: Fri 22. Feb 10:49:21 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -28,11 +28,11 @@ class Ui_ui_opciones
 public:
     QGridLayout *gridLayout_3;
     QSplitter *splitter;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLabel *label;
     QListWidget *listWidget_modulos;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QGridLayout *gridLayout_2;
     QWidget *widget_category;
     QLabel *label_category;
@@ -53,12 +53,12 @@ public:
         splitter = new QSplitter(ui_opciones);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
-        widget = new QWidget(splitter);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        gridLayout = new QGridLayout(widget);
+        layoutWidget = new QWidget(splitter);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -76,7 +76,7 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
-        listWidget_modulos = new QListWidget(widget);
+        listWidget_modulos = new QListWidget(layoutWidget);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/Tune-Up_Utilities.png"), QSize(), QIcon::Normal, QIcon::Off);
         QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget_modulos);
@@ -104,20 +104,22 @@ public:
         listWidget_modulos->setSizePolicy(sizePolicy1);
         listWidget_modulos->setMinimumSize(QSize(190, 407));
         listWidget_modulos->setMaximumSize(QSize(200, 407));
-        listWidget_modulos->setFrameShadow(QFrame::Plain);
         listWidget_modulos->setIconSize(QSize(30, 30));
+        listWidget_modulos->setFlow(QListView::TopToBottom);
         listWidget_modulos->setProperty("isWrapping", QVariant(false));
+        listWidget_modulos->setViewMode(QListView::ListMode);
+        listWidget_modulos->setUniformItemSizes(false);
         listWidget_modulos->setSortingEnabled(false);
 
         gridLayout->addWidget(listWidget_modulos, 1, 0, 1, 1);
 
-        splitter->addWidget(widget);
-        widget1 = new QWidget(splitter);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        gridLayout_2 = new QGridLayout(widget1);
+        splitter->addWidget(layoutWidget);
+        layoutWidget1 = new QWidget(splitter);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        gridLayout_2 = new QGridLayout(layoutWidget1);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        widget_category = new QWidget(widget1);
+        widget_category = new QWidget(layoutWidget1);
         widget_category->setObjectName(QString::fromUtf8("widget_category"));
         sizePolicy.setHeightForWidth(widget_category->sizePolicy().hasHeightForWidth());
         widget_category->setSizePolicy(sizePolicy);
@@ -126,7 +128,7 @@ public:
 
         gridLayout_2->addWidget(widget_category, 1, 0, 1, 1);
 
-        label_category = new QLabel(widget1);
+        label_category = new QLabel(layoutWidget1);
         label_category->setObjectName(QString::fromUtf8("label_category"));
         sizePolicy.setHeightForWidth(label_category->sizePolicy().hasHeightForWidth());
         label_category->setSizePolicy(sizePolicy);
@@ -136,7 +138,7 @@ public:
 
         gridLayout_2->addWidget(label_category, 0, 0, 1, 1);
 
-        splitter->addWidget(widget1);
+        splitter->addWidget(layoutWidget1);
 
         gridLayout_3->addWidget(splitter, 0, 0, 1, 1);
 

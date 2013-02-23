@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     ui_colaborador.cpp \
     ui_opciones.cpp \
     ui_opciones_articulo.cpp \
-    object_e_grupo.cpp
+    object_e_grupo.cpp \
+    ui_opciones_base_datos.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -43,13 +44,15 @@ HEADERS  += ui_main.h \
     ui_colaborador.h \
     ui_opciones.h \
     ui_opciones_articulo.h \
-    object_e_grupo.h
+    object_e_grupo.h \
+    ui_opciones_base_datos.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
     ui_colaborador.ui \
     ui_opciones.ui \
-    ui_opciones_articulo.ui
+    ui_opciones_articulo.ui \
+    ui_opciones_base_datos.ui
 
 RESOURCES += \
     Icons.qrc

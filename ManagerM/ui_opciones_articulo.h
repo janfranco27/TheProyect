@@ -3,7 +3,8 @@
 
 #include <QTabWidget>
 #include "share_include.h"
-#include "object_e_grupo.h"
+
+
 namespace Ui {
 class ui_opciones_articulo;
 }

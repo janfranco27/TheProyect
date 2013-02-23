@@ -5,11 +5,12 @@ class Sistema
 {
 private:
 
-
-
 public:
     Sistema();
     bool validarUsuario(_QSTR nick, _QSTR pass);
+
+
+
 };
 
 #endif // SISTEMA_H

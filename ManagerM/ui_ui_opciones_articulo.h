@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_articulo.ui'
 **
-** Created: Thu 21. Feb 20:12:22 2013
+** Created: Fri 22. Feb 14:05:40 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -260,7 +260,7 @@ public:
 
         retranslateUi(ui_opciones_articulo);
 
-        ui_opciones_articulo->setCurrentIndex(2);
+        ui_opciones_articulo->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ui_opciones_articulo);

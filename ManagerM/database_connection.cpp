@@ -117,6 +117,7 @@ bool database_connection::mf_connect()
 
     if(my_database.open())
     {
+
         qDebug()<<"Conection success...";
         return true;
 

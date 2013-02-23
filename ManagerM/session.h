@@ -13,6 +13,8 @@ class session
 {
 
 private:
+
+    _STR md_code;
     _STR md_name;
     _STR md_nick_name;
     _STR md_permissions;
@@ -20,12 +22,14 @@ private:
 public:
 
     session();
-    session(_STR name,_STR nick_name,_STR permissions);
+    session(_STR code,_STR name,_STR nick_name,_STR permissions);
 
+    void mf_set_code(_STR code);
     void mf_set_name(_STR name);
     void mf_set_nick_name(_STR nick_name);
     void mf_set_permissions(_STR permissions);
 
+    _STR mf_get_code();
     _STR mf_get_name();
     _STR mf_get_nick_name();
     _STR mf_get_permissions();

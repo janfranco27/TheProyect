@@ -38,7 +38,7 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
@@ -93,16 +93,22 @@
            <height>407</height>
           </size>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
          <property name="iconSize">
           <size>
            <width>30</width>
            <height>30</height>
           </size>
          </property>
+         <property name="flow">
+          <enum>QListView::TopToBottom</enum>
+         </property>
          <property name="isWrapping" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="viewMode">
+          <enum>QListView::ListMode</enum>
+         </property>
+         <property name="uniformItemSizes">
           <bool>false</bool>
          </property>
          <property name="sortingEnabled">
@@ -157,7 +163,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="1" column="0">
         <widget class="QWidget" name="widget_category" native="true">
