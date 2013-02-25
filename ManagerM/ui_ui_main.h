@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_main.ui'
 **
-** Created: Fri 22. Feb 18:13:11 2013
+** Created: Sat 23. Feb 16:26:33 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -48,6 +48,8 @@ public:
     QGridLayout *gridLayout_4;
     QSpacerItem *verticalSpacer_4;
     QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *verticalSpacer_2;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
@@ -67,12 +69,9 @@ public:
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
-    QPushButton *pushButton_showMenuBar;
     QSpacerItem *horizontalSpacer_3;
     QSpacerItem *verticalSpacer;
     QSpacerItem *verticalSpacer_3;
-    QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *verticalSpacer_2;
     QMenuBar *menuBar;
     QMenu *menuAyuda;
     QMenu *menuVentana;
@@ -139,6 +138,14 @@ public:
         horizontalSpacer_4 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_4->addItem(horizontalSpacer_4, 1, 0, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_4->addItem(horizontalSpacer_5, 1, 2, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(15, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_4->addItem(verticalSpacer_2, 2, 1, 1, 1);
 
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setSpacing(6);
@@ -246,7 +253,7 @@ public:
         horizontalLayout_2->addLayout(horizontalLayout);
 
 
-        gridLayout_3->addLayout(horizontalLayout_2, 0, 0, 1, 5);
+        gridLayout_3->addLayout(horizontalLayout_2, 0, 0, 1, 4);
 
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(10);
@@ -405,23 +412,15 @@ public:
         gridLayout_2->addWidget(pushButton_9, 0, 2, 1, 1);
 
 
-        gridLayout_3->addLayout(gridLayout_2, 3, 3, 1, 1);
-
-        pushButton_showMenuBar = new QPushButton(centralWidget);
-        pushButton_showMenuBar->setObjectName(QString::fromUtf8("pushButton_showMenuBar"));
-        pushButton_showMenuBar->setMaximumSize(QSize(0, 0));
-        pushButton_showMenuBar->setStyleSheet(QString::fromUtf8("background-image: url(:/Iconos/Iconos/fondo1.png);"));
-        pushButton_showMenuBar->setFlat(false);
-
-        gridLayout_3->addWidget(pushButton_showMenuBar, 2, 2, 1, 1);
+        gridLayout_3->addLayout(gridLayout_2, 3, 2, 1, 1);
 
         horizontalSpacer_3 = new QSpacerItem(78, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        gridLayout_3->addItem(horizontalSpacer_3, 3, 4, 1, 1);
+        gridLayout_3->addItem(horizontalSpacer_3, 3, 3, 1, 1);
 
         verticalSpacer = new QSpacerItem(17, 308, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_3->addItem(verticalSpacer, 2, 4, 1, 1);
+        gridLayout_3->addItem(verticalSpacer, 2, 3, 1, 1);
 
         verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -429,14 +428,6 @@ public:
 
 
         gridLayout_4->addLayout(gridLayout_3, 1, 1, 1, 1);
-
-        horizontalSpacer_5 = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout_4->addItem(horizontalSpacer_5, 1, 2, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(15, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_4->addItem(verticalSpacer_2, 2, 1, 1, 1);
 
         ui_main->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ui_main);
@@ -584,8 +575,6 @@ public:
         pushButton_7->setText(QString());
         pushButton_8->setText(QString());
         pushButton_9->setText(QString());
-        pushButton_showMenuBar->setText(QString());
-        pushButton_showMenuBar->setShortcut(QApplication::translate("ui_main", "Alt+M", 0, QApplication::UnicodeUTF8));
         menuAyuda->setTitle(QApplication::translate("ui_main", "Ayuda", 0, QApplication::UnicodeUTF8));
         menuVentana->setTitle(QApplication::translate("ui_main", "Ventana", 0, QApplication::UnicodeUTF8));
         menuUsuario->setTitle(QApplication::translate("ui_main", "Usuario", 0, QApplication::UnicodeUTF8));

@@ -26,10 +26,6 @@ private slots:
 
     void on_pushButton_colaboradores_clicked();
 
-
-
-    void on_pushButton_showMenuBar_clicked();
-
     void on_pushButton_sistema_clicked();
 
 private:

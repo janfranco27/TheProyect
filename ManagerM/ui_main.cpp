@@ -62,15 +62,7 @@ void ui_main::on_pushButton_colaboradores_clicked()
     colaboForm->show();
 }
 
-void ui_main::on_pushButton_showMenuBar_clicked()
-{
-    if(ui->menuBar->isHidden())
-    {
-        ui->menuBar->show();
-    }else{
-        ui->menuBar->hide();
-    }
-}
+
 
 void ui_main::on_pushButton_sistema_clicked()
 {
@@ -96,6 +88,6 @@ void ui_main::keyReleaseEvent(QKeyEvent *event)
     if(event->key() == Qt::Key_Alt)
     {
         ui->menuBar->setHidden(!(ui->menuBar->isHidden()));
-        qDebug()<<"Release ALT"<<endl;
+
     }
 }
