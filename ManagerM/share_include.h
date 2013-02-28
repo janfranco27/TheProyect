@@ -48,8 +48,8 @@ using namespace std;
 //INCLUDES
 
 #include "ui_main.h"
-
 #include "share_typedef.h"
+
 #include "singleton.h"
 #include "system_log.h"
 #include "database_connection.h"
@@ -78,7 +78,7 @@ using namespace std;
 //NAMESPACES
 
 using namespace module_log;
-//using namespace module_dbconnection;
+using namespace module_dbconnection;
 using namespace module_session;
 
 

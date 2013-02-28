@@ -3,10 +3,11 @@
 
 #include "share_include.h"
 
+/*
 using namespace module_log;
 using namespace module_dbconnection;
 using namespace module_session;
-
+*/
 
 int main(int argc, char *argv[])
 {
@@ -21,10 +22,29 @@ int main(int argc, char *argv[])
     SYS_WRITE;
 
     DATABASE_CONFIG(C_DB_FILE_CONFIG_NAME);
-    DATABASE_CONNECT;
 
-    ui_login *login_form = new ui_login;
-    login_form->show();
+    if(DATABASE_CONNECT)
+    {
+        ui_login *login_form = new ui_login;
+        login_form->show();
+    }else{
+        ui_opciones_base_datos *db_form = new ui_opciones_base_datos;
+        db_form->show();
+    }
+
+        /*
+    if(SYSTEM->is_dbConfigurate())
+    {
+
+    DATABASE_CONFIG(C_DB_FILE_CONFIG_NAME);
+
+        if(DATABASE_CONNECT)
+        {
+
+        }else{
+
+        }
+    }*/
 
    // APP_SHOW_MAXIMIZED;
 

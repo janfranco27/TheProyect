@@ -10,9 +10,9 @@ using namespace std;
 
 namespace module_log{
 
-typedef string _STR;
-typedef const string _CSTR;
-typedef ofstream _OFILE;
+typedef string _STR_LOG;
+typedef const string _CSTR_LOG;
+typedef ofstream _OFILE_LOG;
 
 
 #define DEFAULT_LOG_NAME "myapp.log"
@@ -24,51 +24,51 @@ class system_log
 {
 private:
 
-    _OFILE md_log_file;
-    _OFILE md_log_file_error;
+    _OFILE_LOG md_log_file;
+    _OFILE_LOG md_log_file_error;
 
-    _STR mdp_file_name_log;
-    _STR mdp_file_name_log_error;
+    _STR_LOG mdp_file_name_log;
+    _STR_LOG mdp_file_name_log_error;
 
 
     system_log(const system_log&);
     system_log& operator = (const system_log&);
 
-    _STR md_name_app;
-    _STR md_name_file;
-    _STR md_name_class;
-    _STR md_name_function;
-    _STR md_state;
-    _STR md_comment;
+    _STR_LOG md_name_app;
+    _STR_LOG md_name_file;
+    _STR_LOG md_name_class;
+    _STR_LOG md_name_function;
+    _STR_LOG md_state;
+    _STR_LOG md_comment;
 
 public:
 
     system_log();
-    system_log(_STR file_name_log);
-    system_log(_STR file_name_log, _STR file_name_log_error);
+    system_log(_STR_LOG file_name_log);
+    system_log(_STR_LOG file_name_log, _STR_LOG file_name_log_error);
 
-    void mf_set_file_name_log(_STR file_name_log);
-    void mf_set_file_name_log_error(_STR file_name_log_error);
+    void mf_set_file_name_log(_STR_LOG file_name_log);
+    void mf_set_file_name_log_error(_STR_LOG file_name_log_error);
 
-    _STR mf_get_file_name_log();
-    _STR mf_get_file_name_log_error();
+    _STR_LOG mf_get_file_name_log();
+    _STR_LOG mf_get_file_name_log_error();
 
-    void mf_set_name_app(_STR name_app);
-    void mf_set_name_file(_STR name_file);
-    void mf_set_name_class(_STR name_class);
-    void mf_set_name_function(_STR name_function);
-    void mf_set_state(_STR state);
-    void mf_set_comment(_STR comment);
+    void mf_set_name_app(_STR_LOG name_app);
+    void mf_set_name_file(_STR_LOG name_file);
+    void mf_set_name_class(_STR_LOG name_class);
+    void mf_set_name_function(_STR_LOG name_function);
+    void mf_set_state(_STR_LOG state);
+    void mf_set_comment(_STR_LOG comment);
 
-    _STR mf_get_name_app();
-    _STR mf_get_name_file();
-    _STR mf_get_name_class();
-    _STR mf_get_name_function();
-    _STR mf_get_state();
-    _STR mf_get_comment();
+    _STR_LOG mf_get_name_app();
+    _STR_LOG mf_get_name_file();
+    _STR_LOG mf_get_name_class();
+    _STR_LOG mf_get_name_function();
+    _STR_LOG mf_get_state();
+    _STR_LOG mf_get_comment();
 
     void write();
-    void write(_STR comment);
+    void write(_STR_LOG comment);
 
     ~system_log();
 

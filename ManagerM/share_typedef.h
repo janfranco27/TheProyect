@@ -3,8 +3,10 @@
 
 #include "share_include.h"
 
+
 //TYPEDEFS
 
+typedef QString _QUERY;
 typedef QString _QSTR;
 typedef int _INT;
 typedef string _STR;
@@ -54,6 +56,7 @@ enum opciones_categoria{articulo,banco,base_datos,general};
 
     //BASE DE DATOS
 
+    #define DATABASE SINGLETON(database_connection)
     #define DATABASE_CONFIG(X) SINGLETON(database_connection)->mf_load_configuration(X)
     #define DATABASE_CONNECT SINGLETON(database_connection)->mf_connect()
 
@@ -92,12 +95,17 @@ enum opciones_categoria{articulo,banco,base_datos,general};
     //base de datos
 
     #define C_DB_FILE_CONFIG_NAME "database"
+    #define C_DB_FILE_DEFAULT_CONFIG_NAME "database.cfg"
 
     //login
 
     #define C_LOGIN_UNLOGGED "Sesión no iniciada." //pensar en otro mensaje :/
     //#define C_LOGIN_LOGGED_NAME "Bienvenido" + USER_GET_NAME + "." // revisar esto
     #define C_LOGIN_LOGGED "Bienvenido."
+
+//CONSULTAS A LA DB
+
+
 
 
 #endif // SHARE_TYPEDEF_H

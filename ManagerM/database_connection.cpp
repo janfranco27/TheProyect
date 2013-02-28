@@ -13,84 +13,84 @@ database_connection::~database_connection()
 }
 
 
-void database_connection::mf_set_driver(_QSTR driver)
+void database_connection::mf_set_driver(_QSTR_DB driver)
 {
     md_driver = driver;
 }
 
-void database_connection::mf_set_host(_QSTR host)
+void database_connection::mf_set_host(_QSTR_DB host)
 {
     md_host = host;
 }
 
-void database_connection::mf_set_port(_QSTR port)
+void database_connection::mf_set_port(_QSTR_DB port)
 {
     md_port = port;
 }
 
-void database_connection::mf_set_user(_QSTR user)
+void database_connection::mf_set_user(_QSTR_DB user)
 {
     md_user = user;
 }
 
-void database_connection::mf_set_pass(_QSTR pass)
+void database_connection::mf_set_pass(_QSTR_DB pass)
 {
     md_pass = pass;
 }
 
-void database_connection::mf_set_name(_QSTR name)
+void database_connection::mf_set_name(_QSTR_DB name)
 {
     md_name = name;
 }
 
-void database_connection::mf_set_options(_QSTR options)
+void database_connection::mf_set_options(_QSTR_DB options)
 {
     md_options = options;
 }
 
-_QSTR database_connection::mf_get_driver()
+_QSTR_DB database_connection::mf_get_driver()
 {
     return md_driver;
 }
 
-_QSTR database_connection::mf_get_host()
+_QSTR_DB database_connection::mf_get_host()
 {
     return md_host;
 }
 
-_QSTR database_connection::mf_get_port()
+_QSTR_DB database_connection::mf_get_port()
 {
 
     return md_port;
 }
 
-_QSTR database_connection::mf_get_user()
+_QSTR_DB database_connection::mf_get_user()
 {
     return md_user;
 }
 
-_QSTR database_connection::mf_get_pass()
+_QSTR_DB database_connection::mf_get_pass()
 {
     return md_pass;
 }
 
-_QSTR database_connection::mf_get_name()
+_QSTR_DB database_connection::mf_get_name()
 {
     return md_name;
 }
 
-_QSTR database_connection::mf_get_options()
+_QSTR_DB database_connection::mf_get_options()
 {
     return md_options;
 }
 
-void database_connection::mf_load_configuration(_STR file_config)
+void database_connection::mf_load_configuration(_STR_DB file_config)
 {
-    _STR name_file_cfg = file_config + DB_FILE_NAME_EXTENSION;
+    _STR_DB name_file_cfg = file_config + DB_FILE_NAME_EXTENSION;
 
     ifstream db_config_file(name_file_cfg.c_str());
 
-    _STR host,name,user,pass,port;
+    _STR_DB host,name,user,pass,port;
 
     db_config_file>>host;
     db_config_file>>name;

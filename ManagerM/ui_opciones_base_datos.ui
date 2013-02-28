@@ -96,7 +96,7 @@
               <enum>Qt::LeftToRight</enum>
              </property>
              <property name="inputMask">
-              <string>000.000.000.000; </string>
+              <string/>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -104,19 +104,6 @@
             </widget>
            </item>
           </layout>
-         </item>
-         <item row="0" column="1" rowspan="2">
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>208</width>
-             <height>71</height>
-            </size>
-           </property>
-          </spacer>
          </item>
          <item row="1" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -166,8 +153,20 @@
            </item>
           </layout>
          </item>
+         <item row="0" column="1" rowspan="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>208</width>
+             <height>71</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
-        <zorder></zorder>
         <zorder></zorder>
         <zorder></zorder>
         <zorder>horizontalSpacer_2</zorder>
@@ -224,19 +223,6 @@
            </item>
           </layout>
          </item>
-         <item row="0" column="1" rowspan="2">
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>208</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
          <item row="1" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
@@ -285,9 +271,20 @@
            </item>
           </layout>
          </item>
+         <item row="0" column="1" rowspan="2">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>208</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
-        <zorder>groupBox_address</zorder>
-        <zorder></zorder>
         <zorder></zorder>
         <zorder>horizontalSpacer_3</zorder>
        </widget>
@@ -393,6 +390,14 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_host</tabstop>
+  <tabstop>lineEdit_puerto</tabstop>
+  <tabstop>lineEdit_usuario</tabstop>
+  <tabstop>lineEdit_clave</tabstop>
+  <tabstop>lineEdit_nombre_db</tabstop>
+  <tabstop>pushButton_guardar</tabstop>
+ </tabstops>
  <resources>
   <include location="Icons.qrc"/>
  </resources>

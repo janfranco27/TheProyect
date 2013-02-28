@@ -1,5 +1,6 @@
 #include "sistema.h"
 
+
 Sistema::Sistema()
 {
 }
@@ -26,3 +27,19 @@ bool Sistema::validarUsuario(_QSTR nick, _QSTR pass)
 
     return false;
 }
+
+bool Sistema::is_dbConfigurate()
+{
+    ifstream db_cfg;
+    db_cfg.open(C_DB_FILE_DEFAULT_CONFIG_NAME);
+
+    if(db_cfg.is_open())
+    {
+        qDebug()<<"Open"<<endl;
+        return true;
+    }else{
+        qDebug()<<"No config_db"<<endl;
+        return false;
+    }
+}
+

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_base_datos.ui'
 **
-** Created: Fri 22. Feb 14:05:40 2013
+** Created: Thu 28. Feb 17:29:48 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -38,19 +38,19 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *lineEdit_host;
-    QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QLineEdit *lineEdit_puerto;
+    QSpacerItem *horizontalSpacer_2;
     QGroupBox *groupBox_user;
     QGridLayout *gridLayout_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
     QLineEdit *lineEdit_usuario;
-    QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_5;
     QLineEdit *lineEdit_clave;
+    QSpacerItem *horizontalSpacer_3;
     QGroupBox *groupBox_db;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_5;
@@ -108,10 +108,6 @@ public:
 
         gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
 
-        horizontalSpacer_2 = new QSpacerItem(208, 71, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 0, 1, 2, 1);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_2 = new QLabel(groupBox_address);
@@ -133,6 +129,10 @@ public:
 
 
         gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(208, 71, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 0, 1, 2, 1);
 
 
         gridLayout_4->addWidget(groupBox_address, 0, 0, 1, 2);
@@ -162,10 +162,6 @@ public:
 
         gridLayout_2->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
-        horizontalSpacer_3 = new QSpacerItem(208, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_3, 0, 1, 2, 1);
-
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_5 = new QLabel(groupBox_user);
@@ -188,7 +184,10 @@ public:
 
         gridLayout_2->addLayout(horizontalLayout_4, 1, 0, 1, 1);
 
-        groupBox_address->raise();
+        horizontalSpacer_3 = new QSpacerItem(208, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_3, 0, 1, 2, 1);
+
 
         gridLayout_4->addWidget(groupBox_user, 1, 0, 1, 2);
 
@@ -239,6 +238,11 @@ public:
         gridLayout_5->addLayout(gridLayout_4, 0, 0, 1, 1);
 
         ui_opciones_base_datos->addTab(tab, QString());
+        QWidget::setTabOrder(lineEdit_host, lineEdit_puerto);
+        QWidget::setTabOrder(lineEdit_puerto, lineEdit_usuario);
+        QWidget::setTabOrder(lineEdit_usuario, lineEdit_clave);
+        QWidget::setTabOrder(lineEdit_clave, lineEdit_nombre_db);
+        QWidget::setTabOrder(lineEdit_nombre_db, pushButton_guardar);
 
         retranslateUi(ui_opciones_base_datos);
 
@@ -253,7 +257,7 @@ public:
         ui_opciones_base_datos->setWindowTitle(QApplication::translate("ui_opciones_base_datos", "Base de Datos", 0, QApplication::UnicodeUTF8));
         groupBox_address->setTitle(QApplication::translate("ui_opciones_base_datos", "Direcci\303\263n", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_opciones_base_datos", "Host", 0, QApplication::UnicodeUTF8));
-        lineEdit_host->setInputMask(QApplication::translate("ui_opciones_base_datos", "000.000.000.000; ", 0, QApplication::UnicodeUTF8));
+        lineEdit_host->setInputMask(QString());
         label_2->setText(QApplication::translate("ui_opciones_base_datos", "Puerto", 0, QApplication::UnicodeUTF8));
         groupBox_user->setTitle(QApplication::translate("ui_opciones_base_datos", "Usuario", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ui_opciones_base_datos", "Nombre", 0, QApplication::UnicodeUTF8));

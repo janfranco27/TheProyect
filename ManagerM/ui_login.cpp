@@ -12,6 +12,7 @@ ui_login::ui_login(QWidget *parent) :
     md_p_ui_parent = 0;
     //------------------------
 
+
 }
 
 ui_login::~ui_login()
