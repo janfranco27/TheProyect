@@ -6,7 +6,6 @@
 
 //TYPEDEFS
 
-typedef QString _QUERY;
 typedef QString _QSTR;
 typedef int _INT;
 typedef string _STR;
@@ -103,7 +102,7 @@ enum opciones_categoria{articulo,banco,base_datos,general};
     //#define C_LOGIN_LOGGED_NAME "Bienvenido" + USER_GET_NAME + "." // revisar esto
     #define C_LOGIN_LOGGED "Bienvenido."
 
-//CONSULTAS A LA DB
+    //CONSULTAS A LA DB
 
 
 

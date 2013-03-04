@@ -9,6 +9,7 @@ ui_opciones_articulo::ui_opciones_articulo(QWidget *parent) :
 
 
 
+
     QSqlQueryModel *model = new QSqlQueryModel;
     model->setQuery("SELECT * FROM e_grupo");
     model->setHeaderData(0, Qt::Horizontal, tr("Código"));
@@ -31,3 +32,5 @@ void ui_opciones_articulo::on_pushButton_save_grupo_clicked()
    ui->lineEdit_grupo->clear();
 
 }
+
+

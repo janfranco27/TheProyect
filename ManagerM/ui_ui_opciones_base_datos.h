@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_base_datos.ui'
 **
-** Created: Thu 28. Feb 17:29:48 2013
+** Created: Sun 3. Mar 19:13:08 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

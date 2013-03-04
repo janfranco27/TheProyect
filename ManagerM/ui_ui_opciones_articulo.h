@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_articulo.ui'
 **
-** Created: Thu 28. Feb 15:32:31 2013
+** Created: Sun 3. Mar 19:38:59 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -260,7 +260,7 @@ public:
 
         retranslateUi(ui_opciones_articulo);
 
-        ui_opciones_articulo->setCurrentIndex(0);
+        ui_opciones_articulo->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ui_opciones_articulo);
@@ -269,15 +269,15 @@ public:
     void retranslateUi(QTabWidget *ui_opciones_articulo)
     {
         ui_opciones_articulo->setWindowTitle(QApplication::translate("ui_opciones_articulo", "TabWidget", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("ui_opciones_articulo", "Marca", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("ui_opciones_articulo", "Descripci\303\263n", 0, QApplication::UnicodeUTF8));
         pushButton_save_marca->setText(QString());
         pushButton_delete_marca->setText(QString());
         ui_opciones_articulo->setTabText(ui_opciones_articulo->indexOf(tab_3), QApplication::translate("ui_opciones_articulo", "Marcas", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("ui_opciones_articulo", "Medida", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("ui_opciones_articulo", "Descripci\303\263n", 0, QApplication::UnicodeUTF8));
         pushButton_save_medida->setText(QString());
         pushButton_delete_medida->setText(QString());
         ui_opciones_articulo->setTabText(ui_opciones_articulo->indexOf(tab_2), QApplication::translate("ui_opciones_articulo", "Medidas", 0, QApplication::UnicodeUTF8));
-        label_grupo->setText(QApplication::translate("ui_opciones_articulo", "Grupo", 0, QApplication::UnicodeUTF8));
+        label_grupo->setText(QApplication::translate("ui_opciones_articulo", "Descripci\303\263n", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         pushButton_save_grupo->setToolTip(QApplication::translate("ui_opciones_articulo", "Guardar", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP

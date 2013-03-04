@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_main.ui'
 **
-** Created: Thu 28. Feb 15:32:30 2013
+** Created: Sun 3. Mar 19:13:08 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -95,7 +95,7 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Configure_alt_1.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_main->setWindowIcon(icon);
-        ui_main->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 45, 62);"));
+        ui_main->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);"));
         ui_main->setDocumentMode(false);
         actionAcerca_de_ManagerM = new QAction(ui_main);
         actionAcerca_de_ManagerM->setObjectName(QString::fromUtf8("actionAcerca_de_ManagerM"));
@@ -159,7 +159,7 @@ public:
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(0, 45, 62, 255));
+        QBrush brush1(QColor(0, 170, 127, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         QBrush brush2(QColor(85, 170, 255, 255));
@@ -432,13 +432,8 @@ public:
         ui_main->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ui_main);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1000, 21));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(menuBar->sizePolicy().hasHeightForWidth());
-        menuBar->setSizePolicy(sizePolicy2);
-        menuBar->setMinimumSize(QSize(1000, 0));
+        menuBar->setLayoutDirection(Qt::LeftToRight);
+        menuBar->setDefaultUp(false);
         menuBar->setNativeMenuBar(false);
         menuAyuda = new QMenu(menuBar);
         menuAyuda->setObjectName(QString::fromUtf8("menuAyuda"));
@@ -447,32 +442,62 @@ public:
         menuUsuario = new QMenu(menuBar);
         menuUsuario->setObjectName(QString::fromUtf8("menuUsuario"));
         QPalette palette2;
+        QBrush brush5(QColor(0, 0, 0, 255));
+        brush5.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush5);
         palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Midlight, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Mid, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
         palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
         palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Shadow, brush);
         palette2.setBrush(QPalette::Active, QPalette::Highlight, brush);
+        palette2.setBrush(QPalette::Active, QPalette::AlternateBase, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
         palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Midlight, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Mid, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        QBrush brush6(QColor(160, 160, 160, 255));
+        brush6.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
         palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Shadow, brush);
         palette2.setBrush(QPalette::Inactive, QPalette::Highlight, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
         palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Midlight, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Dark, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Mid, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
         palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
         palette2.setBrush(QPalette::Disabled, QPalette::Highlight, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush);
         menuUsuario->setPalette(palette2);
-        menuUsuario->setStyleSheet(QString::fromUtf8("selection-background-color: rgb(255, 255, 255);"));
         menuVer = new QMenu(menuBar);
         menuVer->setObjectName(QString::fromUtf8("menuVer"));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette3.setBrush(QPalette::Active, QPalette::Base, brush1);
         palette3.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Active, QPalette::AlternateBase, brush);
         palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette3.setBrush(QPalette::Inactive, QPalette::Base, brush1);
         palette3.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush);
         palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette3.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette3.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush);
         menuVer->setPalette(palette3);
         menuPersonas = new QMenu(menuVer);
         menuPersonas->setObjectName(QString::fromUtf8("menuPersonas"));

@@ -1,8 +1,6 @@
 #ifndef SHARE_INCLUDE_H
 #define SHARE_INCLUDE_H
 
-
-
 //LANGUAGE INCLUDES - NAMESPACE
 
 //INCLUDES
@@ -41,6 +39,7 @@ using namespace std;
 #include <QString>
 #include <QVariant>
 #include <QSqlRecord>
+
 //NAMESPACES
 
 //PROYECT INCLUDES - NAMESPACE
@@ -75,11 +74,14 @@ using namespace std;
 #include "ui_opciones.h"
 
 
+
+
 //NAMESPACES
 
 using namespace module_log;
 using namespace module_dbconnection;
 using namespace module_session;
+
 
 
 #endif // SHARE_INCLUDE_H

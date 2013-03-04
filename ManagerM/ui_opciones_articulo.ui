@@ -26,7 +26,7 @@
    <string>TabWidget</string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="tab_3">
    <attribute name="title">
@@ -57,7 +57,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Marca</string>
+             <string>Descripción</string>
             </property>
            </widget>
           </item>
@@ -139,7 +139,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Medida</string>
+             <string>Descripción</string>
             </property>
            </widget>
           </item>
@@ -240,7 +240,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Grupo</string>
+             <string>Descripción</string>
             </property>
            </widget>
           </item>

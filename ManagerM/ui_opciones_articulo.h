@@ -20,6 +20,9 @@ public:
 private slots:
     void on_pushButton_save_grupo_clicked();
 
+
+
+
 private:
     Ui::ui_opciones_articulo *ui;
 };
