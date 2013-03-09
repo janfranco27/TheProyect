@@ -8,7 +8,10 @@ ui_opciones::ui_opciones(QWidget *parent) :
     ui->setupUi(this);
 
     tab_articulos = new ui_opciones_articulo(ui->widget_category);
+
     tab_base_datos = new ui_opciones_base_datos(ui->widget_category);
+
+    //tab_articulos = new tabArticulos(ui->widget_category);
 
     mf_hide_all_tabs();
 

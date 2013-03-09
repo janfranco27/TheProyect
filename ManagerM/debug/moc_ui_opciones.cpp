@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones.h'
 **
-** Created: Mon 4. Mar 16:28:21 2013
+** Created: Sat 9. Mar 13:49:51 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

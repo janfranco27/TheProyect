@@ -60,6 +60,8 @@ using namespace std;
 
 #include "object_e_usuario.h"
 #include "object_e_grupo.h"
+#include "object_e_marca.h"
+#include "object_e_medida.h"
 
 
 
@@ -73,6 +75,13 @@ using namespace std;
 
 #include "ui_opciones.h"
 
+#include "ui_articulo.h"
+
+
+#include "ui_tree_ventas.h"
+#include "ui_table_ventas.h"
+
+#include "ui_area_trabajo.h"
 
 
 
