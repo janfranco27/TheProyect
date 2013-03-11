@@ -25,10 +25,20 @@ SOURCES += main.cpp\
     freequery.cpp \
     ui_colaborador.cpp \
     ui_opciones.cpp \
-    ui_opciones_articulo.cpp \
     object_e_grupo.cpp \
     ui_opciones_base_datos.cpp \
+<<<<<<< HEAD
     ui_inicio.cpp
+=======
+    ui_articulo.cpp \
+    object_e_articulo.cpp \
+    ui_opciones_articulo.cpp \
+    object_e_medida.cpp \
+    object_e_marca.cpp \
+    ui_area_trabajo.cpp \
+    ui_tree_ventas.cpp \
+    ui_table_ventas.cpp
+>>>>>>> origin/jl
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -44,18 +54,37 @@ HEADERS  += ui_main.h \
     object_general.h \
     ui_colaborador.h \
     ui_opciones.h \
-    ui_opciones_articulo.h \
     object_e_grupo.h \
     ui_opciones_base_datos.h \
+<<<<<<< HEAD
     ui_inicio.h
+=======
+    ui_articulo.h \
+    ui_articulo.h \
+    object_e_articulo.h \
+    ui_opciones_articulo.h \
+    object_e_medida.h \
+    object_e_marca.h \
+    ui_area_trabajo.h \
+    ui_tree_ventas.h \
+    ui_table_ventas.h
+>>>>>>> origin/jl
 
 FORMS    += ui_main.ui \
     ui_login.ui \
     ui_colaborador.ui \
     ui_opciones.ui \
+    ui_opciones_base_datos.ui \
+    ui_articulo.ui \
     ui_opciones_articulo.ui \
+<<<<<<< HEAD
     ui_opciones_base_datos.ui \
     ui_inicio.ui
+=======
+    ui_area_trabajo.ui \
+    ui_tree_ventas.ui \
+    ui_table_ventas.ui
+>>>>>>> origin/jl
 
 RESOURCES += \
     Icons.qrc

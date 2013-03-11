@@ -2,20 +2,16 @@
 #include "ui_ui_opciones_articulo.h"
 
 ui_opciones_articulo::ui_opciones_articulo(QWidget *parent) :
-    QTabWidget(parent),
+    QWidget(parent),
     ui(new Ui::ui_opciones_articulo)
 {
     ui->setupUi(this);
 
+    model_marca = new QSqlQueryModel;
+    model_medida = new QSqlQueryModel;
+    model_grupo = new QSqlQueryModel;
 
 
-
-    QSqlQueryModel *model = new QSqlQueryModel;
-    model->setQuery("SELECT * FROM e_grupo");
-    model->setHeaderData(0, Qt::Horizontal, tr("Código"));
-    model->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
-    ui->tableView_grupo->setModel(model);
-    ui->tableView_grupo->show();
 }
 
 ui_opciones_articulo::~ui_opciones_articulo()
@@ -25,12 +21,70 @@ ui_opciones_articulo::~ui_opciones_articulo()
 
 void ui_opciones_articulo::on_pushButton_save_grupo_clicked()
 {
-   object_e_grupo* grupo = new object_e_grupo;
-   grupo->mf_set_descripcion(ui->lineEdit_grupo->text());
-   grupo->mf_add();
+    object_e_grupo* grupo = new object_e_grupo;
+    grupo->mf_set_descripcion(ui->lineEdit_grupo->text());
+    grupo->mf_add();
 
-   ui->lineEdit_grupo->clear();
+    ui->lineEdit_grupo->clear();
+}
 
+void ui_opciones_articulo::on_pushButton_save_medida_clicked()
+{
+    object_e_medida* medida = new object_e_medida;
+    medida->mf_set_descripcion(ui->lineEdit_medida->text());
+    medida->mf_add();
+
+
+    ui->lineEdit_medida->clear();
+}
+
+void ui_opciones_articulo::on_pushButton_save_marca_clicked()
+{
+
+    object_e_marca* marca = new object_e_marca;
+    marca->mf_set_descripcion(ui->lineEdit_marca->text());
+    marca->mf_add();
+
+
+    ui->lineEdit_marca->clear();
+}
+
+void ui_opciones_articulo::on_tabWidget_currentChanged(int index)
+{
+
+    model_grupo->setQuery("SELECT * FROM e_grupo");
+    model_grupo->setHeaderData(0, Qt::Horizontal, tr("Código"));
+    model_grupo->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
+
+    model_medida->setQuery("SELECT * FROM e_medida");
+    model_medida->setHeaderData(0, Qt::Horizontal, tr("Código"));
+    model_medida->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
+
+    model_marca->setQuery("SELECT * FROM e_marca");
+    model_marca->setHeaderData(0, Qt::Horizontal, tr("Código"));
+    model_marca->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
+
+    ui->tableView_grupo->setModel(model_grupo);
+    ui->tableView_medida->setModel(model_medida);
+    ui->tableView_marca->setModel(model_marca);
+
+    switch(index)
+    {
+    case marca:
+        ui->tableView_marca->show();
+        break;
+
+    case medida:
+        ui->tableView_medida->show();
+        break;
+
+    case grupo:
+        ui->tableView_grupo->show();
+        break;
+
+    default:
+        break;
+    }
 }
 
 

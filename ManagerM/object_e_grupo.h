@@ -1,7 +1,7 @@
 #ifndef OBJECT_E_GRUPO_H
 #define OBJECT_E_GRUPO_H
 
-#include "object_general.h"
+#include "share_include.h"
 
 class object_e_grupo:public object_general
 {

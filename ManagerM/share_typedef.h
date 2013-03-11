@@ -15,6 +15,7 @@ typedef vector<vector<QVariant> > TUPLES;
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 enum opciones_categoria{articulo,banco,base_datos,general};
+enum opciones_articulo{marca,medida,grupo};
 
 //MACROS DEL SISTEMA
 

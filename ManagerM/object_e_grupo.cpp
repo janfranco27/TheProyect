@@ -2,22 +2,22 @@
 
 object_e_grupo::object_e_grupo()
 {
-    SYS_FUNCTION("construct_0");
-	SYS_WRITE;
+	//function construct_0
+	//w!
 }
 
 object_e_grupo::object_e_grupo(_QSTR pk_grupo, _QSTR descripcion)
 {
-    SYS_FUNCTION("construct_1");
-	SYS_WRITE;
+	//function construct_1
+	//w!
 
 	md_o_pk_grupo = pk_grupo;
 	md_o_descripcion = descripcion;
 }
 object_e_grupo::object_e_grupo(_QSTR descripcion)
 {
-    SYS_FUNCTION("construct_2");
-	SYS_WRITE;
+	//function construct_2
+	//w!
 
 	md_o_descripcion = descripcion;
 }
@@ -29,38 +29,38 @@ object_e_grupo::~object_e_grupo()
 
 void object_e_grupo::mf_set_pk_grupo(_QSTR pk_grupo)
 {
-    SYS_FUNCTION("mf_set_pk_grupo");
-	SYS_WRITE;
+	//function mf_set_pk_grupo
+	//w!
 
 	md_o_pk_grupo = pk_grupo;
 }
 void object_e_grupo::mf_set_descripcion(_QSTR descripcion)
 {
-    SYS_FUNCTION("mf_set_descripcion");
-	SYS_WRITE;
+	//function mf_set_descripcion
+	//w!
 
 	md_o_descripcion = descripcion;
 }
 
 _QSTR object_e_grupo::mf_get_pk_grupo()
 {
-    SYS_FUNCTION("mf_get_pk_grupo");
-	SYS_WRITE;
+	//function mf_get_pk_grupo
+	//w!
 
 	return md_o_pk_grupo;
 }
 _QSTR object_e_grupo::mf_get_descripcion()
 {
-    SYS_FUNCTION("mf_get_descripcion");
-	SYS_WRITE;
+	//function mf_get_descripcion
+	//w!
 
 	return md_o_descripcion;
 }
 
 bool object_e_grupo::mf_load(_QSTR pk)
 {
-    SYS_FUNCTION("mf_load");
-	SYS_WRITE;
+	//function mf_load
+	//w!
 
 	QSqlQuery query;
 
@@ -73,21 +73,21 @@ bool object_e_grupo::mf_load(_QSTR pk)
 		md_o_pk_grupo = query.value(0).toString();
 		md_o_descripcion = query.value(1).toString();
 
-        SYS_STATE("OK");
-		SYS_WRITE;
+		//state OK
+		//w!
 
 		return true;
 	}else{
-        SYS_STATE("FAILED");
-		SYS_WRITE;
+		//state FAILED
+		//w!
 
 		return false;
 	}
 }
 bool object_e_grupo::mf_add()
 {
-    SYS_FUNCTION("mf_add");
-	SYS_WRITE;
+	//function mf_add
+	//w!
 
 	QSqlQuery query;
 
@@ -96,14 +96,14 @@ bool object_e_grupo::mf_add()
 
 	if(query.exec())
 	{
-        SYS_STATE("OK");
-		SYS_WRITE;
+		//state OK
+		//w!
 
 		return true;
 
 	}else{
-        SYS_STATE("FAILED");
-		SYS_WRITE;
+		//state FAILED
+		//w!
 
 		return false;
 	}
@@ -111,8 +111,8 @@ bool object_e_grupo::mf_add()
 
 bool object_e_grupo::mf_update()
 {
-    SYS_FUNCTION("mf_update");
-	SYS_WRITE;
+	//function mf_update
+	//w!
 
 	QSqlQuery query;
 
@@ -122,14 +122,14 @@ bool object_e_grupo::mf_update()
 
 	if(query.exec())
 	{
-        SYS_STATE("OK");
-		SYS_WRITE;
+		//state OK
+		//w!
 
 		return true;
 
 	}else{
-        SYS_STATE("FAILED");
-		SYS_WRITE;
+		//state FAILED
+		//w!
 
 		return false;
 	}
@@ -137,8 +137,8 @@ bool object_e_grupo::mf_update()
 
 bool object_e_grupo::mf_remove()
 {
-    SYS_FUNCTION("mf_remove");
-	SYS_WRITE;
+	//function mf_remove
+	//w!
 
 	QSqlQuery query;
 
@@ -147,14 +147,14 @@ bool object_e_grupo::mf_remove()
 
 	if(query.exec())
 	{
-        SYS_STATE("OK");
-		SYS_WRITE;
+		//state OK
+		//w!
 
 		return true;
 
 	}else{
-        SYS_STATE("FAILED");
-		SYS_WRITE;
+		//state FAILED
+		//w!
 
 		return false;
 	}

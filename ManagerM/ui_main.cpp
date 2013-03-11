@@ -12,6 +12,8 @@ ui_main::ui_main(QWidget *parent) :
     ui->label_usuario->setText(QString(USER_GET_NICK_NAME.c_str()));
     ui->menuBar->hide();
 
+    form_area_trabajo = new ui_area_trabajo;
+
 }
 
 ui_main::~ui_main()
@@ -90,4 +92,18 @@ void ui_main::keyReleaseEvent(QKeyEvent *event)
         ui->menuBar->setHidden(!(ui->menuBar->isHidden()));
 
     }
+}
+
+void ui_main::on_pushButton_articulo_clicked()
+{
+    ui_articulo *form_articulo = new ui_articulo;
+    form_articulo->show();
+}
+
+void ui_main::on_pushButton_ventas_clicked()
+{
+    form_area_trabajo->setModulo(VENTAS);
+    form_area_trabajo->show();
+   // form_area_trabajo->showMaximized();
+
 }
