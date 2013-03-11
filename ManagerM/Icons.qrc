@@ -57,5 +57,12 @@
         <file>Iconos/save.png</file>
         <file>Iconos/sq_plus.png</file>
         <file>Iconos/trash.png</file>
+        <file>Iconos/Search_1.png</file>
+        <file>Iconos/trash.png</file>
+        <file>Iconos/TRASH - FULL.png</file>
+        <file>Iconos/SEARCH (1).png</file>
+        <file>Iconos/doc_edit.png</file>
+        <file>Iconos/Black_New-Page.png</file>
+        <file>Iconos/monotone_search_zoom.png</file>
     </qresource>
 </RCC>

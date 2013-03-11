@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_table_ventas.ui'
 **
-** Created: Sat 9. Mar 14:35:29 2013
+** Created: Mon 11. Mar 08:51:30 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
