@@ -1,0 +1,29 @@
+#ifndef UI_TOOL_BAR_H
+#define UI_TOOL_BAR_H
+
+#include <QWidget>
+
+#include "share_include.h"
+
+namespace Ui {
+class ui_tool_bar;
+}
+
+class ui_tool_bar : public QWidget
+{
+    Q_OBJECT
+    
+public:
+    explicit ui_tool_bar(QWidget *parent = 0);
+    ~ui_tool_bar();
+    
+private slots:
+    void on_pushButton_home_clicked();
+
+    void on_pushButton_ventas_clicked();
+
+private:
+    Ui::ui_tool_bar *ui;
+};
+
+#endif // UI_TOOL_BAR_H

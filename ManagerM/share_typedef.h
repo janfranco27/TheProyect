@@ -77,6 +77,10 @@ enum opciones_articulo{marca,medida,grupo};
 
     #define SYSTEM SINGLETON(Sistema)
 
+    //ToolBar
+
+    #define TOOLBAR SINGLETON(ui_tool_bar)
+
 
 
 //CONSTANTES DEL SISTEMA

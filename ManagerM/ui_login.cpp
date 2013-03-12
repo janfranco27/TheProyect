@@ -53,7 +53,10 @@ void ui_login::on_pushButton_aceptar_clicked()
 
         close();        
         APP_SHOW_MAXIMIZED;
-        APP_STATUS_BAR(C_LOGIN_LOGGED);
+
+        _QSTR message = "Bienvenido " + QString::fromStdString(USER_GET_NAME) + ".";
+
+        APP_STATUS_BAR(message);
 
 
     }else{

@@ -1,0 +1,26 @@
+#include "ui_tool_bar.h"
+#include "ui_ui_tool_bar.h"
+
+ui_tool_bar::ui_tool_bar(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::ui_tool_bar)
+{
+    ui->setupUi(this);
+}
+
+ui_tool_bar::~ui_tool_bar()
+{
+    delete ui;
+}
+
+void ui_tool_bar::on_pushButton_home_clicked()
+{
+    ui_module_home* form_home = new ui_module_home;
+    APP_MANAGERM->setCentralWidget(form_home);
+}
+
+void ui_tool_bar::on_pushButton_ventas_clicked()
+{
+    ui_module_ventas* form_ventas = new ui_module_ventas;
+    APP_MANAGERM->setCentralWidget(form_ventas);
+}

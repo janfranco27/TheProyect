@@ -8,6 +8,10 @@ ui_main::ui_main(QWidget *parent) :
     ui(new Ui::ui_main)
 {
     ui->setupUi(this);
+    ui->toolBar->addWidget(TOOLBAR);
+   // ui->toolBar->setMovable(false);
+
+
 
 }
 

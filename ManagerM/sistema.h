@@ -24,6 +24,8 @@ public:
     QSqlQuery getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,vector<pair<_QSTR,_QSTR> >  where = vector<pair<_QSTR,_QSTR> >(),vector<pair<_QSTR,_QSTR> > joins = vector<pair<_QSTR,_QSTR> >(),_QSTR   extra="");
     int getAutoIncrement(const _QSTR tablename);
     QSqlQuery getBoletas();
+    QSqlQuery getFacturas();
+
 
 
 };

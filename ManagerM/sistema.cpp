@@ -225,5 +225,15 @@ QSqlQuery Sistema::getBoletas()
     return getSelectQuery(select,from);
 }
 
+QSqlQuery Sistema::getFacturas()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_factura_venta");
+
+    return getSelectQuery(select,from);
+
+}
+
 
 

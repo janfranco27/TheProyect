@@ -20,6 +20,7 @@ INPUT(
 ./debug\object_e_marca.o
 ./debug\ui_module_home.o
 ./debug\ui_module_ventas.o
+./debug\ui_tool_bar.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -29,5 +30,6 @@ INPUT(
 ./debug\moc_ui_opciones_articulo.o
 ./debug\moc_ui_module_home.o
 ./debug\moc_ui_module_ventas.o
+./debug\moc_ui_tool_bar.o
 ./debug\qrc_Icons.o
 );

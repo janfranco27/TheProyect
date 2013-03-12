@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_home.ui'
 **
-** Created: Mon 11. Mar 12:20:42 2013
+** Created: Mon 11. Mar 21:15:36 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QFrame>
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -27,9 +28,9 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_module_home
 {
 public:
+    QGridLayout *gridLayout_2;
+    QFrame *frame;
     QGridLayout *gridLayout;
-    QSpacerItem *verticalSpacer_5;
-    QSpacerItem *horizontalSpacer_7;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
@@ -52,30 +53,32 @@ public:
     QSpacerItem *horizontalSpacer_6;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *verticalSpacer_4;
-    QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *verticalSpacer_5;
     QSpacerItem *verticalSpacer_6;
+    QSpacerItem *horizontalSpacer_8;
 
     void setupUi(QWidget *ui_module_home)
     {
         if (ui_module_home->objectName().isEmpty())
             ui_module_home->setObjectName(QString::fromUtf8("ui_module_home"));
-        ui_module_home->resize(824, 638);
-        ui_module_home->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
-        gridLayout = new QGridLayout(ui_module_home);
+        ui_module_home->resize(826, 640);
+        gridLayout_2 = new QGridLayout(ui_module_home);
+        gridLayout_2->setSpacing(0);
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        frame = new QFrame(ui_module_home);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        gridLayout = new QGridLayout(frame);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
-
-        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
-
         gridLayout_4 = new QGridLayout();
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_2 = new QLabel(ui_module_home);
+        label_2 = new QLabel(frame);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         QFont font;
         font.setFamily(QString::fromUtf8("Segoe UI"));
@@ -94,7 +97,7 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label_usuario_2 = new QLabel(ui_module_home);
+        label_usuario_2 = new QLabel(frame);
         label_usuario_2->setObjectName(QString::fromUtf8("label_usuario_2"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -111,7 +114,7 @@ public:
 
         horizontalLayout_4->addWidget(label_usuario_2);
 
-        pushButton_usuario_2 = new QPushButton(ui_module_home);
+        pushButton_usuario_2 = new QPushButton(frame);
         pushButton_usuario_2->setObjectName(QString::fromUtf8("pushButton_usuario_2"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
@@ -138,7 +141,7 @@ public:
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setSpacing(10);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        pushButton_compras_2 = new QPushButton(ui_module_home);
+        pushButton_compras_2 = new QPushButton(frame);
         pushButton_compras_2->setObjectName(QString::fromUtf8("pushButton_compras_2"));
         sizePolicy1.setHeightForWidth(pushButton_compras_2->sizePolicy().hasHeightForWidth());
         pushButton_compras_2->setSizePolicy(sizePolicy1);
@@ -155,7 +158,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_compras_2, 0, 0, 1, 1);
 
-        pushButton_ventas_2 = new QPushButton(ui_module_home);
+        pushButton_ventas_2 = new QPushButton(frame);
         pushButton_ventas_2->setObjectName(QString::fromUtf8("pushButton_ventas_2"));
         sizePolicy1.setHeightForWidth(pushButton_ventas_2->sizePolicy().hasHeightForWidth());
         pushButton_ventas_2->setSizePolicy(sizePolicy1);
@@ -170,7 +173,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_ventas_2, 0, 1, 1, 1);
 
-        pushButton_articulo_2 = new QPushButton(ui_module_home);
+        pushButton_articulo_2 = new QPushButton(frame);
         pushButton_articulo_2->setObjectName(QString::fromUtf8("pushButton_articulo_2"));
         sizePolicy1.setHeightForWidth(pushButton_articulo_2->sizePolicy().hasHeightForWidth());
         pushButton_articulo_2->setSizePolicy(sizePolicy1);
@@ -185,7 +188,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_articulo_2, 1, 0, 1, 1);
 
-        pushButton_colaboradores_2 = new QPushButton(ui_module_home);
+        pushButton_colaboradores_2 = new QPushButton(frame);
         pushButton_colaboradores_2->setObjectName(QString::fromUtf8("pushButton_colaboradores_2"));
         sizePolicy1.setHeightForWidth(pushButton_colaboradores_2->sizePolicy().hasHeightForWidth());
         pushButton_colaboradores_2->setSizePolicy(sizePolicy1);
@@ -200,7 +203,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_colaboradores_2, 1, 1, 1, 1);
 
-        pushButton_facturacion_2 = new QPushButton(ui_module_home);
+        pushButton_facturacion_2 = new QPushButton(frame);
         pushButton_facturacion_2->setObjectName(QString::fromUtf8("pushButton_facturacion_2"));
         sizePolicy1.setHeightForWidth(pushButton_facturacion_2->sizePolicy().hasHeightForWidth());
         pushButton_facturacion_2->setSizePolicy(sizePolicy1);
@@ -215,7 +218,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_facturacion_2, 2, 0, 1, 1);
 
-        pushButton_sistema_2 = new QPushButton(ui_module_home);
+        pushButton_sistema_2 = new QPushButton(frame);
         pushButton_sistema_2->setObjectName(QString::fromUtf8("pushButton_sistema_2"));
         sizePolicy1.setHeightForWidth(pushButton_sistema_2->sizePolicy().hasHeightForWidth());
         pushButton_sistema_2->setSizePolicy(sizePolicy1);
@@ -240,7 +243,7 @@ public:
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setSpacing(10);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        pushButton_10 = new QPushButton(ui_module_home);
+        pushButton_10 = new QPushButton(frame);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         sizePolicy1.setHeightForWidth(pushButton_10->sizePolicy().hasHeightForWidth());
         pushButton_10->setSizePolicy(sizePolicy1);
@@ -257,7 +260,7 @@ public:
 
         gridLayout_6->addWidget(pushButton_10, 0, 0, 1, 1);
 
-        pushButton_11 = new QPushButton(ui_module_home);
+        pushButton_11 = new QPushButton(frame);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
         pushButton_11->setSizePolicy(sizePolicy1);
@@ -274,7 +277,7 @@ public:
 
         gridLayout_6->addWidget(pushButton_11, 0, 1, 1, 1);
 
-        pushButton_12 = new QPushButton(ui_module_home);
+        pushButton_12 = new QPushButton(frame);
         pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
         sizePolicy1.setHeightForWidth(pushButton_12->sizePolicy().hasHeightForWidth());
         pushButton_12->setSizePolicy(sizePolicy1);
@@ -307,15 +310,26 @@ public:
         gridLayout_4->addItem(verticalSpacer_4, 1, 0, 1, 1);
 
 
-        gridLayout->addLayout(gridLayout_4, 1, 1, 2, 2);
+        gridLayout->addLayout(gridLayout_4, 1, 1, 1, 1);
 
-        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_8, 2, 3, 1, 1);
+        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
+
+        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
 
         verticalSpacer_6 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        gridLayout->addItem(verticalSpacer_6, 3, 2, 1, 1);
+        gridLayout->addItem(verticalSpacer_6, 2, 1, 1, 1);
+
+        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_8, 1, 2, 1, 1);
+
+
+        gridLayout_2->addWidget(frame, 0, 0, 1, 1);
 
 
         retranslateUi(ui_module_home);

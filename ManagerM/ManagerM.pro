@@ -33,7 +33,9 @@ SOURCES += main.cpp\
     object_e_medida.cpp \
     object_e_marca.cpp \
     ui_module_home.cpp \
-    ui_module_ventas.cpp
+    ui_module_ventas.cpp \
+    ui_tool_bar.cpp \
+    ui_edit_boleta_venta.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -58,7 +60,9 @@ HEADERS  += ui_main.h \
     object_e_medida.h \
     object_e_marca.h \
     ui_module_home.h \
-    ui_module_ventas.h
+    ui_module_ventas.h \
+    ui_tool_bar.h \
+    ui_edit_boleta_venta.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -68,7 +72,9 @@ FORMS    += ui_main.ui \
     ui_articulo.ui \
     ui_opciones_articulo.ui \
     ui_module_home.ui \
-    ui_module_ventas.ui
+    ui_module_ventas.ui \
+    ui_tool_bar.ui \
+    ui_edit_boleta_venta.ui
 
 RESOURCES += \
     Icons.qrc

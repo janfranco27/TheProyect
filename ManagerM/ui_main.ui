@@ -119,14 +119,6 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionHome"/>
-   <addaction name="actionSapace"/>
-   <addaction name="actionVentas"/>
-   <addaction name="actionCompras"/>
-   <addaction name="actionArticulos"/>
-   <addaction name="actionCliente"/>
-   <addaction name="actionColaborador"/>
-   <addaction name="actionSistema"/>
   </widget>
   <action name="actionAcerca_de_ManagerM">
    <property name="text">
