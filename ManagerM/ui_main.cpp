@@ -9,6 +9,10 @@ ui_main::ui_main(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    APP_TOOL_BAR->setMaximumHeight(0);
+    ui->toolBar->addWidget(APP_TOOL_BAR);
+
+   // ui->toolBar->setMovable(false);
 }
 
 ui_main::~ui_main()
@@ -64,7 +68,7 @@ void ui_main::on_actionHome_triggered()
 {
     ui_module_home *form_home = new ui_module_home;
     setCentralWidget(form_home);
-    form_home->showMaximized();
+   // form_home->showMaximized();
 
 }
 

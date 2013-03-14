@@ -1,15 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_main.h'
 **
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Thu 7. Mar 20:20:12 2013
-=======
-** Created: Sat 9. Mar 13:49:43 2013
->>>>>>> origin/jl
-=======
-** Created: Mon 11. Mar 12:21:29 2013
->>>>>>> origin/jl
+** Created: Mon 11. Mar 20:56:48 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

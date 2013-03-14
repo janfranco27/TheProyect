@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_ventas.ui'
 **
-** Created: Mon 11. Mar 12:20:42 2013
+** Created: Tue 12. Mar 11:10:01 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -22,7 +22,7 @@
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QSplitter>
-#include <QtGui/QTableWidget>
+#include <QtGui/QTableView>
 #include <QtGui/QTreeWidget>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
@@ -45,19 +45,19 @@ public:
     QPushButton *pushButton_editar;
     QPushButton *pushButton_eliminar;
     QSpacerItem *horizontalSpacer_3;
-    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_buscar;
     QPushButton *pushButton_buscar;
-    QTableWidget *tableWidget_ventas;
+    QTableView *tableView_ventas;
 
     void setupUi(QWidget *ui_module_ventas)
     {
         if (ui_module_ventas->objectName().isEmpty())
             ui_module_ventas->setObjectName(QString::fromUtf8("ui_module_ventas"));
-        ui_module_ventas->resize(901, 238);
+        ui_module_ventas->resize(800, 258);
         gridLayout = new QGridLayout(ui_module_ventas);
         gridLayout->setSpacing(0);
-        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 9, 0, 0);
         splitter = new QSplitter(ui_module_ventas);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
@@ -65,7 +65,7 @@ public:
         layoutWidget = new QWidget(splitter);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setSpacing(0);
+        verticalLayout->setSpacing(10);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(layoutWidget);
@@ -108,7 +108,7 @@ public:
         layoutWidget1 = new QWidget(splitter);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
-        verticalLayout_2->setSpacing(0);
+        verticalLayout_2->setSpacing(10);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
@@ -163,17 +163,21 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_3);
 
-        lineEdit = new QLineEdit(layoutWidget1);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit_buscar = new QLineEdit(layoutWidget1);
+        lineEdit_buscar->setObjectName(QString::fromUtf8("lineEdit_buscar"));
         QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy3);
-        lineEdit->setMinimumSize(QSize(200, 0));
-        lineEdit->setMaximumSize(QSize(200, 16777215));
+        sizePolicy3.setHeightForWidth(lineEdit_buscar->sizePolicy().hasHeightForWidth());
+        lineEdit_buscar->setSizePolicy(sizePolicy3);
+        lineEdit_buscar->setMinimumSize(QSize(250, 0));
+        lineEdit_buscar->setMaximumSize(QSize(250, 16777215));
+        lineEdit_buscar->setFrame(true);
+        lineEdit_buscar->setEchoMode(QLineEdit::NoEcho);
+        lineEdit_buscar->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_buscar->setDragEnabled(false);
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(lineEdit_buscar);
 
         pushButton_buscar = new QPushButton(layoutWidget1);
         pushButton_buscar->setObjectName(QString::fromUtf8("pushButton_buscar"));
@@ -190,10 +194,15 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout);
 
-        tableWidget_ventas = new QTableWidget(layoutWidget1);
-        tableWidget_ventas->setObjectName(QString::fromUtf8("tableWidget_ventas"));
+        tableView_ventas = new QTableView(layoutWidget1);
+        tableView_ventas->setObjectName(QString::fromUtf8("tableView_ventas"));
+        tableView_ventas->setAlternatingRowColors(true);
+        tableView_ventas->setSelectionMode(QAbstractItemView::MultiSelection);
+        tableView_ventas->setSelectionBehavior(QAbstractItemView::SelectRows);
+        tableView_ventas->setShowGrid(false);
+        tableView_ventas->setGridStyle(Qt::NoPen);
 
-        verticalLayout_2->addWidget(tableWidget_ventas);
+        verticalLayout_2->addWidget(tableView_ventas);
 
         splitter->addWidget(layoutWidget1);
 
@@ -243,6 +252,11 @@ public:
         pushButton_nuevo->setText(QApplication::translate("ui_module_ventas", "Nuevo", 0, QApplication::UnicodeUTF8));
         pushButton_editar->setText(QApplication::translate("ui_module_ventas", "Editar", 0, QApplication::UnicodeUTF8));
         pushButton_eliminar->setText(QApplication::translate("ui_module_ventas", "Eliminar", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_STATUSTIP
+        lineEdit_buscar->setStatusTip(QString());
+#endif // QT_NO_STATUSTIP
+        lineEdit_buscar->setText(QString());
+        lineEdit_buscar->setPlaceholderText(QApplication::translate("ui_module_ventas", "Buscar . . .", 0, QApplication::UnicodeUTF8));
         pushButton_buscar->setText(QString());
     } // retranslateUi
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_home.ui'
 **
-** Created: Mon 11. Mar 12:20:42 2013
+** Created: Tue 12. Mar 20:23:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QFrame>
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -27,23 +28,23 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_module_home
 {
 public:
+    QGridLayout *gridLayout_2;
+    QFrame *frame;
     QGridLayout *gridLayout;
-    QSpacerItem *verticalSpacer_5;
-    QSpacerItem *horizontalSpacer_7;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_3;
-    QLabel *label_2;
+    QLabel *label;
     QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
-    QLabel *label_usuario_2;
-    QPushButton *pushButton_usuario_2;
+    QLabel *label_usuario;
+    QPushButton *pushButton_usuario;
     QGridLayout *gridLayout_5;
-    QPushButton *pushButton_compras_2;
-    QPushButton *pushButton_ventas_2;
-    QPushButton *pushButton_articulo_2;
-    QPushButton *pushButton_colaboradores_2;
-    QPushButton *pushButton_facturacion_2;
-    QPushButton *pushButton_sistema_2;
+    QPushButton *pushButton_compras;
+    QPushButton *pushButton_ventas;
+    QPushButton *pushButton_articulo;
+    QPushButton *pushButton_colaboradores;
+    QPushButton *pushButton_facturacion;
+    QPushButton *pushButton_sistema;
     QSpacerItem *horizontalSpacer_5;
     QGridLayout *gridLayout_6;
     QPushButton *pushButton_10;
@@ -52,41 +53,43 @@ public:
     QSpacerItem *horizontalSpacer_6;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *verticalSpacer_4;
-    QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *verticalSpacer_5;
     QSpacerItem *verticalSpacer_6;
+    QSpacerItem *horizontalSpacer_8;
 
     void setupUi(QWidget *ui_module_home)
     {
         if (ui_module_home->objectName().isEmpty())
             ui_module_home->setObjectName(QString::fromUtf8("ui_module_home"));
-        ui_module_home->resize(824, 638);
-        ui_module_home->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
-        gridLayout = new QGridLayout(ui_module_home);
+        ui_module_home->resize(826, 640);
+        gridLayout_2 = new QGridLayout(ui_module_home);
+        gridLayout_2->setSpacing(0);
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        frame = new QFrame(ui_module_home);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        gridLayout = new QGridLayout(frame);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
-
-        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
-
         gridLayout_4 = new QGridLayout();
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_2 = new QLabel(ui_module_home);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label = new QLabel(frame);
+        label->setObjectName(QString::fromUtf8("label"));
         QFont font;
         font.setFamily(QString::fromUtf8("Segoe UI"));
         font.setPointSize(20);
         font.setBold(false);
         font.setWeight(50);
-        label_2->setFont(font);
-        label_2->setStyleSheet(QString::fromUtf8(""));
-        label_2->setInputMethodHints(Qt::ImhNone);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8(""));
+        label->setInputMethodHints(Qt::ImhNone);
 
-        horizontalLayout_3->addWidget(label_2);
+        horizontalLayout_3->addWidget(label);
 
         horizontalSpacer_4 = new QSpacerItem(418, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -94,40 +97,40 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label_usuario_2 = new QLabel(ui_module_home);
-        label_usuario_2->setObjectName(QString::fromUtf8("label_usuario_2"));
+        label_usuario = new QLabel(frame);
+        label_usuario->setObjectName(QString::fromUtf8("label_usuario"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_usuario_2->sizePolicy().hasHeightForWidth());
-        label_usuario_2->setSizePolicy(sizePolicy);
-        label_usuario_2->setMinimumSize(QSize(70, 0));
+        sizePolicy.setHeightForWidth(label_usuario->sizePolicy().hasHeightForWidth());
+        label_usuario->setSizePolicy(sizePolicy);
+        label_usuario->setMinimumSize(QSize(70, 0));
         QFont font1;
         font1.setFamily(QString::fromUtf8("Segoe UI"));
         font1.setPointSize(16);
         font1.setBold(false);
         font1.setWeight(50);
-        label_usuario_2->setFont(font1);
+        label_usuario->setFont(font1);
 
-        horizontalLayout_4->addWidget(label_usuario_2);
+        horizontalLayout_4->addWidget(label_usuario);
 
-        pushButton_usuario_2 = new QPushButton(ui_module_home);
-        pushButton_usuario_2->setObjectName(QString::fromUtf8("pushButton_usuario_2"));
+        pushButton_usuario = new QPushButton(frame);
+        pushButton_usuario->setObjectName(QString::fromUtf8("pushButton_usuario"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(pushButton_usuario_2->sizePolicy().hasHeightForWidth());
-        pushButton_usuario_2->setSizePolicy(sizePolicy1);
-        pushButton_usuario_2->setMinimumSize(QSize(50, 50));
-        pushButton_usuario_2->setMaximumSize(QSize(50, 50));
-        pushButton_usuario_2->setCursor(QCursor(Qt::PointingHandCursor));
+        sizePolicy1.setHeightForWidth(pushButton_usuario->sizePolicy().hasHeightForWidth());
+        pushButton_usuario->setSizePolicy(sizePolicy1);
+        pushButton_usuario->setMinimumSize(QSize(50, 50));
+        pushButton_usuario->setMaximumSize(QSize(50, 50));
+        pushButton_usuario->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Personal.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_usuario_2->setIcon(icon);
-        pushButton_usuario_2->setIconSize(QSize(50, 50));
-        pushButton_usuario_2->setFlat(true);
+        pushButton_usuario->setIcon(icon);
+        pushButton_usuario->setIconSize(QSize(50, 50));
+        pushButton_usuario->setFlat(true);
 
-        horizontalLayout_4->addWidget(pushButton_usuario_2);
+        horizontalLayout_4->addWidget(pushButton_usuario);
 
 
         horizontalLayout_3->addLayout(horizontalLayout_4);
@@ -138,97 +141,97 @@ public:
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setSpacing(10);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        pushButton_compras_2 = new QPushButton(ui_module_home);
-        pushButton_compras_2->setObjectName(QString::fromUtf8("pushButton_compras_2"));
-        sizePolicy1.setHeightForWidth(pushButton_compras_2->sizePolicy().hasHeightForWidth());
-        pushButton_compras_2->setSizePolicy(sizePolicy1);
-        pushButton_compras_2->setMinimumSize(QSize(150, 150));
-        pushButton_compras_2->setMaximumSize(QSize(150, 150));
-        pushButton_compras_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_compras_2->setMouseTracking(false);
-        pushButton_compras_2->setFocusPolicy(Qt::WheelFocus);
+        pushButton_compras = new QPushButton(frame);
+        pushButton_compras->setObjectName(QString::fromUtf8("pushButton_compras"));
+        sizePolicy1.setHeightForWidth(pushButton_compras->sizePolicy().hasHeightForWidth());
+        pushButton_compras->setSizePolicy(sizePolicy1);
+        pushButton_compras->setMinimumSize(QSize(150, 150));
+        pushButton_compras->setMaximumSize(QSize(150, 150));
+        pushButton_compras->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_compras->setMouseTracking(false);
+        pushButton_compras->setFocusPolicy(Qt::WheelFocus);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Marketplace (1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_compras_2->setIcon(icon1);
-        pushButton_compras_2->setIconSize(QSize(150, 150));
-        pushButton_compras_2->setFlat(true);
+        pushButton_compras->setIcon(icon1);
+        pushButton_compras->setIconSize(QSize(150, 150));
+        pushButton_compras->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_compras_2, 0, 0, 1, 1);
+        gridLayout_5->addWidget(pushButton_compras, 0, 0, 1, 1);
 
-        pushButton_ventas_2 = new QPushButton(ui_module_home);
-        pushButton_ventas_2->setObjectName(QString::fromUtf8("pushButton_ventas_2"));
-        sizePolicy1.setHeightForWidth(pushButton_ventas_2->sizePolicy().hasHeightForWidth());
-        pushButton_ventas_2->setSizePolicy(sizePolicy1);
-        pushButton_ventas_2->setMinimumSize(QSize(150, 150));
-        pushButton_ventas_2->setMaximumSize(QSize(150, 150));
-        pushButton_ventas_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_ventas = new QPushButton(frame);
+        pushButton_ventas->setObjectName(QString::fromUtf8("pushButton_ventas"));
+        sizePolicy1.setHeightForWidth(pushButton_ventas->sizePolicy().hasHeightForWidth());
+        pushButton_ventas->setSizePolicy(sizePolicy1);
+        pushButton_ventas->setMinimumSize(QSize(150, 150));
+        pushButton_ventas->setMaximumSize(QSize(150, 150));
+        pushButton_ventas->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/Android_Market.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_ventas_2->setIcon(icon2);
-        pushButton_ventas_2->setIconSize(QSize(150, 150));
-        pushButton_ventas_2->setFlat(true);
+        pushButton_ventas->setIcon(icon2);
+        pushButton_ventas->setIconSize(QSize(150, 150));
+        pushButton_ventas->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_ventas_2, 0, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_ventas, 0, 1, 1, 1);
 
-        pushButton_articulo_2 = new QPushButton(ui_module_home);
-        pushButton_articulo_2->setObjectName(QString::fromUtf8("pushButton_articulo_2"));
-        sizePolicy1.setHeightForWidth(pushButton_articulo_2->sizePolicy().hasHeightForWidth());
-        pushButton_articulo_2->setSizePolicy(sizePolicy1);
-        pushButton_articulo_2->setMinimumSize(QSize(150, 150));
-        pushButton_articulo_2->setMaximumSize(QSize(150, 150));
-        pushButton_articulo_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_articulo = new QPushButton(frame);
+        pushButton_articulo->setObjectName(QString::fromUtf8("pushButton_articulo"));
+        sizePolicy1.setHeightForWidth(pushButton_articulo->sizePolicy().hasHeightForWidth());
+        pushButton_articulo->setSizePolicy(sizePolicy1);
+        pushButton_articulo->setMinimumSize(QSize(150, 150));
+        pushButton_articulo->setMaximumSize(QSize(150, 150));
+        pushButton_articulo->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/Tune-Up_Utilities.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_articulo_2->setIcon(icon3);
-        pushButton_articulo_2->setIconSize(QSize(150, 150));
-        pushButton_articulo_2->setFlat(true);
+        pushButton_articulo->setIcon(icon3);
+        pushButton_articulo->setIconSize(QSize(150, 150));
+        pushButton_articulo->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_articulo_2, 1, 0, 1, 1);
+        gridLayout_5->addWidget(pushButton_articulo, 1, 0, 1, 1);
 
-        pushButton_colaboradores_2 = new QPushButton(ui_module_home);
-        pushButton_colaboradores_2->setObjectName(QString::fromUtf8("pushButton_colaboradores_2"));
-        sizePolicy1.setHeightForWidth(pushButton_colaboradores_2->sizePolicy().hasHeightForWidth());
-        pushButton_colaboradores_2->setSizePolicy(sizePolicy1);
-        pushButton_colaboradores_2->setMinimumSize(QSize(150, 150));
-        pushButton_colaboradores_2->setMaximumSize(QSize(150, 150));
-        pushButton_colaboradores_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_colaboradores = new QPushButton(frame);
+        pushButton_colaboradores->setObjectName(QString::fromUtf8("pushButton_colaboradores"));
+        sizePolicy1.setHeightForWidth(pushButton_colaboradores->sizePolicy().hasHeightForWidth());
+        pushButton_colaboradores->setSizePolicy(sizePolicy1);
+        pushButton_colaboradores->setMinimumSize(QSize(150, 150));
+        pushButton_colaboradores->setMaximumSize(QSize(150, 150));
+        pushButton_colaboradores->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/myspace_alt.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_colaboradores_2->setIcon(icon4);
-        pushButton_colaboradores_2->setIconSize(QSize(150, 150));
-        pushButton_colaboradores_2->setFlat(true);
+        pushButton_colaboradores->setIcon(icon4);
+        pushButton_colaboradores->setIconSize(QSize(150, 150));
+        pushButton_colaboradores->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_colaboradores_2, 1, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_colaboradores, 1, 1, 1, 1);
 
-        pushButton_facturacion_2 = new QPushButton(ui_module_home);
-        pushButton_facturacion_2->setObjectName(QString::fromUtf8("pushButton_facturacion_2"));
-        sizePolicy1.setHeightForWidth(pushButton_facturacion_2->sizePolicy().hasHeightForWidth());
-        pushButton_facturacion_2->setSizePolicy(sizePolicy1);
-        pushButton_facturacion_2->setMinimumSize(QSize(150, 150));
-        pushButton_facturacion_2->setMaximumSize(QSize(150, 150));
-        pushButton_facturacion_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_facturacion = new QPushButton(frame);
+        pushButton_facturacion->setObjectName(QString::fromUtf8("pushButton_facturacion"));
+        sizePolicy1.setHeightForWidth(pushButton_facturacion->sizePolicy().hasHeightForWidth());
+        pushButton_facturacion->setSizePolicy(sizePolicy1);
+        pushButton_facturacion->setMinimumSize(QSize(150, 150));
+        pushButton_facturacion->setMaximumSize(QSize(150, 150));
+        pushButton_facturacion->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/Journal.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_facturacion_2->setIcon(icon5);
-        pushButton_facturacion_2->setIconSize(QSize(150, 150));
-        pushButton_facturacion_2->setFlat(true);
+        pushButton_facturacion->setIcon(icon5);
+        pushButton_facturacion->setIconSize(QSize(150, 150));
+        pushButton_facturacion->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_facturacion_2, 2, 0, 1, 1);
+        gridLayout_5->addWidget(pushButton_facturacion, 2, 0, 1, 1);
 
-        pushButton_sistema_2 = new QPushButton(ui_module_home);
-        pushButton_sistema_2->setObjectName(QString::fromUtf8("pushButton_sistema_2"));
-        sizePolicy1.setHeightForWidth(pushButton_sistema_2->sizePolicy().hasHeightForWidth());
-        pushButton_sistema_2->setSizePolicy(sizePolicy1);
-        pushButton_sistema_2->setMinimumSize(QSize(150, 150));
-        pushButton_sistema_2->setMaximumSize(QSize(150, 150));
-        pushButton_sistema_2->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_sistema = new QPushButton(frame);
+        pushButton_sistema->setObjectName(QString::fromUtf8("pushButton_sistema"));
+        sizePolicy1.setHeightForWidth(pushButton_sistema->sizePolicy().hasHeightForWidth());
+        pushButton_sistema->setSizePolicy(sizePolicy1);
+        pushButton_sistema->setMinimumSize(QSize(150, 150));
+        pushButton_sistema->setMaximumSize(QSize(150, 150));
+        pushButton_sistema->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/Iconos/Iconos/Services.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_sistema_2->setIcon(icon6);
-        pushButton_sistema_2->setIconSize(QSize(150, 1505));
-        pushButton_sistema_2->setFlat(true);
+        pushButton_sistema->setIcon(icon6);
+        pushButton_sistema->setIconSize(QSize(150, 1505));
+        pushButton_sistema->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_sistema_2, 2, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_sistema, 2, 1, 1, 1);
 
 
         gridLayout_4->addLayout(gridLayout_5, 2, 0, 2, 1);
@@ -240,7 +243,7 @@ public:
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setSpacing(10);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        pushButton_10 = new QPushButton(ui_module_home);
+        pushButton_10 = new QPushButton(frame);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         sizePolicy1.setHeightForWidth(pushButton_10->sizePolicy().hasHeightForWidth());
         pushButton_10->setSizePolicy(sizePolicy1);
@@ -257,7 +260,7 @@ public:
 
         gridLayout_6->addWidget(pushButton_10, 0, 0, 1, 1);
 
-        pushButton_11 = new QPushButton(ui_module_home);
+        pushButton_11 = new QPushButton(frame);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         sizePolicy1.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
         pushButton_11->setSizePolicy(sizePolicy1);
@@ -274,7 +277,7 @@ public:
 
         gridLayout_6->addWidget(pushButton_11, 0, 1, 1, 1);
 
-        pushButton_12 = new QPushButton(ui_module_home);
+        pushButton_12 = new QPushButton(frame);
         pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
         sizePolicy1.setHeightForWidth(pushButton_12->sizePolicy().hasHeightForWidth());
         pushButton_12->setSizePolicy(sizePolicy1);
@@ -307,15 +310,26 @@ public:
         gridLayout_4->addItem(verticalSpacer_4, 1, 0, 1, 1);
 
 
-        gridLayout->addLayout(gridLayout_4, 1, 1, 2, 2);
+        gridLayout->addLayout(gridLayout_4, 1, 1, 1, 1);
 
-        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_8, 2, 3, 1, 1);
+        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
+
+        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
 
         verticalSpacer_6 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        gridLayout->addItem(verticalSpacer_6, 3, 2, 1, 1);
+        gridLayout->addItem(verticalSpacer_6, 2, 1, 1, 1);
+
+        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_8, 1, 2, 1, 1);
+
+
+        gridLayout_2->addWidget(frame, 0, 0, 1, 1);
 
 
         retranslateUi(ui_module_home);
@@ -326,48 +340,48 @@ public:
     void retranslateUi(QWidget *ui_module_home)
     {
         ui_module_home->setWindowTitle(QApplication::translate("ui_module_home", "Form", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("ui_module_home", "Inicio", 0, QApplication::UnicodeUTF8));
-        label_usuario_2->setText(QApplication::translate("ui_module_home", "user", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("ui_module_home", "Inicio", 0, QApplication::UnicodeUTF8));
+        label_usuario->setText(QApplication::translate("ui_module_home", "user", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        pushButton_usuario_2->setToolTip(QApplication::translate("ui_module_home", "Usuario", 0, QApplication::UnicodeUTF8));
+        pushButton_usuario->setToolTip(QApplication::translate("ui_module_home", "Usuario", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_usuario_2->setText(QString());
+        pushButton_usuario->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_compras_2->setToolTip(QApplication::translate("ui_module_home", "Compras", 0, QApplication::UnicodeUTF8));
+        pushButton_compras->setToolTip(QApplication::translate("ui_module_home", "Compras", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        pushButton_compras_2->setStatusTip(QString());
+        pushButton_compras->setStatusTip(QString());
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        pushButton_compras_2->setWhatsThis(QString());
+        pushButton_compras->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
 #ifndef QT_NO_ACCESSIBILITY
-        pushButton_compras_2->setAccessibleName(QString());
+        pushButton_compras->setAccessibleName(QString());
 #endif // QT_NO_ACCESSIBILITY
 #ifndef QT_NO_ACCESSIBILITY
-        pushButton_compras_2->setAccessibleDescription(QString());
+        pushButton_compras->setAccessibleDescription(QString());
 #endif // QT_NO_ACCESSIBILITY
-        pushButton_compras_2->setText(QString());
+        pushButton_compras->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_ventas_2->setToolTip(QApplication::translate("ui_module_home", "Ventas", 0, QApplication::UnicodeUTF8));
+        pushButton_ventas->setToolTip(QApplication::translate("ui_module_home", "Ventas", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_ventas_2->setText(QString());
+        pushButton_ventas->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_articulo_2->setToolTip(QApplication::translate("ui_module_home", "Articulos", 0, QApplication::UnicodeUTF8));
+        pushButton_articulo->setToolTip(QApplication::translate("ui_module_home", "Articulos", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_articulo_2->setText(QString());
+        pushButton_articulo->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_colaboradores_2->setToolTip(QApplication::translate("ui_module_home", "Colaboradores", 0, QApplication::UnicodeUTF8));
+        pushButton_colaboradores->setToolTip(QApplication::translate("ui_module_home", "Colaboradores", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_colaboradores_2->setText(QString());
+        pushButton_colaboradores->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_facturacion_2->setToolTip(QApplication::translate("ui_module_home", "Facturacion", 0, QApplication::UnicodeUTF8));
+        pushButton_facturacion->setToolTip(QApplication::translate("ui_module_home", "Facturacion", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_facturacion_2->setText(QString());
+        pushButton_facturacion->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        pushButton_sistema_2->setToolTip(QApplication::translate("ui_module_home", "Ajustes", 0, QApplication::UnicodeUTF8));
+        pushButton_sistema->setToolTip(QApplication::translate("ui_module_home", "Ajustes", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pushButton_sistema_2->setText(QString());
+        pushButton_sistema->setText(QString());
         pushButton_10->setText(QString());
         pushButton_11->setText(QString());
         pushButton_12->setText(QString());

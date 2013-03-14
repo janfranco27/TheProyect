@@ -27,23 +27,21 @@ SOURCES += main.cpp\
     ui_opciones.cpp \
     object_e_grupo.cpp \
     ui_opciones_base_datos.cpp \
-<<<<<<< HEAD
-    ui_inicio.cpp
-=======
     ui_articulo.cpp \
     object_e_articulo.cpp \
     ui_opciones_articulo.cpp \
     object_e_medida.cpp \
     object_e_marca.cpp \
-<<<<<<< HEAD
-    ui_area_trabajo.cpp \
-    ui_tree_ventas.cpp \
-    ui_table_ventas.cpp
->>>>>>> origin/jl
-=======
     ui_module_home.cpp \
-    ui_module_ventas.cpp
->>>>>>> origin/jl
+    ui_module_ventas.cpp \
+    ui_tool_bar.cpp \
+    ui_edit_boleta_venta.cpp \
+    ui_opciones_banco.cpp \
+    object_e_banco.cpp \
+    ui_opciones_proveedor.cpp \
+    ui_edit_proveedor.cpp \
+    object_e_proveedor.cpp \
+    object_e_persona_juridicos.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -61,24 +59,22 @@ HEADERS  += ui_main.h \
     ui_opciones.h \
     object_e_grupo.h \
     ui_opciones_base_datos.h \
-<<<<<<< HEAD
-    ui_inicio.h
-=======
     ui_articulo.h \
     ui_articulo.h \
     object_e_articulo.h \
     ui_opciones_articulo.h \
     object_e_medida.h \
     object_e_marca.h \
-<<<<<<< HEAD
-    ui_area_trabajo.h \
-    ui_tree_ventas.h \
-    ui_table_ventas.h
->>>>>>> origin/jl
-=======
     ui_module_home.h \
-    ui_module_ventas.h
->>>>>>> origin/jl
+    ui_module_ventas.h \
+    ui_tool_bar.h \
+    ui_edit_boleta_venta.h \
+    ui_opciones_banco.h \
+    object_e_banco.h \
+    ui_opciones_proveedor.h \
+    ui_edit_proveedor.h \
+    object_e_proveedor.h \
+    object_e_persona_juridicos.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -87,19 +83,13 @@ FORMS    += ui_main.ui \
     ui_opciones_base_datos.ui \
     ui_articulo.ui \
     ui_opciones_articulo.ui \
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ui_opciones_base_datos.ui \
-    ui_inicio.ui
-=======
-    ui_area_trabajo.ui \
-    ui_tree_ventas.ui \
-    ui_table_ventas.ui
->>>>>>> origin/jl
-=======
     ui_module_home.ui \
-    ui_module_ventas.ui
->>>>>>> origin/jl
+    ui_module_ventas.ui \
+    ui_tool_bar.ui \
+    ui_edit_boleta_venta.ui \
+    ui_opciones_banco.ui \
+    ui_opciones_proveedor.ui \
+    ui_edit_proveedor.ui
 
 RESOURCES += \
     Icons.qrc

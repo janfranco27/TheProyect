@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones.ui'
 **
-** Created: Mon 11. Mar 12:20:42 2013
+** Created: Wed 13. Mar 12:21:59 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -82,20 +82,24 @@ public:
         QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget_modulos);
         __qlistwidgetitem->setIcon(icon1);
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/Google_Sketchup.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/Project_15.png"), QSize(), QIcon::Normal, QIcon::Off);
         QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(listWidget_modulos);
         __qlistwidgetitem1->setIcon(icon2);
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/RegEdit.png"), QSize(), QIcon::Normal, QIcon::Off);
-        QBrush brush(QColor(0, 0, 0, 255));
-        brush.setStyle(Qt::NoBrush);
+        icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/Google_Sketchup.png"), QSize(), QIcon::Normal, QIcon::Off);
         QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(listWidget_modulos);
-        __qlistwidgetitem2->setBackground(brush);
         __qlistwidgetitem2->setIcon(icon3);
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/RegEdit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QBrush brush(QColor(0, 0, 0, 255));
+        brush.setStyle(Qt::NoBrush);
         QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(listWidget_modulos);
+        __qlistwidgetitem3->setBackground(brush);
         __qlistwidgetitem3->setIcon(icon4);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(listWidget_modulos);
+        __qlistwidgetitem4->setIcon(icon5);
         listWidget_modulos->setObjectName(QString::fromUtf8("listWidget_modulos"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -158,11 +162,13 @@ public:
         QListWidgetItem *___qlistwidgetitem = listWidget_modulos->item(0);
         ___qlistwidgetitem->setText(QApplication::translate("ui_opciones", "Articulos", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem1 = listWidget_modulos->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("ui_opciones", "Bancos", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem1->setText(QApplication::translate("ui_opciones", "Proveedores", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem2 = listWidget_modulos->item(2);
-        ___qlistwidgetitem2->setText(QApplication::translate("ui_opciones", "Base de Datos", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem2->setText(QApplication::translate("ui_opciones", "Bancos", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem3 = listWidget_modulos->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("ui_opciones", "General", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem3->setText(QApplication::translate("ui_opciones", "Base de Datos", 0, QApplication::UnicodeUTF8));
+        QListWidgetItem *___qlistwidgetitem4 = listWidget_modulos->item(4);
+        ___qlistwidgetitem4->setText(QApplication::translate("ui_opciones", "General", 0, QApplication::UnicodeUTF8));
         listWidget_modulos->setSortingEnabled(__sortingEnabled);
 
         label_category->setText(QApplication::translate("ui_opciones", "Seccion", 0, QApplication::UnicodeUTF8));

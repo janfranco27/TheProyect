@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_main.ui'
 **
-** Created: Mon 11. Mar 12:26:07 2013
+** Created: Tue 12. Mar 20:23:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -108,6 +108,7 @@ public:
         actionSapace = new QAction(ui_main);
         actionSapace->setObjectName(QString::fromUtf8("actionSapace"));
         actionSapace->setEnabled(false);
+        actionSapace->setPriority(QAction::LowPriority);
         centralWidget = new QWidget(ui_main);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout_4 = new QGridLayout(centralWidget);
@@ -134,6 +135,8 @@ public:
         ui_main->setMenuBar(menuBar);
         toolBar = new QToolBar(ui_main);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        toolBar->setMovable(false);
+        toolBar->setFloatable(true);
         ui_main->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menuBar->addAction(menuUsuario->menuAction());
@@ -157,14 +160,6 @@ public:
         menuVer->addAction(actionCompras);
         menuVer->addAction(actionArticulos);
         menuVer->addAction(actionSistema);
-        toolBar->addAction(actionHome);
-        toolBar->addAction(actionSapace);
-        toolBar->addAction(actionVentas);
-        toolBar->addAction(actionCompras);
-        toolBar->addAction(actionArticulos);
-        toolBar->addAction(actionCliente);
-        toolBar->addAction(actionColaborador);
-        toolBar->addAction(actionSistema);
 
         retranslateUi(ui_main);
 

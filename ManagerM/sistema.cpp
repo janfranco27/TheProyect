@@ -225,5 +225,59 @@ QSqlQuery Sistema::getBoletas()
     return getSelectQuery(select,from);
 }
 
+QSqlQuery Sistema::getFacturas()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_factura_venta");
+
+    return getSelectQuery(select,from);
+
+}
+
+QSqlQuery Sistema::getBancos()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_banco");
+
+    return getSelectQuery(select,from);
+}
+
+QSqlQuery Sistema::getProveedores()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_proveedor");
+
+    return getSelectQuery(select,from);
+}
+
+QSqlQuery Sistema::getMarcas()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_marca");
+
+    return getSelectQuery(select,from);
+}
+
+QSqlQuery Sistema::getMedidas()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_medida");
+
+    return getSelectQuery(select,from);
+}
+
+QSqlQuery Sistema::getGrupos()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_grupo");
+
+    return getSelectQuery(select,from);
+}
 
 

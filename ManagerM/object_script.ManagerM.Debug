@@ -20,6 +20,14 @@ INPUT(
 ./debug\object_e_marca.o
 ./debug\ui_module_home.o
 ./debug\ui_module_ventas.o
+./debug\ui_tool_bar.o
+./debug\ui_edit_boleta_venta.o
+./debug\ui_opciones_banco.o
+./debug\object_e_banco.o
+./debug\ui_opciones_proveedor.o
+./debug\ui_edit_proveedor.o
+./debug\object_e_proveedor.o
+./debug\object_e_persona_juridicos.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -29,5 +37,10 @@ INPUT(
 ./debug\moc_ui_opciones_articulo.o
 ./debug\moc_ui_module_home.o
 ./debug\moc_ui_module_ventas.o
+./debug\moc_ui_tool_bar.o
+./debug\moc_ui_edit_boleta_venta.o
+./debug\moc_ui_opciones_banco.o
+./debug\moc_ui_opciones_proveedor.o
+./debug\moc_ui_edit_proveedor.o
 ./debug\qrc_Icons.o
 );

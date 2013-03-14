@@ -125,6 +125,15 @@
          </item>
          <item>
           <property name="text">
+           <string>Proveedores</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/Project_15.png</normaloff>:/Iconos/Iconos/Project_15.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Bancos</string>
           </property>
           <property name="icon">

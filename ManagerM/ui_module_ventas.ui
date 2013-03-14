@@ -6,15 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>901</width>
-    <height>238</height>
+    <width>800</width>
+    <height>258</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <property name="margin">
+  <layout class="QGridLayout" name="gridLayout" rowminimumheight="0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <property name="spacing">
@@ -31,7 +40,7 @@
      <widget class="QWidget" name="layoutWidget">
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
-        <number>0</number>
+        <number>10</number>
        </property>
        <item>
         <widget class="QLabel" name="label">
@@ -141,7 +150,7 @@
      <widget class="QWidget" name="layoutWidget">
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
-        <number>0</number>
+        <number>10</number>
        </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
@@ -258,7 +267,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="lineEdit_buscar">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -267,15 +276,36 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>200</width>
+             <width>250</width>
              <height>0</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>200</width>
+             <width>250</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="statusTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::NoEcho</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Buscar . . .</string>
            </property>
           </widget>
          </item>
@@ -308,7 +338,23 @@
         </layout>
        </item>
        <item>
-        <widget class="QTableWidget" name="tableWidget_ventas"/>
+        <widget class="QTableView" name="tableView_ventas">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::MultiSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::NoPen</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

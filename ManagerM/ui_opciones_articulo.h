@@ -21,6 +21,11 @@ private:
     QSqlQueryModel *model_marca;
     QSqlQueryModel *model_medida;
     QSqlQueryModel *model_grupo;
+
+public:
+    void update_table_marcas();
+    void update_table_medidas();
+    void update_table_grupos();
     
 private slots:
     void on_pushButton_save_grupo_clicked();
