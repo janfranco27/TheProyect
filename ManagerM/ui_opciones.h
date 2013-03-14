@@ -7,6 +7,8 @@
 
 class ui_opciones_base_datos;
 class ui_opciones_articulo;
+class ui_opciones_banco;
+class ui_opciones_proveedor;
 
 
 namespace Ui {
@@ -25,8 +27,9 @@ public:
 private:
 
     ui_opciones_base_datos* tab_base_datos;
-
+    ui_opciones_proveedor* tab_proveedores;
     ui_opciones_articulo* tab_articulos;
+    ui_opciones_banco* tab_bancos;
 
     //tabArticulos* tab_articulos;
 

@@ -14,7 +14,7 @@ typedef const QString _COMENT;
 typedef vector<vector<QVariant> > TUPLES;
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-enum opciones_categoria{articulo,banco,base_datos,general};
+enum opciones_categoria{articulo,proveedor,banco,base_datos,general};
 enum opciones_articulo{marca,medida,grupo};
 
 //MACROS DEL SISTEMA
@@ -25,7 +25,9 @@ enum opciones_articulo{marca,medida,grupo};
     #define APP_SHOW_MAXIMIZED SINGLETON(ui_main)->showMaximized()
 
     #define APP_STATUS_BAR(X) SINGLETON(ui_main)->statusBar()->showMessage(X);
-    #define APP_STATUS_BAR_TIME(X,Y) SINGLETON(ui_main)->statusBar()->showMessage(X,Y);
+    #define APP_STATUS_BAR_TIME(X,Y) SINGLETON(ui_main)->statusBar()->showMessage(X,Y)
+
+    #define APP_TOOL_BAR SINGLETON(ui_tool_bar)
 
     //LOG
 
@@ -77,9 +79,8 @@ enum opciones_articulo{marca,medida,grupo};
 
     #define SYSTEM SINGLETON(Sistema)
 
-    //ToolBar
 
-    #define TOOLBAR SINGLETON(ui_tool_bar)
+
 
 
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_tool_bar.ui'
 **
-** Created: Mon 11. Mar 20:55:55 2013
+** Created: Tue 12. Mar 21:06:25 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -71,11 +71,11 @@ public:
     {
         if (ui_tool_bar->objectName().isEmpty())
             ui_tool_bar->setObjectName(QString::fromUtf8("ui_tool_bar"));
-        ui_tool_bar->resize(1750, 61);
+        ui_tool_bar->resize(1770, 63);
         gridLayout_8 = new QGridLayout(ui_tool_bar);
         gridLayout_8->setSpacing(0);
-        gridLayout_8->setContentsMargins(0, 0, 0, 0);
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
+        gridLayout_8->setContentsMargins(0, 0, 0, 2);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         gridLayout_2 = new QGridLayout();
@@ -111,6 +111,11 @@ public:
         sizePolicy1.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
         label_7->setSizePolicy(sizePolicy1);
         label_7->setMinimumSize(QSize(50, 0));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Segoe UI Semibold"));
+        font.setBold(true);
+        font.setWeight(75);
+        label_7->setFont(font);
         label_7->setAlignment(Qt::AlignCenter);
 
         gridLayout_2->addWidget(label_7, 1, 0, 1, 3);
@@ -124,7 +129,7 @@ public:
 
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        horizontalSpacer_4 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_4 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout->addItem(horizontalSpacer_4, 0, 0, 1, 1);
 
@@ -140,7 +145,7 @@ public:
 
         gridLayout->addWidget(pushButton_ventas, 0, 1, 1, 1);
 
-        horizontalSpacer_3 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_3 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout->addItem(horizontalSpacer_3, 0, 2, 1, 1);
 
@@ -149,6 +154,7 @@ public:
         sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy1);
         label_2->setMinimumSize(QSize(50, 0));
+        label_2->setFont(font);
         label_2->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label_2, 1, 0, 1, 3);
@@ -158,7 +164,7 @@ public:
 
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        horizontalSpacer_9 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_9 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_3->addItem(horizontalSpacer_9, 0, 0, 1, 1);
 
@@ -174,7 +180,7 @@ public:
 
         gridLayout_3->addWidget(pushButton_compras, 0, 1, 1, 1);
 
-        horizontalSpacer_10 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_10 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_3->addItem(horizontalSpacer_10, 0, 2, 1, 1);
 
@@ -183,6 +189,7 @@ public:
         sizePolicy1.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
         label_9->setSizePolicy(sizePolicy1);
         label_9->setMinimumSize(QSize(50, 0));
+        label_9->setFont(font);
         label_9->setAlignment(Qt::AlignCenter);
 
         gridLayout_3->addWidget(label_9, 1, 0, 1, 3);
@@ -192,7 +199,7 @@ public:
 
         gridLayout_4 = new QGridLayout();
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        horizontalSpacer_11 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_11 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_4->addItem(horizontalSpacer_11, 0, 0, 1, 1);
 
@@ -208,7 +215,7 @@ public:
 
         gridLayout_4->addWidget(pushButton_articulos, 0, 1, 1, 1);
 
-        horizontalSpacer_12 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_12 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_4->addItem(horizontalSpacer_12, 0, 2, 1, 1);
 
@@ -217,6 +224,7 @@ public:
         sizePolicy1.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
         label_10->setSizePolicy(sizePolicy1);
         label_10->setMinimumSize(QSize(50, 0));
+        label_10->setFont(font);
         label_10->setAlignment(Qt::AlignCenter);
 
         gridLayout_4->addWidget(label_10, 1, 0, 1, 3);
@@ -226,7 +234,7 @@ public:
 
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        horizontalSpacer_13 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_13 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_5->addItem(horizontalSpacer_13, 0, 0, 1, 1);
 
@@ -242,7 +250,7 @@ public:
 
         gridLayout_5->addWidget(pushButton_colaborador, 0, 1, 1, 1);
 
-        horizontalSpacer_14 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_14 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_5->addItem(horizontalSpacer_14, 0, 2, 1, 1);
 
@@ -251,6 +259,7 @@ public:
         sizePolicy1.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
         label_11->setSizePolicy(sizePolicy1);
         label_11->setMinimumSize(QSize(50, 0));
+        label_11->setFont(font);
         label_11->setAlignment(Qt::AlignCenter);
 
         gridLayout_5->addWidget(label_11, 1, 0, 1, 3);
@@ -260,7 +269,7 @@ public:
 
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        horizontalSpacer_15 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_15 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_6->addItem(horizontalSpacer_15, 0, 0, 1, 1);
 
@@ -276,7 +285,7 @@ public:
 
         gridLayout_6->addWidget(pushButton_cliente, 0, 1, 1, 1);
 
-        horizontalSpacer_16 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_16 = new QSpacerItem(12, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         gridLayout_6->addItem(horizontalSpacer_16, 0, 2, 1, 1);
 
@@ -285,6 +294,7 @@ public:
         sizePolicy1.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
         label_12->setSizePolicy(sizePolicy1);
         label_12->setMinimumSize(QSize(50, 0));
+        label_12->setFont(font);
         label_12->setAlignment(Qt::AlignCenter);
 
         gridLayout_6->addWidget(label_12, 1, 0, 1, 3);
@@ -323,6 +333,7 @@ public:
         sizePolicy1.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
         label_13->setSizePolicy(sizePolicy1);
         label_13->setMinimumSize(QSize(50, 0));
+        label_13->setFont(font);
         label_13->setAlignment(Qt::AlignCenter);
 
         gridLayout_7->addWidget(label_13, 1, 0, 1, 3);
@@ -343,7 +354,7 @@ public:
     {
         ui_tool_bar->setWindowTitle(QApplication::translate("ui_tool_bar", "Form", 0, QApplication::UnicodeUTF8));
         pushButton_home->setText(QString());
-        label_7->setText(QApplication::translate("ui_tool_bar", "Home", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ui_tool_bar", "Inicio", 0, QApplication::UnicodeUTF8));
         pushButton_ventas->setText(QString());
         label_2->setText(QApplication::translate("ui_tool_bar", "Ventas", 0, QApplication::UnicodeUTF8));
         pushButton_compras->setText(QString());

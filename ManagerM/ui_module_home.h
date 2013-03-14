@@ -2,6 +2,7 @@
 #define UI_MODULE_HOME_H
 
 #include <QWidget>
+#include "share_include.h"
 
 namespace Ui {
 class ui_module_home;
@@ -15,6 +16,12 @@ public:
     explicit ui_module_home(QWidget *parent = 0);
     ~ui_module_home();
     
+private slots:
+
+    void on_pushButton_ventas_clicked();
+
+    void on_pushButton_sistema_clicked();
+
 private:
     Ui::ui_module_home *ui;
 };

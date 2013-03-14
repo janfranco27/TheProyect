@@ -65,15 +65,24 @@ using namespace std;
 #include "object_e_grupo.h"
 #include "object_e_marca.h"
 #include "object_e_medida.h"
-
+#include "object_e_banco.h"
+#include "object_e_proveedor.h"
+#include "object_e_persona_juridicos.h"
 
 #include "ui_tool_bar.h"
 
 #include "ui_login.h"
+
+#include "ui_edit_proveedor.h"
+
 #include "ui_opciones_base_datos.h"
 #include "ui_opciones_articulo.h"
+#include "ui_opciones_banco.h"
+#include "ui_opciones_proveedor.h"
 #include "ui_opciones.h"
+
 #include "ui_articulo.h"
+
 #include "ui_module_ventas.h"
 #include "ui_module_home.h"
 

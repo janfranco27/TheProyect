@@ -37,7 +37,7 @@
         <item row="0" column="0" colspan="4">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="label">
             <property name="font">
              <font>
               <family>Segoe UI</family>
@@ -73,7 +73,7 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QLabel" name="label_usuario_2">
+             <widget class="QLabel" name="label_usuario">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -100,7 +100,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_usuario_2">
+             <widget class="QPushButton" name="pushButton_usuario">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -153,7 +153,7 @@
            <number>10</number>
           </property>
           <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton_compras_2">
+           <widget class="QPushButton" name="pushButton_compras">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -215,7 +215,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QPushButton" name="pushButton_ventas_2">
+           <widget class="QPushButton" name="pushButton_ventas">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -259,7 +259,7 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="pushButton_articulo_2">
+           <widget class="QPushButton" name="pushButton_articulo">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -303,7 +303,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushButton_colaboradores_2">
+           <widget class="QPushButton" name="pushButton_colaboradores">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -347,7 +347,7 @@
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QPushButton" name="pushButton_facturacion_2">
+           <widget class="QPushButton" name="pushButton_facturacion">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -391,7 +391,7 @@
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QPushButton" name="pushButton_sistema_2">
+           <widget class="QPushButton" name="pushButton_sistema">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>

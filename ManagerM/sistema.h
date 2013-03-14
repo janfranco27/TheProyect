@@ -25,7 +25,11 @@ public:
     int getAutoIncrement(const _QSTR tablename);
     QSqlQuery getBoletas();
     QSqlQuery getFacturas();
-
+    QSqlQuery getBancos();
+    QSqlQuery getProveedores();
+    QSqlQuery getMarcas();
+    QSqlQuery getMedidas();
+    QSqlQuery getGrupos();
 
 
 };

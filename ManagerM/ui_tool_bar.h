@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_ventas_clicked();
 
+    void on_pushButton_opciones_clicked();
+
 private:
     Ui::ui_tool_bar *ui;
 };

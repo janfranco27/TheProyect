@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_ventas.h'
 **
-** Created: Tue 12. Mar 10:59:45 2013
+** Created: Wed 13. Mar 18:41:00 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_module_ventas[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,7 @@ static const uint qt_meta_data_ui_module_ventas[] = {
 
  // slots: signature, parameters, type, tag, flags
       30,   18,   17,   17, 0x08,
+      91,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -39,6 +40,7 @@ static const uint qt_meta_data_ui_module_ventas[] = {
 static const char qt_meta_stringdata_ui_module_ventas[] = {
     "ui_module_ventas\0\0item,column\0"
     "on_treeWidget_ventas_itemDoubleClicked(QTreeWidgetItem*,int)\0"
+    "on_pushButton_nuevo_clicked()\0"
 };
 
 void ui_module_ventas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -48,6 +50,7 @@ void ui_module_ventas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         ui_module_ventas *_t = static_cast<ui_module_ventas *>(_o);
         switch (_id) {
         case 0: _t->on_treeWidget_ventas_itemDoubleClicked((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 1: _t->on_pushButton_nuevo_clicked(); break;
         default: ;
         }
     }
@@ -85,9 +88,9 @@ int ui_module_ventas::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

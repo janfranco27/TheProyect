@@ -6,16 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1750</width>
-    <height>61</height>
+    <width>1770</width>
+    <height>63</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
-   <property name="margin">
+   <property name="leftMargin">
     <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
    </property>
    <property name="spacing">
     <number>0</number>
@@ -96,8 +105,15 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Home</string>
+          <string>Inicio</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -134,7 +150,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -176,7 +192,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -195,6 +211,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Ventas</string>
@@ -218,7 +241,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -260,7 +283,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -279,6 +302,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Compras</string>
@@ -302,7 +332,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -344,7 +374,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -363,6 +393,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Articulos</string>
@@ -386,7 +423,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -428,7 +465,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -447,6 +484,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Colaborador</string>
@@ -470,7 +514,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -512,7 +556,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>10</width>
+           <width>12</width>
            <height>20</height>
           </size>
          </property>
@@ -531,6 +575,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Cliente</string>
@@ -631,6 +682,13 @@
            <width>50</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Opciones</string>

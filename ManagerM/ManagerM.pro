@@ -35,7 +35,13 @@ SOURCES += main.cpp\
     ui_module_home.cpp \
     ui_module_ventas.cpp \
     ui_tool_bar.cpp \
-    ui_edit_boleta_venta.cpp
+    ui_edit_boleta_venta.cpp \
+    ui_opciones_banco.cpp \
+    object_e_banco.cpp \
+    ui_opciones_proveedor.cpp \
+    ui_edit_proveedor.cpp \
+    object_e_proveedor.cpp \
+    object_e_persona_juridicos.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -62,7 +68,13 @@ HEADERS  += ui_main.h \
     ui_module_home.h \
     ui_module_ventas.h \
     ui_tool_bar.h \
-    ui_edit_boleta_venta.h
+    ui_edit_boleta_venta.h \
+    ui_opciones_banco.h \
+    object_e_banco.h \
+    ui_opciones_proveedor.h \
+    ui_edit_proveedor.h \
+    object_e_proveedor.h \
+    object_e_persona_juridicos.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -74,7 +86,10 @@ FORMS    += ui_main.ui \
     ui_module_home.ui \
     ui_module_ventas.ui \
     ui_tool_bar.ui \
-    ui_edit_boleta_venta.ui
+    ui_edit_boleta_venta.ui \
+    ui_opciones_banco.ui \
+    ui_opciones_proveedor.ui \
+    ui_edit_proveedor.ui
 
 RESOURCES += \
     Icons.qrc

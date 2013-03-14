@@ -11,12 +11,32 @@ ui_opciones_articulo::ui_opciones_articulo(QWidget *parent) :
     model_medida = new QSqlQueryModel;
     model_grupo = new QSqlQueryModel;
 
-
+    update_table_medidas();
+    update_table_marcas();
+    update_table_grupos();
 }
 
 ui_opciones_articulo::~ui_opciones_articulo()
 {
     delete ui;
+}
+
+void ui_opciones_articulo::update_table_grupos()
+{
+     model_grupo->setQuery(SYSTEM->getGrupos());
+     ui->tableView_grupo->setModel(model_grupo);
+}
+
+void ui_opciones_articulo::update_table_medidas()
+{
+     model_medida->setQuery(SYSTEM->getMedidas());
+     ui->tableView_medida->setModel(model_medida);
+}
+
+void ui_opciones_articulo::update_table_marcas()
+{
+     model_marca->setQuery(SYSTEM->getMarcas());
+     ui->tableView_marca->setModel(model_marca);
 }
 
 void ui_opciones_articulo::on_pushButton_save_grupo_clicked()
@@ -52,7 +72,7 @@ void ui_opciones_articulo::on_pushButton_save_marca_clicked()
 void ui_opciones_articulo::on_tabWidget_currentChanged(int index)
 {
 
-    model_grupo->setQuery("SELECT * FROM e_grupo");
+    /*model_grupo->setQuery("SELECT * FROM e_grupo");
     model_grupo->setHeaderData(0, Qt::Horizontal, tr("Código"));
     model_grupo->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
 
@@ -66,19 +86,23 @@ void ui_opciones_articulo::on_tabWidget_currentChanged(int index)
 
     ui->tableView_grupo->setModel(model_grupo);
     ui->tableView_medida->setModel(model_medida);
-    ui->tableView_marca->setModel(model_marca);
+    ui->tableView_marca->setModel(model_marca);*/
 
     switch(index)
     {
     case marca:
+
+        //update_table_marcas();
         ui->tableView_marca->show();
         break;
 
     case medida:
+        //update_table_medidas();
         ui->tableView_medida->show();
         break;
 
     case grupo:
+        //update_table_grupos();
         ui->tableView_grupo->show();
         break;
 
