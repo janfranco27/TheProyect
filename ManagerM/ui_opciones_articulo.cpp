@@ -27,6 +27,11 @@ void ui_opciones_articulo::update_table_grupos()
      ui->tableView_grupo->setModel(model_grupo);
 }
 
+void ui_opciones_articulo::setCurrentTab(int index)
+{
+    ui->tabWidget->setCurrentIndex(index);
+}
+
 void ui_opciones_articulo::update_table_medidas()
 {
      model_medida->setQuery(SYSTEM->getMedidas());

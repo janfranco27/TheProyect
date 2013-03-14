@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_sistema_clicked();
 
+    void on_pushButton_articulo_clicked();
+
 private:
     Ui::ui_module_home *ui;
 };

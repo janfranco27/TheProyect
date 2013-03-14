@@ -280,4 +280,44 @@ QSqlQuery Sistema::getGrupos()
     return getSelectQuery(select,from);
 }
 
+QSqlQuery Sistema::getArticulos()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_articulo");
+
+    return getSelectQuery(select,from);
+}
+
+void Sistema::loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio)
+{
+
+    if(!obligatorio)
+        box->addItem("- Seleccione -");
+    for(int i=0;i<(int)nombres.size();i++)
+    {
+        box->addItem(nombres[i]);
+    }
+}
+
+vector<_QSTR> Sistema::getDescripcion(const char *tablename)
+{
+    vector<_QSTR> salida;
+
+    vector<_QSTR> select;
+    select.push_back("descripcion");
+
+    vector<_QSTR> from;
+    from.push_back(tablename);
+
+    QSqlQuery query = getSelectQuery(select,from);
+
+    while(query.next())
+    {
+        salida.push_back(query.value(0).toString());
+    }
+
+    return salida;
+}
+
 

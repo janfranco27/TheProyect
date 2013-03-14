@@ -34,6 +34,7 @@ private:
 protected:
 
     void keyReleaseEvent(QKeyEvent *);
+    void closeEvent(QCloseEvent * ev);
 
 private:
 

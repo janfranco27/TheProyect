@@ -85,6 +85,7 @@ using namespace std;
 
 #include "ui_module_ventas.h"
 #include "ui_module_home.h"
+#include "ui_module_articulos.h"
 
 
 

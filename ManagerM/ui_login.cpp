@@ -54,6 +54,7 @@ void ui_login::on_pushButton_aceptar_clicked()
         close();        
 
         APP_SHOW_MAXIMIZED;
+        APP_MANAGERM->setAttribute(Qt::WA_DeleteOnClose);
 
         ui_module_home* form_home = new ui_module_home;
         APP_MANAGERM->setCentralWidget(form_home);

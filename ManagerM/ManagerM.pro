@@ -41,7 +41,10 @@ SOURCES += main.cpp\
     ui_opciones_proveedor.cpp \
     ui_edit_proveedor.cpp \
     object_e_proveedor.cpp \
-    object_e_persona_juridicos.cpp
+    object_e_persona_juridicos.cpp \
+    ui_module_articulos.cpp \
+    ui_new_articulo.cpp
+
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -74,7 +77,9 @@ HEADERS  += ui_main.h \
     ui_opciones_proveedor.h \
     ui_edit_proveedor.h \
     object_e_proveedor.h \
-    object_e_persona_juridicos.h
+    object_e_persona_juridicos.h \
+    ui_module_articulos.h \
+    ui_new_articulo.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -89,7 +94,9 @@ FORMS    += ui_main.ui \
     ui_edit_boleta_venta.ui \
     ui_opciones_banco.ui \
     ui_opciones_proveedor.ui \
-    ui_edit_proveedor.ui
+    ui_edit_proveedor.ui \
+    ui_module_articulos.ui \
+    ui_new_articulo.ui
 
 RESOURCES += \
     Icons.qrc

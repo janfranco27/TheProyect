@@ -25,3 +25,10 @@ void ui_module_home::on_pushButton_sistema_clicked()
     ui_opciones* form_opciones = new ui_opciones;
     form_opciones->show();
 }
+
+void ui_module_home::on_pushButton_articulo_clicked()
+{
+    ui_module_articulos* form_articulos = new ui_module_articulos();
+    APP_MANAGERM->setCentralWidget(form_articulos);
+    APP_TOOL_BAR->setMaximumHeight(63);
+}

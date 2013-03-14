@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_ventas.ui'
 **
-** Created: Tue 12. Mar 11:10:01 2013
+** Created: Wed 13. Mar 22:02:48 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -55,9 +55,7 @@ public:
             ui_module_ventas->setObjectName(QString::fromUtf8("ui_module_ventas"));
         ui_module_ventas->resize(800, 258);
         gridLayout = new QGridLayout(ui_module_ventas);
-        gridLayout->setSpacing(0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 9, 0, 0);
         splitter = new QSplitter(ui_module_ventas);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);

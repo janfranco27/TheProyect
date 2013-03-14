@@ -2,8 +2,9 @@
 #define SINGLETON_H
 
 
-
+#include <QDebug>
 template<class T>
+
 class singleton
 {
 
@@ -13,7 +14,8 @@ private:
     static T* md_p_instance;
     static void mf_s_destroy_singleton()
     {
-        if(md_p_instance != 0 )
+         qDebug()<<"Deleting";
+        if(md_p_instance != 0 );
             delete md_p_instance;
     }
 
@@ -31,11 +33,14 @@ public:
         if(md_p_instance == 0)
         {
             md_p_instance = new T();
-            atexit(&mf_s_destroy_singleton);
+
+
         }
 
         return md_p_instance;
     }
+
+
 
 
     virtual ~singleton();

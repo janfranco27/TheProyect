@@ -64,6 +64,20 @@ void ui_main::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
+void ui_main::closeEvent(QCloseEvent *ev)
+{
+    //Borramos Singletons
+    delete SINGLETON(FreeQuery);
+    delete SINGLETON(session);
+    delete SINGLETON(database_connection);
+    delete SINGLETON(system_log);
+    delete SINGLETON(Sistema);
+    delete SINGLETON(ui_tool_bar);
+    delete SINGLETON(ui_main);
+
+    qDebug()<<"Borrando";
+}
+
 void ui_main::on_actionHome_triggered()
 {
     ui_module_home *form_home = new ui_module_home;

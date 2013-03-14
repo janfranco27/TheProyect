@@ -26,6 +26,7 @@ public:
     void update_table_marcas();
     void update_table_medidas();
     void update_table_grupos();
+    void setCurrentTab(int index);
     
 private slots:
     void on_pushButton_save_grupo_clicked();
