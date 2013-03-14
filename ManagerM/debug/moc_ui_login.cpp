@@ -2,9 +2,13 @@
 ** Meta object code from reading C++ file 'ui_login.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Thu 7. Mar 20:20:15 2013
 =======
 ** Created: Sat 9. Mar 13:49:46 2013
+>>>>>>> origin/jl
+=======
+** Created: Mon 11. Mar 12:21:31 2013
 >>>>>>> origin/jl
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **

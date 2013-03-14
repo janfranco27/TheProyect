@@ -9,11 +9,6 @@ ui_main::ui_main(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->label_usuario->setText(QString(USER_GET_NICK_NAME.c_str()));
-    ui->menuBar->hide();
-
-    form_area_trabajo = new ui_area_trabajo;
-
 }
 
 ui_main::~ui_main()
@@ -56,35 +51,6 @@ void ui_main::on_actionCerrar_Sesion_triggered()
 
 }
 
-void ui_main::on_pushButton_colaboradores_clicked()
-{
-
-    ui_colaborador * colaboForm = new ui_colaborador;
-
-    colaboForm->show();
-}
-
-
-
-void ui_main::on_pushButton_sistema_clicked()
-{
-    ui_opciones* form_opciones = new ui_opciones;
-    form_opciones->show();
-
-
-}
-
-void ui_main::keyPressEvent(QKeyEvent *event)
-{
-    /*
-    if(event->key() == Qt::Key_Alt)
-    {
-        ui->menuBar->setHidden(!(ui->menuBar->isHidden()));
-        qDebug()<<"Press ALT"<<endl;
-    }
-    */
-}
-
 void ui_main::keyReleaseEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Alt)
@@ -94,16 +60,16 @@ void ui_main::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
-void ui_main::on_pushButton_articulo_clicked()
+void ui_main::on_actionHome_triggered()
 {
-    ui_articulo *form_articulo = new ui_articulo;
-    form_articulo->show();
+    ui_module_home *form_home = new ui_module_home;
+    setCentralWidget(form_home);
+    form_home->showMaximized();
+
 }
 
-void ui_main::on_pushButton_ventas_clicked()
+void ui_main::on_actionVentas_triggered()
 {
-    form_area_trabajo->setModulo(VENTAS);
-    form_area_trabajo->show();
-   // form_area_trabajo->showMaximized();
-
+    ui_module_ventas *form_ventas = new ui_module_ventas;
+    setCentralWidget(form_ventas);
 }

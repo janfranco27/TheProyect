@@ -39,6 +39,7 @@ using namespace std;
 #include <QString>
 #include <QVariant>
 #include <QSqlRecord>
+#include <QSqlQueryModel>
 
 //NAMESPACES
 
@@ -78,10 +79,9 @@ using namespace std;
 #include "ui_articulo.h"
 
 
-#include "ui_tree_ventas.h"
-#include "ui_table_ventas.h"
+#include "ui_module_ventas.h"
 
-#include "ui_area_trabajo.h"
+#include "ui_module_home.h"
 
 
 

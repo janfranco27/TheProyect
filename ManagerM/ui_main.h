@@ -2,8 +2,7 @@
 #define UI_MAIN_H
 
 #include <QMainWindow>
-#include "ui_colaborador.h"
-#include "ui_area_trabajo.h"
+
 
 namespace Ui {
 class ui_main;
@@ -26,22 +25,17 @@ private slots:
 
     void on_actionCerrar_Sesion_triggered();
 
-    void on_pushButton_colaboradores_clicked();
+    void on_actionHome_triggered();
 
-    void on_pushButton_sistema_clicked();
-
-    void on_pushButton_articulo_clicked();
-
-    void on_pushButton_ventas_clicked();
+    void on_actionVentas_triggered();
 
 private:
     Ui::ui_main *ui;
 protected:
-    void keyPressEvent(QKeyEvent *);
+
     void keyReleaseEvent(QKeyEvent *);
 
 private:
-    ui_area_trabajo *form_area_trabajo;
 
 };
 

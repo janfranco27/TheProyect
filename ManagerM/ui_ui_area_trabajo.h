@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_area_trabajo.ui'
 **
-** Created: Sat 9. Mar 14:42:20 2013
+** Created: Mon 11. Mar 08:51:30 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -19,10 +19,8 @@
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QMainWindow>
-#include <QtGui/QSpacerItem>
 #include <QtGui/QSplitter>
 #include <QtGui/QToolBar>
-#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -39,23 +37,18 @@ public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QSplitter *splitter;
+    QWidget *tree_widget;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout;
-    QWidget *tree_widget;
-    QSpacerItem *horizontalSpacer;
     QFrame *line;
-    QWidget *widget1;
-    QVBoxLayout *verticalLayout_2;
     QWidget *table_widget;
-    QSpacerItem *horizontalSpacer_2;
     QToolBar *toolBar;
 
     void setupUi(QMainWindow *ui_area_trabajo)
     {
         if (ui_area_trabajo->objectName().isEmpty())
             ui_area_trabajo->setObjectName(QString::fromUtf8("ui_area_trabajo"));
-        ui_area_trabajo->resize(873, 490);
+        ui_area_trabajo->resize(870, 490);
         ui_area_trabajo->setMinimumSize(QSize(870, 490));
         actionVentas = new QAction(ui_area_trabajo);
         actionVentas->setObjectName(QString::fromUtf8("actionVentas"));
@@ -76,14 +69,7 @@ public:
         splitter = new QSplitter(centralwidget);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
-        widget = new QWidget(splitter);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        tree_widget = new QWidget(widget);
+        tree_widget = new QWidget(splitter);
         tree_widget->setObjectName(QString::fromUtf8("tree_widget"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
@@ -92,30 +78,21 @@ public:
         tree_widget->setSizePolicy(sizePolicy);
         tree_widget->setMinimumSize(QSize(10, 0));
         tree_widget->setMaximumSize(QSize(400, 16777215));
-
-        verticalLayout->addWidget(tree_widget);
-
-        horizontalSpacer = new QSpacerItem(230, 10, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        verticalLayout->addItem(horizontalSpacer);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
+        splitter->addWidget(tree_widget);
+        widget = new QWidget(splitter);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         line = new QFrame(widget);
         line->setObjectName(QString::fromUtf8("line"));
+        line->setMaximumSize(QSize(5, 16777215));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
 
         horizontalLayout->addWidget(line);
 
-        splitter->addWidget(widget);
-        widget1 = new QWidget(splitter);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        verticalLayout_2 = new QVBoxLayout(widget1);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        table_widget = new QWidget(widget1);
+        table_widget = new QWidget(widget);
         table_widget->setObjectName(QString::fromUtf8("table_widget"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -123,13 +100,9 @@ public:
         sizePolicy1.setHeightForWidth(table_widget->sizePolicy().hasHeightForWidth());
         table_widget->setSizePolicy(sizePolicy1);
 
-        verticalLayout_2->addWidget(table_widget);
+        horizontalLayout->addWidget(table_widget);
 
-        horizontalSpacer_2 = new QSpacerItem(610, 10, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        verticalLayout_2->addItem(horizontalSpacer_2);
-
-        splitter->addWidget(widget1);
+        splitter->addWidget(widget);
 
         gridLayout->addWidget(splitter, 0, 0, 1, 1);
 
