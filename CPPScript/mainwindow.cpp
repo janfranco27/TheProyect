@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     obj.mf_setHost("localhost");
     obj.mf_setUser("root");
-    obj.mf_setPass("root");
+    obj.mf_setPass("1234");
     obj.mf_setDB("INSARF_DB");
 
     obj.setDirFolder("C:\\Users\\Alexander\\Desktop\\TEST");
@@ -19,8 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QSqlQueryModel *model = new QSqlQueryModel;
 
     model->setQuery("SELECT * FROM grupo");
-    model->setHeaderData(0, Qt::Horizontal, tr("Código"));
-    model->setHeaderData(1, Qt::Horizontal, tr("Descripción"));
+    model->setHeaderData(0, Qt::Horizontal, tr("Codigo"));
+    model->setHeaderData(1, Qt::Horizontal, tr("Descripcion"));
 
     ui->tableView->setModel(model);
 

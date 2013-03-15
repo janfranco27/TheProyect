@@ -401,25 +401,41 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<"\t//w!"<<endl;
     file<<endl;
     file<<"\tQSqlQuery query;"<<endl;
-    file<<endl;
+    file<<endl;    
+    file<<"\tstring str_query = \"INSERT INTO "<<str_class_name<<"(\";"<<endl;
+    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
+    file<<"\t\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<"\";"<<endl;
 
-    file<<"\tquery.prepare(\"INSERT INTO "<<str_class_name<<"("<<md_o_v_column_names[1].toStdString();
+    file<<"\tstr_query += \", "<<md_o_v_column_names[1].toStdString()<<"\";"<<endl;
     for(unsigned int i = 2; i < md_o_v_column_names.size(); i++)
     {
         string temp = md_o_v_column_names[i].toStdString();
-        file<<", "<<temp;
+        file<<"\tstr_query += \""<<", "<<temp<<"\";"<<endl;
     }
-    file<<") VALUES(?";
+
+    file<<"\tstr_query += \""<<") VALUES(?\";"<<endl;
+    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
+    file<<"\t{"<<endl;
+    file<<"\t\tstr_query += \""<<", ?\";"<<endl;
+    file<<"\t}"<<endl;
     for(unsigned int i = 2; i < md_o_v_column_names.size(); i++)
     {
-        file<<", ?";
+        file<<"\tstr_query += \""<<", ?\";"<<endl;
     }
-    file<<")\");"<<endl;
+    file<<"\tstr_query += \")\";"<<endl;
+    file<<endl;
+    file<<"\tquery.prepare(QString(str_query.c_str()));"<<endl;
 
+    file<<"\tint integer = 0;"<<endl;
+    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
+    file<<"\t{"<<endl;
+    file<<"\t\tquery.bindValue(0, "<<"md_o_"<<md_o_v_column_names[0].toStdString()<<");"<<endl;
+    file<<"\t\tinteger++;"<<endl;
+    file<<"\t}"<<endl;
     for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
     {
         string temp = md_o_v_column_names[i].toStdString();
-        file<<"\tquery.bindValue("<<(i-1)<<", "<<"md_o_"<<temp<<");"<<endl;
+        file<<"\tquery.bindValue("<<"integer++"<<", "<<"md_o_"<<temp<<");"<<endl;
     }
 
     file<<endl;
