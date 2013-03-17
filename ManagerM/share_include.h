@@ -68,6 +68,10 @@ using namespace std;
 #include "object_e_banco.h"
 #include "object_e_proveedor.h"
 #include "object_e_persona_juridicos.h"
+#include "object_e_tienda.h"
+#include "object_e_tipo_usuario.h"
+#include "object_e_colaborador.h"
+
 
 #include "ui_tool_bar.h"
 
@@ -84,6 +88,8 @@ using namespace std;
 #include "ui_articulo.h"
 
 #include "ui_module_ventas.h"
+#include "ui_module_colaboradores.h"
+#include "ui_newedit_colaborador.h"
 #include "ui_module_home.h"
 #include "ui_module_articulos.h"
 

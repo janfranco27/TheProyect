@@ -33,6 +33,13 @@ public:
     QSqlQuery getMedidas();
     QSqlQuery getGrupos();
     QSqlQuery getArticulos();
+    QSqlQuery getColaboradores();
+   vector<_QSTR> getAllTiposUsuarios();
+   vector<_QSTR> getAllTiendas();
+   _QSTR getTienda(_QSTR nombreTienda);
+   _QSTR getTipoUsuario(_QSTR nombreUsuario);
+   bool deleteColaborador(_QSTR dni);
+
 
 
 };

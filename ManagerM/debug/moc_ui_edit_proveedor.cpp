@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_proveedor.h'
 **
-** Created: Sat 16. Mar 11:28:20 2013
+** Created: Fri 15. Mar 20:09:56 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButton_opciones_clicked();
 
+    void on_pushButton_colaborador_clicked();
+
 private:
     Ui::ui_tool_bar *ui;
 };

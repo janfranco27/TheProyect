@@ -30,5 +30,11 @@ void ui_module_home::on_pushButton_articulo_clicked()
 {
     ui_module_articulos* form_articulos = new ui_module_articulos();
     APP_MANAGERM->setCentralWidget(form_articulos);
+}
+
+void ui_module_home::on_pushButton_colaboradores_clicked()
+{
+    ui_module_colaboradores* form_colaboradores = new ui_module_colaboradores;
+    APP_MANAGERM->setCentralWidget(form_colaboradores);
     APP_TOOL_BAR->setMaximumHeight(63);
 }

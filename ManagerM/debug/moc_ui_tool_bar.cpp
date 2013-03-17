@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_tool_bar.h'
 **
-** Created: Sat 16. Mar 11:28:03 2013
+** Created: Fri 15. Mar 20:09:39 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_tool_bar[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,7 @@ static const uint qt_meta_data_ui_tool_bar[] = {
       13,   12,   12,   12, 0x08,
       42,   12,   12,   12, 0x08,
       73,   12,   12,   12, 0x08,
+     106,   12,   12,   12, 0x08,
 
        0        // eod
 };
@@ -42,6 +43,7 @@ static const char qt_meta_stringdata_ui_tool_bar[] = {
     "ui_tool_bar\0\0on_pushButton_home_clicked()\0"
     "on_pushButton_ventas_clicked()\0"
     "on_pushButton_opciones_clicked()\0"
+    "on_pushButton_colaborador_clicked()\0"
 };
 
 void ui_tool_bar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -53,6 +55,7 @@ void ui_tool_bar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->on_pushButton_home_clicked(); break;
         case 1: _t->on_pushButton_ventas_clicked(); break;
         case 2: _t->on_pushButton_opciones_clicked(); break;
+        case 3: _t->on_pushButton_colaborador_clicked(); break;
         default: ;
         }
     }
@@ -91,9 +94,9 @@ int ui_tool_bar::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

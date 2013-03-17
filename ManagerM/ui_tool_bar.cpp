@@ -32,3 +32,9 @@ void ui_tool_bar::on_pushButton_opciones_clicked()
     ui_opciones* form_opciones = new ui_opciones;
     form_opciones->show();
 }
+
+void ui_tool_bar::on_pushButton_colaborador_clicked()
+{
+    ui_module_colaboradores* form_colaboradores = new ui_module_colaboradores;
+    APP_MANAGERM->setCentralWidget(form_colaboradores);
+}

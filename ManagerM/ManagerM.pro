@@ -43,8 +43,13 @@ SOURCES += main.cpp\
     object_e_proveedor.cpp \
     object_e_persona_juridicos.cpp \
     ui_module_articulos.cpp \
-    ui_new_articulo.cpp
-
+    ui_new_articulo.cpp\
+    object_e_tipo_usuario.cpp \
+    object_e_tienda.cpp \
+    object_e_colaborador.cpp \
+    ui_newedit_colaborador.cpp \
+    ui_module_colaboradores.cpp \
+    ui_opciones_tienda.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -79,7 +84,14 @@ HEADERS  += ui_main.h \
     object_e_proveedor.h \
     object_e_persona_juridicos.h \
     ui_module_articulos.h \
-    ui_new_articulo.h
+    ui_new_articulo.h \
+    object_e_tipo_usuario.h \
+    object_e_tienda.h \
+    object_e_colaborador.h \
+    ui_newedit_colaborador.h \
+    ui_module_colaboradores.h \
+    ui_opciones_tienda.h
+
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -96,7 +108,10 @@ FORMS    += ui_main.ui \
     ui_opciones_proveedor.ui \
     ui_edit_proveedor.ui \
     ui_module_articulos.ui \
-    ui_new_articulo.ui
+    ui_new_articulo.ui \
+    ui_newedit_colaborador.ui \
+    ui_module_colaboradores.ui \
+    ui_opciones_tienda.ui
 
 RESOURCES += \
     Icons.qrc

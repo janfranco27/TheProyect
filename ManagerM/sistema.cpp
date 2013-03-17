@@ -320,4 +320,72 @@ vector<_QSTR> Sistema::getDescripcion(const char *tablename)
     return salida;
 }
 
+QSqlQuery Sistema::getColaboradores()
+{
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where;
+    select.push_back("*");
+    from.push_back("e_colaborador");
+    where.push_back(make_pair("habilitado","1"));
+
+    return getSelectQuery(select,from,where);
+}
+
+vector<_QSTR> Sistema::getAllTiposUsuarios()
+{
+    _QSTR consulta="SELECT descripcion FROM e_tipo_usuario";
+    TUPLES result=FREEQUERY(consulta);
+    vector<_QSTR> tiposUsuario;
+    for(int i=0;i<result.size();i++)
+    {
+        tiposUsuario.push_back(result[i][0].toString());
+    }
+
+    return tiposUsuario;
+}
+vector<_QSTR> Sistema::getAllTiendas()
+{
+    _QSTR consulta="SELECT nombre FROM e_tienda";
+    TUPLES result=FREEQUERY(consulta);
+    vector<_QSTR> tiendas;
+    for(int i=0;i<result.size();i++)
+    {
+        tiendas.push_back(result[i][0].toString());
+    }
+    return tiendas;
+}
+
+_QSTR Sistema::getTienda(_QSTR nombreTienda)
+{
+    _QSTR consulta="SELECT pk_ruc FROM e_tienda where nombre='"+nombreTienda+"'";
+    TUPLES result = FREEQUERY(consulta);
+    return result[0][0].toString();
+}
+
+_QSTR Sistema::getTipoUsuario(_QSTR nombreUsuario)
+{
+    _QSTR consulta="SELECT pk_tipo_usuario FROM e_tipo_usuario where descripcion='"+nombreUsuario+"'";
+    TUPLES result = FREEQUERY(consulta);
+    return result[0][0].toString();
+}
+
+bool Sistema::deleteColaborador(_QSTR dni)
+{
+    QSqlQuery query;
+
+    query.prepare("UPDATE e_colaborador SET habilitado='0' WHERE pk_dni = ?");
+    query.bindValue(0,dni);
+    query.exec();
+
+    if(query.exec())
+    {
+        //state OK
+        //w!
+        return true;
+    }else{
+        //state FAILED
+        //w!
+        return false;
+    }
+}
 
