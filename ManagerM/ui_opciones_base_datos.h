@@ -16,8 +16,15 @@ public:
     explicit ui_opciones_base_datos(QWidget *parent = 0);
     ~ui_opciones_base_datos();
 
+private:
+
+    int parent;
+
 public:
     void mf_update_data();
+
+    int mf_get_parent();
+    void mf_set_parent(int p);
     
 private slots:
     void on_pushButton_guardar_clicked();

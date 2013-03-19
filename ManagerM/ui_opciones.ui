@@ -161,6 +161,15 @@
          </item>
          <item>
           <property name="text">
+           <string>Tiendas</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/40406.png</normaloff>:/Iconos/Iconos/40406.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>General</string>
           </property>
           <property name="icon">

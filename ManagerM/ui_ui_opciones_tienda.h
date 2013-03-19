@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_tienda.ui'
 **
-** Created: Sat 16. Mar 10:42:36 2013
+** Created: Sat 16. Mar 20:49:59 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -20,6 +20,7 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTextEdit>
@@ -30,11 +31,10 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_opciones_tienda
 {
 public:
-    QGridLayout *gridLayout_6;
+    QGridLayout *gridLayout_4;
     QTabWidget *tabWidget;
     QWidget *tab;
     QGridLayout *gridLayout_5;
-    QGridLayout *gridLayout_4;
     QGroupBox *groupBox_datos;
     QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout;
@@ -67,6 +67,9 @@ public:
     QGridLayout *gridLayout_3;
     QLabel *label_8;
     QTextEdit *textEdit_comentario;
+    QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *pushButton_guardar;
 
     void setupUi(QWidget *ui_opciones_tienda)
     {
@@ -75,18 +78,16 @@ public:
         ui_opciones_tienda->resize(602, 408);
         ui_opciones_tienda->setMinimumSize(QSize(571, 408));
         ui_opciones_tienda->setMaximumSize(QSize(602, 408));
-        gridLayout_6 = new QGridLayout(ui_opciones_tienda);
-        gridLayout_6->setSpacing(0);
-        gridLayout_6->setContentsMargins(0, 0, 0, 0);
-        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        gridLayout_4 = new QGridLayout(ui_opciones_tienda);
+        gridLayout_4->setSpacing(0);
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         tabWidget = new QTabWidget(ui_opciones_tienda);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_5 = new QGridLayout(tab);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        gridLayout_4 = new QGridLayout();
-        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         groupBox_datos = new QGroupBox(tab);
         groupBox_datos->setObjectName(QString::fromUtf8("groupBox_datos"));
         gridLayout = new QGridLayout(groupBox_datos);
@@ -149,7 +150,7 @@ public:
         gridLayout->addLayout(horizontalLayout_3, 2, 0, 1, 1);
 
 
-        gridLayout_4->addWidget(groupBox_datos, 0, 0, 1, 1);
+        gridLayout_5->addWidget(groupBox_datos, 0, 0, 1, 1);
 
         groupBox_contacto = new QGroupBox(tab);
         groupBox_contacto->setObjectName(QString::fromUtf8("groupBox_contacto"));
@@ -236,7 +237,7 @@ public:
         gridLayout_2->addLayout(horizontalLayout_7, 2, 0, 1, 2);
 
 
-        gridLayout_4->addWidget(groupBox_contacto, 1, 0, 1, 1);
+        gridLayout_5->addWidget(groupBox_contacto, 1, 0, 1, 1);
 
         groupBox_otros = new QGroupBox(tab);
         groupBox_otros->setObjectName(QString::fromUtf8("groupBox_otros"));
@@ -255,14 +256,25 @@ public:
         gridLayout_3->addWidget(textEdit_comentario, 1, 0, 1, 1);
 
 
-        gridLayout_4->addWidget(groupBox_otros, 2, 0, 1, 1);
+        gridLayout_5->addWidget(groupBox_otros, 2, 0, 1, 1);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalSpacer_4 = new QSpacerItem(428, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_4);
+
+        pushButton_guardar = new QPushButton(tab);
+        pushButton_guardar->setObjectName(QString::fromUtf8("pushButton_guardar"));
+
+        horizontalLayout_8->addWidget(pushButton_guardar);
 
 
-        gridLayout_5->addLayout(gridLayout_4, 0, 0, 1, 1);
+        gridLayout_5->addLayout(horizontalLayout_8, 3, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
 
-        gridLayout_6->addWidget(tabWidget, 0, 0, 1, 1);
+        gridLayout_4->addWidget(tabWidget, 0, 0, 1, 1);
 
 
         retranslateUi(ui_opciones_tienda);
@@ -287,6 +299,7 @@ public:
         label_7->setText(QApplication::translate("ui_opciones_tienda", "Pagina Web", 0, QApplication::UnicodeUTF8));
         groupBox_otros->setTitle(QApplication::translate("ui_opciones_tienda", "Otros", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ui_opciones_tienda", "Comentario", 0, QApplication::UnicodeUTF8));
+        pushButton_guardar->setText(QApplication::translate("ui_opciones_tienda", "Guardar", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ui_opciones_tienda", "Tienda", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

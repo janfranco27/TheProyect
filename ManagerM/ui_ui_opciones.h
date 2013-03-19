@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones.ui'
 **
-** Created: Wed 13. Mar 12:21:59 2013
+** Created: Sat 16. Mar 20:49:58 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -97,9 +97,13 @@ public:
         __qlistwidgetitem3->setBackground(brush);
         __qlistwidgetitem3->setIcon(icon4);
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/40406.png"), QSize(), QIcon::Normal, QIcon::Off);
         QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(listWidget_modulos);
         __qlistwidgetitem4->setIcon(icon5);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem5 = new QListWidgetItem(listWidget_modulos);
+        __qlistwidgetitem5->setIcon(icon6);
         listWidget_modulos->setObjectName(QString::fromUtf8("listWidget_modulos"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -168,7 +172,9 @@ public:
         QListWidgetItem *___qlistwidgetitem3 = listWidget_modulos->item(3);
         ___qlistwidgetitem3->setText(QApplication::translate("ui_opciones", "Base de Datos", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem4 = listWidget_modulos->item(4);
-        ___qlistwidgetitem4->setText(QApplication::translate("ui_opciones", "General", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem4->setText(QApplication::translate("ui_opciones", "Tiendas", 0, QApplication::UnicodeUTF8));
+        QListWidgetItem *___qlistwidgetitem5 = listWidget_modulos->item(5);
+        ___qlistwidgetitem5->setText(QApplication::translate("ui_opciones", "General", 0, QApplication::UnicodeUTF8));
         listWidget_modulos->setSortingEnabled(__sortingEnabled);
 
         label_category->setText(QApplication::translate("ui_opciones", "Seccion", 0, QApplication::UnicodeUTF8));

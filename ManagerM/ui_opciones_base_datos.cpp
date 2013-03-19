@@ -37,8 +37,25 @@ void ui_opciones_base_datos::on_pushButton_guardar_clicked()
 
     db_cfg.open(C_DB_FILE_DEFAULT_CONFIG_NAME);
 
+    if(mf_get_parent() == 0)
+    {
+        this->close();
+    }
+
     db_cfg<<host<<" "<<db_nombre<<" "<<usuario<<" "<<clave<<" "<<puerto;
 
 
 
 }
+
+void ui_opciones_base_datos::mf_set_parent(int p)
+{
+    parent = p;
+}
+
+int ui_opciones_base_datos::mf_get_parent()
+{
+    return parent;
+}
+
+

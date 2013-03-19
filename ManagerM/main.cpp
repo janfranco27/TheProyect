@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
         login_form->show();
     }else{
         ui_opciones_base_datos *db_form = new ui_opciones_base_datos;
+        db_form->mf_set_parent(0);
         db_form->show();
     }
 
