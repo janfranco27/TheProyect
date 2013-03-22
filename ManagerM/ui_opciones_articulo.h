@@ -37,6 +37,11 @@ private slots:
 
     void on_pushButton_save_marca_clicked();
 
+    void closeEvent(QCloseEvent *ev );
+
+signals:
+    void closing();
+
 private:
     Ui::ui_opciones_articulo *ui;
 };

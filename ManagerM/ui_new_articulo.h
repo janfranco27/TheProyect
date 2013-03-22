@@ -20,6 +20,8 @@ private slots:
 
     bool validateRegistrarForm();
 
+
+
     void on_pushButton_agregar_clicked();
 
     void on_btn_aceptar_clicked();
@@ -34,8 +36,20 @@ private slots:
 
     void on_btn_add_medida_clicked();
 
+    void update_form();
+
+    void closeEvent(QCloseEvent *ev );
+
+signals:
+    void closing();
 private:
     Ui::ui_new_articulo *ui;
+//Funciones auxiliares
+    void openOpcionesArticuloWith(int tab);
+
+    void reset_form();
+    void incrementar_codigo();
+    void clear_input();
 };
 
 #endif // UI_NEW_ARTICULO_H

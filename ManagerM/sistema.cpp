@@ -283,14 +283,18 @@ QSqlQuery Sistema::getGrupos()
 QSqlQuery Sistema::getArticulos()
 {
     vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where;
     select.push_back("*");
     from.push_back("e_articulo");
+    where.push_back(make_pair("habilitado","1"));
 
     return getSelectQuery(select,from);
 }
 
 void Sistema::loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio)
 {
+
+    box->clear();
 
     if(!obligatorio)
         box->addItem("- Seleccione -");

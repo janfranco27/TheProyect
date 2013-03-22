@@ -19,9 +19,14 @@ private slots:
     void on_pushButton_nuevo_2_clicked();
 
 
+
+
+    void on_pushButton_editar_2_clicked();
+
+    void update_table_articulos();
 private:
     Ui::ui_module_articulos *ui;
-    void update_table_articulos();
+
 
 };
 

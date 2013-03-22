@@ -38,3 +38,9 @@ void ui_tool_bar::on_pushButton_colaborador_clicked()
     ui_module_colaboradores* form_colaboradores = new ui_module_colaboradores;
     APP_MANAGERM->setCentralWidget(form_colaboradores);
 }
+
+void ui_tool_bar::on_pushButton_articulos_clicked()
+{
+    ui_module_articulos * form_articulos = new ui_module_articulos();
+    APP_MANAGERM->setCentralWidget(form_articulos);
+}

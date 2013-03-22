@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ui_new_articulo</class>
  <widget class="QWidget" name="ui_new_articulo">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -221,17 +224,6 @@
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QPushButton" name="btn_borrar">
-       <property name="text">
-        <string>Borrar</string>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/Iconos/Iconos/trash.png</normaloff>:/Iconos/Iconos/trash.png</iconset>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item row="3" column="0">
@@ -245,6 +237,9 @@
      </item>
      <item>
       <widget class="QTableWidget" name="tableWidget">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
        <column>
         <property name="text">
          <string>Código</string>
@@ -309,6 +304,17 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="btn_borrar">
+         <property name="text">
+          <string>Borrar</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icons.qrc">
+           <normaloff>:/Iconos/Iconos/trash.png</normaloff>:/Iconos/Iconos/trash.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="btn_cancelar">
          <property name="text">
           <string>Cancelar</string>
@@ -321,6 +327,24 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>le_nombre_2</tabstop>
+  <tabstop>cb_grupo</tabstop>
+  <tabstop>cb_marca</tabstop>
+  <tabstop>cb_medida</tabstop>
+  <tabstop>le_stock_2</tabstop>
+  <tabstop>le_precio_2</tabstop>
+  <tabstop>cb_proveedor</tabstop>
+  <tabstop>pushButton_agregar</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>btn_aceptar</tabstop>
+  <tabstop>btn_borrar</tabstop>
+  <tabstop>btn_cancelar</tabstop>
+  <tabstop>btn_add_grupo</tabstop>
+  <tabstop>btn_add_marca</tabstop>
+  <tabstop>btn_add_medida</tabstop>
+  <tabstop>btn_add_proveedor</tabstop>
+ </tabstops>
  <resources>
   <include location="Icons.qrc"/>
  </resources>

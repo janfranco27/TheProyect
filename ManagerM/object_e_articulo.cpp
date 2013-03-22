@@ -1,13 +1,15 @@
 #include "share_include.h"
-
+#include <QSqlError>
 object_e_articulo::object_e_articulo()
 {
+	//file e_articulo
 	//function construct_0
 	//w!
 }
 
-object_e_articulo::object_e_articulo(_QSTR pk_articulo, _QSTR fk_grupo, _QSTR fk_marca, _QSTR fk_medida, _QSTR descripcion, _QSTR precio_lista, _QSTR stock)
+object_e_articulo::object_e_articulo(_QSTR pk_articulo, _QSTR fk_grupo, _QSTR fk_marca, _QSTR fk_medida, _QSTR descripcion, _QSTR precio_lista, _QSTR stock, _QSTR habilitado)
 {
+	//file e_articulo
 	//function construct_1
 	//w!
 
@@ -18,9 +20,11 @@ object_e_articulo::object_e_articulo(_QSTR pk_articulo, _QSTR fk_grupo, _QSTR fk
 	md_o_descripcion = descripcion;
 	md_o_precio_lista = precio_lista;
 	md_o_stock = stock;
+	md_o_habilitado = habilitado;
 }
-object_e_articulo::object_e_articulo(_QSTR fk_grupo, _QSTR fk_marca, _QSTR fk_medida, _QSTR descripcion, _QSTR precio_lista, _QSTR stock)
+object_e_articulo::object_e_articulo(_QSTR fk_grupo, _QSTR fk_marca, _QSTR fk_medida, _QSTR descripcion, _QSTR precio_lista, _QSTR stock, _QSTR habilitado)
 {
+	//file e_articulo
 	//function construct_2
 	//w!
 
@@ -30,6 +34,7 @@ object_e_articulo::object_e_articulo(_QSTR fk_grupo, _QSTR fk_marca, _QSTR fk_me
 	md_o_descripcion = descripcion;
 	md_o_precio_lista = precio_lista;
 	md_o_stock = stock;
+	md_o_habilitado = habilitado;
 }
 object_e_articulo::~object_e_articulo()
 {
@@ -86,6 +91,13 @@ void object_e_articulo::mf_set_stock(_QSTR stock)
 
 	md_o_stock = stock;
 }
+void object_e_articulo::mf_set_habilitado(_QSTR habilitado)
+{
+	//function mf_set_habilitado
+	//w!
+
+	md_o_habilitado = habilitado;
+}
 
 _QSTR object_e_articulo::mf_get_pk_articulo()
 {
@@ -136,6 +148,13 @@ _QSTR object_e_articulo::mf_get_stock()
 
 	return md_o_stock;
 }
+_QSTR object_e_articulo::mf_get_habilitado()
+{
+	//function mf_get_habilitado
+	//w!
+
+	return md_o_habilitado;
+}
 
 bool object_e_articulo::mf_load(_QSTR pk)
 {
@@ -157,6 +176,7 @@ bool object_e_articulo::mf_load(_QSTR pk)
 		md_o_descripcion = query.value(4).toString();
 		md_o_precio_lista = query.value(5).toString();
 		md_o_stock = query.value(6).toString();
+		md_o_habilitado = query.value(7).toString();
 
 		//state OK
 		//w!
@@ -176,13 +196,57 @@ bool object_e_articulo::mf_add()
 
 	QSqlQuery query;
 
-	query.prepare("INSERT INTO e_articulo(fk_grupo, fk_marca, fk_medida, descripcion, precio_lista, stock) VALUES(?, ?, ?, ?, ?, ?)");
-	query.bindValue(0, md_o_fk_grupo);
-	query.bindValue(1, md_o_fk_marca);
-	query.bindValue(2, md_o_fk_medida);
-	query.bindValue(3, md_o_descripcion);
-	query.bindValue(4, md_o_precio_lista);
-	query.bindValue(5, md_o_stock);
+	string str_query = "INSERT INTO e_articulo(";
+	if (md_o_pk_articulo != "")
+        str_query += "pk_articulo,";
+    str_query += " fk_grupo";
+	str_query += ", fk_marca";
+	str_query += ", fk_medida";
+	str_query += ", descripcion";
+	str_query += ", precio_lista";
+	str_query += ", stock";
+	str_query += ", habilitado";
+	str_query += ") VALUES(?";
+	if (md_o_pk_articulo!= "")
+	{
+		str_query += ", ?";
+	}
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ")";
+
+	query.prepare(QString(str_query.c_str()));
+	int integer = 0;
+	if (md_o_pk_articulo != "")
+	{
+		query.bindValue(0, md_o_pk_articulo);
+		integer++;
+	}
+
+
+         if(md_o_fk_grupo=="")
+           query.bindValue(integer++,QVariant());
+       else
+           query.bindValue(integer++, md_o_fk_grupo);
+       if(md_o_fk_marca=="")
+               query.bindValue(integer++,QVariant());
+       else
+           query.bindValue(integer++, md_o_fk_marca);
+
+       if(md_o_fk_medida=="")
+               query.bindValue(integer++,QVariant());
+       else
+           query.bindValue(integer++, md_o_fk_medida);
+
+
+	query.bindValue(integer++, md_o_descripcion);
+	query.bindValue(integer++, md_o_precio_lista);
+	query.bindValue(integer++, md_o_stock);
+	query.bindValue(integer++, md_o_habilitado);
 
 	if(query.exec())
 	{
@@ -194,7 +258,8 @@ bool object_e_articulo::mf_add()
 	}else{
 		//state FAILED
 		//w!
-
+        qDebug()<<str_query.c_str()<<endl;
+    qDebug()<<query.lastError().databaseText()<<endl;
 		return false;
 	}
 }
@@ -206,14 +271,15 @@ bool object_e_articulo::mf_update()
 
 	QSqlQuery query;
 
-	query.prepare("UPDATE e_articulo SET fk_grupo = ?, fk_marca = ?, fk_medida = ?, descripcion = ?, precio_lista = ?, stock = ? WHERE pk_articulo = ?");
+	query.prepare("UPDATE e_articulo SET fk_grupo = ?, fk_marca = ?, fk_medida = ?, descripcion = ?, precio_lista = ?, stock = ?, habilitado = ? WHERE pk_articulo = ?");
 	query.bindValue(0, md_o_fk_grupo);
 	query.bindValue(1, md_o_fk_marca);
 	query.bindValue(2, md_o_fk_medida);
 	query.bindValue(3, md_o_descripcion);
 	query.bindValue(4, md_o_precio_lista);
 	query.bindValue(5, md_o_stock);
-	query.bindValue(6, md_o_pk_articulo);
+	query.bindValue(6, md_o_habilitado);
+	query.bindValue(7, md_o_pk_articulo);
 
 	if(query.exec())
 	{
@@ -248,8 +314,8 @@ bool object_e_articulo::mf_remove()
 		return true;
 
 	}else{
-		//state FAILED
-		//w!
+	//state FAILED
+	//w!
 
 		return false;
 	}

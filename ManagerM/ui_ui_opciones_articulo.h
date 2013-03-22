@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_articulo.ui'
 **
-** Created: Thu 14. Mar 12:21:03 2013
+** Created: Fri 22. Mar 12:42:41 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -69,6 +69,7 @@ public:
     {
         if (ui_opciones_articulo->objectName().isEmpty())
             ui_opciones_articulo->setObjectName(QString::fromUtf8("ui_opciones_articulo"));
+        ui_opciones_articulo->setWindowModality(Qt::ApplicationModal);
         ui_opciones_articulo->resize(571, 408);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -273,7 +274,7 @@ public:
 
         retranslateUi(ui_opciones_articulo);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ui_opciones_articulo);

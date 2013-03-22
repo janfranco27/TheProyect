@@ -1,6 +1,32 @@
 #include "ui_module_articulos.h"
 #include "ui_ui_module_articulos.h"
 #include "ui_new_articulo.h"
+
+#include "ui_edit_articulo.h"
+#include <QSqlRelationalTableModel>
+#include <QModelIndexList>
+
+const int num_header = 7;
+enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK};
+const char * e_articulo = "e_articulo";
+const char * e_grupo = "e_grupo";
+const char * e_marca = "e_marca";
+const char * e_medida = "e_medida";
+
+//Primary Keys
+
+const char * pk_grupo = "pk_grupo";
+const char * pk_marca = "pk_marca";
+const char * pk_medida = "pk_medida";
+
+//campo buscado
+
+const char * descripcion = "descripcion";
+
+//Headers tabla
+
+const char * tableHeaders[num_header] = {"Código","Grupo","Marca","Medida","Descripción","Precio","Stock"};
+
 ui_module_articulos::ui_module_articulos(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_module_articulos)
@@ -13,12 +39,15 @@ ui_module_articulos::ui_module_articulos(QWidget *parent) :
 
 ui_module_articulos::~ui_module_articulos()
 {
+
     delete ui;
 }
 
 void ui_module_articulos::on_pushButton_nuevo_2_clicked()
 {
     ui_new_articulo * form_new_articulo = new ui_new_articulo();
+    connect(form_new_articulo,SIGNAL(closing()),this,SLOT(update_table_articulos()));
+
     form_new_articulo->setAttribute(Qt::WA_DeleteOnClose);
     form_new_articulo->show();
 
@@ -26,8 +55,74 @@ void ui_module_articulos::on_pushButton_nuevo_2_clicked()
 
 void ui_module_articulos::update_table_articulos()
 {
+    //Limipiamos el model anterior
+    QAbstractItemModel * anteriorModel = ui->tableView_articulos->model();
+    if(anteriorModel)
+            delete anteriorModel;
 
-    QSqlQueryModel * model = new QSqlQueryModel();
-       model->setQuery(SYSTEM->getArticulos());
-    ui->tableView_articulos->setModel(model);
+    //Creamos el nuevo model
+    QSqlRelationalTableModel * model = new QSqlRelationalTableModel();
+    model->setTable(e_articulo);
+   model->setRelation(GRUPO,QSqlRelation(e_grupo,pk_grupo,descripcion));
+   model->setRelation(MARCA,QSqlRelation(e_marca,pk_marca,descripcion));
+    model->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
+    model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
+    for(int i=0;i<num_header;i++)
+    {
+        model->setHeaderData(i,Qt::Horizontal,tableHeaders[i]);
+    }
+
+    if(model->select())
+    {
+
+            ui->tableView_articulos->setModel(model);
+    }
+    else
+    {
+        QMessageBox::information(this,"Error","Ocurrio un error al cargar la información");
+    }
+}
+
+
+
+void ui_module_articulos::on_pushButton_editar_2_clicked()
+{
+
+    QModelIndexList  list = ui->tableView_articulos->selectionModel()->selectedRows();
+    int filas = list.size();
+
+
+    if(filas>1)
+    {
+        QMessageBox::information(this,"Error","Solo se puede editar una fila a la vez");
+    }
+    else
+    {
+        if(filas==0)
+        {
+            QMessageBox::information(this,"Error","Por favor, seleccione una fila para editar");
+        }
+        else
+        {
+            object_e_articulo  articulo;
+
+            QSqlRelationalTableModel * model = (QSqlRelationalTableModel*)ui->tableView_articulos->model();
+            QSqlRecord record = model->record(list.at(0).row());
+
+
+
+            articulo.mf_set_pk_articulo(record.value(COD).toString());
+            articulo.mf_set_descripcion(record.value(DESCRIPCION).toString());
+            articulo.mf_set_fk_marca(record.value(MARCA).toString());
+            articulo.mf_set_fk_grupo(record.value(GRUPO).toString());
+            articulo.mf_set_fk_medida(record.value(MEDIDA).toString());
+            articulo.mf_set_precio_lista(record.value(PRECIO).toString());
+            articulo.mf_set_stock(record.value(STOCK).toString());
+
+            qDebug()<<"ok "<<record.value(0).toString();
+            ui_edit_articulo  form_edit_articulos(&articulo) ;
+            form_edit_articulos.exec();
+        }
+    }
+
 }

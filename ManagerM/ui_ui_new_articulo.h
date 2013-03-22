@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
-** Created: Thu 14. Mar 11:19:59 2013
+** Created: Fri 22. Mar 12:30:57 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -62,19 +62,20 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_agregar;
-    QPushButton *btn_borrar;
     QVBoxLayout *verticalLayout;
     QLabel *l_resultado_2;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *btn_aceptar;
+    QPushButton *btn_borrar;
     QPushButton *btn_cancelar;
 
     void setupUi(QWidget *ui_new_articulo)
     {
         if (ui_new_articulo->objectName().isEmpty())
             ui_new_articulo->setObjectName(QString::fromUtf8("ui_new_articulo"));
+        ui_new_articulo->setWindowModality(Qt::ApplicationModal);
         ui_new_articulo->resize(729, 497);
         gridLayout_2 = new QGridLayout(ui_new_articulo);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
@@ -224,14 +225,6 @@ public:
 
         horizontalLayout_2->addWidget(pushButton_agregar);
 
-        btn_borrar = new QPushButton(ui_new_articulo);
-        btn_borrar->setObjectName(QString::fromUtf8("btn_borrar"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btn_borrar->setIcon(icon);
-
-        horizontalLayout_2->addWidget(btn_borrar);
-
 
         gridLayout_2->addLayout(horizontalLayout_2, 2, 0, 1, 1);
 
@@ -260,6 +253,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem6);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
         verticalLayout->addWidget(tableWidget);
 
@@ -271,11 +265,19 @@ public:
 
         btn_aceptar = new QPushButton(ui_new_articulo);
         btn_aceptar->setObjectName(QString::fromUtf8("btn_aceptar"));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/aceptar.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btn_aceptar->setIcon(icon1);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/aceptar.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btn_aceptar->setIcon(icon);
 
         horizontalLayout_3->addWidget(btn_aceptar);
+
+        btn_borrar = new QPushButton(ui_new_articulo);
+        btn_borrar->setObjectName(QString::fromUtf8("btn_borrar"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btn_borrar->setIcon(icon1);
+
+        horizontalLayout_3->addWidget(btn_borrar);
 
         btn_cancelar = new QPushButton(ui_new_articulo);
         btn_cancelar->setObjectName(QString::fromUtf8("btn_cancelar"));
@@ -288,6 +290,21 @@ public:
 
         gridLayout_2->addLayout(verticalLayout, 3, 0, 1, 1);
 
+        QWidget::setTabOrder(le_nombre_2, cb_grupo);
+        QWidget::setTabOrder(cb_grupo, cb_marca);
+        QWidget::setTabOrder(cb_marca, cb_medida);
+        QWidget::setTabOrder(cb_medida, le_stock_2);
+        QWidget::setTabOrder(le_stock_2, le_precio_2);
+        QWidget::setTabOrder(le_precio_2, cb_proveedor);
+        QWidget::setTabOrder(cb_proveedor, pushButton_agregar);
+        QWidget::setTabOrder(pushButton_agregar, tableWidget);
+        QWidget::setTabOrder(tableWidget, btn_aceptar);
+        QWidget::setTabOrder(btn_aceptar, btn_borrar);
+        QWidget::setTabOrder(btn_borrar, btn_cancelar);
+        QWidget::setTabOrder(btn_cancelar, btn_add_grupo);
+        QWidget::setTabOrder(btn_add_grupo, btn_add_marca);
+        QWidget::setTabOrder(btn_add_marca, btn_add_medida);
+        QWidget::setTabOrder(btn_add_medida, btn_add_proveedor);
 
         retranslateUi(ui_new_articulo);
 
@@ -312,7 +329,6 @@ public:
         btn_add_grupo->setText(QString());
         l_stock_2->setText(QApplication::translate("ui_new_articulo", "Stock:", 0, QApplication::UnicodeUTF8));
         pushButton_agregar->setText(QApplication::translate("ui_new_articulo", "Agregar", 0, QApplication::UnicodeUTF8));
-        btn_borrar->setText(QApplication::translate("ui_new_articulo", "Borrar", 0, QApplication::UnicodeUTF8));
         l_resultado_2->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ui_new_articulo", "C\303\263digo", 0, QApplication::UnicodeUTF8));
@@ -329,6 +345,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QApplication::translate("ui_new_articulo", "Precio", 0, QApplication::UnicodeUTF8));
         btn_aceptar->setText(QApplication::translate("ui_new_articulo", "Aceptar", 0, QApplication::UnicodeUTF8));
+        btn_borrar->setText(QApplication::translate("ui_new_articulo", "Borrar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_new_articulo", "Cancelar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

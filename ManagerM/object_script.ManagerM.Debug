@@ -13,7 +13,6 @@ INPUT(
 ./debug\ui_opciones.o
 ./debug\object_e_grupo.o
 ./debug\ui_opciones_base_datos.o
-./debug\ui_articulo.o
 ./debug\object_e_articulo.o
 ./debug\ui_opciones_articulo.o
 ./debug\object_e_medida.o
@@ -36,12 +35,12 @@ INPUT(
 ./debug\ui_newedit_colaborador.o
 ./debug\ui_module_colaboradores.o
 ./debug\ui_opciones_tienda.o
+./debug\ui_edit_articulo.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
 ./debug\moc_ui_opciones.o
 ./debug\moc_ui_opciones_base_datos.o
-./debug\moc_ui_articulo.o
 ./debug\moc_ui_opciones_articulo.o
 ./debug\moc_ui_module_home.o
 ./debug\moc_ui_module_ventas.o
@@ -55,5 +54,6 @@ INPUT(
 ./debug\moc_ui_newedit_colaborador.o
 ./debug\moc_ui_module_colaboradores.o
 ./debug\moc_ui_opciones_tienda.o
+./debug\moc_ui_edit_articulo.o
 ./debug\qrc_Icons.o
 );

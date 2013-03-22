@@ -27,7 +27,6 @@ SOURCES += main.cpp\
     ui_opciones.cpp \
     object_e_grupo.cpp \
     ui_opciones_base_datos.cpp \
-    ui_articulo.cpp \
     object_e_articulo.cpp \
     ui_opciones_articulo.cpp \
     object_e_medida.cpp \
@@ -49,7 +48,8 @@ SOURCES += main.cpp\
     object_e_colaborador.cpp \
     ui_newedit_colaborador.cpp \
     ui_module_colaboradores.cpp \
-    ui_opciones_tienda.cpp
+    ui_opciones_tienda.cpp \
+    ui_edit_articulo.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -67,8 +67,6 @@ HEADERS  += ui_main.h \
     ui_opciones.h \
     object_e_grupo.h \
     ui_opciones_base_datos.h \
-    ui_articulo.h \
-    ui_articulo.h \
     object_e_articulo.h \
     ui_opciones_articulo.h \
     object_e_medida.h \
@@ -90,7 +88,9 @@ HEADERS  += ui_main.h \
     object_e_colaborador.h \
     ui_newedit_colaborador.h \
     ui_module_colaboradores.h \
-    ui_opciones_tienda.h
+    ui_opciones_tienda.h \
+    ui_edit_articulo.h \
+    database_connection.h
 
 
 FORMS    += ui_main.ui \
@@ -98,7 +98,6 @@ FORMS    += ui_main.ui \
     ui_colaborador.ui \
     ui_opciones.ui \
     ui_opciones_base_datos.ui \
-    ui_articulo.ui \
     ui_opciones_articulo.ui \
     ui_module_home.ui \
     ui_module_ventas.ui \
@@ -111,7 +110,8 @@ FORMS    += ui_main.ui \
     ui_new_articulo.ui \
     ui_newedit_colaborador.ui \
     ui_module_colaboradores.ui \
-    ui_opciones_tienda.ui
+    ui_opciones_tienda.ui \
+    ui_edit_articulo.ui
 
 RESOURCES += \
     Icons.qrc

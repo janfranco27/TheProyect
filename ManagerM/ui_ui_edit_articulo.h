@@ -1,0 +1,252 @@
+/********************************************************************************
+** Form generated from reading UI file 'ui_edit_articulo.ui'
+**
+** Created: Fri 22. Mar 14:26:42 2013
+**      by: Qt User Interface Compiler version 4.8.1
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_UI_EDIT_ARTICULO_H
+#define UI_UI_EDIT_ARTICULO_H
+
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QComboBox>
+#include <QtGui/QDialog>
+#include <QtGui/QDialogButtonBox>
+#include <QtGui/QGridLayout>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_ui_edit_articulos
+{
+public:
+    QGridLayout *gridLayout;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *title_label;
+    QSpacerItem *horizontalSpacer_3;
+    QGridLayout *gridLayout_2;
+    QLabel *l_codigo_2;
+    QLabel *l_marca_2;
+    QComboBox *cb_marca;
+    QPushButton *btn_add_marca;
+    QLabel *l_precio_2;
+    QLineEdit *le_precio_2;
+    QLabel *l_nombre_2;
+    QLineEdit *le_nombre_2;
+    QLabel *l_medida_2;
+    QComboBox *cb_medida;
+    QPushButton *btn_add_medida;
+    QLabel *label_2;
+    QComboBox *cb_proveedor;
+    QPushButton *btn_add_proveedor;
+    QLabel *l_grupo_2;
+    QComboBox *cb_grupo;
+    QPushButton *btn_add_grupo;
+    QLabel *l_stock_2;
+    QLineEdit *le_stock_2;
+    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *horizontalSpacer_6;
+    QLabel *l_codigoop;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QDialogButtonBox *buttonBox;
+
+    void setupUi(QDialog *ui_edit_articulos)
+    {
+        if (ui_edit_articulos->objectName().isEmpty())
+            ui_edit_articulos->setObjectName(QString::fromUtf8("ui_edit_articulos"));
+        ui_edit_articulos->resize(690, 206);
+        gridLayout = new QGridLayout(ui_edit_articulos);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        horizontalSpacer_2 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 0, 0, 1, 1);
+
+        title_label = new QLabel(ui_edit_articulos);
+        title_label->setObjectName(QString::fromUtf8("title_label"));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        title_label->setFont(font);
+
+        gridLayout->addWidget(title_label, 0, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_3, 0, 2, 1, 1);
+
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        l_codigo_2 = new QLabel(ui_edit_articulos);
+        l_codigo_2->setObjectName(QString::fromUtf8("l_codigo_2"));
+
+        gridLayout_2->addWidget(l_codigo_2, 0, 0, 1, 1);
+
+        l_marca_2 = new QLabel(ui_edit_articulos);
+        l_marca_2->setObjectName(QString::fromUtf8("l_marca_2"));
+
+        gridLayout_2->addWidget(l_marca_2, 0, 4, 1, 1);
+
+        cb_marca = new QComboBox(ui_edit_articulos);
+        cb_marca->setObjectName(QString::fromUtf8("cb_marca"));
+
+        gridLayout_2->addWidget(cb_marca, 0, 5, 1, 1);
+
+        btn_add_marca = new QPushButton(ui_edit_articulos);
+        btn_add_marca->setObjectName(QString::fromUtf8("btn_add_marca"));
+
+        gridLayout_2->addWidget(btn_add_marca, 0, 7, 1, 1);
+
+        l_precio_2 = new QLabel(ui_edit_articulos);
+        l_precio_2->setObjectName(QString::fromUtf8("l_precio_2"));
+
+        gridLayout_2->addWidget(l_precio_2, 0, 8, 1, 1);
+
+        le_precio_2 = new QLineEdit(ui_edit_articulos);
+        le_precio_2->setObjectName(QString::fromUtf8("le_precio_2"));
+
+        gridLayout_2->addWidget(le_precio_2, 0, 9, 1, 2);
+
+        l_nombre_2 = new QLabel(ui_edit_articulos);
+        l_nombre_2->setObjectName(QString::fromUtf8("l_nombre_2"));
+
+        gridLayout_2->addWidget(l_nombre_2, 1, 0, 1, 1);
+
+        le_nombre_2 = new QLineEdit(ui_edit_articulos);
+        le_nombre_2->setObjectName(QString::fromUtf8("le_nombre_2"));
+
+        gridLayout_2->addWidget(le_nombre_2, 1, 1, 1, 3);
+
+        l_medida_2 = new QLabel(ui_edit_articulos);
+        l_medida_2->setObjectName(QString::fromUtf8("l_medida_2"));
+
+        gridLayout_2->addWidget(l_medida_2, 1, 4, 1, 1);
+
+        cb_medida = new QComboBox(ui_edit_articulos);
+        cb_medida->setObjectName(QString::fromUtf8("cb_medida"));
+
+        gridLayout_2->addWidget(cb_medida, 1, 5, 1, 1);
+
+        btn_add_medida = new QPushButton(ui_edit_articulos);
+        btn_add_medida->setObjectName(QString::fromUtf8("btn_add_medida"));
+
+        gridLayout_2->addWidget(btn_add_medida, 1, 7, 1, 1);
+
+        label_2 = new QLabel(ui_edit_articulos);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout_2->addWidget(label_2, 1, 8, 1, 1);
+
+        cb_proveedor = new QComboBox(ui_edit_articulos);
+        cb_proveedor->setObjectName(QString::fromUtf8("cb_proveedor"));
+
+        gridLayout_2->addWidget(cb_proveedor, 1, 9, 1, 1);
+
+        btn_add_proveedor = new QPushButton(ui_edit_articulos);
+        btn_add_proveedor->setObjectName(QString::fromUtf8("btn_add_proveedor"));
+
+        gridLayout_2->addWidget(btn_add_proveedor, 1, 10, 1, 1);
+
+        l_grupo_2 = new QLabel(ui_edit_articulos);
+        l_grupo_2->setObjectName(QString::fromUtf8("l_grupo_2"));
+
+        gridLayout_2->addWidget(l_grupo_2, 2, 0, 1, 1);
+
+        cb_grupo = new QComboBox(ui_edit_articulos);
+        cb_grupo->setObjectName(QString::fromUtf8("cb_grupo"));
+
+        gridLayout_2->addWidget(cb_grupo, 2, 1, 1, 1);
+
+        btn_add_grupo = new QPushButton(ui_edit_articulos);
+        btn_add_grupo->setObjectName(QString::fromUtf8("btn_add_grupo"));
+
+        gridLayout_2->addWidget(btn_add_grupo, 2, 3, 1, 1);
+
+        l_stock_2 = new QLabel(ui_edit_articulos);
+        l_stock_2->setObjectName(QString::fromUtf8("l_stock_2"));
+
+        gridLayout_2->addWidget(l_stock_2, 2, 4, 1, 1);
+
+        le_stock_2 = new QLineEdit(ui_edit_articulos);
+        le_stock_2->setObjectName(QString::fromUtf8("le_stock_2"));
+
+        gridLayout_2->addWidget(le_stock_2, 2, 5, 1, 3);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_5, 2, 2, 1, 1);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_6, 0, 6, 1, 1);
+
+        l_codigoop = new QLabel(ui_edit_articulos);
+        l_codigoop->setObjectName(QString::fromUtf8("l_codigoop"));
+
+        gridLayout_2->addWidget(l_codigoop, 0, 1, 1, 3);
+
+
+        gridLayout->addLayout(gridLayout_2, 1, 0, 1, 3);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        buttonBox = new QDialogButtonBox(ui_edit_articulos);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        buttonBox->setOrientation(Qt::Horizontal);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        horizontalLayout->addWidget(buttonBox);
+
+
+        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 2);
+
+
+        retranslateUi(ui_edit_articulos);
+        QObject::connect(buttonBox, SIGNAL(accepted()), ui_edit_articulos, SLOT(accept()));
+        QObject::connect(buttonBox, SIGNAL(rejected()), ui_edit_articulos, SLOT(reject()));
+
+        QMetaObject::connectSlotsByName(ui_edit_articulos);
+    } // setupUi
+
+    void retranslateUi(QDialog *ui_edit_articulos)
+    {
+        ui_edit_articulos->setWindowTitle(QApplication::translate("ui_edit_articulos", "Dialog", 0, QApplication::UnicodeUTF8));
+        title_label->setText(QApplication::translate("ui_edit_articulos", "Modifique los datos del art\303\255culo seleccionado", 0, QApplication::UnicodeUTF8));
+        l_codigo_2->setText(QApplication::translate("ui_edit_articulos", "C\303\263digo:", 0, QApplication::UnicodeUTF8));
+        l_marca_2->setText(QApplication::translate("ui_edit_articulos", "Marca:", 0, QApplication::UnicodeUTF8));
+        btn_add_marca->setText(QString());
+        l_precio_2->setText(QApplication::translate("ui_edit_articulos", "Precio:  S/.", 0, QApplication::UnicodeUTF8));
+        l_nombre_2->setText(QApplication::translate("ui_edit_articulos", "Nombre:", 0, QApplication::UnicodeUTF8));
+        l_medida_2->setText(QApplication::translate("ui_edit_articulos", "Medida:", 0, QApplication::UnicodeUTF8));
+        btn_add_medida->setText(QString());
+        label_2->setText(QApplication::translate("ui_edit_articulos", "Proveedor:", 0, QApplication::UnicodeUTF8));
+        btn_add_proveedor->setText(QString());
+        l_grupo_2->setText(QApplication::translate("ui_edit_articulos", "Grupo:", 0, QApplication::UnicodeUTF8));
+        btn_add_grupo->setText(QString());
+        l_stock_2->setText(QApplication::translate("ui_edit_articulos", "Stock:", 0, QApplication::UnicodeUTF8));
+        l_codigoop->setText(QString());
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class ui_edit_articulos: public Ui_ui_edit_articulos {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_UI_EDIT_ARTICULO_H

@@ -29,6 +29,8 @@ private slots:
 
     void on_actionVentas_triggered();
 
+    void on_actionArticulos_triggered();
+
 private:
     Ui::ui_main *ui;
 protected:

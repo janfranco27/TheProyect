@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_articulos.ui'
 **
-** Created: Thu 14. Mar 11:46:50 2013
+** Created: Fri 22. Mar 14:35:56 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -182,6 +182,7 @@ public:
 
         tableView_articulos = new QTableView(layoutWidget_4);
         tableView_articulos->setObjectName(QString::fromUtf8("tableView_articulos"));
+        tableView_articulos->setEditTriggers(QAbstractItemView::NoEditTriggers);
         tableView_articulos->setAlternatingRowColors(true);
         tableView_articulos->setSelectionMode(QAbstractItemView::ExtendedSelection);
         tableView_articulos->setSelectionBehavior(QAbstractItemView::SelectRows);

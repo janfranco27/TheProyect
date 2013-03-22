@@ -91,3 +91,9 @@ void ui_main::on_actionVentas_triggered()
     ui_module_ventas *form_ventas = new ui_module_ventas;
     setCentralWidget(form_ventas);
 }
+
+void ui_main::on_actionArticulos_triggered()
+{
+    ui_module_articulos * form_articulos = new ui_module_articulos();
+    setCentralWidget(form_articulos);
+}

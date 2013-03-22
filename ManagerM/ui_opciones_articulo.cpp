@@ -14,6 +14,10 @@ ui_opciones_articulo::ui_opciones_articulo(QWidget *parent) :
     update_table_medidas();
     update_table_marcas();
     update_table_grupos();
+
+    ui->lineEdit_grupo->setFocus(Qt::OtherFocusReason);
+    ui->lineEdit_medida->setFocus(Qt::OtherFocusReason);
+    ui->lineEdit_marca->setFocus(Qt::OtherFocusReason);
 }
 
 ui_opciones_articulo::~ui_opciones_articulo()
@@ -72,6 +76,12 @@ void ui_opciones_articulo::on_pushButton_save_marca_clicked()
 
 
     ui->lineEdit_marca->clear();
+}
+
+void ui_opciones_articulo::closeEvent(QCloseEvent *ev)
+{
+    emit closing();
+
 }
 
 void ui_opciones_articulo::on_tabWidget_currentChanged(int index)

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_home.ui'
 **
-** Created: Tue 12. Mar 20:23:16 2013
+** Created: Fri 22. Mar 12:30:57 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

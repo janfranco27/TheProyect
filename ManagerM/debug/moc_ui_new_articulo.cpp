@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_articulo.h'
 **
-** Created: Fri 15. Mar 20:10:07 2013
+** Created: Fri 22. Mar 14:48:08 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,35 +23,42 @@ static const uint qt_meta_data_ui_new_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      17,   16,   16,   16, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      22,   16,   17,   16, 0x08,
-      46,   16,   16,   16, 0x08,
-      78,   16,   16,   16, 0x08,
-     103,   16,   16,   16, 0x08,
-     127,   16,   16,   16, 0x08,
-     153,   16,   16,   16, 0x08,
-     180,   16,   16,   16, 0x08,
-     207,   16,   16,   16, 0x08,
+      32,   16,   27,   16, 0x08,
+      56,   16,   16,   16, 0x08,
+      88,   16,   16,   16, 0x08,
+     113,   16,   16,   16, 0x08,
+     137,   16,   16,   16, 0x08,
+     163,   16,   16,   16, 0x08,
+     190,   16,   16,   16, 0x08,
+     217,   16,   16,   16, 0x08,
+     245,   16,   16,   16, 0x08,
+     262,  259,   16,   16, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ui_new_articulo[] = {
-    "ui_new_articulo\0\0bool\0validateRegistrarForm()\0"
+    "ui_new_articulo\0\0closing()\0bool\0"
+    "validateRegistrarForm()\0"
     "on_pushButton_agregar_clicked()\0"
     "on_btn_aceptar_clicked()\0"
     "on_btn_borrar_clicked()\0"
     "on_btn_cancelar_clicked()\0"
     "on_btn_add_grupo_clicked()\0"
     "on_btn_add_marca_clicked()\0"
-    "on_btn_add_medida_clicked()\0"
+    "on_btn_add_medida_clicked()\0update_form()\0"
+    "ev\0closeEvent(QCloseEvent*)\0"
 };
 
 void ui_new_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -60,15 +67,18 @@ void ui_new_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         Q_ASSERT(staticMetaObject.cast(_o));
         ui_new_articulo *_t = static_cast<ui_new_articulo *>(_o);
         switch (_id) {
-        case 0: { bool _r = _t->validateRegistrarForm();
+        case 0: _t->closing(); break;
+        case 1: { bool _r = _t->validateRegistrarForm();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 1: _t->on_pushButton_agregar_clicked(); break;
-        case 2: _t->on_btn_aceptar_clicked(); break;
-        case 3: _t->on_btn_borrar_clicked(); break;
-        case 4: _t->on_btn_cancelar_clicked(); break;
-        case 5: _t->on_btn_add_grupo_clicked(); break;
-        case 6: _t->on_btn_add_marca_clicked(); break;
-        case 7: _t->on_btn_add_medida_clicked(); break;
+        case 2: _t->on_pushButton_agregar_clicked(); break;
+        case 3: _t->on_btn_aceptar_clicked(); break;
+        case 4: _t->on_btn_borrar_clicked(); break;
+        case 5: _t->on_btn_cancelar_clicked(); break;
+        case 6: _t->on_btn_add_grupo_clicked(); break;
+        case 7: _t->on_btn_add_marca_clicked(); break;
+        case 8: _t->on_btn_add_medida_clicked(); break;
+        case 9: _t->update_form(); break;
+        case 10: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -106,10 +116,16 @@ int ui_new_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 11;
     }
     return _id;
+}
+
+// SIGNAL 0
+void ui_new_articulo::closing()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE
