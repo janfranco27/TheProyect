@@ -49,7 +49,10 @@ SOURCES += main.cpp\
     ui_newedit_colaborador.cpp \
     ui_module_colaboradores.cpp \
     ui_opciones_tienda.cpp \
-    ui_edit_articulo.cpp
+    ui_edit_articulo.cpp \
+    ui_new_venta.cpp \
+    ui_new_venta_boleta.cpp \
+    ui_new_venta_factura.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -90,7 +93,10 @@ HEADERS  += ui_main.h \
     ui_module_colaboradores.h \
     ui_opciones_tienda.h \
     ui_edit_articulo.h \
-    database_connection.h
+    database_connection.h \
+    ui_new_venta.h \
+    ui_new_venta_boleta.h \
+    ui_new_venta_factura.h
 
 
 FORMS    += ui_main.ui \
@@ -111,7 +117,10 @@ FORMS    += ui_main.ui \
     ui_newedit_colaborador.ui \
     ui_module_colaboradores.ui \
     ui_opciones_tienda.ui \
-    ui_edit_articulo.ui
+    ui_edit_articulo.ui \
+    ui_new_venta.ui \
+    ui_new_venta_boleta.ui \
+    ui_new_venta_factura.ui
 
 RESOURCES += \
     Icons.qrc

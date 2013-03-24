@@ -36,6 +36,9 @@ INPUT(
 ./release\ui_module_colaboradores.o
 ./release\ui_opciones_tienda.o
 ./release\ui_edit_articulo.o
+./release\ui_new_venta.o
+./release\ui_new_venta_boleta.o
+./release\ui_new_venta_factura.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -55,5 +58,8 @@ INPUT(
 ./release\moc_ui_module_colaboradores.o
 ./release\moc_ui_opciones_tienda.o
 ./release\moc_ui_edit_articulo.o
+./release\moc_ui_new_venta.o
+./release\moc_ui_new_venta_boleta.o
+./release\moc_ui_new_venta_factura.o
 ./release\qrc_Icons.o
 );

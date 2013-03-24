@@ -36,6 +36,9 @@ INPUT(
 ./debug\ui_module_colaboradores.o
 ./debug\ui_opciones_tienda.o
 ./debug\ui_edit_articulo.o
+./debug\ui_new_venta.o
+./debug\ui_new_venta_boleta.o
+./debug\ui_new_venta_factura.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -55,5 +58,8 @@ INPUT(
 ./debug\moc_ui_module_colaboradores.o
 ./debug\moc_ui_opciones_tienda.o
 ./debug\moc_ui_edit_articulo.o
+./debug\moc_ui_new_venta.o
+./debug\moc_ui_new_venta_boleta.o
+./debug\moc_ui_new_venta_factura.o
 ./debug\qrc_Icons.o
 );
