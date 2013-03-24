@@ -170,9 +170,22 @@ bool object_e_articulo::mf_load(_QSTR pk)
 	if(query.next())
 	{
 		md_o_pk_articulo = query.value(0).toString();
-		md_o_fk_grupo = query.value(1).toString();
-		md_o_fk_marca = query.value(2).toString();
-		md_o_fk_medida = query.value(3).toString();
+        if(query.value(1).isNull())
+            md_o_fk_grupo="";
+        else
+            md_o_fk_grupo = query.value(1).toString();
+
+
+        if(query.value(2).isNull())
+            md_o_fk_marca="";
+        else
+            md_o_fk_marca = query.value(2).toString();
+
+        if(query.value(3).isNull())
+            md_o_fk_medida="";
+        else
+            md_o_fk_medida = query.value(3).toString();
+
 		md_o_descripcion = query.value(4).toString();
 		md_o_precio_lista = query.value(5).toString();
 		md_o_stock = query.value(6).toString();
@@ -272,9 +285,20 @@ bool object_e_articulo::mf_update()
 	QSqlQuery query;
 
 	query.prepare("UPDATE e_articulo SET fk_grupo = ?, fk_marca = ?, fk_medida = ?, descripcion = ?, precio_lista = ?, stock = ?, habilitado = ? WHERE pk_articulo = ?");
-	query.bindValue(0, md_o_fk_grupo);
-	query.bindValue(1, md_o_fk_marca);
-	query.bindValue(2, md_o_fk_medida);
+    if(md_o_fk_grupo=="")
+      query.bindValue(0,QVariant());
+  else
+      query.bindValue(0, md_o_fk_grupo);
+  if(md_o_fk_marca=="")
+          query.bindValue(1,QVariant());
+  else
+      query.bindValue(1, md_o_fk_marca);
+
+  if(md_o_fk_medida=="")
+          query.bindValue(2,QVariant());
+  else
+      query.bindValue(2, md_o_fk_medida);
+
 	query.bindValue(3, md_o_descripcion);
 	query.bindValue(4, md_o_precio_lista);
 	query.bindValue(5, md_o_stock);
@@ -291,7 +315,7 @@ bool object_e_articulo::mf_update()
 	}else{
 		//state FAILED
 		//w!
-
+        qDebug()<<query.lastError().databaseText()<<endl;
 		return false;
 	}
 }

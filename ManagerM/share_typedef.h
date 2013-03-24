@@ -108,6 +108,12 @@ enum opciones_articulo{marca,medida,grupo};
     //#define C_LOGIN_LOGGED_NAME "Bienvenido" + USER_GET_NAME + "." // revisar esto
     #define C_LOGIN_LOGGED "Bienvenido."
 
+    #define C_ERROR_REGISTRO_ARTICULO "Ocurrio un error al momento de registrar, intente de nuevo"
+    #define C_ERROR_ELIMINAR_ARTICULO "Ocurrio un error al momento de eliminar, intente de nuevo"
+    #define C_CORRECTO_REGISTRO_ARTICULO "Los articulos fueron registrados correctamente"
+
+    #define C_HABILITADO "1"
+    #define C_NO_HABILITADO  "0"
     //CONSULTAS A LA DB
 
 

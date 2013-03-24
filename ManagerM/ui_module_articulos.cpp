@@ -119,10 +119,68 @@ void ui_module_articulos::on_pushButton_editar_2_clicked()
             articulo.mf_set_precio_lista(record.value(PRECIO).toString());
             articulo.mf_set_stock(record.value(STOCK).toString());
 
-            qDebug()<<"ok "<<record.value(0).toString();
+
             ui_edit_articulo  form_edit_articulos(&articulo) ;
             form_edit_articulos.exec();
+
+
+            //Actualizamos la tabla de articulos
+            update_table_articulos();
         }
     }
+
+}
+
+void ui_module_articulos::on_pushButton_eliminar_2_clicked()
+{
+   QModelIndexList  list = ui->tableView_articulos->selectionModel()->selectedRows();
+    int filas = list.size();
+   if(filas==0)
+   {
+       QMessageBox::information(this,"Error","Por favor, seleccione una fila para eliminar");
+   }
+   else
+   {
+       int rpta = QMessageBox::question(this,"Confirmación","Esta seguro de eliminar "+QString::number(filas)+" articulos?","Aceptar","Cancelar");
+
+       if(rpta==0)
+       {
+           bool ok = true;
+           for(int i=0;i<filas;i++)
+           {
+               QSqlRelationalTableModel * model = (QSqlRelationalTableModel*)ui->tableView_articulos->model();
+               QSqlRecord record = model->record(list.at(i).row());
+
+               object_e_articulo obj;
+               obj.mf_load(record.value(COD).toString());
+
+               obj.mf_set_habilitado(C_NO_HABILITADO);
+
+               //Si ocurre un error
+              if (!obj.mf_update())
+              {
+                ok = false;
+              }
+           }
+
+
+           if(!ok)
+           {
+               //Mostramos mensaje de error
+               QMessageBox::information(this,"Error",C_ERROR_ELIMINAR_ARTICULO)        ;
+
+
+           }
+           else
+           {
+               //No ocurre ningun error
+              update_table_articulos();
+           }
+
+
+
+       }
+
+   }
 
 }

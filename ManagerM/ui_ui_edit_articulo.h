@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
-** Created: Fri 22. Mar 14:26:42 2013
+** Created: Sun 24. Mar 15:18:13 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,7 +16,6 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
 #include <QtGui/QDialog>
-#include <QtGui/QDialogButtonBox>
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -31,6 +30,7 @@ class Ui_ui_edit_articulos
 {
 public:
     QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
     QLabel *title_label;
     QSpacerItem *horizontalSpacer_3;
@@ -59,18 +59,21 @@ public:
     QLabel *l_codigoop;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QDialogButtonBox *buttonBox;
+    QPushButton *btn_aceptar;
+    QPushButton *btn_cancelar;
 
     void setupUi(QDialog *ui_edit_articulos)
     {
         if (ui_edit_articulos->objectName().isEmpty())
             ui_edit_articulos->setObjectName(QString::fromUtf8("ui_edit_articulos"));
-        ui_edit_articulos->resize(690, 206);
+        ui_edit_articulos->resize(702, 231);
         gridLayout = new QGridLayout(ui_edit_articulos);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_2, 0, 0, 1, 1);
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
         title_label = new QLabel(ui_edit_articulos);
         title_label->setObjectName(QString::fromUtf8("title_label"));
@@ -79,11 +82,14 @@ public:
         font.setWeight(75);
         title_label->setFont(font);
 
-        gridLayout->addWidget(title_label, 0, 1, 1, 1);
+        horizontalLayout_2->addWidget(title_label);
 
         horizontalSpacer_3 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_3, 0, 2, 1, 1);
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
+
+        gridLayout->addLayout(horizontalLayout_2, 0, 0, 1, 1);
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
@@ -196,7 +202,7 @@ public:
         gridLayout_2->addWidget(l_codigoop, 0, 1, 1, 3);
 
 
-        gridLayout->addLayout(gridLayout_2, 1, 0, 1, 3);
+        gridLayout->addLayout(gridLayout_2, 1, 0, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -204,20 +210,21 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        buttonBox = new QDialogButtonBox(ui_edit_articulos);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        btn_aceptar = new QPushButton(ui_edit_articulos);
+        btn_aceptar->setObjectName(QString::fromUtf8("btn_aceptar"));
 
-        horizontalLayout->addWidget(buttonBox);
+        horizontalLayout->addWidget(btn_aceptar);
+
+        btn_cancelar = new QPushButton(ui_edit_articulos);
+        btn_cancelar->setObjectName(QString::fromUtf8("btn_cancelar"));
+
+        horizontalLayout->addWidget(btn_cancelar);
 
 
-        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 2);
+        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 1);
 
 
         retranslateUi(ui_edit_articulos);
-        QObject::connect(buttonBox, SIGNAL(accepted()), ui_edit_articulos, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), ui_edit_articulos, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(ui_edit_articulos);
     } // setupUi
@@ -239,6 +246,8 @@ public:
         btn_add_grupo->setText(QString());
         l_stock_2->setText(QApplication::translate("ui_edit_articulos", "Stock:", 0, QApplication::UnicodeUTF8));
         l_codigoop->setText(QString());
+        btn_aceptar->setText(QApplication::translate("ui_edit_articulos", "Aceptar", 0, QApplication::UnicodeUTF8));
+        btn_cancelar->setText(QApplication::translate("ui_edit_articulos", "Cancelar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

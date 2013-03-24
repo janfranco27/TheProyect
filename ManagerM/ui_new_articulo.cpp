@@ -5,8 +5,7 @@ const int numHeaders = 7;
 
 //_QSTR headers[numHeaders] = {"Código","Nombre","Grupo","Marca","Medida","Precio","Stock"};
 
-const  char *habilitado = "1";
-const  char *no_habilitado = "0";
+
 
 enum {MEDIDA,GRUPO,MARCA};
 ui_new_articulo::ui_new_articulo(QWidget *parent) :
@@ -160,7 +159,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     articulo.mf_set_fk_medida(medida);
                     articulo.mf_set_stock(ui->tableWidget->item(i,5)->text());
                     articulo.mf_set_precio_lista(ui->tableWidget->item(i,6)->text());
-                    articulo.mf_set_habilitado(habilitado);
+                    articulo.mf_set_habilitado(C_HABILITADO);
 
                     //Si ocurrio un error al insertar en la BD
                     if(!articulo.mf_add())
@@ -174,13 +173,13 @@ void ui_new_articulo::on_btn_aceptar_clicked()
 
             if(ok)
             {
-                QMessageBox::information(this,"Registro correcto","Los articulos fueron registrados correctamente")        ;
+                QMessageBox::information(this,"Registro correcto",C_CORRECTO_REGISTRO_ARTICULO)        ;
                 reset_form();
 
             }
             else
             {
-                QMessageBox::information(this,"Error en el registro","Ocurrio un error al momento de registrar, intente de nuevo")        ;
+                QMessageBox::information(this,"Error en el registro",C_ERROR_REGISTRO_ARTICULO)        ;
             }
         }
         else

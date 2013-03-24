@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_articulos.h'
 **
-** Created: Fri 22. Mar 14:48:04 2013
+** Created: Sun 24. Mar 15:28:35 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_module_articulos[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,7 @@ static const uint qt_meta_data_ui_module_articulos[] = {
       21,   20,   20,   20, 0x08,
       53,   20,   20,   20, 0x08,
       86,   20,   20,   20, 0x08,
+     111,   20,   20,   20, 0x08,
 
        0        // eod
 };
@@ -43,6 +44,7 @@ static const char qt_meta_stringdata_ui_module_articulos[] = {
     "on_pushButton_nuevo_2_clicked()\0"
     "on_pushButton_editar_2_clicked()\0"
     "update_table_articulos()\0"
+    "on_pushButton_eliminar_2_clicked()\0"
 };
 
 void ui_module_articulos::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -54,6 +56,7 @@ void ui_module_articulos::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 0: _t->on_pushButton_nuevo_2_clicked(); break;
         case 1: _t->on_pushButton_editar_2_clicked(); break;
         case 2: _t->update_table_articulos(); break;
+        case 3: _t->on_pushButton_eliminar_2_clicked(); break;
         default: ;
         }
     }
@@ -92,9 +95,9 @@ int ui_module_articulos::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

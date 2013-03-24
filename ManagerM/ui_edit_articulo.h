@@ -15,9 +15,18 @@ public:
     explicit ui_edit_articulo(object_e_articulo * ar, QWidget *parent = 0);
     ~ui_edit_articulo();
     
+private slots:
+
+
+    void on_btn_aceptar_clicked();
+
+    void on_btn_cancelar_clicked();
+
 private:
     Ui::ui_edit_articulos *ui;
     void update_form();
+    void load_selected_articulo(object_e_articulo *ar);
+    bool validateForm();
 };
 
 #endif // UI_EDIT_ARTICULOS_H
