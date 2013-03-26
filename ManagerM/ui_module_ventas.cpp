@@ -73,5 +73,6 @@ void ui_module_ventas::on_pushButton_nuevo_clicked()
 
     form_new_venta->setAttribute(Qt::WA_DeleteOnClose);
 
+
     form_new_venta->show();
 }

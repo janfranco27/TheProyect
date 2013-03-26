@@ -63,10 +63,12 @@ void ui_module_articulos::update_table_articulos()
     //Creamos el nuevo model
     QSqlRelationalTableModel * model = new QSqlRelationalTableModel();
     model->setTable(e_articulo);
+
    model->setRelation(GRUPO,QSqlRelation(e_grupo,pk_grupo,descripcion));
    model->setRelation(MARCA,QSqlRelation(e_marca,pk_marca,descripcion));
     model->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
     model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
+    model->setFilter("habilitado=1");
     for(int i=0;i<num_header;i++)
     {
         model->setHeaderData(i,Qt::Horizontal,tableHeaders[i]);
