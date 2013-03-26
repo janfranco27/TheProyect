@@ -1,6 +1,6 @@
 #include "ui_module_ventas.h"
 #include "ui_ui_module_ventas.h"
-
+#include "ui_new_venta.h"
 //enum modulo_ventas{}
 
 ui_module_ventas::ui_module_ventas(QWidget *parent) :
@@ -69,5 +69,9 @@ void ui_module_ventas::on_treeWidget_ventas_itemDoubleClicked(QTreeWidgetItem *i
 
 void ui_module_ventas::on_pushButton_nuevo_clicked()
 {
+    ui_new_venta * form_new_venta = new ui_new_venta();
 
+    form_new_venta->setAttribute(Qt::WA_DeleteOnClose);
+
+    form_new_venta->show();
 }

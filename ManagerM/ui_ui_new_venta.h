@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-** Created: Sat 23. Mar 12:36:57 2013
+** Created: Tue 26. Mar 16:31:47 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -50,19 +50,19 @@ public:
     QWidget *page_2;
     QTableWidget *tableWidget_2;
     QLabel *label_5;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
     QComboBox *comboBox_3;
     QWidget *page_3;
-    QWidget *widget1;
-    QWidget *widget2;
+    QWidget *widget;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_6;
     QLineEdit *lineEdit_2;
     QLabel *label_7;
     QLineEdit *lineEdit_3;
-    QWidget *widget3;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_8;
     QDateEdit *dateEdit;
@@ -134,18 +134,18 @@ public:
         label_5 = new QLabel(page_2);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(40, 80, 114, 13));
-        widget = new QWidget(page_2);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 10, 178, 22));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(page_2);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 10, 204, 24));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         horizontalLayout->addWidget(label_4);
 
-        comboBox_3 = new QComboBox(widget);
+        comboBox_3 = new QComboBox(layoutWidget);
         comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
 
         horizontalLayout->addWidget(comboBox_3);
@@ -153,47 +153,47 @@ public:
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
-        widget1 = new QWidget(page_3);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(40, 80, 801, 331));
-        widget2 = new QWidget(page_3);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(40, 30, 351, 22));
-        horizontalLayout_2 = new QHBoxLayout(widget2);
+        widget = new QWidget(page_3);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(40, 80, 801, 331));
+        layoutWidget1 = new QWidget(page_3);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(40, 30, 351, 24));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_6 = new QLabel(widget2);
+        label_6 = new QLabel(layoutWidget1);
         label_6->setObjectName(QString::fromUtf8("label_6"));
 
         horizontalLayout_2->addWidget(label_6);
 
-        lineEdit_2 = new QLineEdit(widget2);
+        lineEdit_2 = new QLineEdit(layoutWidget1);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
 
         horizontalLayout_2->addWidget(lineEdit_2);
 
-        label_7 = new QLabel(widget2);
+        label_7 = new QLabel(layoutWidget1);
         label_7->setObjectName(QString::fromUtf8("label_7"));
 
         horizontalLayout_2->addWidget(label_7);
 
-        lineEdit_3 = new QLineEdit(widget2);
+        lineEdit_3 = new QLineEdit(layoutWidget1);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
 
         horizontalLayout_2->addWidget(lineEdit_3);
 
-        widget3 = new QWidget(page_3);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        widget3->setGeometry(QRect(660, 30, 158, 22));
-        horizontalLayout_3 = new QHBoxLayout(widget3);
+        layoutWidget2 = new QWidget(page_3);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(660, 30, 188, 24));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_8 = new QLabel(widget3);
+        label_8 = new QLabel(layoutWidget2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
 
         horizontalLayout_3->addWidget(label_8);
 
-        dateEdit = new QDateEdit(widget3);
+        dateEdit = new QDateEdit(layoutWidget2);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
 
         horizontalLayout_3->addWidget(dateEdit);
@@ -207,7 +207,7 @@ public:
         pushButton_4->setGeometry(QRect(730, 550, 75, 23));
         layoutWidget_2 = new QWidget(ui_new_venta);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(660, 500, 185, 22));
+        layoutWidget_2->setGeometry(QRect(660, 500, 185, 24));
         horizontalLayout_6 = new QHBoxLayout(layoutWidget_2);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -224,7 +224,7 @@ public:
 
         retranslateUi(ui_new_venta);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ui_new_venta);
