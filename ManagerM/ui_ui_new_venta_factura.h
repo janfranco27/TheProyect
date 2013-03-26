@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta_factura.ui'
 **
-** Created: Sat 23. Mar 12:36:58 2013
+** Created: Tue 26. Mar 17:21:42 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,12 +30,14 @@ public:
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
     QPushButton *pushButton_2;
+    QLabel *label_4;
+    QLineEdit *lineEdit_4;
 
     void setupUi(QWidget *ui_new_venta_factura)
     {
         if (ui_new_venta_factura->objectName().isEmpty())
             ui_new_venta_factura->setObjectName(QString::fromUtf8("ui_new_venta_factura"));
-        ui_new_venta_factura->resize(710, 395);
+        ui_new_venta_factura->resize(710, 220);
         label = new QLabel(ui_new_venta_factura);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(50, 60, 46, 13));
@@ -50,7 +52,13 @@ public:
         lineEdit_2->setGeometry(QRect(190, 90, 113, 20));
         pushButton_2 = new QPushButton(ui_new_venta_factura);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(310, 90, 75, 23));
+        pushButton_2->setGeometry(QRect(330, 90, 75, 23));
+        label_4 = new QLabel(ui_new_venta_factura);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(50, 150, 81, 16));
+        lineEdit_4 = new QLineEdit(ui_new_venta_factura);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(190, 140, 113, 20));
 
         retranslateUi(ui_new_venta_factura);
 
@@ -63,6 +71,7 @@ public:
         label->setText(QApplication::translate("ui_new_venta_factura", "Ruc", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_new_venta_factura", "Raz\303\263n social", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("ui_new_venta_factura", "PushButton", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("ui_new_venta_factura", "Direccion", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
