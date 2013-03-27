@@ -22,6 +22,7 @@ public:
 
     QSqlQuery getArticulos(_QSTR codigo, _QSTR nombre , _QSTR grupo, _QSTR marca, _QSTR medida, _QSTR stock, _QSTR precio);
     QSqlQuery getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,vector<pair<_QSTR,_QSTR> >  where = vector<pair<_QSTR,_QSTR> >(),vector<pair<_QSTR,_QSTR> > joins = vector<pair<_QSTR,_QSTR> >(),_QSTR   extra="");
+    QStringList getArticulosDescripcion();
     int getAutoIncrement(const _QSTR tablename);
     void loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio);
     vector<_QSTR> getDescripcion(const char *tablename);

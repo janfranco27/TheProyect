@@ -15,6 +15,9 @@ public:
     explicit ui_new_venta(QWidget *parent = 0);
     ~ui_new_venta();
     
+private slots:
+    void on_le_nombre_textEdited(const QString &arg1);
+
 private:
     Ui::ui_new_venta *ui;
 };

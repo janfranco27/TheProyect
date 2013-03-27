@@ -18,8 +18,8 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>871</width>
-     <height>461</height>
+     <width>851</width>
+     <height>477</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -58,12 +58,12 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="l_marca">
       <property name="text">
        <string>Marca</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox"/>
+     <widget class="QComboBox" name="cb_marca"/>
     </widget>
     <widget class="QSplitter" name="splitter_2">
      <property name="geometry">
@@ -77,12 +77,12 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="l_medida">
       <property name="text">
        <string>Medida</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_2"/>
+     <widget class="QComboBox" name="cb_medida"/>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
@@ -122,12 +122,12 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="l_nombre">
       <property name="text">
        <string>Nombre</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="le_nombre"/>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">

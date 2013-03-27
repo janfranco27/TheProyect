@@ -1,5 +1,5 @@
 #include "sistema.h"
-
+#include <QSqlError>
 
 Sistema::Sistema()
 {
@@ -179,6 +179,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
             }
             else
             {
+                    qDebug()<<query.lastError()<<endl;
                     qDebug()<<"query  NO";
             }
         }
@@ -196,6 +197,25 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
           return query;
 
+
+}
+
+QStringList Sistema::getArticulosDescripcion()
+{
+    vector<_QSTR> select,from;
+    select.push_back("descripcion");
+    from.push_back("e_articulo");
+
+     QSqlQuery query = getSelectQuery(select,from);
+
+     QStringList lista;
+
+     while(query.next())
+     {
+        lista<<query.value(0).toString();
+     }
+
+     return lista;
 
 }
 

@@ -42,7 +42,7 @@ using namespace std;
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QModelIndex>
-
+#include <QSqlRelationalTableModel>
 //NAMESPACES
 
 //PROYECT INCLUDES - NAMESPACE

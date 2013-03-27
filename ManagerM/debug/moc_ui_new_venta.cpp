@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta.h'
 **
-** Created: Sun 24. Mar 12:32:56 2013
+** Created: Tue 26. Mar 18:37:20 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,26 +23,33 @@ static const uint qt_meta_data_ui_new_venta[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+      19,   14,   13,   13, 0x08,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_ui_new_venta[] = {
-    "ui_new_venta\0"
+    "ui_new_venta\0\0arg1\0on_le_nombre_textEdited(QString)\0"
 };
 
 void ui_new_venta::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ui_new_venta *_t = static_cast<ui_new_venta *>(_o);
+        switch (_id) {
+        case 0: _t->on_le_nombre_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObjectExtraData ui_new_venta::staticMetaObjectExtraData = {
@@ -76,6 +83,11 @@ int ui_new_venta::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE
