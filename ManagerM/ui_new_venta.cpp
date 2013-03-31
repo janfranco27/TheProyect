@@ -7,7 +7,7 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QCompleter * comp = new QCompleter(SYSTEM->getArticulosDescripcion(),this);
+    QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
 
     comp->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
     comp->setCompletionPrefix("pin");

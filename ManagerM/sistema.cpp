@@ -200,13 +200,17 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
 }
 
-QStringList Sistema::getArticulosDescripcion()
+QStringList Sistema::getListOfValues(_QSTR tableName, _QSTR columnName)
 {
-    vector<_QSTR> select,from;
-    select.push_back("descripcion");
-    from.push_back("e_articulo");
 
-     QSqlQuery query = getSelectQuery(select,from);
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where,joins;
+    _QSTR extra = "ORDER BY "+columnName;
+
+    select.push_back(columnName);
+    from.push_back(tableName);
+
+     QSqlQuery query = getSelectQuery(select,from,where,joins,extra);
 
      QStringList lista;
 
@@ -218,6 +222,7 @@ QStringList Sistema::getArticulosDescripcion()
      return lista;
 
 }
+
 
 int Sistema::getAutoIncrement(const _QSTR tablename)
 {

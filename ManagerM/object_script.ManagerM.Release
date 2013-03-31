@@ -39,6 +39,8 @@ INPUT(
 ./release\ui_new_venta.o
 ./release\ui_new_venta_boleta.o
 ./release\ui_new_venta_factura.o
+./release\generado.o
+./release\lineedit.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -61,5 +63,7 @@ INPUT(
 ./release\moc_ui_new_venta.o
 ./release\moc_ui_new_venta_boleta.o
 ./release\moc_ui_new_venta_factura.o
+./release\moc_generado.o
+./release\moc_lineedit.o
 ./release\qrc_Icons.o
 );
