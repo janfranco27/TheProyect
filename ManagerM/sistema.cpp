@@ -418,3 +418,54 @@ bool Sistema::deleteColaborador(_QSTR dni)
     }
 }
 
+_QSTR Sistema::getTienda()
+{
+    QSqlQuery query;
+
+    query.prepare("SELECT pk_ruc FROM e_tienda");
+    query.exec();
+
+    query.next();
+
+    if(query.size()==0)
+    {
+        return "";
+    }else{
+        return query.value(0).toString();
+    }
+
+
+
+
+
+}
+
+_QSTR Sistema::getAdministrador()
+{
+    QSqlQuery query;
+
+    query.prepare("SELECT pk_dni FROM e_usuario WHERE fk_tipo_usuario=1");
+    query.exec();
+
+    query.next();
+
+    if(query.size()==0)
+    {
+        return "";
+    }else{
+        return query.value(0).toString();
+    }
+}
+
+void Sistema::init_e_tipo_usuario()
+{
+    QSqlQuery query;
+    query.prepare("INSERT INTO e_tipo_usuario(descripcion,permisos) VALUES(?,?)");
+    query.bindValue(0,"Administrador");
+    query.bindValue(1,"1");
+    query.exec();
+
+    //inicializar todos los tipos de usuarios;
+
+}
+

@@ -54,7 +54,9 @@ SOURCES += main.cpp\
     ui_new_venta_boleta.cpp \
     ui_new_venta_factura.cpp \
     generado.cpp \
-    lineedit.cpp
+    lineedit.cpp \
+    ui_opciones_general.cpp \
+    object_e_sistema.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -100,7 +102,11 @@ HEADERS  += ui_main.h \
     ui_new_venta_boleta.h \
     ui_new_venta_factura.h \
     generado.h \
-    lineedit.h
+    lineedit.h \
+    object_general.h \
+    ui_opciones_general.h \
+    ui_ui_new_articulo.h \
+    object_e_sistema.h
 
 
 FORMS    += ui_main.ui \
@@ -125,7 +131,8 @@ FORMS    += ui_main.ui \
     ui_new_venta.ui \
     ui_new_venta_boleta.ui \
     ui_new_venta_factura.ui \
-    generado.ui
+    generado.ui \
+    ui_opciones_general.ui
 
 RESOURCES += \
     Icons.qrc

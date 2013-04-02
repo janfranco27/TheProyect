@@ -143,6 +143,15 @@
          </item>
          <item>
           <property name="text">
+           <string>Tienda</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Icons.qrc">
+            <normaloff>:/Iconos/Iconos/40406.png</normaloff>:/Iconos/Iconos/40406.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Base de Datos</string>
           </property>
           <property name="background">
@@ -157,15 +166,6 @@
           <property name="icon">
            <iconset resource="Icons.qrc">
             <normaloff>:/Iconos/Iconos/RegEdit.png</normaloff>:/Iconos/Iconos/RegEdit.png</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Tiendas</string>
-          </property>
-          <property name="icon">
-           <iconset resource="Icons.qrc">
-            <normaloff>:/Iconos/Iconos/40406.png</normaloff>:/Iconos/Iconos/40406.png</iconset>
           </property>
          </item>
          <item>

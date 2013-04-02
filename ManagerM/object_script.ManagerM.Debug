@@ -41,6 +41,8 @@ INPUT(
 ./debug\ui_new_venta_factura.o
 ./debug\generado.o
 ./debug\lineedit.o
+./debug\ui_opciones_general.o
+./debug\object_e_sistema.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -65,5 +67,6 @@ INPUT(
 ./debug\moc_ui_new_venta_factura.o
 ./debug\moc_generado.o
 ./debug\moc_lineedit.o
+./debug\moc_ui_opciones_general.o
 ./debug\qrc_Icons.o
 );

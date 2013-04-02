@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_tienda.ui'
 **
-** Created: Fri 22. Mar 12:30:57 2013
+** Created: Mon 1. Apr 23:35:07 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -75,15 +75,20 @@ public:
     {
         if (ui_opciones_tienda->objectName().isEmpty())
             ui_opciones_tienda->setObjectName(QString::fromUtf8("ui_opciones_tienda"));
-        ui_opciones_tienda->resize(602, 408);
+        ui_opciones_tienda->resize(571, 408);
         ui_opciones_tienda->setMinimumSize(QSize(571, 408));
-        ui_opciones_tienda->setMaximumSize(QSize(602, 408));
+        ui_opciones_tienda->setMaximumSize(QSize(571, 408));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/40406.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ui_opciones_tienda->setWindowIcon(icon);
         gridLayout_4 = new QGridLayout(ui_opciones_tienda);
         gridLayout_4->setSpacing(0);
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         tabWidget = new QTabWidget(ui_opciones_tienda);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        tabWidget->setMinimumSize(QSize(571, 408));
+        tabWidget->setMaximumSize(QSize(571, 408));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_5 = new QGridLayout(tab);
@@ -287,7 +292,7 @@ public:
 
     void retranslateUi(QWidget *ui_opciones_tienda)
     {
-        ui_opciones_tienda->setWindowTitle(QApplication::translate("ui_opciones_tienda", "Form", 0, QApplication::UnicodeUTF8));
+        ui_opciones_tienda->setWindowTitle(QApplication::translate("ui_opciones_tienda", "Tienda", 0, QApplication::UnicodeUTF8));
         groupBox_datos->setTitle(QApplication::translate("ui_opciones_tienda", "Datos", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_opciones_tienda", "Nombre", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_opciones_tienda", "Direcci\303\263n", 0, QApplication::UnicodeUTF8));
@@ -300,7 +305,7 @@ public:
         groupBox_otros->setTitle(QApplication::translate("ui_opciones_tienda", "Otros", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ui_opciones_tienda", "Comentario", 0, QApplication::UnicodeUTF8));
         pushButton_guardar->setText(QApplication::translate("ui_opciones_tienda", "Guardar", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ui_opciones_tienda", "Tienda", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ui_opciones_tienda", "Informaci\303\263n", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

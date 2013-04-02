@@ -20,6 +20,17 @@ private slots:
     void on_pushButton_guardar_clicked();
 
 private:
+
+    int parent;
+
+public:
+    void mf_update_data();
+
+
+    int mf_get_parent();
+    void mf_set_parent(int p);
+
+private:
     Ui::ui_opciones_tienda *ui;
 };
 

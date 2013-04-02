@@ -18,7 +18,7 @@ public:
 
 private:
 
-    int parent;
+    int parent;//para saber quien lo esta llamando (login u opciones)
 
 public:
     void mf_update_data();

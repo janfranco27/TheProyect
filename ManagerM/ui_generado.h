@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'generado.ui'
 **
-** Created: Sun 31. Mar 13:04:48 2013
+** Created: Mon 1. Apr 23:35:08 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

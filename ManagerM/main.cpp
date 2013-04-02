@@ -21,8 +21,27 @@ int main(int argc, char *argv[])
 
     if(DATABASE_CONNECT)
     {
-        ui_login *login_form = new ui_login;
-        login_form->show();
+
+
+        if(SYSTEM->getTienda() == "")
+        {
+            ui_opciones_tienda *tienda_form = new ui_opciones_tienda;
+            tienda_form->mf_set_parent(0);
+            tienda_form->show();
+        }else{
+            if(SYSTEM->getAdministrador() == "")
+            {
+                SYSTEM->init_e_tipo_usuario();
+
+                ui_newedit_colaborador *colaborador_form = new ui_newedit_colaborador(1);
+                colaborador_form->mf_set_parent(0);
+                colaborador_form->show();
+            }else{
+                ui_login *login_form = new ui_login;
+                login_form->show();
+            }
+        }
+
     }else{
         ui_opciones_base_datos *db_form = new ui_opciones_base_datos;
         db_form->mf_set_parent(0);

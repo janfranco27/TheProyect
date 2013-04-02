@@ -11,6 +11,8 @@ ui_opciones::ui_opciones(QWidget *parent) :
     tab_base_datos = new ui_opciones_base_datos(ui->widget_category);
     tab_bancos = new ui_opciones_banco(ui->widget_category);
     tab_proveedores = new ui_opciones_proveedor(ui->widget_category);
+    tab_tienda = new ui_opciones_tienda(ui->widget_category);
+    tab_general = new ui_opciones_general(ui->widget_category);
 
 
     mf_hide_all_tabs();
@@ -30,6 +32,9 @@ void ui_opciones::mf_hide_all_tabs()
     tab_base_datos->hide();
     tab_bancos->hide();
     tab_proveedores->hide();
+    tab_tienda->hide();
+    tab_general->hide();
+
 }
 
 void ui_opciones::on_listWidget_modulos_clicked(const QModelIndex &index)
@@ -54,9 +59,10 @@ void ui_opciones::on_listWidget_modulos_clicked(const QModelIndex &index)
 
         break;
 
-    case general:
 
-        ui->label_category->setText("General");
+    case tienda:
+        ui->label_category->setText("Tienda");
+        tab_tienda->show();
 
         break;
 
@@ -71,6 +77,13 @@ void ui_opciones::on_listWidget_modulos_clicked(const QModelIndex &index)
 
         ui->label_category->setText("Bancos");
         tab_bancos->show();
+
+    case general:
+
+        ui->label_category->setText("General");
+        tab_general->show();
+
+        break;
 
     default:
         break;

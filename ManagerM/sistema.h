@@ -43,7 +43,9 @@ public:
    _QSTR getTipoUsuario(_QSTR nombreUsuario);
    bool deleteColaborador(_QSTR dni);
 
-
+   _QSTR getTienda();
+   _QSTR getAdministrador();
+   void init_e_tipo_usuario();
 
 };
 

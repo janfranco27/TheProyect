@@ -61,6 +61,7 @@ using namespace std;
 
 #include "object_general.h"
 
+#include "object_e_sistema.h"
 #include "object_e_usuario.h"
 #include "object_e_grupo.h"
 #include "object_e_marca.h"
@@ -79,10 +80,12 @@ using namespace std;
 
 #include "ui_edit_proveedor.h"
 
+#include "ui_opciones_tienda.h"
 #include "ui_opciones_base_datos.h"
 #include "ui_opciones_articulo.h"
 #include "ui_opciones_banco.h"
 #include "ui_opciones_proveedor.h"
+#include "ui_opciones_general.h"
 #include "ui_opciones.h"
 
 #include "ui_articulo.h"

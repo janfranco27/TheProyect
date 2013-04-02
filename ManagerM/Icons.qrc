@@ -56,7 +56,6 @@
         <file>Iconos/windows8_metro_green_1920_1080.jpg</file>
         <file>Iconos/save.png</file>
         <file>Iconos/sq_plus.png</file>
-        <file>Iconos/trash.png</file>
         <file>Iconos/Search_1.png</file>
         <file>Iconos/trash.png</file>
         <file>Iconos/TRASH - FULL.png</file>
@@ -74,5 +73,40 @@
         <file>Iconos/JAVA.png</file>
         <file>Iconos/40406.png</file>
         <file>Iconos/Project_15.png</file>
+        <file>Iconos/sq_br_prev.png</file>
+        <file>Iconos/rnd_br_down.png</file>
+        <file>Iconos/doc_minus.png</file>
+        <file>Iconos/doc_delete.png</file>
+        <file>Iconos/contact_card.png</file>
+        <file>Iconos/br_prev.png</file>
+        <file>Iconos/sq_br_next.png</file>
+        <file>Iconos/playback_reload.png</file>
+        <file>Iconos/info.png</file>
+        <file>Iconos/download.png</file>
+        <file>Iconos/br_next.png</file>
+        <file>Iconos/sq_minus.png</file>
+        <file>Iconos/sq_br_down.png</file>
+        <file>Iconos/round_minus.png</file>
+        <file>Iconos/round_checkmark.png</file>
+        <file>Iconos/rnd_br_up.png</file>
+        <file>Iconos/doc_export.png</file>
+        <file>Iconos/br_down.png</file>
+        <file>Iconos/attention.png</file>
+        <file>Iconos/wrench_plus.png</file>
+        <file>Iconos/zoom.png</file>
+        <file>Iconos/sq_up.png</file>
+        <file>Iconos/sq_down.png</file>
+        <file>Iconos/round_delete.png</file>
+        <file>Iconos/rnd_br_prev.png</file>
+        <file>Iconos/round_arrow_right.png</file>
+        <file>Iconos/brackets.png</file>
+        <file>Iconos/wrench.png</file>
+        <file>Iconos/sq_br_up.png</file>
+        <file>Iconos/round_arrow_left.png</file>
+        <file>Iconos/rnd_br_next.png</file>
+        <file>Iconos/key.png</file>
+        <file>Iconos/doc_new.png</file>
+        <file>Iconos/checkmark.png</file>
+        <file>Iconos/br_up.png</file>
     </qresource>
 </RCC>

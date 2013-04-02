@@ -5,10 +5,12 @@
 
 #include "share_include.h"
 
+class ui_opciones_tienda;
 class ui_opciones_base_datos;
 class ui_opciones_articulo;
 class ui_opciones_banco;
 class ui_opciones_proveedor;
+class ui_opciones_general;
 
 
 namespace Ui {
@@ -29,7 +31,9 @@ private:
     ui_opciones_base_datos* tab_base_datos;
     ui_opciones_proveedor* tab_proveedores;
     ui_opciones_articulo* tab_articulos;
+    ui_opciones_tienda* tab_tienda;
     ui_opciones_banco* tab_bancos;
+    ui_opciones_general* tab_general;
 
     //tabArticulos* tab_articulos;
 

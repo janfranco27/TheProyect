@@ -196,14 +196,43 @@ bool object_e_tienda::mf_add()
 
 	QSqlQuery query;
 
-	query.prepare("INSERT INTO e_tienda(nombre, direccion, telefono_fijo, fax, email, pagina_web, comentario) VALUES(?, ?, ?, ?, ?, ?, ?)");
-	query.bindValue(0, md_o_nombre);
-	query.bindValue(1, md_o_direccion);
-	query.bindValue(2, md_o_telefono_fijo);
-	query.bindValue(3, md_o_fax);
-	query.bindValue(4, md_o_email);
-	query.bindValue(5, md_o_pagina_web);
-	query.bindValue(6, md_o_comentario);
+	string str_query = "INSERT INTO e_tienda(";
+	if (md_o_pk_ruc != "")
+		str_query += "pk_ruc";
+	str_query += ", nombre";
+	str_query += ", direccion";
+	str_query += ", telefono_fijo";
+	str_query += ", fax";
+	str_query += ", email";
+	str_query += ", pagina_web";
+	str_query += ", comentario";
+	str_query += ") VALUES(?";
+	if (md_o_pk_ruc!= "")
+	{
+		str_query += ", ?";
+	}
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ")";
+
+	query.prepare(QString(str_query.c_str()));
+	int integer = 0;
+	if (md_o_pk_ruc != "")
+	{
+		query.bindValue(0, md_o_pk_ruc);
+		integer++;
+	}
+	query.bindValue(integer++, md_o_nombre);
+	query.bindValue(integer++, md_o_direccion);
+	query.bindValue(integer++, md_o_telefono_fijo);
+	query.bindValue(integer++, md_o_fax);
+	query.bindValue(integer++, md_o_email);
+	query.bindValue(integer++, md_o_pagina_web);
+	query.bindValue(integer++, md_o_comentario);
 
 	if(query.exec())
 	{

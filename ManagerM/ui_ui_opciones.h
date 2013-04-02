@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones.ui'
 **
-** Created: Fri 22. Mar 12:30:56 2013
+** Created: Mon 1. Apr 23:35:06 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -90,15 +90,15 @@ public:
         QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(listWidget_modulos);
         __qlistwidgetitem2->setIcon(icon3);
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/RegEdit.png"), QSize(), QIcon::Normal, QIcon::Off);
-        QBrush brush(QColor(0, 0, 0, 255));
-        brush.setStyle(Qt::NoBrush);
+        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/40406.png"), QSize(), QIcon::Normal, QIcon::Off);
         QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(listWidget_modulos);
-        __qlistwidgetitem3->setBackground(brush);
         __qlistwidgetitem3->setIcon(icon4);
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/40406.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/RegEdit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QBrush brush(QColor(0, 0, 0, 255));
+        brush.setStyle(Qt::NoBrush);
         QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(listWidget_modulos);
+        __qlistwidgetitem4->setBackground(brush);
         __qlistwidgetitem4->setIcon(icon5);
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -170,9 +170,9 @@ public:
         QListWidgetItem *___qlistwidgetitem2 = listWidget_modulos->item(2);
         ___qlistwidgetitem2->setText(QApplication::translate("ui_opciones", "Bancos", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem3 = listWidget_modulos->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("ui_opciones", "Base de Datos", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem3->setText(QApplication::translate("ui_opciones", "Tienda", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem4 = listWidget_modulos->item(4);
-        ___qlistwidgetitem4->setText(QApplication::translate("ui_opciones", "Tiendas", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem4->setText(QApplication::translate("ui_opciones", "Base de Datos", 0, QApplication::UnicodeUTF8));
         QListWidgetItem *___qlistwidgetitem5 = listWidget_modulos->item(5);
         ___qlistwidgetitem5->setText(QApplication::translate("ui_opciones", "General", 0, QApplication::UnicodeUTF8));
         listWidget_modulos->setSortingEnabled(__sortingEnabled);

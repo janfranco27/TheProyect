@@ -38,6 +38,18 @@ private:
     Ui::ui_newedit_colaborador *ui;
     bool esNuevoC;
     object_e_colaborador* colaboradorAsociado;
+
+
+private:
+
+    int parent;//para saber desde es llamado
+
+public:
+    //void mf_update_data();
+
+    int mf_get_parent();
+    void mf_set_parent(int p);
+
 };
 
 #endif // UI_NEWEDIT_COLABORADOR_H
