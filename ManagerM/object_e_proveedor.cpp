@@ -1,13 +1,15 @@
-#include "share_include.h"
+#include "object_e_proveedor.h"
 
 object_e_proveedor::object_e_proveedor()
 {
+	//file e_proveedor
 	//function construct_0
 	//w!
 }
 
 object_e_proveedor::object_e_proveedor(_QSTR pk_ruc, _QSTR nombre_vendedor, _QSTR celular_vendedor)
 {
+	//file e_proveedor
 	//function construct_1
 	//w!
 
@@ -17,6 +19,7 @@ object_e_proveedor::object_e_proveedor(_QSTR pk_ruc, _QSTR nombre_vendedor, _QST
 }
 object_e_proveedor::object_e_proveedor(_QSTR nombre_vendedor, _QSTR celular_vendedor)
 {
+	//file e_proveedor
 	//function construct_2
 	//w!
 
@@ -108,9 +111,29 @@ bool object_e_proveedor::mf_add()
 
 	QSqlQuery query;
 
-	query.prepare("INSERT INTO e_proveedor(nombre_vendedor, celular_vendedor) VALUES(?, ?)");
-	query.bindValue(0, md_o_nombre_vendedor);
-	query.bindValue(1, md_o_celular_vendedor);
+	string str_query = "INSERT INTO e_proveedor(";
+	if (md_o_pk_ruc != "")
+		str_query += "pk_ruc, ";
+	str_query += "nombre_vendedor, ";
+	str_query += "celular_vendedor";
+	str_query += ") VALUES(";
+	if (md_o_pk_ruc!= "")
+	{
+		str_query += "?, ";
+	}
+	str_query += "?, ";
+	str_query += "?";
+	str_query += ")";
+
+	query.prepare(QString(str_query.c_str()));
+	int integer = 0;
+	if (md_o_pk_ruc != "")
+	{
+		query.bindValue(0, md_o_pk_ruc);
+		integer++;
+	}
+	query.bindValue(integer++, md_o_nombre_vendedor);
+	query.bindValue(integer++, md_o_celular_vendedor);
 
 	if(query.exec())
 	{
@@ -172,8 +195,8 @@ bool object_e_proveedor::mf_remove()
 		return true;
 
 	}else{
-		//state FAILED
-		//w!
+	//state FAILED
+	//w!
 
 		return false;
 	}

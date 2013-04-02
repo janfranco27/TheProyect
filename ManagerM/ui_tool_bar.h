@@ -28,6 +28,7 @@ private slots:
 
     void on_pushButton_articulos_clicked();
 
+    void on_pushButton_compras_clicked();
 private:
     Ui::ui_tool_bar *ui;
 };

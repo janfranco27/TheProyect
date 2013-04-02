@@ -39,8 +39,6 @@ SOURCES += main.cpp\
     object_e_banco.cpp \
     ui_opciones_proveedor.cpp \
     ui_edit_proveedor.cpp \
-    object_e_proveedor.cpp \
-    object_e_persona_juridicos.cpp \
     ui_module_articulos.cpp \
     ui_new_articulo.cpp\
     object_e_tipo_usuario.cpp \
@@ -56,7 +54,28 @@ SOURCES += main.cpp\
     generado.cpp \
     lineedit.cpp \
     ui_opciones_general.cpp \
-    object_e_sistema.cpp
+    object_e_sistema.cpp \
+    ui_new_transportista.cpp \
+    ui_new_proveedor.cpp \
+    ui_new_orden.cpp \
+    ui_new_guiarr.cpp \
+    ui_new_flete.cpp \
+    ui_new_factura_compra.cpp \
+    ui_module_compras.cpp \
+    object_e_transportista_funciones.cpp \
+    object_e_transportista.cpp \
+    object_e_proveedor_funciones.cpp \
+    object_e_proveedor.cpp \
+    object_e_persona_juridicos_funciones.cpp \
+    object_e_persona_juridicos.cpp \
+    object_e_orden_compra_funciones.cpp \
+    object_e_orden_compra.cpp \
+    object_e_guia_rr_compra_funciones.cpp \
+    object_e_guia_rr_compra.cpp \
+    object_e_factura_compra_funciones.cpp \
+    object_e_factura_compra.cpp \
+    object_e_comprobante_funciones.cpp \
+    object_e_comprobante.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -86,8 +105,6 @@ HEADERS  += ui_main.h \
     object_e_banco.h \
     ui_opciones_proveedor.h \
     ui_edit_proveedor.h \
-    object_e_proveedor.h \
-    object_e_persona_juridicos.h \
     ui_module_articulos.h \
     ui_new_articulo.h \
     object_e_tipo_usuario.h \
@@ -103,10 +120,31 @@ HEADERS  += ui_main.h \
     ui_new_venta_factura.h \
     generado.h \
     lineedit.h \
-    object_general.h \
     ui_opciones_general.h \
     ui_ui_new_articulo.h \
-    object_e_sistema.h
+    object_e_sistema.h \
+    ui_new_transportista.h \
+    ui_new_proveedor.h \
+    ui_new_orden.h \
+    ui_new_guiarr.h \
+    ui_new_flete.h \
+    ui_new_factura_compra.h \
+    ui_module_compras.h \
+    object_general.h \
+    object_e_transportista_funciones.h \
+    object_e_transportista.h \
+    object_e_proveedor_funciones.h \
+    object_e_proveedor.h \
+    object_e_persona_juridicos_funciones.h \
+    object_e_persona_juridicos.h \
+    object_e_orden_compra_funciones.h \
+    object_e_orden_compra.h \
+    object_e_guia_rr_compra_funciones.h \
+    object_e_guia_rr_compra.h \
+    object_e_factura_compra_funciones.h \
+    object_e_factura_compra.h \
+    object_e_comprobante_funciones.h \
+    object_e_comprobante.h
 
 
 FORMS    += ui_main.ui \
@@ -132,7 +170,14 @@ FORMS    += ui_main.ui \
     ui_new_venta_boleta.ui \
     ui_new_venta_factura.ui \
     generado.ui \
-    ui_opciones_general.ui
+    ui_opciones_general.ui \
+    ui_new_transportista.ui \
+    ui_new_proveedor.ui \
+    ui_new_orden.ui \
+    ui_new_guiarr.ui \
+    ui_new_flete.ui \
+    ui_new_factura_compra.ui \
+    ui_module_compras.ui
 
 RESOURCES += \
     Icons.qrc

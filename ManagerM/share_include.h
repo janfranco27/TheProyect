@@ -72,6 +72,19 @@ using namespace std;
 #include "object_e_tienda.h"
 #include "object_e_tipo_usuario.h"
 #include "object_e_colaborador.h"
+#include "object_e_orden_compra.h"
+#include "object_e_factura_compra.h"
+#include "object_e_comprobante.h"
+#include "object_e_guia_rr_compra.h"
+#include "object_e_transportista.h"
+
+#include "object_e_comprobante_funciones.h"
+#include "object_e_factura_compra_funciones.h"
+#include "object_e_guia_rr_compra_funciones.h"
+#include "object_e_orden_compra_funciones.h"
+#include "object_e_persona_juridicos_funciones.h"
+#include "object_e_proveedor_funciones.h"
+#include "object_e_transportista_funciones.h"
 
 
 #include "ui_tool_bar.h"
@@ -95,7 +108,7 @@ using namespace std;
 #include "ui_newedit_colaborador.h"
 #include "ui_module_home.h"
 #include "ui_module_articulos.h"
-
+#include "ui_module_compras.h"
 
 
 //NAMESPACES

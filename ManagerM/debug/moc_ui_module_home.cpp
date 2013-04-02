@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_home.h'
 **
-** Created: Tue 2. Apr 00:25:39 2013
+** Created: Tue 2. Apr 01:41:54 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_module_home[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,7 @@ static const uint qt_meta_data_ui_module_home[] = {
       47,   15,   15,   15, 0x08,
       79,   15,   15,   15, 0x08,
      112,   15,   15,   15, 0x08,
+     150,   15,   15,   15, 0x08,
 
        0        // eod
 };
@@ -44,6 +45,7 @@ static const char qt_meta_stringdata_ui_module_home[] = {
     "on_pushButton_sistema_clicked()\0"
     "on_pushButton_articulo_clicked()\0"
     "on_pushButton_colaboradores_clicked()\0"
+    "on_pushButton_compras_clicked()\0"
 };
 
 void ui_module_home::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -56,6 +58,7 @@ void ui_module_home::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 1: _t->on_pushButton_sistema_clicked(); break;
         case 2: _t->on_pushButton_articulo_clicked(); break;
         case 3: _t->on_pushButton_colaboradores_clicked(); break;
+        case 4: _t->on_pushButton_compras_clicked(); break;
         default: ;
         }
     }
@@ -94,9 +97,9 @@ int ui_module_home::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

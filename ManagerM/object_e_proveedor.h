@@ -3,6 +3,8 @@
 
 #include "share_include.h"
 
+#include <QSqlQueryModel>
+#define TABLE_NAME_E_PROVEEDOR "e_proveedor"
 class object_e_proveedor:public object_general
 {
 
@@ -28,6 +30,7 @@ public:
 	bool mf_add();
 	bool mf_update();
 	bool mf_remove();
+
 
 	~object_e_proveedor();
 };

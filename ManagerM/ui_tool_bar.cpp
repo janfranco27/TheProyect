@@ -44,3 +44,9 @@ void ui_tool_bar::on_pushButton_articulos_clicked()
     ui_module_articulos * form_articulos = new ui_module_articulos();
     APP_MANAGERM->setCentralWidget(form_articulos);
 }
+
+void ui_tool_bar::on_pushButton_compras_clicked()
+{
+    ui_module_compras* form_compras = new ui_module_compras;
+    APP_MANAGERM->setCentralWidget(form_compras);
+}

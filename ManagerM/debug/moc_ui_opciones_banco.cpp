@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_banco.h'
 **
-** Created: Tue 2. Apr 00:25:55 2013
+** Created: Tue 2. Apr 01:42:11 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

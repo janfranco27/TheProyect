@@ -42,3 +42,10 @@ void ui_module_home::on_pushButton_colaboradores_clicked()
     APP_MANAGERM->setCentralWidget(form_colaboradores);
     APP_TOOL_BAR->setMaximumHeight(63);
 }
+
+void ui_module_home::on_pushButton_compras_clicked()
+{
+    ui_module_compras* form_compras = new ui_module_compras();
+    APP_MANAGERM->setCentralWidget(form_compras);
+    APP_TOOL_BAR->setMaximumHeight(63);
+}
