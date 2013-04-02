@@ -47,6 +47,11 @@ public:
    _QSTR getAdministrador();
    void init_e_tipo_usuario();
 
+   int messageInformation(_QSTR title,_QSTR message);
+   int messageQuestion(_QSTR title,_QSTR message);
+   int messageAlert(_QSTR title,_QSTR message);
+   int messageCritical(_QSTR title,_QSTR message);
+
 };
 
 

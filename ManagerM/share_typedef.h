@@ -79,6 +79,13 @@ enum opciones_articulo{marca,medida,grupo};
 
     #define SYSTEM SINGLETON(Sistema)
 
+    //Mensajes de sistema
+
+    #define MESSAGE_ALERT(X,Y) SYSTEM->messageAlert(X,Y)
+    #define MESSAGE_INFORMATION(X,Y) SYSTEM->messageInformation(X,Y)
+    #define MESSAGE_QUESTION(X,Y) SYSTEM->messageQuestion(X,Y)
+    #define MESSAGE_CRITICAL(X,Y) SYSTEM->messageCritical(X,Y)
+
 
 
 
