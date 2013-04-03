@@ -469,3 +469,24 @@ void Sistema::init_e_tipo_usuario()
 
 }
 
+int Sistema::messageInformation(_QSTR title, _QSTR message)
+{
+    return QMessageBox::information(this,title,message,QMessageBox::Ok);
+}
+
+int Sistema::messageQuestion(_QSTR title, _QSTR message)
+{
+    return QMessageBox::question(this,title,message,QMessageBox::Yes,QMessageBox::No);
+}
+
+int Sistema::messageWarning(_QSTR title, _QSTR message)
+{
+    return QMessageBox::warning(this,title,message,QMessageBox::Yes,QMessageBox::No);
+}
+
+int Sistema::messageCritical(_QSTR title, _QSTR message)
+{
+    return QMessageBox::critical(this,title,message,QMessageBox::Yes,QMessageBox::No);
+}
+
+
