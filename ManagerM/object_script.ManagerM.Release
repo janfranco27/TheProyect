@@ -62,6 +62,12 @@ INPUT(
 ./release\object_e_factura_compra.o
 ./release\object_e_comprobante_funciones.o
 ./release\object_e_comprobante.o
+./release\object_e_tipo_pago_funciones.o
+./release\object_e_tipo_pago.o
+./release\object_e_tipo_moneda_funciones.o
+./release\object_e_tipo_moneda.o
+./release\object_e_tipo_comprobante_funciones.o
+./release\object_e_tipo_comprobante.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o

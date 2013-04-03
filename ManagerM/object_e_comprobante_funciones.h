@@ -14,17 +14,16 @@ public:
 	~object_e_comprobante_funciones();
 
     int mf_pk_comprobante_max()
-    {
-        QSqlQuery query;
-        query.prepare("SELECT max(pk_comprobante) FROM e_comprobante");
-
-        if(query.exec())
         {
-            return query.value(0).toInt();
-        }
-        return -1;
-    }
+            QSqlQuery query;
+            query.prepare("SELECT max(pk_comprobante) FROM e_comprobante");
 
+            if(query.exec())
+            {
+                return query.value(0).toInt();
+            }
+            return -1;
+        }
 	/*
 	QSqlQueryModel* mf_model_e_comprobante();
 	*/

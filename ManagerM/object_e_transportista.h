@@ -13,8 +13,6 @@ private:
 public:
 	object_e_transportista();
 	object_e_transportista(_QSTR pk_ruc);
-//	object_e_transportista(_QSTR descripcion);
-
 	void mf_set_pk_ruc(_QSTR pk_ruc);
 
 	_QSTR mf_get_pk_ruc();
@@ -27,3 +25,9 @@ public:
 	~object_e_transportista();
 };
 #endif // OBJECT_E_TRANSPORTISTA_H
+	/*
+	object_e_transportista obj_e_transportista;
+	obj_e_transportista.mf_set_pk_ruc();
+
+	obj_e_transportista.mf_get_pk_ruc();
+	*/

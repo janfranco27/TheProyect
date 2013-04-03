@@ -75,7 +75,13 @@ SOURCES += main.cpp\
     object_e_factura_compra_funciones.cpp \
     object_e_factura_compra.cpp \
     object_e_comprobante_funciones.cpp \
-    object_e_comprobante.cpp
+    object_e_comprobante.cpp \
+    object_e_tipo_pago_funciones.cpp \
+    object_e_tipo_pago.cpp \
+    object_e_tipo_moneda_funciones.cpp \
+    object_e_tipo_moneda.cpp \
+    object_e_tipo_comprobante_funciones.cpp \
+    object_e_tipo_comprobante.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -144,7 +150,13 @@ HEADERS  += ui_main.h \
     object_e_factura_compra_funciones.h \
     object_e_factura_compra.h \
     object_e_comprobante_funciones.h \
-    object_e_comprobante.h
+    object_e_comprobante.h \
+    object_e_tipo_pago_funciones.h \
+    object_e_tipo_pago.h \
+    object_e_tipo_moneda_funciones.h \
+    object_e_tipo_moneda.h \
+    object_e_tipo_comprobante_funciones.h \
+    object_e_tipo_comprobante.h
 
 
 FORMS    += ui_main.ui \

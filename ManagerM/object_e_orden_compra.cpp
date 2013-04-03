@@ -7,7 +7,7 @@ object_e_orden_compra::object_e_orden_compra()
 	//w!
 }
 
-object_e_orden_compra::object_e_orden_compra(_QSTR pk_orden_compra, _QSTR fk_comprobante, _QSTR fk_transportista, _QSTR fk_proveedor, _QSTR fk_tipo_pago, _QSTR total, _QSTR igv)
+object_e_orden_compra::object_e_orden_compra(_QSTR pk_orden_compra, _QSTR fk_comprobante, _QSTR fk_transportista, _QSTR fk_proveedor, _QSTR fk_tipo_pago, _QSTR fk_tipo_moneda, _QSTR total, _QSTR igv)
 {
 	//file e_orden_compra
 	//function construct_1
@@ -18,10 +18,11 @@ object_e_orden_compra::object_e_orden_compra(_QSTR pk_orden_compra, _QSTR fk_com
 	md_o_fk_transportista = fk_transportista;
 	md_o_fk_proveedor = fk_proveedor;
 	md_o_fk_tipo_pago = fk_tipo_pago;
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
 	md_o_total = total;
 	md_o_igv = igv;
 }
-object_e_orden_compra::object_e_orden_compra(_QSTR fk_comprobante, _QSTR fk_transportista, _QSTR fk_proveedor, _QSTR fk_tipo_pago, _QSTR total, _QSTR igv)
+object_e_orden_compra::object_e_orden_compra(_QSTR fk_comprobante, _QSTR fk_transportista, _QSTR fk_proveedor, _QSTR fk_tipo_pago, _QSTR fk_tipo_moneda, _QSTR total, _QSTR igv)
 {
 	//file e_orden_compra
 	//function construct_2
@@ -31,6 +32,7 @@ object_e_orden_compra::object_e_orden_compra(_QSTR fk_comprobante, _QSTR fk_tran
 	md_o_fk_transportista = fk_transportista;
 	md_o_fk_proveedor = fk_proveedor;
 	md_o_fk_tipo_pago = fk_tipo_pago;
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
 	md_o_total = total;
 	md_o_igv = igv;
 }
@@ -74,6 +76,13 @@ void object_e_orden_compra::mf_set_fk_tipo_pago(_QSTR fk_tipo_pago)
 	//w!
 
 	md_o_fk_tipo_pago = fk_tipo_pago;
+}
+void object_e_orden_compra::mf_set_fk_tipo_moneda(_QSTR fk_tipo_moneda)
+{
+	//function mf_set_fk_tipo_moneda
+	//w!
+
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
 }
 void object_e_orden_compra::mf_set_total(_QSTR total)
 {
@@ -125,6 +134,13 @@ _QSTR object_e_orden_compra::mf_get_fk_tipo_pago()
 
 	return md_o_fk_tipo_pago;
 }
+_QSTR object_e_orden_compra::mf_get_fk_tipo_moneda()
+{
+	//function mf_get_fk_tipo_moneda
+	//w!
+
+	return md_o_fk_tipo_moneda;
+}
 _QSTR object_e_orden_compra::mf_get_total()
 {
 	//function mf_get_total
@@ -158,8 +174,9 @@ bool object_e_orden_compra::mf_load(_QSTR pk)
 		md_o_fk_transportista = query.value(2).toString();
 		md_o_fk_proveedor = query.value(3).toString();
 		md_o_fk_tipo_pago = query.value(4).toString();
-		md_o_total = query.value(5).toString();
-		md_o_igv = query.value(6).toString();
+		md_o_fk_tipo_moneda = query.value(5).toString();
+		md_o_total = query.value(6).toString();
+		md_o_igv = query.value(7).toString();
 
 		//state OK
 		//w!
@@ -186,6 +203,7 @@ bool object_e_orden_compra::mf_add()
 	str_query += "fk_transportista, ";
 	str_query += "fk_proveedor, ";
 	str_query += "fk_tipo_pago, ";
+	str_query += "fk_tipo_moneda, ";
 	str_query += "total, ";
 	str_query += "igv";
 	str_query += ") VALUES(";
@@ -193,6 +211,7 @@ bool object_e_orden_compra::mf_add()
 	{
 		str_query += "?, ";
 	}
+	str_query += "?, ";
 	str_query += "?, ";
 	str_query += "?, ";
 	str_query += "?, ";
@@ -212,6 +231,7 @@ bool object_e_orden_compra::mf_add()
 	query.bindValue(integer++, md_o_fk_transportista);
 	query.bindValue(integer++, md_o_fk_proveedor);
 	query.bindValue(integer++, md_o_fk_tipo_pago);
+	query.bindValue(integer++, md_o_fk_tipo_moneda);
 	query.bindValue(integer++, md_o_total);
 	query.bindValue(integer++, md_o_igv);
 
@@ -237,14 +257,15 @@ bool object_e_orden_compra::mf_update()
 
 	QSqlQuery query;
 
-	query.prepare("UPDATE e_orden_compra SET fk_comprobante = ?, fk_transportista = ?, fk_proveedor = ?, fk_tipo_pago = ?, total = ?, igv = ? WHERE pk_orden_compra = ?");
+	query.prepare("UPDATE e_orden_compra SET fk_comprobante = ?, fk_transportista = ?, fk_proveedor = ?, fk_tipo_pago = ?, fk_tipo_moneda = ?, total = ?, igv = ? WHERE pk_orden_compra = ?");
 	query.bindValue(0, md_o_fk_comprobante);
 	query.bindValue(1, md_o_fk_transportista);
 	query.bindValue(2, md_o_fk_proveedor);
 	query.bindValue(3, md_o_fk_tipo_pago);
-	query.bindValue(4, md_o_total);
-	query.bindValue(5, md_o_igv);
-	query.bindValue(6, md_o_pk_orden_compra);
+	query.bindValue(4, md_o_fk_tipo_moneda);
+	query.bindValue(5, md_o_total);
+	query.bindValue(6, md_o_igv);
+	query.bindValue(7, md_o_pk_orden_compra);
 
 	if(query.exec())
 	{

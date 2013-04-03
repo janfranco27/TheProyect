@@ -7,7 +7,7 @@ object_e_factura_compra::object_e_factura_compra()
 	//w!
 }
 
-object_e_factura_compra::object_e_factura_compra(_QSTR pk_factura_compra, _QSTR fk_comprobante, _QSTR fk_tipo_pago, _QSTR fk_proveedor, _QSTR fk_factura_transportista, _QSTR total, _QSTR igv)
+object_e_factura_compra::object_e_factura_compra(_QSTR pk_factura_compra, _QSTR fk_comprobante, _QSTR fk_tipo_pago, _QSTR fk_tipo_moneda, _QSTR fk_proveedor, _QSTR fk_factura_transportista, _QSTR percepcion, _QSTR total, _QSTR igv)
 {
 	//file e_factura_compra
 	//function construct_1
@@ -16,12 +16,14 @@ object_e_factura_compra::object_e_factura_compra(_QSTR pk_factura_compra, _QSTR 
 	md_o_pk_factura_compra = pk_factura_compra;
 	md_o_fk_comprobante = fk_comprobante;
 	md_o_fk_tipo_pago = fk_tipo_pago;
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
 	md_o_fk_proveedor = fk_proveedor;
 	md_o_fk_factura_transportista = fk_factura_transportista;
+	md_o_percepcion = percepcion;
 	md_o_total = total;
 	md_o_igv = igv;
 }
-object_e_factura_compra::object_e_factura_compra(_QSTR fk_comprobante, _QSTR fk_tipo_pago, _QSTR fk_proveedor, _QSTR fk_factura_transportista, _QSTR total, _QSTR igv)
+object_e_factura_compra::object_e_factura_compra(_QSTR fk_comprobante, _QSTR fk_tipo_pago, _QSTR fk_tipo_moneda, _QSTR fk_proveedor, _QSTR fk_factura_transportista, _QSTR percepcion, _QSTR total, _QSTR igv)
 {
 	//file e_factura_compra
 	//function construct_2
@@ -29,8 +31,10 @@ object_e_factura_compra::object_e_factura_compra(_QSTR fk_comprobante, _QSTR fk_
 
 	md_o_fk_comprobante = fk_comprobante;
 	md_o_fk_tipo_pago = fk_tipo_pago;
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
 	md_o_fk_proveedor = fk_proveedor;
 	md_o_fk_factura_transportista = fk_factura_transportista;
+	md_o_percepcion = percepcion;
 	md_o_total = total;
 	md_o_igv = igv;
 }
@@ -61,6 +65,13 @@ void object_e_factura_compra::mf_set_fk_tipo_pago(_QSTR fk_tipo_pago)
 
 	md_o_fk_tipo_pago = fk_tipo_pago;
 }
+void object_e_factura_compra::mf_set_fk_tipo_moneda(_QSTR fk_tipo_moneda)
+{
+	//function mf_set_fk_tipo_moneda
+	//w!
+
+	md_o_fk_tipo_moneda = fk_tipo_moneda;
+}
 void object_e_factura_compra::mf_set_fk_proveedor(_QSTR fk_proveedor)
 {
 	//function mf_set_fk_proveedor
@@ -74,6 +85,13 @@ void object_e_factura_compra::mf_set_fk_factura_transportista(_QSTR fk_factura_t
 	//w!
 
 	md_o_fk_factura_transportista = fk_factura_transportista;
+}
+void object_e_factura_compra::mf_set_percepcion(_QSTR percepcion)
+{
+	//function mf_set_percepcion
+	//w!
+
+	md_o_percepcion = percepcion;
 }
 void object_e_factura_compra::mf_set_total(_QSTR total)
 {
@@ -111,6 +129,13 @@ _QSTR object_e_factura_compra::mf_get_fk_tipo_pago()
 
 	return md_o_fk_tipo_pago;
 }
+_QSTR object_e_factura_compra::mf_get_fk_tipo_moneda()
+{
+	//function mf_get_fk_tipo_moneda
+	//w!
+
+	return md_o_fk_tipo_moneda;
+}
 _QSTR object_e_factura_compra::mf_get_fk_proveedor()
 {
 	//function mf_get_fk_proveedor
@@ -124,6 +149,13 @@ _QSTR object_e_factura_compra::mf_get_fk_factura_transportista()
 	//w!
 
 	return md_o_fk_factura_transportista;
+}
+_QSTR object_e_factura_compra::mf_get_percepcion()
+{
+	//function mf_get_percepcion
+	//w!
+
+	return md_o_percepcion;
 }
 _QSTR object_e_factura_compra::mf_get_total()
 {
@@ -156,10 +188,12 @@ bool object_e_factura_compra::mf_load(_QSTR pk)
 		md_o_pk_factura_compra = query.value(0).toString();
 		md_o_fk_comprobante = query.value(1).toString();
 		md_o_fk_tipo_pago = query.value(2).toString();
-		md_o_fk_proveedor = query.value(3).toString();
-		md_o_fk_factura_transportista = query.value(4).toString();
-		md_o_total = query.value(5).toString();
-		md_o_igv = query.value(6).toString();
+		md_o_fk_tipo_moneda = query.value(3).toString();
+		md_o_fk_proveedor = query.value(4).toString();
+		md_o_fk_factura_transportista = query.value(5).toString();
+		md_o_percepcion = query.value(6).toString();
+		md_o_total = query.value(7).toString();
+		md_o_igv = query.value(8).toString();
 
 		//state OK
 		//w!
@@ -184,8 +218,10 @@ bool object_e_factura_compra::mf_add()
 		str_query += "pk_factura_compra, ";
 	str_query += "fk_comprobante, ";
 	str_query += "fk_tipo_pago, ";
+	str_query += "fk_tipo_moneda, ";
 	str_query += "fk_proveedor, ";
 	str_query += "fk_factura_transportista, ";
+	str_query += "percepcion, ";
 	str_query += "total, ";
 	str_query += "igv";
 	str_query += ") VALUES(";
@@ -193,6 +229,8 @@ bool object_e_factura_compra::mf_add()
 	{
 		str_query += "?, ";
 	}
+	str_query += "?, ";
+	str_query += "?, ";
 	str_query += "?, ";
 	str_query += "?, ";
 	str_query += "?, ";
@@ -210,8 +248,10 @@ bool object_e_factura_compra::mf_add()
 	}
 	query.bindValue(integer++, md_o_fk_comprobante);
 	query.bindValue(integer++, md_o_fk_tipo_pago);
+	query.bindValue(integer++, md_o_fk_tipo_moneda);
 	query.bindValue(integer++, md_o_fk_proveedor);
 	query.bindValue(integer++, md_o_fk_factura_transportista);
+	query.bindValue(integer++, md_o_percepcion);
 	query.bindValue(integer++, md_o_total);
 	query.bindValue(integer++, md_o_igv);
 
@@ -237,14 +277,16 @@ bool object_e_factura_compra::mf_update()
 
 	QSqlQuery query;
 
-	query.prepare("UPDATE e_factura_compra SET fk_comprobante = ?, fk_tipo_pago = ?, fk_proveedor = ?, fk_factura_transportista = ?, total = ?, igv = ? WHERE pk_factura_compra = ?");
+	query.prepare("UPDATE e_factura_compra SET fk_comprobante = ?, fk_tipo_pago = ?, fk_tipo_moneda = ?, fk_proveedor = ?, fk_factura_transportista = ?, percepcion = ?, total = ?, igv = ? WHERE pk_factura_compra = ?");
 	query.bindValue(0, md_o_fk_comprobante);
 	query.bindValue(1, md_o_fk_tipo_pago);
-	query.bindValue(2, md_o_fk_proveedor);
-	query.bindValue(3, md_o_fk_factura_transportista);
-	query.bindValue(4, md_o_total);
-	query.bindValue(5, md_o_igv);
-	query.bindValue(6, md_o_pk_factura_compra);
+	query.bindValue(2, md_o_fk_tipo_moneda);
+	query.bindValue(3, md_o_fk_proveedor);
+	query.bindValue(4, md_o_fk_factura_transportista);
+	query.bindValue(5, md_o_percepcion);
+	query.bindValue(6, md_o_total);
+	query.bindValue(7, md_o_igv);
+	query.bindValue(8, md_o_pk_factura_compra);
 
 	if(query.exec())
 	{

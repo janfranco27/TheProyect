@@ -2,13 +2,20 @@
 
 object_e_proveedor_funciones::object_e_proveedor_funciones()
 {
+	//file e_proveedor
+	//function construct_0
+	//w!
 }
 
 object_e_proveedor_funciones::~object_e_proveedor_funciones()
 {
+	//file e_proveedor
+	//function destruct_0
+	//w!
 }
 
-QSqlQueryModel* object_e_proveedor_funciones::mf_model_proveedores()
+
+QSqlQueryModel* object_e_proveedor_funciones::mf_model_e_proveedor()
 {
     QSqlQueryModel* model = new QSqlQueryModel;
     QString str_query = "SELECT";
@@ -26,3 +33,4 @@ QSqlQueryModel* object_e_proveedor_funciones::mf_model_proveedores()
 
     return model;
 }
+

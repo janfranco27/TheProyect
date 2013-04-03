@@ -23,8 +23,10 @@ QSqlQueryModel* object_e_factura_compra_funciones::mf_model_e_factura_compra()
 	str_query += "pk_factura_compra";
 	str_query += "fk_comprobante";
 	str_query += "fk_tipo_pago";
+	str_query += "fk_tipo_moneda";
 	str_query += "fk_proveedor";
 	str_query += "fk_factura_transportista";
+	str_query += "percepcion";
 	str_query += "total";
 	str_query += "igv";
 

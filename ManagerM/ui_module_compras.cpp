@@ -191,13 +191,13 @@ void ui_module_compras::mf_doTransportista()
 void ui_module_compras::mf_updateModel_proveedor()
 {
     object_e_proveedor_funciones obj_proveedor;
-    ui->tableView_compras->setModel(obj_proveedor.mf_model_proveedores());
+    ui->tableView_compras->setModel(obj_proveedor.mf_model_e_proveedor());
 }
 
 void ui_module_compras::mf_updateModel_transportista()
 {
     object_e_transportista_funciones obj_transportista;
-    ui->tableView_compras->setModel(obj_transportista.mf_model_transportistas());
+    ui->tableView_compras->setModel(obj_transportista.mf_model_e_transportista());
 }
 
 void ui_module_compras::on_pushButton_nuevo_clicked_orden()

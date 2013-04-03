@@ -25,6 +25,7 @@ QSqlQueryModel* object_e_orden_compra_funciones::mf_model_e_orden_compra()
 	str_query += "fk_transportista";
 	str_query += "fk_proveedor";
 	str_query += "fk_tipo_pago";
+	str_query += "fk_tipo_moneda";
 	str_query += "total";
 	str_query += "igv";
 

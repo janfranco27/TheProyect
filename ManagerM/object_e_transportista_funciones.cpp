@@ -2,13 +2,20 @@
 
 object_e_transportista_funciones::object_e_transportista_funciones()
 {
+	//file e_transportista
+	//function construct_0
+	//w!
 }
 
 object_e_transportista_funciones::~object_e_transportista_funciones()
 {
+	//file e_transportista
+	//function destruct_0
+	//w!
 }
 
-QSqlQueryModel* object_e_transportista_funciones::mf_model_transportistas()
+
+QSqlQueryModel* object_e_transportista_funciones::mf_model_e_transportista()
 {
     QSqlQueryModel* model = new QSqlQueryModel;
     QString str_query = "SELECT";
@@ -23,3 +30,4 @@ QSqlQueryModel* object_e_transportista_funciones::mf_model_transportistas()
     model->setQuery(str_query);
     return model;
 }
+

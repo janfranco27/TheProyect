@@ -23,7 +23,7 @@ struct TablesAndColumns{
 };
 
 const string STR_OBJECT = "object_";
-
+const string STR_FUNCIONES = "_funciones";
 
 class CPPScript
 {
@@ -59,11 +59,21 @@ private:
     vector<_QSTR> md_o_v_data_types;
 
     void mf_extractColumnsTable(_QSTR class_name);
-    void mf_extractTables(vector<TablesAndColumns>&);
+    void mf_extractTables(vector<TablesAndColumns>&);    
+
     bool mf_openFile_h(_QSTR& class_name);
-    void mf_fillFile_h(_QSTR& class_name);
     bool mf_openFile_cpp(_QSTR& class_name);
+    bool mf_openFile_objectFunciones_h(_QSTR& class_name);
+    bool mf_openFile_objectFunciones_cpp(_QSTR& class_name);
+
+    void mf_fillFile_h(_QSTR& class_name);
     void mf_fillFile_cpp(_QSTR& class_name);
+    void mf_fillFile_objectFunciones_h(_QSTR& class_name);
+    void mf_fillFile_objectFunciones_cpp(_QSTR& class_name);
+
+    void mf_generate_class_objectGeneral_h(vector<TablesAndColumns>&);
+    void mf_generate_class_objectGeneral_cpp();
+
 };
 
 #endif // CPPSCRIPT_H

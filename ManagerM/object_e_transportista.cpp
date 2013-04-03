@@ -15,15 +15,6 @@ object_e_transportista::object_e_transportista(_QSTR pk_ruc)
 
 	md_o_pk_ruc = pk_ruc;
 }
-/*
-object_e_transportista::object_e_transportista(_QSTR descripcion)
-{
-	//file e_transportista
-	//function construct_2
-	//w!
-
-}
-*/
 object_e_transportista::~object_e_transportista()
 {
 
@@ -81,11 +72,11 @@ bool object_e_transportista::mf_add()
 
 	string str_query = "INSERT INTO e_transportista(";
 	if (md_o_pk_ruc != "")
-        str_query += "pk_ruc";
+		str_query += "pk_ruc, ";
 	str_query += ") VALUES(";
 	if (md_o_pk_ruc!= "")
 	{
-        str_query += "?";
+		str_query += "?, ";
 	}
 	str_query += ")";
 

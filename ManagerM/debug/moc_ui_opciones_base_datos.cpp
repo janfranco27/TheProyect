@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_base_datos.h'
 **
-** Created: Tue 2. Apr 01:41:42 2013
+** Created: Tue 2. Apr 20:40:39 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

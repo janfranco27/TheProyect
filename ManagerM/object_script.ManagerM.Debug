@@ -62,6 +62,12 @@ INPUT(
 ./debug\object_e_factura_compra.o
 ./debug\object_e_comprobante_funciones.o
 ./debug\object_e_comprobante.o
+./debug\object_e_tipo_pago_funciones.o
+./debug\object_e_tipo_pago.o
+./debug\object_e_tipo_moneda_funciones.o
+./debug\object_e_tipo_moneda.o
+./debug\object_e_tipo_comprobante_funciones.o
+./debug\object_e_tipo_comprobante.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
