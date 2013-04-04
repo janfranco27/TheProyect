@@ -13,6 +13,8 @@ public:
     _STR code_marca;
     _STR code_medida;
 
+    //QMessageBox* message_box;
+
 public:
     Sistema();
 
@@ -49,7 +51,7 @@ public:
 
    int messageInformation(_QSTR title,_QSTR message);
    int messageQuestion(_QSTR title,_QSTR message);
-   int messageAlert(_QSTR title,_QSTR message);
+   int messageWarning(_QSTR title,_QSTR message);
    int messageCritical(_QSTR title,_QSTR message);
 
 };
