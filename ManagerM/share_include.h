@@ -93,6 +93,9 @@ using namespace std;
 
 #include "ui_edit_proveedor.h"
 
+#include "ui_new_marca.h"
+#include "ui_new_medida.h"
+
 #include "ui_opciones_tienda.h"
 #include "ui_opciones_base_datos.h"
 #include "ui_opciones_articulo.h"

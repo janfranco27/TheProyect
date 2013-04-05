@@ -78,6 +78,8 @@ void ui_opciones::on_listWidget_modulos_clicked(const QModelIndex &index)
         ui->label_category->setText("Bancos");
         tab_bancos->show();
 
+        break;
+
     case general:
 
         ui->label_category->setText("General");

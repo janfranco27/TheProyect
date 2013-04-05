@@ -20,16 +20,18 @@ private:
 
     QSqlQueryModel *model_marca;
     QSqlQueryModel *model_medida;
-    QSqlQueryModel *model_grupo;
+
+    _QSTR pk_marca;
+    _QSTR pk_medida;
 
 public:
+
     void update_table_marcas();
     void update_table_medidas();
-    void update_table_grupos();
+
     void setCurrentTab(int index);
     
 private slots:
-    void on_pushButton_save_grupo_clicked();
 
     void on_tabWidget_currentChanged(int index);
 
@@ -39,6 +41,14 @@ private slots:
 
     void closeEvent(QCloseEvent *ev );
 
+    void on_pushButton_new_marca_clicked();
+
+    void on_tableView_marca_clicked(const QModelIndex &index);
+
+    void on_pushButton_new_medida_clicked();
+
+    void on_tableView_medida_clicked(const QModelIndex &index);
+
 signals:
     void closing();
 
@@ -47,3 +57,5 @@ private:
 };
 
 #endif // UI_OPCIONES_ARTICULO_H
+
+
