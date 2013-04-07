@@ -70,6 +70,7 @@ INPUT(
 ./debug\object_e_tipo_comprobante.o
 ./debug\ui_new_marca.o
 ./debug\ui_new_medida.o
+./debug\search_articulo.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -104,5 +105,6 @@ INPUT(
 ./debug\moc_ui_module_compras.o
 ./debug\moc_ui_new_marca.o
 ./debug\moc_ui_new_medida.o
+./debug\moc_search_articulo.o
 ./debug\qrc_Icons.o
 );

@@ -83,7 +83,8 @@ SOURCES += main.cpp\
     object_e_tipo_comprobante_funciones.cpp \
     object_e_tipo_comprobante.cpp \
     ui_new_marca.cpp \
-    ui_new_medida.cpp
+    ui_new_medida.cpp \
+    search_articulo.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -160,7 +161,8 @@ HEADERS  += ui_main.h \
     object_e_tipo_comprobante_funciones.h \
     object_e_tipo_comprobante.h \
     ui_new_marca.h \
-    ui_new_medida.h
+    ui_new_medida.h \
+    search_articulo.h
 
 
 FORMS    += ui_main.ui \
@@ -195,7 +197,8 @@ FORMS    += ui_main.ui \
     ui_new_factura_compra.ui \
     ui_module_compras.ui \
     ui_new_marca.ui \
-    ui_new_medida.ui
+    ui_new_medida.ui \
+    search_articulo.ui
 
 RESOURCES += \
     Icons.qrc

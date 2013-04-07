@@ -2,7 +2,7 @@
 #include "ui_ui_module_ventas.h"
 #include "ui_new_venta.h"
 //enum modulo_ventas{}
-#include "generado.h"
+#include "search_articulo.h"
 ui_module_ventas::ui_module_ventas(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_module_ventas)
@@ -69,8 +69,8 @@ void ui_module_ventas::on_treeWidget_ventas_itemDoubleClicked(QTreeWidgetItem *i
 
 void ui_module_ventas::on_pushButton_nuevo_clicked()
 {
-    ui_new_venta * form_new_venta = new ui_new_venta();
-  //  Generado * form_new_venta = new Generado();
+   // ui_new_venta * form_new_venta = new ui_new_venta();
+   search_articulo * form_new_venta = new search_articulo();
 
     form_new_venta->setAttribute(Qt::WA_DeleteOnClose);
 

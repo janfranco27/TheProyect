@@ -70,6 +70,7 @@ INPUT(
 ./release\object_e_tipo_comprobante.o
 ./release\ui_new_marca.o
 ./release\ui_new_medida.o
+./release\search_articulo.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -104,5 +105,6 @@ INPUT(
 ./release\moc_ui_module_compras.o
 ./release\moc_ui_new_marca.o
 ./release\moc_ui_new_medida.o
+./release\moc_search_articulo.o
 ./release\qrc_Icons.o
 );
