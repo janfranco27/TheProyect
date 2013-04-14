@@ -84,7 +84,8 @@ SOURCES += main.cpp\
     object_e_tipo_comprobante.cpp \
     ui_new_marca.cpp \
     ui_new_medida.cpp \
-    search_articulo.cpp
+    search_articulo.cpp \
+    object_r_proveedor_articulo.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -162,7 +163,8 @@ HEADERS  += ui_main.h \
     object_e_tipo_comprobante.h \
     ui_new_marca.h \
     ui_new_medida.h \
-    search_articulo.h
+    search_articulo.h \
+    object_r_proveedor_articulo.h
 
 
 FORMS    += ui_main.ui \

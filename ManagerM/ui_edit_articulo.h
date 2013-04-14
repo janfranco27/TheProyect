@@ -2,6 +2,7 @@
 #define UI_EDIT_ARTICULOS_H
 
 #include <QDialog>
+#include "object_e_articulo.h"
 class object_e_articulo;
 namespace Ui {
 class ui_edit_articulos;
@@ -27,6 +28,8 @@ private:
     void update_form();
     void load_selected_articulo(object_e_articulo *ar);
     bool validateForm();
+
+    _QSTR pk_proveedor;
 };
 
 #endif // UI_EDIT_ARTICULOS_H

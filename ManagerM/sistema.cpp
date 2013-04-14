@@ -175,6 +175,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
             if(query.exec())
             {
+
                 qDebug()<<"query  OK";
             }
             else
@@ -200,6 +201,89 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
 }
 
+QSqlQuery Sistema::getDeleteQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > where)
+{
+    _QSTR consulta = "DELETE FROM "+from  +" WHERE ";
+
+    for(int i=0;i<where.size();i++)
+    {
+
+        if(i==0)
+        {
+            consulta+= where[i].first + " = "+ where[i].second;
+        }
+        else
+        {
+            consulta+=" AND "+ where[i].first + " = "+ where[i].second;
+        }
+    }
+
+    QSqlQuery query(consulta);
+
+
+    if(query.exec())
+    {
+        qDebug()<<"query  OK";
+    }
+    else
+    {
+            qDebug()<<query.lastError()<<endl;
+            qDebug()<<"query  NO";
+    }
+
+    return query;
+
+}
+
+QSqlQuery Sistema::getUpdateQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > set, vector<pair<_QSTR, _QSTR> > where)
+{
+    _QSTR consulta = "UPDATE "+from  +" SET ";
+
+    for(int i=0;i<set.size();i++)
+    {
+
+        if(i==0)
+        {
+            consulta+= set[i].first + " = "+ set[i].second;
+        }
+        else
+        {
+            consulta+=", "+ set[i].first + " = "+ set[i].second;
+        }
+    }
+
+    consulta+=" WHERE ";
+    for(int i=0;i<where.size();i++)
+    {
+
+        if(i==0)
+        {
+            consulta+= where[i].first + " = "+ where[i].second;
+        }
+        else
+        {
+            consulta+=", "+ where[i].first + " = "+ where[i].second;
+        }
+    }
+
+    QSqlQuery query(consulta);
+
+
+    if(query.exec())
+    {
+        qDebug()<<"query  OK";
+    }
+    else
+    {
+            qDebug()<<query.lastQuery();
+            qDebug()<<query.lastError()<<endl;
+            qDebug()<<"query  NO";
+    }
+
+    return query;
+
+}
+
 QStringList Sistema::getListOfValues(_QSTR tableName, _QSTR columnName)
 {
 
@@ -221,6 +305,28 @@ QStringList Sistema::getListOfValues(_QSTR tableName, _QSTR columnName)
 
      return lista;
 
+}
+
+QStringList Sistema::getListOfValuesNotSorted(_QSTR tableName, _QSTR columnName)
+{
+
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where,joins;
+
+
+    select.push_back(columnName);
+    from.push_back(tableName);
+
+     QSqlQuery query = getSelectQuery(select,from,where,joins);
+
+     QStringList lista;
+
+     while(query.next())
+     {
+        lista<<query.value(0).toString();
+     }
+
+     return lista;
 }
 
 
@@ -316,7 +422,7 @@ QSqlQuery Sistema::getArticulos()
     return getSelectQuery(select,from);
 }
 
-void Sistema::loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio)
+void Sistema::loadComboBoxFromVector(QComboBox *box, vector<_QSTR> & nombres, bool obligatorio)
 {
 
     box->clear();
@@ -329,7 +435,18 @@ void Sistema::loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, boo
     }
 }
 
-vector<_QSTR> Sistema::getDescripcion(const char *tablename)
+void Sistema::loadComboBoxFromVector(QComboBox *box, QStringList nombres, bool obligatorio)
+{
+    box->clear();
+
+    if(!obligatorio)
+        box->addItem("- Seleccione -");
+    for(int i=0;i<(int)nombres.size();i++)
+    {
+        box->addItem(nombres.at(i));
+    }
+}
+vector<_QSTR> Sistema:: getDescripcion(const char *tablename)
 {
     vector<_QSTR> salida;
 
@@ -398,6 +515,61 @@ _QSTR Sistema::getTipoUsuario(_QSTR nombreUsuario)
     return result[0][0].toString();
 }
 
+_QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
+{
+    vector<_QSTR> select;
+    select.push_back("pk_ruc");
+
+    vector<_QSTR> from;
+    from.push_back("e_proveedor");
+
+    vector<pair<_QSTR,_QSTR> > where;
+
+    where.push_back(make_pair("nombre_vendedor",nombreVendedor));
+
+
+    QSqlQuery query = getSelectQuery(select,from,where);
+
+    if(query.exec())
+    {
+        query.next();
+        return query.value(0).toString();
+    }
+    else
+        return "";
+
+}
+
+_QSTR Sistema::getNombreProveedor(_QSTR proveedorPK)
+{
+    vector<_QSTR> select;
+    select.push_back("nombre_vendedor");
+
+    vector<_QSTR> from;
+    from.push_back("e_proveedor");
+
+    vector<pair<_QSTR,_QSTR> > where;
+
+    where.push_back(make_pair("pk_ruc",proveedorPK));
+
+
+    QSqlQuery query = getSelectQuery(select,from,where);
+
+    if(query.exec())
+    {
+        query.next();
+        return query.value(0).toString();
+    }
+    else
+        return "";
+
+
+
+
+}
+
+
+
 bool Sistema::deleteColaborador(_QSTR dni)
 {
     QSqlQuery query;
@@ -416,6 +588,25 @@ bool Sistema::deleteColaborador(_QSTR dni)
         //w!
         return false;
     }
+}
+
+bool Sistema::updateProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK, _QSTR nuevoProveedorPK)
+{
+
+
+        vector<pair<_QSTR,_QSTR> > set;
+        set.push_back(make_pair("pk_proveedor",nuevoProveedorPK));
+
+        vector<pair<_QSTR,_QSTR> > where;
+        where.push_back(make_pair("pk_proveedor",proveedorPK));
+        where.push_back(make_pair("pk_articulo",articuloPK));
+
+
+        QSqlQuery query = getUpdateQuery("r_proveedor_articulo",set,where);
+
+
+        return query.next();
+
 }
 
 _QSTR Sistema::getTienda()
@@ -488,6 +679,43 @@ int Sistema::messageWarning(_QSTR title, _QSTR message)
 int Sistema::messageCritical(_QSTR title, _QSTR message)
 {
     return QMessageBox::critical(0,title,message,QMessageBox::Yes,QMessageBox::No);
+}
+
+_QSTR Sistema::getProveedorPKFromArticulo(_QSTR articuloPK)
+{
+    vector<_QSTR> select;
+    select.push_back("pk_proveedor");
+
+    vector<_QSTR> from;
+    from.push_back("r_proveedor_articulo");
+
+    vector<pair<_QSTR,_QSTR> > where;
+
+    where.push_back(make_pair("pk_articulo",articuloPK));
+
+
+    QSqlQuery query = getSelectQuery(select,from,where);
+
+
+
+    if(query.next())
+        return query.value(0).toString();
+    else
+        return "";
+
+
+}
+
+bool Sistema::deleteProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK)
+{
+
+    vector<pair<_QSTR,_QSTR> > where;
+    where.push_back(make_pair("pk_proveedor",proveedorPK));
+    where.push_back(make_pair("pk_articulo",articuloPK));
+    QSqlQuery query = getDeleteQuery("r_proveedor_articulo",where);
+
+    return query.isValid();
+
 }
 
 

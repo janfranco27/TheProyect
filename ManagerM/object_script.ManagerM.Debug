@@ -71,6 +71,7 @@ INPUT(
 ./debug\ui_new_marca.o
 ./debug\ui_new_medida.o
 ./debug\search_articulo.o
+./debug\object_r_proveedor_articulo.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o

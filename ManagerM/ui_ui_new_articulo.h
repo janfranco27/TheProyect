@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
-** Created: Mon 1. Apr 23:35:07 2013
+** Created: Sat 13. Apr 19:04:48 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -236,8 +236,8 @@ public:
         verticalLayout->addWidget(l_resultado_2);
 
         tableWidget = new QTableWidget(ui_new_articulo);
-        if (tableWidget->columnCount() < 7)
-            tableWidget->setColumnCount(7);
+        if (tableWidget->columnCount() < 8)
+            tableWidget->setColumnCount(8);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -252,6 +252,8 @@ public:
         tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
         tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
@@ -344,6 +346,8 @@ public:
         ___qtablewidgetitem5->setText(QApplication::translate("ui_new_articulo", "Stock", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QApplication::translate("ui_new_articulo", "Precio", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QApplication::translate("ui_new_articulo", "Proveedor", 0, QApplication::UnicodeUTF8));
         btn_aceptar->setText(QApplication::translate("ui_new_articulo", "Aceptar", 0, QApplication::UnicodeUTF8));
         btn_borrar->setText(QApplication::translate("ui_new_articulo", "Borrar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_new_articulo", "Cancelar", 0, QApplication::UnicodeUTF8));

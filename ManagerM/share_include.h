@@ -85,7 +85,7 @@ using namespace std;
 #include "object_e_persona_juridicos_funciones.h"
 #include "object_e_proveedor_funciones.h"
 #include "object_e_transportista_funciones.h"
-
+#include "object_r_proveedor_articulo.h"
 
 #include "ui_tool_bar.h"
 

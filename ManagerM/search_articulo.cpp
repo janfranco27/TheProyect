@@ -2,6 +2,20 @@
 #include "ui_search_articulo.h"
 #include <QStringListModel>
 #include "share_include.h"
+
+
+enum {PK_ARTICULO,FK_GRUPO,FK_MARCA,FK_MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
+QString table_e_marca = "e_marca";
+QString table_e_medida = "e_medida";
+QString col_descripcion = "descripcion";
+QString col_pk_marca = "pk_marca";
+QString col_pk_medida = "pk_medida";
+QString table_e_articulo = "e_articulo";
+QString col_descripcion_marca = "relTblAl_2.descripcion";
+QString col_descripcion_medida = "relTblAl_3.descripcion";
+
+
+
 search_articulo::search_articulo(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::search_articulo)
@@ -39,8 +53,20 @@ ui(new Ui::search_articulo)
 	ui->le_descripcion->setCompleter(c2);
 
 	table_model = new QSqlRelationalTableModel();
-	table_model->setTable(table_name);
+
+    //Seteamos las relaciones
+
+    table_model->setTable(table_name);
+
+     table_model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
+
+    table_model->setRelation(FK_MARCA,QSqlRelation(table_e_marca,col_pk_marca,col_descripcion));
+    table_model->setRelation(FK_MEDIDA,QSqlRelation(table_e_medida,col_pk_medida,col_descripcion));
+
+
 	table_model->select();
+
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 	ui->tableView->setModel(table_model);
 }
 void search_articulo::refreshTableView()
@@ -57,7 +83,7 @@ void search_articulo::refreshTableView()
 		{
 			filtro+=" AND ";
 		}
-	filtro+="fk_marca='"+ui->le_fk_marca->text()+"'";
+    filtro+=col_descripcion_marca+"='"+ui->le_fk_marca->text()+"'";
 	}
 	if(!ui->le_fk_medida->text().isEmpty())
 	{
@@ -69,7 +95,7 @@ void search_articulo::refreshTableView()
 		{
 			filtro+=" AND ";
 		}
-	filtro+="fk_medida='"+ui->le_fk_medida->text()+"'";
+    filtro+=col_descripcion_medida+"='"+ui->le_fk_medida->text()+"'";
 	}
 	if(!ui->le_descripcion->text().isEmpty())
 	{
@@ -81,10 +107,12 @@ void search_articulo::refreshTableView()
 		{
 			filtro+=" AND ";
 		}
-	filtro+="descripcion='"+ui->le_descripcion->text()+"'";
+    filtro+=table_e_articulo+".descripcion='"+ui->le_descripcion->text()+"'";
 	}
-	table_model->setFilter(filtro);
-	table_model->select();
+
+    table_model->setFilter(filtro);
+    qDebug()<<table_model->query().lastQuery()<<endl;
+    //table_model->select();
 }
 void search_articulo::on_le_fk_marca_editingFinished()
 {

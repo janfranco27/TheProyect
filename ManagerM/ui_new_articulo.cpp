@@ -1,13 +1,14 @@
 #include "ui_new_articulo.h"
 #include "ui_ui_new_articulo.h"
 #include "share_include.h"
-const int numHeaders = 7;
+const int numHeaders = 8;
 
-//_QSTR headers[numHeaders] = {"Código","Nombre","Grupo","Marca","Medida","Precio","Stock"};
+
 
 
 
 enum {MEDIDA,GRUPO,MARCA};
+enum {H_CODIGO, H_NOMBRE, H_GRUPO, H_MARCA, H_MEDIDA, H_STOCK,H_PRECIO, H_PROVEEDOR};
 ui_new_articulo::ui_new_articulo(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_new_articulo)
@@ -81,6 +82,16 @@ void ui_new_articulo::on_pushButton_agregar_clicked()
     articulo[5] = ui->le_stock_2->text();
     articulo[6] = ui->le_precio_2->text();
 
+    if(ui->cb_proveedor->currentIndex()==0)
+    {
+        articulo[7] = "";
+    }
+    else
+    {
+        articulo[7] = ui->cb_proveedor->currentText();
+
+    }
+
     if(validateRegistrarForm())
     {
         int count = ui->tableWidget->rowCount();
@@ -109,19 +120,22 @@ void ui_new_articulo::on_btn_aceptar_clicked()
         {
             qDebug()<<"Registrando: "<<n_elementos<<endl;
             object_e_articulo articulo;
+            object_r_proveedor_articulo proveedor_articulo;
             for(int i=0;i<n_elementos;i++)
             {
 
 
 
+                    QString grupo,marca,medida,proveedor,pk_proveedor;
 
-                    int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,2)->text());
+                    proveedor = ui->tableWidget->item(i,H_PROVEEDOR)->text();
 
-                    int marca_index = ui->cb_marca->findText(ui->tableWidget->item(i,3)->text());
-                    int medida_index = ui->cb_medida->findText(ui->tableWidget->item(i,4)->text());
+                    int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,H_GRUPO)->text());
 
+                    int marca_index = ui->cb_marca->findText(ui->tableWidget->item(i,H_MARCA)->text());
+                    int medida_index = ui->cb_medida->findText(ui->tableWidget->item(i,H_MEDIDA)->text());
+                    int proveedor_index = ui->cb_proveedor->findText(proveedor);
 
-                    QString grupo,marca,medida;
 
                      //No selecciono grupo
                     if(grupo_index==-1)
@@ -153,13 +167,16 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                       medida = QString::number(medida_index);
                     }
 
-                    articulo.mf_set_descripcion(ui->tableWidget->item(i,1)->text());
+
+
+                    articulo.mf_set_descripcion(ui->tableWidget->item(i,H_NOMBRE)->text());
                     articulo.mf_set_fk_grupo(grupo);
                     articulo.mf_set_fk_marca(marca);
                     articulo.mf_set_fk_medida(medida);
-                    articulo.mf_set_stock(ui->tableWidget->item(i,5)->text());
-                    articulo.mf_set_precio_lista(ui->tableWidget->item(i,6)->text());
+                    articulo.mf_set_stock(ui->tableWidget->item(i,H_STOCK)->text());
+                    articulo.mf_set_precio_lista(ui->tableWidget->item(i,H_PRECIO)->text());
                     articulo.mf_set_habilitado(C_HABILITADO);
+
 
                     //Si ocurrio un error al insertar en la BD
                     if(!articulo.mf_add())
@@ -167,6 +184,25 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                         ok = false;
                         break;
                     }
+                    //Tiene proveedor
+                    if(proveedor_index!=-1)
+                    {
+                        pk_proveedor = SYSTEM->getProveedorPK(proveedor);
+
+                        proveedor_articulo.mf_set_pk_articulo(ui->tableWidget->item(i,H_CODIGO)->text());
+                        proveedor_articulo.mf_set_pk_proveedor(pk_proveedor);
+
+
+
+                        if(!proveedor_articulo.mf_add())
+                        {
+                            ok = false;
+
+                            break;
+                        }
+
+                    }
+
 
             }
 
@@ -237,7 +273,7 @@ void ui_new_articulo::update_form()
     vector<_QSTR> grupo = SYSTEM->getDescripcion("e_grupo");
     vector<_QSTR> marca = SYSTEM->getDescripcion("e_marca");
     vector<_QSTR> medida = SYSTEM->getDescripcion("e_medida");
-    vector<_QSTR> proveedor = SYSTEM->getDescripcion("e_proveedor");
+    QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
 
 
     SYSTEM->loadComboBoxFromVector(ui->cb_grupo,grupo,false);

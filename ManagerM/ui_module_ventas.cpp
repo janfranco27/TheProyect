@@ -69,8 +69,8 @@ void ui_module_ventas::on_treeWidget_ventas_itemDoubleClicked(QTreeWidgetItem *i
 
 void ui_module_ventas::on_pushButton_nuevo_clicked()
 {
-    ui_new_venta * form_new_venta = new ui_new_venta();
-   //search_articulo * form_new_venta = new search_articulo();
+   // ui_new_venta * form_new_venta = new ui_new_venta();
+   search_articulo * form_new_venta = new search_articulo();
 
     form_new_venta->setAttribute(Qt::WA_DeleteOnClose);
 
