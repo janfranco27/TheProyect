@@ -23,7 +23,7 @@ _QSTR CPPScript::mf_getPass(){ return md_o_sql_pass; }
 _QSTR CPPScript::mf_getDB(){ return md_o_sql_db; }
 
 string CPPScript::getDirFolder(){ return strDirFolder; }
-
+/*
 void CPPScript::generateClass_withinDB(_QSTR class_name)
 {
     // Abrir File
@@ -57,9 +57,11 @@ void CPPScript::generateClass_withinDB(_QSTR class_name)
 
     }
 }
-
+*/
+/*
 void CPPScript::mf_extractColumnsTable(_QSTR class_name)
 {
+
     QSqlQuery columnsTable;
     //_QSTR query = "SELECT column_name, data_type, column_key FROM ";
     //query += "INFORMATION_SCHEMA.COLUMNS WHERE table_name = '"+name_table+"'";
@@ -80,11 +82,11 @@ void CPPScript::mf_extractColumnsTable(_QSTR class_name)
 
 
 }
-
+*/
 void CPPScript::generateClass_withinDB()
 {
     // Create folder
-    mkdir(getDirFolder().c_str());
+    //mkdir(getDirFolder().c_str());
 
     QSqlDatabase db =  QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName(md_o_sql_host);
@@ -97,47 +99,47 @@ void CPPScript::generateClass_withinDB()
     if(ok)
     {
         qDebug()<<"Connection sucessfull"<<endl;
-        vector<TablesAndColumns> v_info;
-        mf_extractTables(v_info);
 
-        for(unsigned int i = 0; i < v_info.size(); i++)
+        mf_extractColumnsOfData(data);
+
+        for(unsigned int i = 0; i < data.size(); i++)
         {
-            if(mf_openFile_h(v_info[i].table_name))
+            if(mf_openFile_h(data[i].first))
             {
-                md_o_v_column_names = v_info[i].v_column_names;
-                mf_fillFile_h(v_info[i].table_name);
+                md_o_v_column_names = data[i].second;
+                mf_fillFile_h(data[i].first);
             }
         }
 
-        for(unsigned int i = 0; i < v_info.size(); i++)
+        for(unsigned int i = 0; i < data.size(); i++)
         {
-            if(mf_openFile_cpp(v_info[i].table_name))
+            if(mf_openFile_cpp(data[i].first))
             {
-                md_o_v_column_names = v_info[i].v_column_names;
-                mf_fillFile_cpp(v_info[i].table_name);
+                md_o_v_column_names = data[i].second;
+                mf_fillFile_cpp(data[i].first);
             }
         }
 
-        for(unsigned int i = 0; i < v_info.size(); i++)
+        for(unsigned int i = 0; i < data.size(); i++)
         {
-            if(mf_openFile_objectFunciones_h(v_info[i].table_name))
+            if(mf_openFile_objectFunciones_h(data[i].first))
             {
-                md_o_v_column_names = v_info[i].v_column_names;
-                mf_fillFile_objectFunciones_h(v_info[i].table_name);
+                md_o_v_column_names = data[i].second;
+                mf_fillFile_objectFunciones_h(data[i].first);
             }
         }
 
-        for(unsigned int i = 0; i < v_info.size(); i++)
+        for(unsigned int i = 0; i < data.size(); i++)
         {
-            if(mf_openFile_objectFunciones_cpp(v_info[i].table_name))
+            if(mf_openFile_objectFunciones_cpp(data[i].first))
             {
-                md_o_v_column_names = v_info[i].v_column_names;
-                mf_fillFile_objectFunciones_cpp(v_info[i].table_name);
+                md_o_v_column_names = data[i].second;
+                mf_fillFile_objectFunciones_cpp(data[i].first);
             }
         }
 
 
-        mf_generate_class_objectGeneral_h(v_info);
+        mf_generate_class_objectGeneral_h(data);
 
     }
     else
@@ -145,8 +147,9 @@ void CPPScript::generateClass_withinDB()
 
     }
 }
-void CPPScript::mf_extractTables(vector<TablesAndColumns> &v_info)
+void CPPScript::mf_extractColumnsOfData(vector<pair<_QSTR, vector<_QSTR> > > &data)
 {
+    /*
     QSqlQuery sql_tables;
     sql_tables.prepare("SHOW tables");
     if(sql_tables.exec())
@@ -157,13 +160,13 @@ void CPPScript::mf_extractTables(vector<TablesAndColumns> &v_info)
             v_info.push_back((*(new TablesAndColumns(sql_tables.value(0).toString() )) ) );
         }
     }
-
-    for(unsigned i = 0; i < v_info.size(); i++)
+    */
+    for(unsigned i = 0; i < data.size(); i++)
     {
         QSqlQuery columnsTable;
         //_QSTR query = "SELECT column_name, data_type, column_key FROM ";
         //query += "INFORMATION_SCHEMA.COLUMNS WHERE table_name = '"+name_table+"'";
-        _QSTR query = "SHOW COLUMNS FROM "+v_info[i].table_name;
+        _QSTR query = "SHOW COLUMNS FROM "+data[i].first;
         columnsTable.prepare(query);
 
         if(columnsTable.exec())
@@ -171,15 +174,20 @@ void CPPScript::mf_extractTables(vector<TablesAndColumns> &v_info)
             qDebug()<<"query successful"<<endl;
             while(columnsTable.next())
             {
-                v_info[i].v_column_names.push_back(columnsTable.value(0).toString());
+                data[i].second.push_back(columnsTable.value(0).toString());
             }
         }
     }
 }
-
+/*
 void CPPScript::generateClass_withoutDB(_QSTR class_name, vector<_QSTR>& l_v_dTypes)
 {
 
+}
+*/
+void CPPScript::push_back_tableName(_QSTR str)
+{
+    data.push_back(make_pair(str,*new vector<_QSTR>));
 }
 
 bool CPPScript::mf_openFile_h(_QSTR& class_name)
@@ -481,9 +489,10 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<"\tQSqlQuery query;"<<endl;
     file<<endl;    
     file<<"\tstring str_query = \"INSERT INTO "<<str_class_name<<"(\";"<<endl;
-    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
-    file<<"\t\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<", \";"<<endl;
-
+    //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
+    file<<"\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<", \";"<<endl;
+    //file<<"\telse"<<endl;
+    //file<<"\t\tstr_query += NULL";
     //file<<"\tstr_query += \""<<md_o_v_column_names[1].toStdString()<<"\";"<<endl;
     for(unsigned int i = 1; i < md_o_v_column_names.size()-1; i++)
     {
@@ -498,10 +507,10 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     }
 
     file<<"\tstr_query += \""<<") VALUES(\";"<<endl;
-    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
-    file<<"\t{"<<endl;
-    file<<"\t\tstr_query += \""<<"?, \";"<<endl;
-    file<<"\t}"<<endl;
+    //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
+    //file<<"\t{"<<endl;
+    file<<"\tstr_query += \""<<"?, \";"<<endl;
+    //file<<"\t}"<<endl;
     for(unsigned int i = 1; i < md_o_v_column_names.size()-1; i++)
     {
         file<<"\tstr_query += \""<<"?, \";"<<endl;
@@ -509,7 +518,7 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
 
     if((md_o_v_column_names.size()-1) > 1)
     {
-        string temp = md_o_v_column_names[md_o_v_column_names.size()-1].toStdString();
+        //string temp = md_o_v_column_names[md_o_v_column_names.size()-1].toStdString();
         file<<"\tstr_query += \"?"<<"\";"<<endl;
     }
     file<<"\tstr_query += \")\";"<<endl;
@@ -519,9 +528,12 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<"\tint integer = 0;"<<endl;
     file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
     file<<"\t{"<<endl;
-    file<<"\t\tquery.bindValue(0, "<<"md_o_"<<md_o_v_column_names[0].toStdString()<<");"<<endl;
-    file<<"\t\tinteger++;"<<endl;
+    file<<"\t\tquery.bindValue(integer++, "<<"md_o_"<<md_o_v_column_names[0].toStdString()<<");"<<endl;
+    //file<<"\t\tinteger++;"<<endl;
     file<<"\t}"<<endl;
+    file<<"\telse"<<endl;
+    file<<"\t\tquery.bindValue(integer++, \"NULL\");"<<endl;
+
     for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
     {
         string temp = md_o_v_column_names[i].toStdString();
@@ -710,7 +722,7 @@ void CPPScript::mf_fillFile_objectFunciones_cpp(_QSTR& class_name)
 }
 
 // Class Object General
-void CPPScript::mf_generate_class_objectGeneral_h(vector<TablesAndColumns>& v_info)
+void CPPScript::mf_generate_class_objectGeneral_h(vector<pair<_QSTR, vector<_QSTR > > >& data)
 {
     string str_general = "general";
     QString temp = str_general.c_str();
@@ -741,14 +753,14 @@ void CPPScript::mf_generate_class_objectGeneral_h(vector<TablesAndColumns>& v_in
     file<<"\n#endif // OBJECT_"<<str_general_upper<<endl;
 
     file<<"/*"<<endl;
-    for(unsigned i = 0; i < v_info.size(); i++)
+    for(unsigned i = 0; i < data.size(); i++)
     {
-        file<<"#include \""<<"object_"<<v_info[i].table_name.toStdString()<<".h\""<<endl;
+        file<<"#include \""<<"object_"<<data[i].first.toStdString()<<".h\""<<endl;
     }
     file<<endl;
-    for(unsigned i = 0; i < v_info.size(); i++)
+    for(unsigned i = 0; i < data.size(); i++)
     {
-        file<<"#include \""<<"object_"<<v_info[i].table_name.toStdString()<<STR_FUNCIONES<<".h\""<<endl;
+        file<<"#include \""<<"object_"<<data[i].first.toStdString()<<STR_FUNCIONES<<".h\""<<endl;
     }
     file<<"*/"<<endl;
 }

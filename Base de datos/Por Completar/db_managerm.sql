@@ -98,6 +98,20 @@ CREATE UNIQUE INDEX `pk_dni_UNIQUE` ON `e_usuario` (`pk_dni` ASC) ;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
+-- Table `e_region`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_region` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_region` (
+  `pk_region` INT NOT NULL AUTO_INCREMENT ,
+  `region` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`pk_region`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
 -- Table `e_persona_juridica`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `e_persona_juridica` ;
@@ -105,8 +119,8 @@ DROP TABLE IF EXISTS `e_persona_juridica` ;
 SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `e_persona_juridica` (
   `pk_ruc` VARCHAR(11) NOT NULL ,
+  `fk_region` INT NOT NULL ,
   `razon_social` VARCHAR(45) NOT NULL ,
-  `region` VARCHAR(45) NOT NULL ,
   `direccion` VARCHAR(45) NOT NULL ,
   `telefono_fijo` VARCHAR(45) NULL ,
   `fax` VARCHAR(45) NULL ,
@@ -481,9 +495,7 @@ SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `e_ticket` (
   `pk_comprobante` INT NOT NULL ,
   `fk_cliente` VARCHAR(11) NOT NULL ,
-  `fk_factura_venta` INT NULL ,
   `total` FLOAT NULL ,
-  `e_ticketcol` VARCHAR(45) NULL ,
   PRIMARY KEY (`pk_comprobante`) )
 ENGINE = InnoDB;
 
@@ -549,7 +561,6 @@ CREATE  TABLE IF NOT EXISTS `e_sistema` (
   `pk_code` INT NOT NULL AUTO_INCREMENT ,
   `igv` FLOAT NULL ,
   `cambio_dolar` FLOAT NULL ,
-  `fecha` DATE NULL ,
   PRIMARY KEY (`pk_code`) )
 ENGINE = InnoDB;
 
@@ -570,6 +581,8 @@ CREATE  TABLE IF NOT EXISTS `e_proforma_venta` (
   `nombre` VARCHAR(100) NULL ,
   `dni` VARCHAR(8) NULL ,
   `direccion` VARCHAR(150) NULL ,
+  `total` FLOAT NULL ,
+  `igv` FLOAT NULL ,
   PRIMARY KEY (`pk_comprobante`) )
 ENGINE = InnoDB;
 
@@ -587,6 +600,8 @@ CREATE  TABLE IF NOT EXISTS `e_cotizacion_venta` (
   `nombre` VARCHAR(100) NULL ,
   `dni` VARCHAR(8) NULL ,
   `direccion` VARCHAR(150) NULL ,
+  `total` FLOAT NULL ,
+  `igv` FLOAT NULL ,
   PRIMARY KEY (`pk_comprobante`) )
 ENGINE = InnoDB;
 
@@ -602,6 +617,25 @@ CREATE  TABLE IF NOT EXISTS `e_nota_credito_compra` (
   `pk_comprobante` INT NOT NULL ,
   PRIMARY KEY (`pk_comprobante`) )
 ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `e_guia_rr_venta`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_guia_rr_venta` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_guia_rr_venta` (
+  `pk_comprobante` INT NOT NULL ,
+  `fk_nota_pedido` INT NOT NULL ,
+  `fk_proveedor` VARCHAR(11) NOT NULL ,
+  `fk_factura_venta` INT NOT NULL ,
+  PRIMARY KEY (`pk_comprobante`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `fk_factura_venta_UNIQUE` ON `e_guia_rr_venta` (`fk_factura_venta` ASC) ;
 
 SHOW WARNINGS;
 
@@ -651,10 +685,10 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `db_managerm`;
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `razon_social`, `region`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('11111111111', 'Corporacion Peruana de Pinturas S.A.C.', 'Lima', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `razon_social`, `region`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('22222222222', 'Shubert S.A.', 'Lima', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `razon_social`, `region`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('33333333333', 'Anypsa S.A.', 'Lima', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `razon_social`, `region`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('44444444444', 'Juan Tito Calizaya', 'Ilo', 'NC', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('11111111111', NULL, 'Corporacion Peruana de Pinturas S.A.C.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('22222222222', NULL, 'Shubert S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('33333333333', NULL, 'Anypsa S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('44444444444', NULL, 'Juan Tito Calizaya', 'NC', '1', '1', '1', '1', '1', '1', 1);
 
 COMMIT;
 
