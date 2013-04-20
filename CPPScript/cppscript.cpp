@@ -490,37 +490,28 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<endl;    
     file<<"\tstring str_query = \"INSERT INTO "<<str_class_name<<"(\";"<<endl;
     //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
-    file<<"\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<", \";"<<endl;
+    file<<"\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<"\";"<<endl;
     //file<<"\telse"<<endl;
     //file<<"\t\tstr_query += NULL";
     //file<<"\tstr_query += \""<<md_o_v_column_names[1].toStdString()<<"\";"<<endl;
-    for(unsigned int i = 1; i < md_o_v_column_names.size()-1; i++)
+    for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
     {
         string temp = md_o_v_column_names[i].toStdString();
-        file<<"\tstr_query += \""<<temp<<", \";"<<endl;
+        file<<"\tstr_query += \", "<<temp<<"\";"<<endl;
     }
 
-    if((md_o_v_column_names.size()-1) > 1)
-    {
-        string temp = md_o_v_column_names[md_o_v_column_names.size()-1].toStdString();
-        file<<"\tstr_query += \""<<temp<<"\";"<<endl;
-    }
 
     file<<"\tstr_query += \""<<") VALUES(\";"<<endl;
     //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
     //file<<"\t{"<<endl;
-    file<<"\tstr_query += \""<<"?, \";"<<endl;
+    file<<"\tstr_query += \""<<"?\";"<<endl;
     //file<<"\t}"<<endl;
-    for(unsigned int i = 1; i < md_o_v_column_names.size()-1; i++)
+    for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
     {
-        file<<"\tstr_query += \""<<"?, \";"<<endl;
+        file<<"\tstr_query += \", "<<"?\";"<<endl;
     }
 
-    if((md_o_v_column_names.size()-1) > 1)
-    {
-        //string temp = md_o_v_column_names[md_o_v_column_names.size()-1].toStdString();
-        file<<"\tstr_query += \"?"<<"\";"<<endl;
-    }
+
     file<<"\tstr_query += \")\";"<<endl;
     file<<endl;
     file<<"\tquery.prepare(QString(str_query.c_str()));"<<endl;
