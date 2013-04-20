@@ -45,6 +45,7 @@ public:
     QSqlQuery getColaboradores();
    vector<_QSTR> getAllTiposUsuarios();
    vector<_QSTR> getAllTiendas();
+   vector<_QSTR> getAllRegiones();
    _QSTR getTienda(_QSTR nombreTienda);
    _QSTR getTipoUsuario(_QSTR nombreUsuario);
    _QSTR getProveedorPK(_QSTR nombreVendedor);
@@ -53,12 +54,16 @@ public:
 
    bool deleteProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK);
    bool deleteColaborador(_QSTR dni);
-
    //Modifica solo el proveedor (3er parametro)
    bool updateProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK,_QSTR nuevoProveedorPK);
 
+
+   QSqlQuery getClientes();
+   _QSTR getRegion(_QSTR codigo_region);
+
    _QSTR getTienda();
    _QSTR getAdministrador();
+   _QSTR getCodigoRegion(_QSTR region);
    void init_e_tipo_usuario();
 
    int messageInformation(_QSTR title,_QSTR message);

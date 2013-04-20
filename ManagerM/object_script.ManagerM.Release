@@ -52,8 +52,6 @@ INPUT(
 ./release\object_e_transportista.o
 ./release\object_e_proveedor_funciones.o
 ./release\object_e_proveedor.o
-./release\object_e_persona_juridicos_funciones.o
-./release\object_e_persona_juridicos.o
 ./release\object_e_orden_compra_funciones.o
 ./release\object_e_orden_compra.o
 ./release\object_e_guia_rr_compra_funciones.o
@@ -72,6 +70,11 @@ INPUT(
 ./release\ui_new_medida.o
 ./release\search_articulo.o
 ./release\object_r_proveedor_articulo.o
+./release\ui_newedit_cliente.o
+./release\ui_module_clientes.o
+./release\object_e_persona_juridica.o
+./release\object_e_cliente.o
+./release\object_e_region.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -107,5 +110,7 @@ INPUT(
 ./release\moc_ui_new_marca.o
 ./release\moc_ui_new_medida.o
 ./release\moc_search_articulo.o
+./release\moc_ui_newedit_cliente.o
+./release\moc_ui_module_clientes.o
 ./release\qrc_Icons.o
 );

@@ -15,9 +15,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cppscript.cpp
+    cppscript.cpp \
+    selecttablestogenscript.cpp
 
 HEADERS  += mainwindow.h \
-    cppscript.h
+    cppscript.h \
+    selecttablestogenscript.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    selecttablestogenscript.ui

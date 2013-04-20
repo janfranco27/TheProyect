@@ -66,8 +66,6 @@ SOURCES += main.cpp\
     object_e_transportista.cpp \
     object_e_proveedor_funciones.cpp \
     object_e_proveedor.cpp \
-    object_e_persona_juridicos_funciones.cpp \
-    object_e_persona_juridicos.cpp \
     object_e_orden_compra_funciones.cpp \
     object_e_orden_compra.cpp \
     object_e_guia_rr_compra_funciones.cpp \
@@ -85,7 +83,13 @@ SOURCES += main.cpp\
     ui_new_marca.cpp \
     ui_new_medida.cpp \
     search_articulo.cpp \
-    object_r_proveedor_articulo.cpp
+    object_r_proveedor_articulo.cpp \
+    ui_newedit_cliente.cpp \
+    ui_module_clientes.cpp \
+    object_e_persona_juridica.cpp \
+    object_e_cliente.cpp \
+    object_e_region.cpp
+
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -145,8 +149,6 @@ HEADERS  += ui_main.h \
     object_e_transportista.h \
     object_e_proveedor_funciones.h \
     object_e_proveedor.h \
-    object_e_persona_juridicos_funciones.h \
-    object_e_persona_juridicos.h \
     object_e_orden_compra_funciones.h \
     object_e_orden_compra.h \
     object_e_guia_rr_compra_funciones.h \
@@ -164,8 +166,12 @@ HEADERS  += ui_main.h \
     ui_new_marca.h \
     ui_new_medida.h \
     search_articulo.h \
-    object_r_proveedor_articulo.h
-
+    object_r_proveedor_articulo.h \
+    ui_newedit_cliente.h \
+    ui_module_clientes.h \
+    object_e_persona_juridica.h \
+    object_e_cliente.h \
+    object_e_region.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -200,7 +206,9 @@ FORMS    += ui_main.ui \
     ui_module_compras.ui \
     ui_new_marca.ui \
     ui_new_medida.ui \
-    search_articulo.ui
+    search_articulo.ui \
+    ui_newedit_cliente.ui \
+    ui_module_clientes.ui
 
 RESOURCES += \
     Icons.qrc

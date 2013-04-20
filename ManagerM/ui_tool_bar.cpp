@@ -50,3 +50,9 @@ void ui_tool_bar::on_pushButton_compras_clicked()
     ui_module_compras* form_compras = new ui_module_compras;
     APP_MANAGERM->setCentralWidget(form_compras);
 }
+
+void ui_tool_bar::on_pushButton_cliente_clicked()
+{
+    ui_module_clientes* form_clientes = new ui_module_clientes;
+    APP_MANAGERM->setCentralWidget(form_clientes);
+}

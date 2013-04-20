@@ -271,7 +271,6 @@ void ui_newedit_colaborador::mf_set_parent(int p)
 }
 
 
-
 void ui_newedit_colaborador::on_pushButton_cancel_clicked()
 {
      close();

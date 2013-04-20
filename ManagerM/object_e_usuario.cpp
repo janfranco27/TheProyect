@@ -106,23 +106,24 @@ bool object_e_usuario::mf_load(_QSTR pk)
 bool object_e_usuario::mf_add()
 {
 
-	QSqlQuery query;
+    QSqlQuery query;
 
-	query.prepare("INSERT INTO e_usuario(fk_tipo_usuario, nick, clave, habilitado) VALUES(?, ?, ?, ?)");
-	query.bindValue(0, md_o_fk_tipo_usuario);
-	query.bindValue(1, md_o_nick);
-	query.bindValue(2, md_o_clave);
-	query.bindValue(3, md_o_habilitado);
+    query.prepare("INSERT INTO e_usuario(pk_dni, fk_tipo_usuario, nick, clave, habilitado) VALUES(?, ?, ?, ?, ?)");
+    query.bindValue(0, md_o_pk_dni);
+    query.bindValue(1, md_o_fk_tipo_usuario);
+    query.bindValue(2, md_o_nick);
+    query.bindValue(3, md_o_clave);
+    query.bindValue(4, md_o_habilitado);
 
-	if(query.exec())
-	{
+    if(query.exec())
+    {
 
-		return true;
+        return true;
 
-	}else{
+    }else{
 
-		return false;
-	}
+        return false;
+    }
 }
 
 bool object_e_usuario::mf_update()
