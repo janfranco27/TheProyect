@@ -126,8 +126,8 @@ bool object_e_tipo_usuario::mf_add()
 	}else{
 		//state FAILED
 		//w!
-        //qDebug()<<query.lastQuery()<<endl;
-        //qDebug()<<query.lastError().databaseText()<<endl;
+        qDebug()<<query.lastQuery()<<endl;
+        qDebug()<<query.lastError().databaseText()<<endl;
 		return false;
 	}
 }

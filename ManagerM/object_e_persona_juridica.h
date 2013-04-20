@@ -9,8 +9,8 @@ class object_e_persona_juridica:public object_general
 
 private:
 	_QSTR md_o_pk_ruc;
+	_QSTR md_o_fk_region;
 	_QSTR md_o_razon_social;
-	_QSTR md_o_region;
 	_QSTR md_o_direccion;
 	_QSTR md_o_telefono_fijo;
 	_QSTR md_o_telefono_celular;
@@ -23,12 +23,12 @@ private:
 
 public:
 	object_e_persona_juridica();
-	object_e_persona_juridica(_QSTR pk_ruc, _QSTR razon_social, _QSTR region, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado);
-	object_e_persona_juridica(_QSTR razon_social, _QSTR region, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado);
+	object_e_persona_juridica(_QSTR pk_ruc, _QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado);
+	object_e_persona_juridica(_QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado);
 
 	void mf_set_pk_ruc(_QSTR pk_ruc);
+	void mf_set_fk_region(_QSTR fk_region);
 	void mf_set_razon_social(_QSTR razon_social);
-	void mf_set_region(_QSTR region);
 	void mf_set_direccion(_QSTR direccion);
 	void mf_set_telefono_fijo(_QSTR telefono_fijo);
 	void mf_set_telefono_celular(_QSTR telefono_celular);
@@ -40,8 +40,8 @@ public:
 	void mf_set_habilitado(_QSTR habilitado);
 
 	_QSTR mf_get_pk_ruc();
+	_QSTR mf_get_fk_region();
 	_QSTR mf_get_razon_social();
-	_QSTR mf_get_region();
 	_QSTR mf_get_direccion();
 	_QSTR mf_get_telefono_fijo();
 	_QSTR mf_get_telefono_celular();
@@ -63,8 +63,8 @@ public:
 	/*
 	object_e_persona_juridica obj_e_persona_juridica;
 	obj_e_persona_juridica.mf_set_pk_ruc();
+	obj_e_persona_juridica.mf_set_fk_region();
 	obj_e_persona_juridica.mf_set_razon_social();
-	obj_e_persona_juridica.mf_set_region();
 	obj_e_persona_juridica.mf_set_direccion();
 	obj_e_persona_juridica.mf_set_telefono_fijo();
 	obj_e_persona_juridica.mf_set_telefono_celular();
@@ -76,8 +76,8 @@ public:
 	obj_e_persona_juridica.mf_set_habilitado();
 
 	obj_e_persona_juridica.mf_get_pk_ruc();
+	obj_e_persona_juridica.mf_get_fk_region();
 	obj_e_persona_juridica.mf_get_razon_social();
-	obj_e_persona_juridica.mf_get_region();
 	obj_e_persona_juridica.mf_get_direccion();
 	obj_e_persona_juridica.mf_get_telefono_fijo();
 	obj_e_persona_juridica.mf_get_telefono_celular();

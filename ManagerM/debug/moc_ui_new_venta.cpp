@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta.h'
 **
-** Created: Tue 2. Apr 01:04:09 2013
+** Created: Tue 16. Apr 18:18:02 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_new_venta[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,12 +32,16 @@ static const uint qt_meta_data_ui_new_venta[] = {
 
  // slots: signature, parameters, type, tag, flags
       19,   14,   13,   13, 0x08,
+      52,   13,   13,   13, 0x08,
+      86,   13,   13,   13, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ui_new_venta[] = {
     "ui_new_venta\0\0arg1\0on_le_nombre_textEdited(QString)\0"
+    "on_pushButton_siguiente_clicked()\0"
+    "on_pushButton_atras_clicked()\0"
 };
 
 void ui_new_venta::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,6 +51,8 @@ void ui_new_venta::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         ui_new_venta *_t = static_cast<ui_new_venta *>(_o);
         switch (_id) {
         case 0: _t->on_le_nombre_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->on_pushButton_siguiente_clicked(); break;
+        case 2: _t->on_pushButton_atras_clicked(); break;
         default: ;
         }
     }
@@ -84,9 +90,9 @@ int ui_new_venta::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

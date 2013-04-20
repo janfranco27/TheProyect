@@ -16,7 +16,7 @@ ui_edit_proveedor::~ui_edit_proveedor()
 void ui_edit_proveedor::on_pushButton_aceptar_clicked()
 {
     object_e_proveedor* proveedor = new object_e_proveedor;
-    object_e_persona_juridicos* persona_juridica = new object_e_persona_juridicos;
+    object_e_persona_juridica* persona_juridica = new object_e_persona_juridica;
 
     proveedor->mf_set_pk_ruc(ui->lineEdit_ruc->text());
     proveedor->mf_set_nombre_vendedor(ui->lineEdit_nombre->text());

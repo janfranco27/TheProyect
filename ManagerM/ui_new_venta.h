@@ -18,6 +18,10 @@ public:
 private slots:
     void on_le_nombre_textEdited(const QString &arg1);
 
+    void on_pushButton_siguiente_clicked();
+
+    void on_pushButton_atras_clicked();
+
 private:
     Ui::ui_new_venta *ui;
 };

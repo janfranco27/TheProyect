@@ -68,7 +68,7 @@ using namespace std;
 #include "object_e_medida.h"
 #include "object_e_banco.h"
 #include "object_e_proveedor.h"
-#include "object_e_persona_juridicos.h"
+#include "object_e_persona_juridica.h"
 #include "object_e_tienda.h"
 #include "object_e_tipo_usuario.h"
 #include "object_e_colaborador.h"
@@ -77,12 +77,14 @@ using namespace std;
 #include "object_e_comprobante.h"
 #include "object_e_guia_rr_compra.h"
 #include "object_e_transportista.h"
+#include "object_e_cliente.h"
+#include "object_e_region.h"
 
 #include "object_e_comprobante_funciones.h"
 #include "object_e_factura_compra_funciones.h"
 #include "object_e_guia_rr_compra_funciones.h"
 #include "object_e_orden_compra_funciones.h"
-#include "object_e_persona_juridicos_funciones.h"
+#include "object_e_persona_juridica_funciones.h"
 #include "object_e_proveedor_funciones.h"
 #include "object_e_transportista_funciones.h"
 #include "object_r_proveedor_articulo.h"
@@ -112,8 +114,8 @@ using namespace std;
 #include "ui_module_home.h"
 #include "ui_module_articulos.h"
 #include "ui_module_compras.h"
-
-
+#include "ui_module_clientes.h"
+#include "ui_newedit_cliente.h"
 //NAMESPACES
 
 using namespace module_log;

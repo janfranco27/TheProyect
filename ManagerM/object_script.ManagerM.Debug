@@ -52,8 +52,6 @@ INPUT(
 ./debug\object_e_transportista.o
 ./debug\object_e_proveedor_funciones.o
 ./debug\object_e_proveedor.o
-./debug\object_e_persona_juridicos_funciones.o
-./debug\object_e_persona_juridicos.o
 ./debug\object_e_orden_compra_funciones.o
 ./debug\object_e_orden_compra.o
 ./debug\object_e_guia_rr_compra_funciones.o
@@ -72,6 +70,11 @@ INPUT(
 ./debug\ui_new_medida.o
 ./debug\search_articulo.o
 ./debug\object_r_proveedor_articulo.o
+./debug\ui_newedit_cliente.o
+./debug\ui_module_clientes.o
+./debug\object_e_persona_juridica.o
+./debug\object_e_cliente.o
+./debug\object_e_region.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -107,5 +110,7 @@ INPUT(
 ./debug\moc_ui_new_marca.o
 ./debug\moc_ui_new_medida.o
 ./debug\moc_search_articulo.o
+./debug\moc_ui_newedit_cliente.o
+./debug\moc_ui_module_clientes.o
 ./debug\qrc_Icons.o
 );

@@ -38,3 +38,17 @@ void ui_new_venta::on_le_nombre_textEdited(const QString &arg1)
 
 
 }
+
+void ui_new_venta::on_pushButton_siguiente_clicked()
+{
+    int nextPage = ui->stackedWidget_ventas->currentIndex() + 1;
+    if (nextPage < ui->stackedWidget_ventas->count())
+        ui->stackedWidget_ventas->setCurrentIndex(nextPage);
+}
+
+void ui_new_venta::on_pushButton_atras_clicked()
+{
+    int prevPage = ui->stackedWidget_ventas->currentIndex()-1;
+    if (prevPage >= 0)
+        ui->stackedWidget_ventas->setCurrentIndex(prevPage);
+}

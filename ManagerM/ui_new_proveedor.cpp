@@ -85,23 +85,23 @@ void ui_new_proveedor::on_pushButton_registrar_clicked()
     if(rpta == 0)
     {
         qDebug()<<"Procesando consulta"<<endl;
-        object_e_persona_juridicos obj_persona_juridicos;
+        object_e_persona_juridica obj_persona_juridica;
 
-        obj_persona_juridicos.mf_set_pk_ruc(ui->lineEdit_ruc->text());
-        obj_persona_juridicos.mf_set_comentario(ui->lineEdit_comentario->text());
-        obj_persona_juridicos.mf_set_region(ui->comboBox_regiones->currentText());
-        obj_persona_juridicos.mf_set_direccion(ui->lineEdit_direccion->text());
-        obj_persona_juridicos.mf_set_email(ui->lineEdit_email->text());
-        obj_persona_juridicos.mf_set_fax(ui->lineEdit_fax->text());
-        obj_persona_juridicos.mf_set_habilitado("1");
-        obj_persona_juridicos.mf_set_pagina_web(ui->lineEdit_pagina_web->text());
-        obj_persona_juridicos.mf_set_razon_social(ui->lineEdit_razon_social->text());
-        obj_persona_juridicos.mf_set_representante(ui->lineEdit_representante->text());
+        obj_persona_juridica.mf_set_pk_ruc(ui->lineEdit_ruc->text());
+        obj_persona_juridica.mf_set_comentario(ui->lineEdit_comentario->text());
+        obj_persona_juridica.mf_set_fk_region(ui->comboBox_regiones->currentText());
+        obj_persona_juridica.mf_set_direccion(ui->lineEdit_direccion->text());
+        obj_persona_juridica.mf_set_email(ui->lineEdit_email->text());
+        obj_persona_juridica.mf_set_fax(ui->lineEdit_fax->text());
+        obj_persona_juridica.mf_set_habilitado("1");
+        obj_persona_juridica.mf_set_pagina_web(ui->lineEdit_pagina_web->text());
+        obj_persona_juridica.mf_set_razon_social(ui->lineEdit_razon_social->text());
+        obj_persona_juridica.mf_set_representante(ui->lineEdit_representante->text());
         // No debe ir este campo
         //obj_persona_juridicos.mf_set_telefono_celular("");
-        obj_persona_juridicos.mf_set_telefono_fijo(ui->lineEdit_telefono->text());
+        obj_persona_juridica.mf_set_telefono_fijo(ui->lineEdit_telefono->text());
 
-        obj_persona_juridicos.mf_add();
+        obj_persona_juridica.mf_add();
 
         object_e_proveedor obj_proveedor;
 

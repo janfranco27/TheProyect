@@ -501,6 +501,18 @@ vector<_QSTR> Sistema::getAllTiendas()
     return tiendas;
 }
 
+vector<_QSTR> Sistema::getAllRegiones()
+{
+    _QSTR consulta="SELECT nombre_region FROM e_region";
+    TUPLES result=FREEQUERY(consulta);
+    vector<_QSTR> region;
+    for(int i=0;i<result.size();i++)
+    {
+        region.push_back(result[i][0].toString());
+    }
+    return region;
+}
+
 _QSTR Sistema::getTienda(_QSTR nombreTienda)
 {
     _QSTR consulta="SELECT pk_ruc FROM e_tienda where nombre='"+nombreTienda+"'";
@@ -589,7 +601,6 @@ bool Sistema::deleteColaborador(_QSTR dni)
         return false;
     }
 }
-
 bool Sistema::updateProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK, _QSTR nuevoProveedorPK)
 {
 
@@ -606,7 +617,42 @@ bool Sistema::updateProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK, _QST
 
 
         return query.next();
+}
+QSqlQuery Sistema::getClientes()
+{
+    QSqlQuery query;
+    _QSTR cons="SELECT e_cliente.pk_ruc,nombre_region,razon_social,direccion,telefono_fijo,telefono_celular, fax, "
+            "representante, email,pagina_web,comentario FROM e_persona_juridica, e_cliente,e_region "
+            "WHERE e_cliente.pk_ruc=e_persona_juridica.pk_ruc AND fk_region=pk_codigo_region";
+    query.prepare(cons);
+    if(query.exec())
+    {
+        //state OK
+        //w!
+         qDebug()<<"query  OK";
+    }else{
+        //state FAILED
+        //w!
+         qDebug()<<"query  NO";
+    }
+    return query;
+}
 
+_QSTR Sistema::getRegion(_QSTR codigo_region)
+{
+    QSqlQuery query;
+
+    query.prepare("SELECT nombre_region FROM e_region WHERE pk_codigo_region="+codigo_region);
+    query.exec();
+
+    query.next();
+
+    if(query.size()==0)
+    {
+        return "";
+    }else{
+        return query.value(0).toString();
+    }
 }
 
 _QSTR Sistema::getTienda()
@@ -644,6 +690,24 @@ _QSTR Sistema::getAdministrador()
     {
         return "";
     }else{
+        return query.value(0).toString();
+    }
+}
+
+_QSTR Sistema::getCodigoRegion(_QSTR region)
+{
+    QSqlQuery query;
+
+    query.prepare("SELECT pk_codigo_region FROM e_region WHERE nombre_region='"+region+"'");
+    query.exec();
+
+    query.next();
+
+    if(query.size()==0)
+    {
+        return "";
+    }else{
+        qDebug()<<"CODIGO REGION "<<query.value(0).toString()<<endl;
         return query.value(0).toString();
     }
 }
