@@ -48,3 +48,8 @@ void ui_new_marca::on_pushButton_new_marca_clicked()
 
     close();
 }
+
+void ui_new_marca::closeEvent(QCloseEvent *ev)
+{
+    emit closing();
+}

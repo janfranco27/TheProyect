@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_medida.ui'
 **
-** Created: Thu 4. Apr 14:30:38 2013
+** Created: Sun 21. Apr 21:48:42 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -35,6 +35,7 @@ public:
     {
         if (ui_new_medida->objectName().isEmpty())
             ui_new_medida->setObjectName(QString::fromUtf8("ui_new_medida"));
+        ui_new_medida->setWindowModality(Qt::ApplicationModal);
         ui_new_medida->resize(240, 30);
         ui_new_medida->setMinimumSize(QSize(240, 30));
         ui_new_medida->setMaximumSize(QSize(240, 30));

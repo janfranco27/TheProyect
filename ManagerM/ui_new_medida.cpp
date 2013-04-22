@@ -6,10 +6,14 @@ ui_new_medida::ui_new_medida(QWidget *parent) :
     ui(new Ui::ui_new_medida)
 {
     ui->setupUi(this);
+
+    obj_medida = new object_e_medida();
 }
 
 ui_new_medida::~ui_new_medida()
 {
+    delete obj_medida;
+
     delete ui;
 }
 
@@ -44,4 +48,9 @@ void ui_new_medida::on_pushButton_new_medida_clicked()
     }
 
     close();
+}
+
+void ui_new_medida::closeEvent(QCloseEvent *ev)
+{
+    emit closing();
 }

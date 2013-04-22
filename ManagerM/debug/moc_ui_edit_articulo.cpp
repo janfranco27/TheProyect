@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_articulo.h'
 **
-** Created: Sun 14. Apr 21:15:49 2013
+** Created: Sun 21. Apr 22:39:47 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,6 +33,11 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
  // slots: signature, parameters, type, tag, flags
       18,   17,   17,   17, 0x08,
       43,   17,   17,   17, 0x08,
+      69,   17,   17,   17, 0x08,
+      96,   17,   17,   17, 0x08,
+     124,   17,   17,   17, 0x08,
+     148,   17,   17,   17, 0x08,
+     173,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -40,6 +45,11 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
 static const char qt_meta_stringdata_ui_edit_articulo[] = {
     "ui_edit_articulo\0\0on_btn_aceptar_clicked()\0"
     "on_btn_cancelar_clicked()\0"
+    "on_btn_add_marca_clicked()\0"
+    "on_btn_add_medida_clicked()\0"
+    "update_comboBox_Marca()\0"
+    "update_comboBox_Medida()\0"
+    "update_comboBox_Proveedor()\0"
 };
 
 void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,6 +60,11 @@ void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         switch (_id) {
         case 0: _t->on_btn_aceptar_clicked(); break;
         case 1: _t->on_btn_cancelar_clicked(); break;
+        case 2: _t->on_btn_add_marca_clicked(); break;
+        case 3: _t->on_btn_add_medida_clicked(); break;
+        case 4: _t->update_comboBox_Marca(); break;
+        case 5: _t->update_comboBox_Medida(); break;
+        case 6: _t->update_comboBox_Proveedor(); break;
         default: ;
         }
     }
@@ -88,9 +103,9 @@ int ui_edit_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 7;
     }
     return _id;
 }

@@ -31,9 +31,12 @@ public:
     ui_opciones_articulo* mf_get_parent_form();
     int mf_get_parent();
 
+signals:
+    void closing();
 
 private slots:
     void on_pushButton_new_medida_clicked();
+    void closeEvent(QCloseEvent *);
 
 private:
     Ui::ui_new_medida *ui;

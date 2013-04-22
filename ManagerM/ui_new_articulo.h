@@ -38,6 +38,10 @@ private slots:
 
     void update_form();
 
+    void update_comboBox_Marca();
+    void update_comboBox_Medida();
+    void update_comboBox_Proveedor();
+
     void closeEvent(QCloseEvent *ev );
 
 signals:
@@ -45,7 +49,7 @@ signals:
 private:
     Ui::ui_new_articulo *ui;
 //Funciones auxiliares
-    void openOpcionesArticuloWith(int tab);
+    //void openOpcionesArticuloWith(int tab);
 
     void reset_form();
     void incrementar_codigo();

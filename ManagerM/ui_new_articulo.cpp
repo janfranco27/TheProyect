@@ -16,6 +16,12 @@ ui_new_articulo::ui_new_articulo(QWidget *parent) :
     ui->setupUi(this);
 
     update_form();
+
+    ui->l_grupo_2->setVisible(false);
+    ui->cb_grupo->setVisible(false);
+    ui->btn_add_grupo->setVisible(false);
+
+    ui->tableWidget->setColumnHidden(H_GRUPO,true);
 }
 
 ui_new_articulo::~ui_new_articulo()
@@ -238,27 +244,43 @@ void ui_new_articulo::on_btn_cancelar_clicked()
 
 void ui_new_articulo::on_btn_add_grupo_clicked()
 {
-     openOpcionesArticuloWith(GRUPO);
+     //openOpcionesArticuloWith(GRUPO);
 }
 
 void ui_new_articulo::on_btn_add_marca_clicked()
 {
-    openOpcionesArticuloWith(MARCA);
+    //openOpcionesArticuloWith(MARCA);
+    ui_new_marca * form_new_marca = new ui_new_marca();
+    form_new_marca->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(form_new_marca,SIGNAL(closing()),this,SLOT(update_comboBox_Marca()));
+
+    form_new_marca->show();
+
 }
 
 void ui_new_articulo::on_btn_add_medida_clicked()
 {
-    openOpcionesArticuloWith(MEDIDA);
+   // openOpcionesArticuloWith(MEDIDA);
+
+    ui_new_medida * form_new_medida = new ui_new_medida();
+    form_new_medida->setAttribute(Qt::WA_DeleteOnClose);
+
+
+    connect(form_new_medida,SIGNAL(closing()),this,SLOT(update_comboBox_Medida()));
+
+    form_new_medida->show();
+
 }
 
-void ui_new_articulo::openOpcionesArticuloWith(int tab)
-{
-    ui_opciones_articulo * form_opciones = new ui_opciones_articulo();
-    connect(form_opciones,SIGNAL(closing()),this,SLOT(update_form()));
-    form_opciones->setCurrentTab(tab);
-    form_opciones->setAttribute(Qt::WA_DeleteOnClose);
-    form_opciones->show();
-}
+//void ui_new_articulo::openOpcionesArticuloWith(int tab)
+//{
+//    ui_opciones_articulo * form_opciones = new ui_opciones_articulo();
+//    connect(form_opciones,SIGNAL(closing()),this,SLOT(update_form()));
+//    form_opciones->setCurrentTab(tab);
+//    form_opciones->setAttribute(Qt::WA_DeleteOnClose);
+//    form_opciones->show();
+//}
 
 void ui_new_articulo::update_form()
 {
@@ -268,20 +290,42 @@ void ui_new_articulo::update_form()
     ui->l_codigoop->setText(QString::number(SYSTEM->getAutoIncrement("e_articulo")));
 
 
-    //Actualizamos los combobox con la informacion de la BD
-
-    vector<_QSTR> grupo = SYSTEM->getDescripcion("e_grupo");
-    vector<_QSTR> marca = SYSTEM->getDescripcion("e_marca");
-    vector<_QSTR> medida = SYSTEM->getDescripcion("e_medida");
-    QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
 
 
-    SYSTEM->loadComboBoxFromVector(ui->cb_grupo,grupo,false);
-    SYSTEM->loadComboBoxFromVector(ui->cb_marca,marca,false);
-    SYSTEM->loadComboBoxFromVector(ui->cb_medida,medida,false);
-    SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+   // vector<_QSTR> grupo = SYSTEM->getDescripcion("e_grupo");
+
+    //SYSTEM->loadComboBoxFromVector(ui->cb_grupo,grupo,false);
+
+
+
+     //Actualizamos los combobox con la informacion de la BD
+
+    update_comboBox_Marca();
+    update_comboBox_Medida();
+    update_comboBox_Proveedor();
+
 
 }
+
+void ui_new_articulo::update_comboBox_Marca()
+{
+      vector<_QSTR> marca = SYSTEM->getDescripcion("e_marca");
+      SYSTEM->loadComboBoxFromVector(ui->cb_marca,marca,false);
+}
+
+void ui_new_articulo::update_comboBox_Medida()
+{
+    vector<_QSTR> medida = SYSTEM->getDescripcion("e_medida");
+      SYSTEM->loadComboBoxFromVector(ui->cb_medida,medida,false);
+}
+
+void ui_new_articulo::update_comboBox_Proveedor()
+{
+    QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
+   SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+}
+
+
 
 void ui_new_articulo::closeEvent(QCloseEvent *ev)
 {

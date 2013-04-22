@@ -33,7 +33,10 @@ ui_module_articulos::ui_module_articulos(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     update_table_articulos();
+
+
 
 }
 
@@ -83,6 +86,8 @@ void ui_module_articulos::update_table_articulos()
     {
         QMessageBox::information(this,"Error","Ocurrio un error al cargar la información");
     }
+
+    ui->tableView_articulos->setColumnHidden(GRUPO,true);
 }
 
 

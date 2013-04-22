@@ -23,6 +23,14 @@ private slots:
 
     void on_btn_cancelar_clicked();
 
+    void on_btn_add_marca_clicked();
+
+    void on_btn_add_medida_clicked();
+
+    void update_comboBox_Marca();
+    void update_comboBox_Medida();
+    void update_comboBox_Proveedor();
+
 private:
     Ui::ui_edit_articulos *ui;
     void update_form();

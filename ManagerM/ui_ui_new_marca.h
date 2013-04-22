@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_marca.ui'
 **
-** Created: Wed 3. Apr 23:39:18 2013
+** Created: Sun 21. Apr 21:48:42 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -39,6 +39,7 @@ public:
         ui_new_marca->resize(240, 30);
         ui_new_marca->setMinimumSize(QSize(240, 30));
         ui_new_marca->setMaximumSize(QSize(240, 30));
+        ui_new_marca->setFocusPolicy(Qt::NoFocus);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/wrench.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_new_marca->setWindowIcon(icon);

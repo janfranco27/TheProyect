@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ui_new_medida</class>
  <widget class="QWidget" name="ui_new_medida">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>

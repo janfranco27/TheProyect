@@ -25,6 +25,9 @@
     <height>30</height>
    </size>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>Nueva Marca</string>
   </property>
