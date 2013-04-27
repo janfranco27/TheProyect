@@ -28,6 +28,8 @@ private slots:
 
 private:
     Ui::ui_module_articulos *ui;
+    QSortFilterProxyModel * proxyModel ;
+
 
 
 };

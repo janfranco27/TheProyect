@@ -5,6 +5,7 @@
 #include "ui_edit_articulo.h"
 #include <QSqlRelationalTableModel>
 #include <QModelIndexList>
+#include <QSortFilterProxyModel>
 
 const int num_header = 7;
 enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK};
@@ -34,7 +35,9 @@ ui_module_articulos::ui_module_articulos(QWidget *parent) :
     ui->setupUi(this);
 
 
+     proxyModel = new QSortFilterProxyModel();
     update_table_articulos();
+
 
 
 
@@ -80,7 +83,12 @@ void ui_module_articulos::update_table_articulos()
     if(model->select())
     {
 
-            ui->tableView_articulos->setModel(model);
+           // ui->tableView_articulos->setModel(model);
+
+           proxyModel->setSourceModel(model);
+          ui->tableView_articulos->setModel(proxyModel);
+
+
     }
     else
     {
