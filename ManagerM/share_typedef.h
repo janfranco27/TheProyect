@@ -121,6 +121,17 @@ enum opciones_articulo{marca,medida,grupo};
 
     #define C_HABILITADO "1"
     #define C_NO_HABILITADO  "0"
+	
+	//MENSAJES QMessageBox
+	#define C_CAMPOS_VACIOS "Campos Vacios"
+	#define C_CAMPOS_VACIOS_TEXT "Los campos se encuentran vacios"
+	#define C_CAMBIO_INCORRECTO "Cambio incorrecto"
+	#define C_CAMBIO_CORRECTO "Cambio correcto de información personal"
+	#define C_CAMBIO_CORRECTO_TEXT "Los cambios fueron exitosos"
+	#define C_WRONG_PASSWORD "Password incorrecta"	
+	#define C_LENGTH_PASSWORD "El pasword debe tener como mínimo 6 caracteres"
+	#define C_CAMBIAR_TEXT "Seguro que desea cambiar sus datos?"
+	#define C_CAMBIAR_TITLE "Cambiar datos"
     //CONSULTAS A LA DB
 
 

@@ -70,6 +70,10 @@ public:
    int messageQuestion(_QSTR title,_QSTR message);
    int messageWarning(_QSTR title,_QSTR message);
    int messageCritical(_QSTR title,_QSTR message);
+   
+   //-----------
+   _QSTR getDNIColaborador(_QSTR nick,_QSTR pass="");
+   bool nickColaboradorValido(_QSTR nick);
 
 };
 

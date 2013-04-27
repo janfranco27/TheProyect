@@ -745,6 +745,44 @@ int Sistema::messageCritical(_QSTR title, _QSTR message)
     return QMessageBox::critical(0,title,message,QMessageBox::Yes,QMessageBox::No);
 }
 
+_QSTR Sistema::getDNIColaborador(_QSTR nick, _QSTR pass)
+{
+    vector<_QSTR> select;
+    select.push_back("pk_dni");
+    vector<_QSTR> from;
+    from.push_back("e_usuario");
+
+    vector<pair<_QSTR,_QSTR> > where;
+    where.push_back(make_pair("nick",nick));
+    if(pass!="")
+        where.push_back(make_pair("clave",pass));
+
+    QSqlQuery query=getSelectQuery(select,from,where);
+
+    if(query.next())
+        return query.value(0).toString();
+    else return "";
+}
+
+bool Sistema::nickColaboradorValido(_QSTR nick)
+{
+    /*vector<_QSTR> select;
+    select.push_back("nick");
+    vector<_QSTR> from;
+    from.push_back("e_usuario");
+
+    vector<pair<_QSTR,_QSTR> > where;
+    where.push_back(make_pair("nick",nick));
+    if(pass!="")
+        where.push_back(make_pair("clave",pass));
+
+    QSqlQuery query=getSelectQuery(select,from,where);
+
+    if(query.next())
+        return query.value(0).toString();
+    else return "";*/return true;
+}
+
 _QSTR Sistema::getProveedorPKFromArticulo(_QSTR articuloPK)
 {
     vector<_QSTR> select;

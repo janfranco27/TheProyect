@@ -2,10 +2,14 @@
 ** Meta object code from reading C++ file 'ui_login.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Sat 27. Apr 10:38:17 2013
 =======
 ** Created: Sat 27. Apr 11:00:26 2013
 >>>>>>> db
+=======
+** Created: Sat 27. Apr 18:06:56 2013
+>>>>>>> EditPersonalInformation
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

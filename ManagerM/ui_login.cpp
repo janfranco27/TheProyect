@@ -55,12 +55,15 @@ void ui_login::on_pushButton_aceptar_clicked()
 
         APP_SHOW_MAXIMIZED;
         APP_MANAGERM->setAttribute(Qt::WA_DeleteOnClose);
-
+        object_e_colaborador* colaboradorActual=new object_e_colaborador;
+        _QSTR dniColaborador=SYSTEM->getDNIColaborador(usuario,text);
+        colaboradorActual->mf_load(dniColaborador);
+        USER_SET_NAME(colaboradorActual->mf_get_nombres().toStdString());
+        qDebug()<<"USUARIO: "<<QString::fromStdString(USER_GET_NAME);
         ui_module_home* form_home = new ui_module_home;
         APP_MANAGERM->setCentralWidget(form_home);
-
+        USER_SET_NICK_NAME(usuario.toStdString());
         _QSTR message = "Bienvenido " + QString::fromStdString(USER_GET_NAME) + ".";
-
         APP_STATUS_BAR(message);
 
 
