@@ -88,7 +88,8 @@ SOURCES += main.cpp\
     ui_module_clientes.cpp \
     object_e_persona_juridica.cpp \
     object_e_cliente.cpp \
-    object_e_region.cpp
+    object_e_region.cpp \
+    ui_opciones_comprobante.cpp
 
 
 HEADERS  += ui_main.h \
@@ -171,7 +172,8 @@ HEADERS  += ui_main.h \
     ui_module_clientes.h \
     object_e_persona_juridica.h \
     object_e_cliente.h \
-    object_e_region.h
+    object_e_region.h \
+    ui_opciones_comprobante.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -208,7 +210,8 @@ FORMS    += ui_main.ui \
     ui_new_medida.ui \
     search_articulo.ui \
     ui_newedit_cliente.ui \
-    ui_module_clientes.ui
+    ui_module_clientes.ui \
+    ui_opciones_comprobante.ui
 
 RESOURCES += \
     Icons.qrc
