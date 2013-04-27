@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_factura_compra.h'
 **
-<<<<<<< HEAD
-** Created: Sat 6. Apr 18:50:33 2013
-=======
-** Created: Fri 12. Apr 22:10:36 2013
->>>>>>> COMMIT
+** Created: Sat 27. Apr 11:02:24 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

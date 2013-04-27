@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_clientes.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 27. Apr 10:40:03 2013
+=======
+** Created: Sat 27. Apr 11:02:47 2013
+>>>>>>> db
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

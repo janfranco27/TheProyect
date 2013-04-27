@@ -552,6 +552,71 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
+-- Table `boleta_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `boleta_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `boleta_sistema` (
+  `pk_boleta_s` INT NOT NULL ,
+  `serie` INT NOT NULL ,
+  `numero_inicio` INT NOT NULL ,
+  `numero_fin` INT NOT NULL ,
+  `numero_actual` INT NOT NULL ,
+  PRIMARY KEY (`pk_boleta_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `factura_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `factura_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `factura_sistema` (
+  `pk_factura_s` INT NOT NULL ,
+  `serie` INT NOT NULL ,
+  `numero_inicio` INT NOT NULL ,
+  `numero_fin` INT NOT NULL ,
+  `numero_actual` INT NOT NULL ,
+  PRIMARY KEY (`pk_factura_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `igv_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `igv_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `igv_sistema` (
+  `pk_igv_s` INT NOT NULL ,
+  `valor` INT NOT NULL ,
+  `fecha` DATE NOT NULL ,
+  PRIMARY KEY (`pk_igv_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `cambio_dolar_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cambio_dolar_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `cambio_dolar_sistema` (
+  `pk_cambio_dolar_s` INT NOT NULL ,
+  `valor_dolar_soles` FLOAT NOT NULL ,
+  `valor_soler_dolar` FLOAT NOT NULL ,
+  `fecha` DATE NOT NULL ,
+  PRIMARY KEY (`pk_cambio_dolar_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
 -- Table `e_sistema`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `e_sistema` ;
@@ -559,12 +624,10 @@ DROP TABLE IF EXISTS `e_sistema` ;
 SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `e_sistema` (
   `pk_code` INT NOT NULL AUTO_INCREMENT ,
-  `igv` FLOAT NOT NULL ,
-  `cambio_dolar` FLOAT NOT NULL ,
-  `factura_serie` INT NOT NULL ,
-  `factura_numero` INT NOT NULL ,
-  `boleta_serie` INT NOT NULL ,
-  `boleta_numero` INT NOT NULL ,
+  `fk_boleta_s` INT NOT NULL ,
+  `fk_factura_s` INT NOT NULL ,
+  `fk_igv_s` INT NOT NULL ,
+  `fk_cambio_dolar_s` INT NOT NULL ,
   PRIMARY KEY (`pk_code`) )
 ENGINE = InnoDB;
 
