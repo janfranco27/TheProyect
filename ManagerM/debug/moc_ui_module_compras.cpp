@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_compras.h'
 **
-** Created: Sun 21. Apr 22:25:11 2013
+** Created: Sat 27. Apr 10:39:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
