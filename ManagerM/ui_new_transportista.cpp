@@ -9,14 +9,50 @@ ui_new_transportista::ui_new_transportista(QWidget *parent) :
     QRegExp regExp_numero("[0-9]{11,11}");
     ui->lineEdit_ruc->setValidator(new QRegExpValidator(regExp_numero));
 
-
     for(int i=0; i<25; i++)
         ui->comboBox_regiones->addItem("");
-
     /*
     QRegExp regExp_alfabeto("[A-Z]*");
     ui->comboBox_regiones->setValidator(new QRegExpValidator(regExp_alfabeto));
     */
+
+    //connect(ui->tableView, SIGNAL(entered(QModelIndex)));
+    //ui->tableView->entered(*new QModelIndex);
+    vector<QString > select, from;
+    vector<pair<QString, QString > > where, joins;
+    QString extra;
+
+    // SELECT
+    select.push_back("region");
+
+    // FROM
+    QString str_from = QString(TABLE_NAME_E_REGION);
+
+    from.push_back(str_from);
+
+    // WHERE
+
+    // EXTRA
+    extra += QString("ORDER BY ") + QString("region");
+
+    QSqlQuery query = SYSTEM->getSelectQuery(select, from, where, joins,extra);
+    int countRegion = 0;
+
+    while(query.next())
+    {
+        //regiones[query.value(1).toString()] = query.value(0).toString();
+        ui->comboBox_regiones->setItemText(countRegion++, query.value(0).toString());
+    }
+    /*
+    map<QString, QString >::iterator it;
+    int countRegion = 0;
+    for(it = regiones.begin(); it != regiones.end(); it++)
+    {
+        ui->comboBox_regiones->setItemText(countRegion++, (*it).first);
+    }
+    ui->comboBox_regiones->setCurrentIndex(0);
+    */
+    /*
     int count = 0;
     ui->comboBox_regiones->setItemText(count++, "AMAZONAS");
     ui->comboBox_regiones->setItemText(count++, "ANCASH");
@@ -43,6 +79,7 @@ ui_new_transportista::ui_new_transportista(QWidget *parent) :
     ui->comboBox_regiones->setItemText(count++, "TACNA");
     ui->comboBox_regiones->setItemText(count++, "TUMBES");
     ui->comboBox_regiones->setItemText(count++, "UCAYALI");
+    */
 }
 
 ui_new_transportista::~ui_new_transportista()
@@ -83,23 +120,41 @@ void ui_new_transportista::on_pushButton_registrar_clicked()
 
     if(rpta == 0)
     {
-        object_e_persona_juridica obj_persona_juridica;
+        object_e_persona_juridica obj_e_persona_juridica;
 
-        obj_persona_juridica.mf_set_pk_ruc(ui->lineEdit_ruc->text());
-        obj_persona_juridica.mf_set_comentario(ui->lineEdit_comentario->text());
-        obj_persona_juridica.mf_set_fk_region(ui->comboBox_regiones->currentText());
-        obj_persona_juridica.mf_set_direccion(ui->lineEdit_direccion->text());
-        obj_persona_juridica.mf_set_email(ui->lineEdit_email->text());
-        obj_persona_juridica.mf_set_fax(ui->lineEdit_fax->text());
-        obj_persona_juridica.mf_set_habilitado("1");
-        obj_persona_juridica.mf_set_pagina_web(ui->lineEdit_pagina_web->text());
-        obj_persona_juridica.mf_set_razon_social(ui->lineEdit_razon_social->text());
-        obj_persona_juridica.mf_set_representante(ui->lineEdit_representante->text());
-        // No debe ir este campo
-        //obj_persona_juridicos.mf_set_telefono_celular("");
-        obj_persona_juridica.mf_set_telefono_fijo(ui->lineEdit_telefono->text());
+        obj_e_persona_juridica.mf_set_pk_ruc(ui->lineEdit_ruc->text());
+        // set fk_region
+        vector<QString > select, from;
+        vector<pair<QString, QString > > where, joins;
+        QString extra;
 
-        obj_persona_juridica.mf_add();
+        // SELECT
+        select.push_back("pk_region");
+
+        // FROM
+        QString str_from = QString(TABLE_NAME_E_REGION);
+
+        from.push_back(str_from);
+
+        // WHERE
+        where.push_back(make_pair("region", ui->comboBox_regiones->currentText()));
+
+        QSqlQuery query = SYSTEM->getSelectQuery(select, from, where, joins,extra);
+        if(query.isSelect())
+            query.next();
+        obj_e_persona_juridica.mf_set_fk_region(query.value(0).toString());
+
+        obj_e_persona_juridica.mf_set_razon_social(ui->lineEdit_razon_social->text());        
+        obj_e_persona_juridica.mf_set_direccion(ui->lineEdit_direccion->text());
+        obj_e_persona_juridica.mf_set_telefono_fijo(ui->lineEdit_telefono->text());        
+        obj_e_persona_juridica.mf_set_fax(ui->lineEdit_fax->text());
+        obj_e_persona_juridica.mf_set_representante(ui->lineEdit_representante->text());
+        obj_e_persona_juridica.mf_set_email(ui->lineEdit_email->text());
+        obj_e_persona_juridica.mf_set_pagina_web(ui->lineEdit_pagina_web->text());
+        obj_e_persona_juridica.mf_set_comentario(ui->lineEdit_comentario->text());
+        obj_e_persona_juridica.mf_set_habilitado("1");
+
+        obj_e_persona_juridica.mf_add();
 
         object_e_transportista obj_transportista;
 

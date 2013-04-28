@@ -88,24 +88,17 @@ SOURCES += main.cpp\
     object_e_persona_juridica.cpp \
     object_e_cliente.cpp \
     object_e_region.cpp \
-<<<<<<< HEAD
     ui_opciones_comprobante.cpp \
     ui_new_factura_sistema.cpp \
     ui_new_boleta_sistema.cpp \
     object_e_igv_sistema.cpp \
     object_e_factura_sistema.cpp \
     object_e_cambio_dolar_sistema.cpp \
-    object_e_boleta_sistema.cpp
-=======
-    ui_opciones_comprobante.cpp\
-    ui_new_venta_proforma.cpp \
-    ui_new_venta_cotizacion.cpp \
-    ui_edit_personalinformation.cpp\
-ui_advanced_search_articulo.cpp
-
-
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
-
+    object_e_boleta_sistema.cpp \
+    ui_edit_personalinformation.cpp \
+    ui_advanced_search_articulo.cpp \
+    ui_new_compra_orden.cpp \
+    ui_edit_compra_orden.cpp
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -187,23 +180,19 @@ HEADERS  += ui_main.h \
     object_e_persona_juridica.h \
     object_e_cliente.h \
     object_e_region.h \
-<<<<<<< HEAD
     ui_opciones_comprobante.h \
     ui_new_factura_sistema.h \
     ui_new_boleta_sistema.h \
     object_e_igv_sistema.h \
     object_e_factura_sistema.h \
     object_e_cambio_dolar_sistema.h \
-    object_e_boleta_sistema.h
-=======
-    ui_opciones_comprobante.h\
-    ui_new_venta_proforma.h \
-    ui_new_venta_cotizacion.h \
-    ui_edit_personalinformation.h\
-    ui_advanced_search_articulo.h
+    object_e_boleta_sistema.h \
+    ui_edit_personalinformation.h \
+    ui_advanced_search_articulo.h \
+    ui_new_compra_orden.h \
+    ui_edit_compra_orden.h
 
 
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -241,19 +230,16 @@ FORMS    += ui_main.ui \
     search_articulo.ui \
     ui_newedit_cliente.ui \
     ui_module_clientes.ui \
-<<<<<<< HEAD
     ui_opciones_comprobante.ui \
     ui_new_factura_sistema.ui \
-    ui_new_boleta_sistema.ui
-=======
-    ui_opciones_comprobante.ui\
-    ui_new_venta_proforma.ui \
-    ui_new_venta_cotizacion.ui \
-    ui_edit_personalinformation.ui\
-    ui_advanced_search_articulo.ui
-
-
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
+    ui_new_boleta_sistema.ui \    
+    ui_edit_personalinformation.ui \
+    ui_advanced_search_articulo.ui \
+    ui_new_compra_orden.ui \
+    ui_edit_compra_orden.ui
 
 RESOURCES += \
     Icons.qrc
+
+OTHER_FILES += \
+    database.cfg

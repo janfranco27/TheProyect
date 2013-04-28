@@ -55,7 +55,7 @@ void ui_newedit_cliente::llenarCamposEdicion()
     ui->lineEdit_paginaWeb->setText(cliente->mf_get_pagina_web());
     ui->lineEdit_representante->setText(cliente->mf_get_representante());
     ui->lineEdit_ruc->setText(cliente->mf_get_pk_ruc());
-    ui->lineEdit_telefonoCelular->setText(cliente->mf_get_telefono_celular());
+    //ui->lineEdit_telefonoCelular->setText(cliente->mf_get_telefono_celular());
     ui->lineEdit_telefonoFijo->setText(cliente->mf_get_telefono_fijo());
     ui->lineEdit_ruc->setEnabled(false);
 }
@@ -98,7 +98,7 @@ void ui_newedit_cliente::on_pushButton_save_clicked()
     if(esNuevoC)
     {
         //entra si se esta añadiendo un trabajador
-        object_e_persona_juridica *cliente_juridico=new object_e_persona_juridica(ruc,regionCod,nombre,direccion,nmroFijo,nmroCelular,fax,representante,email,pWeb,comentario,habilitado);
+        object_e_persona_juridica *cliente_juridico=new object_e_persona_juridica(ruc,regionCod,nombre,direccion,nmroFijo,fax,representante,email,pWeb,comentario,habilitado);
         object_e_cliente *cliente=new object_e_cliente(ruc);
         if(!boolRuc||nombre==""||representante=="")
             QMessageBox::information(this,"Añadir cliente","Los siguientes campos son indispensables:\n1.RUC(11 digitos)\n2.Razón Social\n3.Región\n4.Representante!",QMessageBox::Ok);
@@ -140,7 +140,7 @@ void ui_newedit_cliente::on_pushButton_save_clicked()
             cliente->mf_set_pagina_web(pWeb);
             cliente->mf_set_razon_social(nombre);
             cliente->mf_set_representante(representante);
-            cliente->mf_set_telefono_celular(nmroCelular);
+            //cliente->mf_set_telefono_celular(nmroCelular);
             cliente->mf_set_telefono_fijo(nmroFijo);
 
             //update usuario

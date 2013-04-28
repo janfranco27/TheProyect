@@ -13,7 +13,7 @@ public:
 
 	~object_e_transportista_funciones();
 
-	QSqlQueryModel* mf_model_e_transportista();
+    QSqlQueryModel* mf_model_e_transportista();
 
 };
 #endif // OBJECT_E_TRANSPORTISTA_H

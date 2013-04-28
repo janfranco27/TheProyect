@@ -1,5 +1,5 @@
 #include "object_e_persona_juridica.h"
-#include <QSqlError>
+
 object_e_persona_juridica::object_e_persona_juridica()
 {
 	//file e_persona_juridica
@@ -7,7 +7,7 @@ object_e_persona_juridica::object_e_persona_juridica()
 	//w!
 }
 
-object_e_persona_juridica::object_e_persona_juridica(_QSTR pk_ruc, _QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado)
+object_e_persona_juridica::object_e_persona_juridica(_QSTR pk_ruc, _QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado)
 {
 	//file e_persona_juridica
 	//function construct_1
@@ -18,7 +18,6 @@ object_e_persona_juridica::object_e_persona_juridica(_QSTR pk_ruc, _QSTR fk_regi
 	md_o_razon_social = razon_social;
 	md_o_direccion = direccion;
 	md_o_telefono_fijo = telefono_fijo;
-	md_o_telefono_celular = telefono_celular;
 	md_o_fax = fax;
 	md_o_representante = representante;
 	md_o_email = email;
@@ -26,7 +25,7 @@ object_e_persona_juridica::object_e_persona_juridica(_QSTR pk_ruc, _QSTR fk_regi
 	md_o_comentario = comentario;
 	md_o_habilitado = habilitado;
 }
-object_e_persona_juridica::object_e_persona_juridica(_QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR telefono_celular, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado)
+object_e_persona_juridica::object_e_persona_juridica(_QSTR fk_region, _QSTR razon_social, _QSTR direccion, _QSTR telefono_fijo, _QSTR fax, _QSTR representante, _QSTR email, _QSTR pagina_web, _QSTR comentario, _QSTR habilitado)
 {
 	//file e_persona_juridica
 	//function construct_2
@@ -36,7 +35,6 @@ object_e_persona_juridica::object_e_persona_juridica(_QSTR fk_region, _QSTR razo
 	md_o_razon_social = razon_social;
 	md_o_direccion = direccion;
 	md_o_telefono_fijo = telefono_fijo;
-	md_o_telefono_celular = telefono_celular;
 	md_o_fax = fax;
 	md_o_representante = representante;
 	md_o_email = email;
@@ -84,13 +82,6 @@ void object_e_persona_juridica::mf_set_telefono_fijo(_QSTR telefono_fijo)
 	//w!
 
 	md_o_telefono_fijo = telefono_fijo;
-}
-void object_e_persona_juridica::mf_set_telefono_celular(_QSTR telefono_celular)
-{
-	//function mf_set_telefono_celular
-	//w!
-
-	md_o_telefono_celular = telefono_celular;
 }
 void object_e_persona_juridica::mf_set_fax(_QSTR fax)
 {
@@ -170,13 +161,6 @@ _QSTR object_e_persona_juridica::mf_get_telefono_fijo()
 
 	return md_o_telefono_fijo;
 }
-_QSTR object_e_persona_juridica::mf_get_telefono_celular()
-{
-	//function mf_get_telefono_celular
-	//w!
-
-	return md_o_telefono_celular;
-}
 _QSTR object_e_persona_juridica::mf_get_fax()
 {
 	//function mf_get_fax
@@ -238,13 +222,12 @@ bool object_e_persona_juridica::mf_load(_QSTR pk)
 		md_o_razon_social = query.value(2).toString();
 		md_o_direccion = query.value(3).toString();
 		md_o_telefono_fijo = query.value(4).toString();
-		md_o_telefono_celular = query.value(5).toString();
-		md_o_fax = query.value(6).toString();
-		md_o_representante = query.value(7).toString();
-		md_o_email = query.value(8).toString();
-		md_o_pagina_web = query.value(9).toString();
-		md_o_comentario = query.value(10).toString();
-		md_o_habilitado = query.value(11).toString();
+		md_o_fax = query.value(5).toString();
+		md_o_representante = query.value(6).toString();
+		md_o_email = query.value(7).toString();
+		md_o_pagina_web = query.value(8).toString();
+		md_o_comentario = query.value(9).toString();
+		md_o_habilitado = query.value(10).toString();
 
 		//state OK
 		//w!
@@ -265,49 +248,43 @@ bool object_e_persona_juridica::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_persona_juridica(";
-	if (md_o_pk_ruc != "")
-		str_query += "pk_ruc, ";
-	str_query += "fk_region, ";
-	str_query += "razon_social, ";
-	str_query += "direccion, ";
-	str_query += "telefono_fijo, ";
-	str_query += "telefono_celular, ";
-	str_query += "fax, ";
-	str_query += "representante, ";
-	str_query += "email, ";
-	str_query += "pagina_web, ";
-	str_query += "comentario, ";
-	str_query += "habilitado";
+	str_query += "pk_ruc";
+	str_query += ", fk_region";
+	str_query += ", razon_social";
+	str_query += ", direccion";
+	str_query += ", telefono_fijo";
+	str_query += ", fax";
+	str_query += ", representante";
+	str_query += ", email";
+	str_query += ", pagina_web";
+	str_query += ", comentario";
+	str_query += ", habilitado";
 	str_query += ") VALUES(";
-	if (md_o_pk_ruc!= "")
-	{
-		str_query += "?, ";
-	}
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
 	str_query += "?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
 	int integer = 0;
 	if (md_o_pk_ruc != "")
 	{
-		query.bindValue(0, md_o_pk_ruc);
-		integer++;
+		query.bindValue(integer++, md_o_pk_ruc);
 	}
+	else
+		query.bindValue(integer++, "NULL");
 	query.bindValue(integer++, md_o_fk_region);
 	query.bindValue(integer++, md_o_razon_social);
 	query.bindValue(integer++, md_o_direccion);
 	query.bindValue(integer++, md_o_telefono_fijo);
-	query.bindValue(integer++, md_o_telefono_celular);
 	query.bindValue(integer++, md_o_fax);
 	query.bindValue(integer++, md_o_representante);
 	query.bindValue(integer++, md_o_email);
@@ -319,14 +296,12 @@ bool object_e_persona_juridica::mf_add()
 	{
 		//state OK
 		//w!
-        qDebug()<<query.lastError().databaseText()<<endl;
 
 		return true;
 
 	}else{
 		//state FAILED
 		//w!
-        qDebug()<<query.lastError().databaseText()<<endl;
 
 		return false;
 	}
@@ -339,19 +314,18 @@ bool object_e_persona_juridica::mf_update()
 
 	QSqlQuery query;
 
-	query.prepare("UPDATE e_persona_juridica SET fk_region = ?, razon_social = ?, direccion = ?, telefono_fijo = ?, telefono_celular = ?, fax = ?, representante = ?, email = ?, pagina_web = ?, comentario = ?, habilitado = ? WHERE pk_ruc = ?");
+	query.prepare("UPDATE e_persona_juridica SET fk_region = ?, razon_social = ?, direccion = ?, telefono_fijo = ?, fax = ?, representante = ?, email = ?, pagina_web = ?, comentario = ?, habilitado = ? WHERE pk_ruc = ?");
 	query.bindValue(0, md_o_fk_region);
 	query.bindValue(1, md_o_razon_social);
 	query.bindValue(2, md_o_direccion);
 	query.bindValue(3, md_o_telefono_fijo);
-	query.bindValue(4, md_o_telefono_celular);
-	query.bindValue(5, md_o_fax);
-	query.bindValue(6, md_o_representante);
-	query.bindValue(7, md_o_email);
-	query.bindValue(8, md_o_pagina_web);
-	query.bindValue(9, md_o_comentario);
-	query.bindValue(10, md_o_habilitado);
-	query.bindValue(11, md_o_pk_ruc);
+	query.bindValue(4, md_o_fax);
+	query.bindValue(5, md_o_representante);
+	query.bindValue(6, md_o_email);
+	query.bindValue(7, md_o_pagina_web);
+	query.bindValue(8, md_o_comentario);
+	query.bindValue(9, md_o_habilitado);
+	query.bindValue(10, md_o_pk_ruc);
 
 	if(query.exec())
 	{
@@ -363,8 +337,8 @@ bool object_e_persona_juridica::mf_update()
 	}else{
 		//state FAILED
 		//w!
-        qDebug()<<query.lastError().databaseText()<<endl;
-        return false;
+
+		return false;
 	}
 }
 

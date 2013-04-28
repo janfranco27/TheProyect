@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_boleta_sistema.ui'
 **
-** Created: Sat 27. Apr 18:01:49 2013
+** Created: Sun 28. Apr 01:07:45 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

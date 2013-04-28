@@ -71,22 +71,19 @@ bool object_e_transportista::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_transportista(";
-	if (md_o_pk_ruc != "")
-		str_query += "pk_ruc, ";
+	str_query += "pk_ruc";
 	str_query += ") VALUES(";
-	if (md_o_pk_ruc!= "")
-	{
-		str_query += "?, ";
-	}
+	str_query += "?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
 	int integer = 0;
 	if (md_o_pk_ruc != "")
 	{
-		query.bindValue(0, md_o_pk_ruc);
-		integer++;
+		query.bindValue(integer++, md_o_pk_ruc);
 	}
+	else
+		query.bindValue(integer++, "NULL");
 
 	if(query.exec())
 	{

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
-** Created: Sat 13. Apr 19:04:48 2013
+** Created: Sun 28. Apr 01:07:44 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

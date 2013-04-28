@@ -4,6 +4,9 @@
 #include <QWidget>
 #include "share_include.h"
 #include <QMessageBox>
+
+class ui_module_compras;
+
 namespace Ui {
 class ui_new_proveedor;
 }
@@ -30,6 +33,7 @@ private:
     Ui::ui_new_proveedor *ui;
 
     ui_module_compras* module_compras;
+    map<QString, QString > regiones;
 };
 
 #endif // UI_NEW_PROVEEDOR_H

@@ -1,23 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_articulo.h'
 **
-<<<<<<< HEAD
-** Created: Sat 27. Apr 23:27:04 2013
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Sat 27. Apr 10:38:32 2013
-=======
-** Created: Sat 27. Apr 11:00:46 2013
->>>>>>> db
-=======
-** Created: Sat 27. Apr 18:07:26 2013
->>>>>>> EditPersonalInformation
-=======
-** Created: Sat 27. Apr 12:27:10 2013
->>>>>>> busqueda articulos
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
+** Created: Sun 28. Apr 01:14:48 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

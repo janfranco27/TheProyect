@@ -14,6 +14,10 @@ public:
 	~object_e_proveedor_funciones();
 
     QSqlQueryModel* mf_model_e_proveedor();
+    // Aun no usado
+    QStringList* mf_stringList();
+
+    QSqlQueryModel* mf_model_search_e_proveedor();
 
 };
 #endif // OBJECT_E_PROVEEDOR_H

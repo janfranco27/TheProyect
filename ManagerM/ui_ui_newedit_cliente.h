@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_newedit_cliente.ui'
 **
-** Created: Sun 14. Apr 22:02:17 2013
+** Created: Sun 28. Apr 01:07:45 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

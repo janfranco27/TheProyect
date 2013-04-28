@@ -5,7 +5,7 @@
 #include "ui_new_flete.h"
 #include "ui_new_guiarr.h"
 
-#include "ui_new_orden.h"
+#include "ui_new_compra_orden.h"
 #include "ui_new_proveedor.h"
 #include "ui_new_transportista.h"
 
@@ -202,7 +202,7 @@ void ui_module_compras::mf_updateModel_transportista()
 
 void ui_module_compras::on_pushButton_nuevo_clicked_orden()
 {
-    ui_new_orden* form_orden = new ui_new_orden();
+    ui_new_compra_orden* form_orden = new ui_new_compra_orden();
     form_orden->setAttribute(Qt::WA_DeleteOnClose);    
     form_orden->setType(COMPRAS_NEW);
     form_orden->show();
@@ -210,10 +210,12 @@ void ui_module_compras::on_pushButton_nuevo_clicked_orden()
 
 void ui_module_compras::on_pushButton_editar_clicked_orden()
 {
+    /*
     ui_new_orden* form_orden = new ui_new_orden();
     form_orden->setAttribute(Qt::WA_DeleteOnClose);
     form_orden->setType(COMPRAS_EDIT);
     form_orden->show();
+    */
 }
 
 void ui_module_compras::on_pushButton_eliminar_clicked_orden()

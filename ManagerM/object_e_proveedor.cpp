@@ -112,26 +112,23 @@ bool object_e_proveedor::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_proveedor(";
-	if (md_o_pk_ruc != "")
-		str_query += "pk_ruc, ";
-	str_query += "nombre_vendedor, ";
-	str_query += "celular_vendedor";
+	str_query += "pk_ruc";
+	str_query += ", nombre_vendedor";
+	str_query += ", celular_vendedor";
 	str_query += ") VALUES(";
-	if (md_o_pk_ruc!= "")
-	{
-		str_query += "?, ";
-	}
-	str_query += "?, ";
 	str_query += "?";
+	str_query += ", ?";
+	str_query += ", ?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
 	int integer = 0;
 	if (md_o_pk_ruc != "")
 	{
-		query.bindValue(0, md_o_pk_ruc);
-		integer++;
+		query.bindValue(integer++, md_o_pk_ruc);
 	}
+	else
+		query.bindValue(integer++, "NULL");
 	query.bindValue(integer++, md_o_nombre_vendedor);
 	query.bindValue(integer++, md_o_celular_vendedor);
 

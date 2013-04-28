@@ -30,7 +30,7 @@ void ui_edit_proveedor::on_pushButton_aceptar_clicked()
     persona_juridica->mf_set_pagina_web(ui->lineEdit_pagina_web->text());
     persona_juridica->mf_set_razon_social(ui->lineEdit_razon_social->text());
     persona_juridica->mf_set_representante(ui->lineEdit_representante->text());
-    persona_juridica->mf_set_telefono_celular(ui->lineEdit_celular->text());
+    //persona_juridica->mf_set_telefono_celular(ui->lineEdit_celular->text());
     persona_juridica->mf_set_telefono_fijo(ui->lineEdit_telefono->text());
 
     persona_juridica->mf_add();

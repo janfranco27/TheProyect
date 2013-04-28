@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_proveedor.ui'
 **
-** Created: Tue 2. Apr 01:35:36 2013
+** Created: Sun 28. Apr 01:07:45 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -164,7 +164,7 @@ public:
         comboBox_regiones->setObjectName(QString::fromUtf8("comboBox_regiones"));
         comboBox_regiones->setMinimumSize(QSize(200, 0));
         comboBox_regiones->setInputMethodHints(Qt::ImhNone);
-        comboBox_regiones->setEditable(true);
+        comboBox_regiones->setEditable(false);
 
         horizontalLayout_2->addWidget(comboBox_regiones);
 

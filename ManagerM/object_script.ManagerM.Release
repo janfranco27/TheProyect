@@ -75,19 +75,16 @@ INPUT(
 ./release\object_e_cliente.o
 ./release\object_e_region.o
 ./release\ui_opciones_comprobante.o
-<<<<<<< HEAD
 ./release\ui_new_factura_sistema.o
 ./release\ui_new_boleta_sistema.o
 ./release\object_e_igv_sistema.o
 ./release\object_e_factura_sistema.o
 ./release\object_e_cambio_dolar_sistema.o
 ./release\object_e_boleta_sistema.o
-=======
-./release\ui_new_venta_proforma.o
-./release\ui_new_venta_cotizacion.o
 ./release\ui_edit_personalinformation.o
 ./release\ui_advanced_search_articulo.o
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
+./release\ui_new_compra_orden.o
+./release\ui_edit_compra_orden.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -126,14 +123,11 @@ INPUT(
 ./release\moc_ui_newedit_cliente.o
 ./release\moc_ui_module_clientes.o
 ./release\moc_ui_opciones_comprobante.o
-<<<<<<< HEAD
 ./release\moc_ui_new_factura_sistema.o
 ./release\moc_ui_new_boleta_sistema.o
-=======
-./release\moc_ui_new_venta_proforma.o
-./release\moc_ui_new_venta_cotizacion.o
 ./release\moc_ui_edit_personalinformation.o
 ./release\moc_ui_advanced_search_articulo.o
->>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
+./release\moc_ui_new_compra_orden.o
+./release\moc_ui_edit_compra_orden.o
 ./release\qrc_Icons.o
 );
