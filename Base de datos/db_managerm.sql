@@ -706,6 +706,91 @@ CREATE UNIQUE INDEX `fk_factura_venta_UNIQUE` ON `e_guia_rr_venta` (`fk_factura_
 
 SHOW WARNINGS;
 
+-- -----------------------------------------------------
+-- Table `e_cambio_dolar_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_cambio_dolar_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_cambio_dolar_sistema` (
+  `pk_cambio_dolar_s` INT NOT NULL ,
+  `valor_dolar_soles` FLOAT NOT NULL ,
+  `valor_soler_dolar` FLOAT NOT NULL ,
+  `fecha` DATE NOT NULL ,
+  PRIMARY KEY (`pk_cambio_dolar_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `e_igv_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_igv_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_igv_sistema` (
+  `pk_igv_s` INT NOT NULL ,
+  `valor` INT NOT NULL ,
+  `fecha` DATE NOT NULL ,
+  PRIMARY KEY (`pk_igv_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `e_boleta_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_boleta_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_boleta_sistema` (
+  `pk_boleta_s` INT NOT NULL ,
+  `serie` INT NOT NULL ,
+  `numero_inicio` INT NOT NULL ,
+  `numero_fin` INT NOT NULL ,
+  `numero_actual` INT NOT NULL ,
+  PRIMARY KEY (`pk_boleta_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `e_factura_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_factura_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_factura_sistema` (
+  `pk_factura_s` INT NOT NULL ,
+  `serie` INT NOT NULL ,
+  `numero_inicio` INT NOT NULL ,
+  `numero_fin` INT NOT NULL ,
+  `numero_actual` INT NOT NULL ,
+  PRIMARY KEY (`pk_factura_s`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+
+-- -----------------------------------------------------
+-- Table `e_sistema`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `e_sistema` ;
+
+SHOW WARNINGS;
+CREATE  TABLE IF NOT EXISTS `e_sistema` (
+  `pk_code` INT NOT NULL AUTO_INCREMENT ,
+  `fk_boleta_s` INT NOT NULL ,
+  `fk_factura_s` INT NOT NULL ,
+  `fk_igv_s` INT NOT NULL ,
+  `fk_cambio_dolar_s` INT NOT NULL ,
+  PRIMARY KEY (`pk_code`) )
+ENGINE = InnoDB;
+
+SHOW WARNINGS;
+CREATE UNIQUE INDEX `pk_code_UNIQUE` ON `e_sistema` (`pk_code` ASC) ;
+
+SHOW WARNINGS;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
@@ -748,14 +833,47 @@ INSERT INTO `e_usuario` (`pk_dni`, `fk_tipo_usuario`, `nick`, `clave`, `habilita
 COMMIT;
 
 -- -----------------------------------------------------
+-- Data for table `e_region`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `db_managerm`;
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (1, 'Amazonas');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (2, 'Ancash');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (3, 'Apurimac');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (4, 'Arequipa');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (5, 'Ayacucho');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (6, 'Cajamarca');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (7, 'Callao');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (8, 'Cusco');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (9, 'Huancavelica');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (10, 'Huanuco');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (11, 'Ica');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (12, 'Junin');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (13, 'La Libertad');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (14, 'Lambayeque');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (15, 'Lima');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (16, 'Loreto');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (17, 'Madre de Dios');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (18, 'Moquegua');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (19, 'Pasco');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (20, 'Piura');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (21, 'Puno');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (22, 'San Martin');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (23, 'Tacna');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (24, 'Tumbes');
+INSERT INTO `e_region` (`pk_region`, `region`) VALUES (25, 'Ucayali');
+
+COMMIT;
+
+-- -----------------------------------------------------
 -- Data for table `e_persona_juridica`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `db_managerm`;
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('11111111111', NULL, 'Corporacion Peruana de Pinturas S.A.C.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('22222222222', NULL, 'Shubert S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('33333333333', NULL, 'Anypsa S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
-INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('44444444444', NULL, 'Juan Tito Calizaya', 'NC', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('11111111111', 1, 'Corporacion Peruana de Pinturas S.A.C.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('22222222222', 1, 'Shubert S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('33333333333', 1, 'Anypsa S.A.', 'Cercado', '1', '1', '1', '1', '1', '1', 1);
+INSERT INTO `e_persona_juridica` (`pk_ruc`, `fk_region`, `razon_social`, `direccion`, `telefono_fijo`, `fax`, `representante`, `email`, `pagina_web`, `comentario`, `habilitado`) VALUES ('44444444444', 1, 'Juan Tito Calizaya', 'NC', '1', '1', '1', '1', '1', '1', 1);
 
 COMMIT;
 
@@ -820,6 +938,7 @@ START TRANSACTION;
 USE `db_managerm`;
 INSERT INTO `e_proveedor` (`pk_ruc`, `nombre_vendedor`, `celular_vendedor`) VALUES ('11111111111', 'Chato', '959658975');
 INSERT INTO `e_proveedor` (`pk_ruc`, `nombre_vendedor`, `celular_vendedor`) VALUES ('22222222222', 'Viejo', '959658978');
+INSERT INTO `e_proveedor` (`pk_ruc`, `nombre_vendedor`, `celular_vendedor`) VALUES ('33333333333', 'Renzo', '997878784');
 
 COMMIT;
 
