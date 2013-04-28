@@ -133,8 +133,16 @@ using namespace std;
 #include "ui_module_compras.h"
 #include "ui_module_clientes.h"
 #include "ui_newedit_cliente.h"
+<<<<<<< HEAD
 
 
+=======
+#include "ui_new_venta_boleta.h"
+#include "ui_new_venta_cotizacion.h"
+#include "ui_new_venta_factura.h"
+#include "ui_new_venta_proforma.h"
+#include "ui_edit_personalinformation.h"
+>>>>>>> f1059c91f4ab739db208fcd51e558f2d7a474144
 //NAMESPACES
 
 using namespace module_log;

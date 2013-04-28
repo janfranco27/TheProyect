@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_atras_clicked();
 
+    void on_cb_tipo_comprobante_activated(const QString &arg1);
+
 private:
     Ui::ui_new_venta *ui;
 };

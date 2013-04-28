@@ -52,3 +52,23 @@ void ui_new_venta::on_pushButton_atras_clicked()
     if (prevPage >= 0)
         ui->stackedWidget_ventas->setCurrentIndex(prevPage);
 }
+
+void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
+{
+    if(arg1=="Boleta")
+    {
+        ui->gridLayout_6->removeWidget(ui->widget_venta);
+        ui_new_venta_boleta *boleta=new ui_new_venta_boleta;
+        ui->gridLayout_6->addWidget(boleta,2,0);
+        boleta->show();
+        qDebug()<<"boleta"<<endl;
+    }
+    if(arg1=="Factura")
+    {
+        ui->gridLayout_6->removeWidget(ui->widget_venta);
+        ui_new_venta_factura *factura=new ui_new_venta_factura;
+        ui->gridLayout_6->addWidget(factura,3,0);
+        factura->show();
+        qDebug()<<"Factura"<<endl;
+    }
+}

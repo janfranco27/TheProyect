@@ -6,6 +6,8 @@ ui_module_home::ui_module_home(QWidget *parent) :
     ui(new Ui::ui_module_home)
 {
     ui->setupUi(this);
+    ui->label_usuario->setText(QString::fromStdString(USER_GET_NAME));
+
 }
 
 ui_module_home::~ui_module_home()
@@ -48,4 +50,10 @@ void ui_module_home::on_pushButton_compras_clicked()
     ui_module_compras* form_compras = new ui_module_compras();
     APP_MANAGERM->setCentralWidget(form_compras);
     APP_TOOL_BAR->setMaximumHeight(63);
+}
+
+void ui_module_home::on_pushButton_usuario_clicked()
+{
+    ui_edit_personalInformation *dialog_Informacion=new ui_edit_personalInformation;
+    dialog_Informacion->show();
 }

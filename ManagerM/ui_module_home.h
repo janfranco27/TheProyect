@@ -7,7 +7,7 @@
 namespace Ui {
 class ui_module_home;
 }
-
+class ui_edit_personalInformation;
 class ui_module_home : public QWidget
 {
     Q_OBJECT
@@ -27,6 +27,8 @@ private slots:
     void on_pushButton_colaboradores_clicked();
 
     void on_pushButton_compras_clicked();
+    void on_pushButton_usuario_clicked();
+
 private:
     Ui::ui_module_home *ui;
 };

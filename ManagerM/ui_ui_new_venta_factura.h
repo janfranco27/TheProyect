@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta_factura.ui'
 **
-** Created: Mon 1. Apr 23:35:08 2013
+** Created: Sat 27. Apr 17:40:23 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,25 +40,25 @@ public:
         ui_new_venta_factura->resize(710, 220);
         label = new QLabel(ui_new_venta_factura);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(50, 60, 46, 13));
+        label->setGeometry(QRect(30, 20, 46, 13));
         label_2 = new QLabel(ui_new_venta_factura);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(50, 90, 81, 16));
+        label_2->setGeometry(QRect(30, 50, 81, 16));
         lineEdit = new QLineEdit(ui_new_venta_factura);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(190, 60, 113, 20));
+        lineEdit->setGeometry(QRect(170, 20, 113, 20));
         lineEdit_2 = new QLineEdit(ui_new_venta_factura);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(190, 90, 113, 20));
+        lineEdit_2->setGeometry(QRect(170, 50, 113, 20));
         pushButton_2 = new QPushButton(ui_new_venta_factura);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(330, 90, 75, 23));
+        pushButton_2->setGeometry(QRect(360, 80, 75, 23));
         label_4 = new QLabel(ui_new_venta_factura);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(50, 150, 81, 16));
+        label_4->setGeometry(QRect(30, 80, 81, 16));
         lineEdit_4 = new QLineEdit(ui_new_venta_factura);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setGeometry(QRect(190, 140, 113, 20));
+        lineEdit_4->setGeometry(QRect(170, 80, 113, 20));
 
         retranslateUi(ui_new_venta_factura);
 

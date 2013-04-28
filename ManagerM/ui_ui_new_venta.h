@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-** Created: Tue 16. Apr 18:15:32 2013
+** Created: Sat 27. Apr 17:46:54 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -104,7 +104,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_8;
     QDateEdit *dateEdit_fecha_emision;
-    QWidget *widget;
+    QWidget *widget_venta;
     QFrame *line_4;
     QSpacerItem *verticalSpacer_7;
 
@@ -505,15 +505,15 @@ public:
 
         gridLayout_6->addLayout(horizontalLayout_14, 3, 0, 1, 1);
 
-        widget = new QWidget(page_3);
-        widget->setObjectName(QString::fromUtf8("widget"));
+        widget_venta = new QWidget(page_3);
+        widget_venta->setObjectName(QString::fromUtf8("widget_venta"));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
-        widget->setSizePolicy(sizePolicy4);
+        sizePolicy4.setHeightForWidth(widget_venta->sizePolicy().hasHeightForWidth());
+        widget_venta->setSizePolicy(sizePolicy4);
 
-        gridLayout_6->addWidget(widget, 4, 0, 1, 1);
+        gridLayout_6->addWidget(widget_venta, 4, 0, 1, 1);
 
         line_4 = new QFrame(page_3);
         line_4->setObjectName(QString::fromUtf8("line_4"));
@@ -536,7 +536,7 @@ public:
 
         retranslateUi(ui_new_venta);
 
-        stackedWidget_ventas->setCurrentIndex(0);
+        stackedWidget_ventas->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(ui_new_venta);
