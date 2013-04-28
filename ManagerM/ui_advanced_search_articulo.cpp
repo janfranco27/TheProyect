@@ -70,7 +70,7 @@ ui_advanced_search_articulo::~ui_advanced_search_articulo()
 
 void ui_advanced_search_articulo::filterTodos()
 {
-    queryFilter ="pk_articulo=%1";
+    queryFilter ="( relTblAl_2.descripcion='%1' or pk_articulo='%1' or relTblAl_3.descripcion='%1' or e_articulo.descripcion='%1' or stock='%1' or precio_lista='%1')";
     qDebug()<<queryFilter;
 }
 

@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta.h'
 **
-<<<<<<< HEAD
-** Created: Sat 27. Apr 11:01:54 2013
-=======
-** Created: Sat 27. Apr 17:54:41 2013
->>>>>>> EditPersonalInformation
+** Created: Sat 27. Apr 19:43:39 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
