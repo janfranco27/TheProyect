@@ -8,7 +8,7 @@
 #include <QSortFilterProxyModel>
 
 const int num_header = 7;
-enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK};
+enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
 const char * e_articulo = "e_articulo";
 const char * e_grupo = "e_grupo";
 const char * e_marca = "e_marca";
@@ -35,7 +35,7 @@ ui_module_articulos::ui_module_articulos(QWidget *parent) :
     ui->setupUi(this);
 
 
-     proxyModel = new QSortFilterProxyModel();
+
     update_table_articulos();
 
 
@@ -75,6 +75,8 @@ void ui_module_articulos::update_table_articulos()
     model->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
     model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
     model->setFilter("habilitado=1");
+
+
     for(int i=0;i<num_header;i++)
     {
         model->setHeaderData(i,Qt::Horizontal,tableHeaders[i]);
@@ -83,10 +85,8 @@ void ui_module_articulos::update_table_articulos()
     if(model->select())
     {
 
-           // ui->tableView_articulos->setModel(model);
-
-           proxyModel->setSourceModel(model);
-          ui->tableView_articulos->setModel(proxyModel);
+            ui->tableView_articulos->setModel(model);
+            ui->busqueda->setTableModel(model);
 
 
     }
@@ -95,7 +95,11 @@ void ui_module_articulos::update_table_articulos()
         QMessageBox::information(this,"Error","Ocurrio un error al cargar la información");
     }
 
+    //Ocultamos columnas
     ui->tableView_articulos->setColumnHidden(GRUPO,true);
+    ui->tableView_articulos->setColumnHidden(HABILITADO,true);
+
+    //qDebug()<<model->query().lastQuery()<<endl;
 }
 
 
@@ -199,3 +203,6 @@ void ui_module_articulos::on_pushButton_eliminar_2_clicked()
    }
 
 }
+
+
+

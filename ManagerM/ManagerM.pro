@@ -90,12 +90,17 @@ SOURCES += main.cpp\
     object_e_cliente.cpp \
     object_e_region.cpp \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_opciones_comprobante.cpp
 =======
     ui_new_venta_proforma.cpp \
     ui_new_venta_cotizacion.cpp \
     ui_edit_personalinformation.cpp
 >>>>>>> EditPersonalInformation
+=======
+    ui_advanced_search_articulo.cpp
+
+>>>>>>> busqueda articulos
 
 
 HEADERS  += ui_main.h \
@@ -180,12 +185,17 @@ HEADERS  += ui_main.h \
     object_e_cliente.h \
     object_e_region.h \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_opciones_comprobante.h
 =======
     ui_new_venta_proforma.h \
     ui_new_venta_cotizacion.h \
     ui_edit_personalinformation.h
 >>>>>>> EditPersonalInformation
+=======
+    ui_advanced_search_articulo.h
+
+>>>>>>> busqueda articulos
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -224,12 +234,17 @@ FORMS    += ui_main.ui \
     ui_newedit_cliente.ui \
     ui_module_clientes.ui \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_opciones_comprobante.ui
 =======
     ui_new_venta_proforma.ui \
     ui_new_venta_cotizacion.ui \
     ui_edit_personalinformation.ui
 >>>>>>> EditPersonalInformation
+=======
+    ui_advanced_search_articulo.ui
+
+>>>>>>> busqueda articulos
 
 RESOURCES += \
     Icons.qrc

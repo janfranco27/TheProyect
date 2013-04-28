@@ -26,12 +26,14 @@ private slots:
     void update_table_articulos();
     void on_pushButton_eliminar_2_clicked();
 
+
 private:
-    Ui::ui_module_articulos *ui;
-    QSortFilterProxyModel * proxyModel ;
+    Ui::ui_module_articulos *ui;  
 
 
 
 };
 
 #endif // UI_MODULE_ARTICULOS_H
+
+

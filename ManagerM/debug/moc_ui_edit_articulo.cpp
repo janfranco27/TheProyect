@@ -3,6 +3,7 @@
 **
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Sat 27. Apr 10:39:22 2013
 =======
 ** Created: Sat 27. Apr 11:01:51 2013
@@ -10,6 +11,9 @@
 =======
 ** Created: Sat 27. Apr 18:09:20 2013
 >>>>>>> EditPersonalInformation
+=======
+** Created: Sat 27. Apr 12:28:02 2013
+>>>>>>> busqueda articulos
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
