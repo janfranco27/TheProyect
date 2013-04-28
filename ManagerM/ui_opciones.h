@@ -11,6 +11,7 @@ class ui_opciones_articulo;
 class ui_opciones_banco;
 class ui_opciones_proveedor;
 class ui_opciones_general;
+//class ui_opciones_comprobante;
 
 
 namespace Ui {
@@ -34,6 +35,7 @@ private:
     ui_opciones_tienda* tab_tienda;
     ui_opciones_banco* tab_bancos;
     ui_opciones_general* tab_general;
+    //ui_opciones_comprobante* tab_comprobante;
 
     //tabArticulos* tab_articulos;
 

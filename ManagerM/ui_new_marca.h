@@ -6,6 +6,7 @@
 
 class ui_opciones_articulo;
 
+
 namespace Ui {
 class ui_new_marca;
 }

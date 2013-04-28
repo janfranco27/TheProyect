@@ -54,7 +54,6 @@ SOURCES += main.cpp\
     generado.cpp \
     lineedit.cpp \
     ui_opciones_general.cpp \
-    object_e_sistema.cpp \
     ui_new_transportista.cpp \
     ui_new_proveedor.cpp \
     ui_new_orden.cpp \
@@ -89,7 +88,13 @@ SOURCES += main.cpp\
     object_e_persona_juridica.cpp \
     object_e_cliente.cpp \
     object_e_region.cpp \
-    ui_opciones_comprobante.cpp
+    ui_opciones_comprobante.cpp \
+    ui_new_factura_sistema.cpp \
+    ui_new_boleta_sistema.cpp \
+    object_e_igv_sistema.cpp \
+    object_e_factura_sistema.cpp \
+    object_e_cambio_dolar_sistema.cpp \
+    object_e_boleta_sistema.cpp
 
 
 HEADERS  += ui_main.h \
@@ -137,7 +142,6 @@ HEADERS  += ui_main.h \
     lineedit.h \
     ui_opciones_general.h \
     ui_ui_new_articulo.h \
-    object_e_sistema.h \
     ui_new_transportista.h \
     ui_new_proveedor.h \
     ui_new_orden.h \
@@ -173,7 +177,13 @@ HEADERS  += ui_main.h \
     object_e_persona_juridica.h \
     object_e_cliente.h \
     object_e_region.h \
-    ui_opciones_comprobante.h
+    ui_opciones_comprobante.h \
+    ui_new_factura_sistema.h \
+    ui_new_boleta_sistema.h \
+    object_e_igv_sistema.h \
+    object_e_factura_sistema.h \
+    object_e_cambio_dolar_sistema.h \
+    object_e_boleta_sistema.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -211,7 +221,9 @@ FORMS    += ui_main.ui \
     search_articulo.ui \
     ui_newedit_cliente.ui \
     ui_module_clientes.ui \
-    ui_opciones_comprobante.ui
+    ui_opciones_comprobante.ui \
+    ui_new_factura_sistema.ui \
+    ui_new_boleta_sistema.ui
 
 RESOURCES += \
     Icons.qrc

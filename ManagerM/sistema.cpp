@@ -477,6 +477,24 @@ QSqlQuery Sistema::getColaboradores()
     return getSelectQuery(select,from,where);
 }
 
+QSqlQuery Sistema::getBoletaSistema()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_boleta_sistema");
+
+    return getSelectQuery(select,from);
+}
+
+QSqlQuery Sistema::getFacturaSistema()
+{
+    vector<_QSTR> select,from;
+    select.push_back("*");
+    from.push_back("e_factura_sistema");
+
+    return getSelectQuery(select,from);
+}
+
 vector<_QSTR> Sistema::getAllTiposUsuarios()
 {
     _QSTR consulta="SELECT descripcion FROM e_tipo_usuario";

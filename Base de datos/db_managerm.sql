@@ -552,12 +552,12 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `boleta_sistema`
+-- Table `e_boleta_sistema`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `boleta_sistema` ;
+DROP TABLE IF EXISTS `e_boleta_sistema` ;
 
 SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `boleta_sistema` (
+CREATE  TABLE IF NOT EXISTS `e_boleta_sistema` (
   `pk_boleta_s` INT NOT NULL ,
   `serie` INT NOT NULL ,
   `numero_inicio` INT NOT NULL ,
@@ -569,12 +569,12 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `factura_sistema`
+-- Table `e_factura_sistema`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `factura_sistema` ;
+DROP TABLE IF EXISTS `e_factura_sistema` ;
 
 SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `factura_sistema` (
+CREATE  TABLE IF NOT EXISTS `e_factura_sistema` (
   `pk_factura_s` INT NOT NULL ,
   `serie` INT NOT NULL ,
   `numero_inicio` INT NOT NULL ,
@@ -586,12 +586,12 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `igv_sistema`
+-- Table `e_igv_sistema`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `igv_sistema` ;
+DROP TABLE IF EXISTS `e_igv_sistema` ;
 
 SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `igv_sistema` (
+CREATE  TABLE IF NOT EXISTS `e_igv_sistema` (
   `pk_igv_s` INT NOT NULL ,
   `valor` INT NOT NULL ,
   `fecha` DATE NOT NULL ,
@@ -601,12 +601,12 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `cambio_dolar_sistema`
+-- Table `e_cambio_dolar_sistema`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cambio_dolar_sistema` ;
+DROP TABLE IF EXISTS `e_cambio_dolar_sistema` ;
 
 SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `cambio_dolar_sistema` (
+CREATE  TABLE IF NOT EXISTS `e_cambio_dolar_sistema` (
   `pk_cambio_dolar_s` INT NOT NULL ,
   `valor_dolar_soles` FLOAT NOT NULL ,
   `valor_soler_dolar` FLOAT NOT NULL ,

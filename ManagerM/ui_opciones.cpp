@@ -13,6 +13,7 @@ ui_opciones::ui_opciones(QWidget *parent) :
     tab_proveedores = new ui_opciones_proveedor(ui->widget_category);
     tab_tienda = new ui_opciones_tienda(ui->widget_category);
     tab_general = new ui_opciones_general(ui->widget_category);
+    //tab_comprobante = new ui_opciones_comprobante(ui->widget_category);
 
 
     mf_hide_all_tabs();
@@ -34,6 +35,7 @@ void ui_opciones::mf_hide_all_tabs()
     tab_proveedores->hide();
     tab_tienda->hide();
     tab_general->hide();
+    //tab_comprobante->hide();
 
 }
 
@@ -80,12 +82,20 @@ void ui_opciones::on_listWidget_modulos_clicked(const QModelIndex &index)
 
         break;
 
+    case comprobante:
+
+        ui->label_category->setText("Comprobantes");
+        //tab_comprobante->show();
+
+        break;
+
     case general:
 
         ui->label_category->setText("General");
         tab_general->show();
 
         break;
+
 
     default:
         break;

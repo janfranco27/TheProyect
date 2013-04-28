@@ -40,7 +40,6 @@ INPUT(
 ./debug\generado.o
 ./debug\lineedit.o
 ./debug\ui_opciones_general.o
-./debug\object_e_sistema.o
 ./debug\ui_new_transportista.o
 ./debug\ui_new_proveedor.o
 ./debug\ui_new_orden.o
@@ -75,6 +74,13 @@ INPUT(
 ./debug\object_e_persona_juridica.o
 ./debug\object_e_cliente.o
 ./debug\object_e_region.o
+./debug\ui_opciones_comprobante.o
+./debug\ui_new_factura_sistema.o
+./debug\ui_new_boleta_sistema.o
+./debug\object_e_igv_sistema.o
+./debug\object_e_factura_sistema.o
+./debug\object_e_cambio_dolar_sistema.o
+./debug\object_e_boleta_sistema.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -112,5 +118,8 @@ INPUT(
 ./debug\moc_search_articulo.o
 ./debug\moc_ui_newedit_cliente.o
 ./debug\moc_ui_module_clientes.o
+./debug\moc_ui_opciones_comprobante.o
+./debug\moc_ui_new_factura_sistema.o
+./debug\moc_ui_new_boleta_sistema.o
 ./debug\qrc_Icons.o
 );

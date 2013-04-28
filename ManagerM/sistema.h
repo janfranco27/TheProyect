@@ -43,6 +43,13 @@ public:
     QSqlQuery getGrupos();
     QSqlQuery getArticulos();
     QSqlQuery getColaboradores();
+    //---
+    QSqlQuery getBoletaSistema();
+    QSqlQuery getFacturaSistema();
+
+    //--
+
+
    vector<_QSTR> getAllTiposUsuarios();
    vector<_QSTR> getAllTiendas();
    vector<_QSTR> getAllRegiones();
