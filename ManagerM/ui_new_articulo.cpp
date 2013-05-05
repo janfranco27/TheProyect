@@ -7,7 +7,7 @@ const int numHeaders = 8;
 
 
 
-enum {MEDIDA,GRUPO,MARCA};
+//enum {MEDIDA,GRUPO,MARCA};
 enum {H_CODIGO, H_NOMBRE, H_GRUPO, H_MARCA, H_MEDIDA, H_STOCK,H_PRECIO, H_PROVEEDOR};
 ui_new_articulo::ui_new_articulo(QWidget *parent) :
     QWidget(parent),

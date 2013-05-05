@@ -70,28 +70,28 @@ ui_advanced_search_articulo::~ui_advanced_search_articulo()
 
 void ui_advanced_search_articulo::filterTodos()
 {
-    queryFilter ="( relTblAl_2.descripcion='%1' or pk_articulo='%1' or relTblAl_3.descripcion='%1' or e_articulo.descripcion='%1' or stock='%1' or precio_lista='%1')";
-    qDebug()<<queryFilter;
+    queryFilter ="( relTblAl_2.descripcion LIKE'%1%' or pk_articulo LIKE'%1%' or relTblAl_3.descripcion LIKE '%1%' or e_articulo.descripcion LIKE'%1%' or stock='%1' or precio_lista='%1')";
+    //qDebug()<<queryFilter;
 }
 
 void ui_advanced_search_articulo::filterCodigo()
 {
-     queryFilter ="pk_articulo= %1 ";
+     queryFilter ="pk_articulo LIKE %1% ";
 }
 
 void ui_advanced_search_articulo::filterMarca()
 {
-    queryFilter ="relTblAl_2.descripcion = '%1' ";
+    queryFilter ="relTblAl_2.descripcion LIKE '%1%' ";
 }
 
 void ui_advanced_search_articulo::filterMedida()
 {
-    queryFilter ="relTblAl_3.descripcion = '%1' ";
+    queryFilter ="relTblAl_3.descripcion LIKE '%1%' ";
 }
 
 void ui_advanced_search_articulo::filterDescripcion()
 {
-    queryFilter ="e_articulo.descripcion = '%1' ";
+    queryFilter ="e_articulo.descripcion LIKE '%1%' ";
 }
 
 void ui_advanced_search_articulo::filterStock()

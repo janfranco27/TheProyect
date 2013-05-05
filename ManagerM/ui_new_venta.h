@@ -2,7 +2,7 @@
 #define UI_NEW_VENTA_H
 
 #include <QWidget>
-
+#include <QSqlRelationalTableModel>
 namespace Ui {
 class ui_new_venta;
 }
@@ -24,8 +24,13 @@ private slots:
 
     void on_cb_tipo_comprobante_activated(const QString &arg1);
 
+    void on_le_marca_textEdited(const QString &arg1);
+
+    void on_le_medida_textEdited(const QString &arg1);
+
 private:
     Ui::ui_new_venta *ui;
+     QSqlRelationalTableModel * table;
 };
 
 #endif // UI_NEW_VENTA_H

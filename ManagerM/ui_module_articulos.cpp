@@ -8,7 +8,7 @@
 #include <QSortFilterProxyModel>
 
 const int num_header = 7;
-enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
+
 const char * e_articulo = "e_articulo";
 const char * e_grupo = "e_grupo";
 const char * e_marca = "e_marca";
