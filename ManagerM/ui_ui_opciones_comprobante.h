@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_comprobante.ui'
 **
-** Created: Sun 28. Apr 01:07:45 2013
+** Created: Sat 11. May 12:50:20 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -329,7 +329,7 @@ public:
 
         retranslateUi(ui_opciones_comprobante);
 
-        tabWidget_boleta->setCurrentIndex(1);
+        tabWidget_boleta->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ui_opciones_comprobante);

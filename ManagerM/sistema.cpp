@@ -96,7 +96,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
             consulta = "SELECT "+select[0];
 
 
-            for(int i=1;i<select.size();i++)
+            for(int i=1;i<(int)select.size();i++)
             {
                 consulta+=","+select[i];
             }
@@ -104,7 +104,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
             consulta+=" FROM "+from[0];
 
-            for(int i=1;i<from.size();i++)
+            for(int i=1;i<(int)from.size();i++)
             {
                 consulta+=","+from[i];
 
@@ -115,7 +115,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
             {
                 consulta+=" WHERE ";
 
-                for(int i=0;i<where.size();i++)
+                for(int i=0;i<(int)where.size();i++)
                 {
                     if(where[i].second!="")
                     {
@@ -140,7 +140,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
             if(joins.size()>0)
             {
 
-                for(int i=0;i<joins.size();i++)
+                for(int i=0;i<(int)joins.size();i++)
                 {
                     if(joins[i].second!="")
                     {
@@ -165,7 +165,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
 
             query.prepare(consulta);
 
-            for(int i=0;i<where.size();i++)
+            for(int i=0;i<(int)where.size();i++)
             {
                 if(where[i].second!="")
                 {
@@ -205,7 +205,7 @@ QSqlQuery Sistema::getDeleteQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > where)
 {
     _QSTR consulta = "DELETE FROM "+from  +" WHERE ";
 
-    for(int i=0;i<where.size();i++)
+    for(int i=0;i<(int)where.size();i++)
     {
 
         if(i==0)
@@ -239,7 +239,7 @@ QSqlQuery Sistema::getUpdateQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > set, v
 {
     _QSTR consulta = "UPDATE "+from  +" SET ";
 
-    for(int i=0;i<set.size();i++)
+    for(int i=0;i<(int)set.size();i++)
     {
 
         if(i==0)
@@ -253,7 +253,7 @@ QSqlQuery Sistema::getUpdateQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > set, v
     }
 
     consulta+=" WHERE ";
-    for(int i=0;i<where.size();i++)
+    for(int i=0;i<(int)where.size();i++)
     {
 
         if(i==0)
@@ -500,7 +500,7 @@ vector<_QSTR> Sistema::getAllTiposUsuarios()
     _QSTR consulta="SELECT descripcion FROM e_tipo_usuario";
     TUPLES result=FREEQUERY(consulta);
     vector<_QSTR> tiposUsuario;
-    for(int i=0;i<result.size();i++)
+    for(int i=0;i<(int)result.size();i++)
     {
         tiposUsuario.push_back(result[i][0].toString());
     }
@@ -512,7 +512,7 @@ vector<_QSTR> Sistema::getAllTiendas()
     _QSTR consulta="SELECT nombre FROM e_tienda";
     TUPLES result=FREEQUERY(consulta);
     vector<_QSTR> tiendas;
-    for(int i=0;i<result.size();i++)
+    for(int i=0;i<(int)result.size();i++)
     {
         tiendas.push_back(result[i][0].toString());
     }
@@ -524,7 +524,7 @@ vector<_QSTR> Sistema::getAllRegiones()
     _QSTR consulta="SELECT nombre_region FROM e_region";
     TUPLES result=FREEQUERY(consulta);
     vector<_QSTR> region;
-    for(int i=0;i<result.size();i++)
+    for(int i=0;i<(int)result.size();i++)
     {
         region.push_back(result[i][0].toString());
     }
@@ -744,7 +744,7 @@ void Sistema::init_e_tipo_usuario()
 
 int Sistema::messageInformation(_QSTR title, _QSTR message)
 {
-    QMessageBox::information(0,title,message,QMessageBox::Ok);
+    return QMessageBox::information(0,title,message,QMessageBox::Ok);
 
 }
 

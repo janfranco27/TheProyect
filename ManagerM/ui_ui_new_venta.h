@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-** Created: Sun 5. May 01:02:02 2013
+** Created: Sat 11. May 12:50:18 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

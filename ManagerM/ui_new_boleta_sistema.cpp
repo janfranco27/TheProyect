@@ -14,7 +14,7 @@ ui_new_boleta_sistema::~ui_new_boleta_sistema()
     delete ui;
 }
 
-/*
+
 void ui_new_boleta_sistema::mf_set_parent_form(ui_opciones_comprobante *p)
 {
     parent_form = p;
@@ -35,10 +35,10 @@ int ui_new_boleta_sistema::mf_get_parent()
     return parent;
 }
 
-*/
+
 void ui_new_boleta_sistema::on_pushButton_new_clicked()
 {
-    /*
+
     obj_boleta->mf_set_serie(ui->spinBox_serie->text());
     obj_boleta->mf_set_numero_inicio(ui->spinBox_numero_i->text());
     obj_boleta->mf_set_numero_fin(ui->spinBox_numero_f->text());
@@ -52,5 +52,5 @@ void ui_new_boleta_sistema::on_pushButton_new_clicked()
     }
 
     close();
-    */
+
 }

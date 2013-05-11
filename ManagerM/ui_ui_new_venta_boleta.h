@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta_boleta.ui'
 **
-** Created: Sun 28. Apr 01:07:44 2013
+** Created: Sat 11. May 12:50:18 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

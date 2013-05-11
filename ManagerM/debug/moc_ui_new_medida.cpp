@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_medida.h'
 **
-** Created: Sun 5. May 00:02:47 2013
+** Created: Sat 11. May 12:56:55 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

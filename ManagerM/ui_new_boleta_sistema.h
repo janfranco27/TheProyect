@@ -4,8 +4,8 @@
 #include <QWidget>
 #include "share_include.h"
 
-//class object_e_boleta_sistema;
-//class ui_opciones_comprobante;
+class object_e_boleta_sistema;
+class ui_opciones_comprobante;
 
 namespace Ui {
 class ui_new_boleta_sistema;
@@ -18,7 +18,7 @@ class ui_new_boleta_sistema : public QWidget
 public:
     explicit ui_new_boleta_sistema(QWidget *parent = 0);
     ~ui_new_boleta_sistema();
-/*
+
 private:
     ui_opciones_comprobante* parent_form;
     int parent;
@@ -31,7 +31,7 @@ public:
     ui_opciones_comprobante* mf_get_parent_form();
     int mf_get_parent();
 
-  */
+
 private slots:
     void on_pushButton_new_clicked();
 

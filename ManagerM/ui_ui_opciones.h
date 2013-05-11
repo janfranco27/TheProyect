@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones.ui'
 **
-** Created: Sun 28. Apr 01:07:43 2013
+** Created: Sat 11. May 12:50:18 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -41,7 +41,7 @@ public:
     {
         if (ui_opciones->objectName().isEmpty())
             ui_opciones->setObjectName(QString::fromUtf8("ui_opciones"));
-        ui_opciones->setWindowModality(Qt::ApplicationModal);
+        ui_opciones->setWindowModality(Qt::WindowModal);
         ui_opciones->resize(792, 455);
         ui_opciones->setMinimumSize(QSize(792, 455));
         ui_opciones->setMaximumSize(QSize(792, 455));
