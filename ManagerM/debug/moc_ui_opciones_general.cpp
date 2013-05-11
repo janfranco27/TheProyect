@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_general.h'
 **
+<<<<<<< HEAD
 ** Created: Sun 5. May 00:02:23 2013
+=======
+** Created: Sat 27. Apr 20:45:39 2013
+>>>>>>> Commit
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

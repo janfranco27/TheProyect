@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_compras.ui'
 **
+<<<<<<< HEAD
 ** Created: Sun 28. Apr 01:07:45 2013
+=======
+** Created: Sat 27. Apr 20:35:30 2013
+>>>>>>> Commit
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

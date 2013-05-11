@@ -24,6 +24,7 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
 {
     ui->setupUi(this);
 
+<<<<<<< HEAD
     table = new QSqlRelationalTableModel();
     table->setTable("e_articulo");
      table->select();
@@ -34,6 +35,17 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
       table->setJoinMode(QSqlRelationalTableModel::LeftJoin);
       table->setFilter("habilitado=1");
 
+=======
+    //por defecto es una boleta
+    QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
+    ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
+    delete tmpWidget;
+    ui_new_venta_boleta *boleta=new ui_new_venta_boleta;
+    ui->gridLayout_6->addWidget(boleta,1,0);
+    boleta->show();
+
+    QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
+>>>>>>> Commit
 
       ui->tableView_articulos_1->setModel(table);
 
@@ -236,21 +248,49 @@ void ui_new_venta::on_pushButton_atras_clicked()
 
 void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
 {
+    /*QWidget* widget = ui.TPCheckBoxLayout_G->itemAtPosition(i,j)->widget();	 ui.TPCheckBoxLayout_G->removeItem(ui.TPCheckBoxLayout_G->itemAtPosition(i,j));
+    delete ui.TPCheckBoxLayout_G->itemAtPosition(i,j);
+    delete widget;
+    */
     if(arg1=="Boleta")
     {
-        ui->gridLayout_6->removeWidget(ui->widget_venta);
+        QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
+        ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
+        delete tmpWidget;
         ui_new_venta_boleta *boleta=new ui_new_venta_boleta;
-        ui->gridLayout_6->addWidget(boleta,2,0);
+        ui->gridLayout_6->addWidget(boleta,1,0);
         boleta->show();
         qDebug()<<"boleta"<<endl;
     }
-    if(arg1=="Factura")
+    else if(arg1=="Factura")
     {
-        ui->gridLayout_6->removeWidget(ui->widget_venta);
+        QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
+        ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
+        delete tmpWidget;
         ui_new_venta_factura *factura=new ui_new_venta_factura;
-        ui->gridLayout_6->addWidget(factura,3,0);
+        ui->gridLayout_6->addWidget(factura,1,0);
         factura->show();
         qDebug()<<"Factura"<<endl;
+    }
+    else if(arg1=="Proforma")
+    {
+        QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
+        ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
+        delete tmpWidget;
+        ui_new_venta_proforma *proforma=new ui_new_venta_proforma;
+        ui->gridLayout_6->addWidget(proforma,1,0);
+        proforma->show();
+        qDebug()<<"Proforma"<<endl;
+    }
+    else if(arg1=="Cotización")
+    {
+        QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
+        ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
+        delete tmpWidget;
+        ui_new_venta_cotizacion *cotizacion=new ui_new_venta_cotizacion;
+        ui->gridLayout_6->addWidget(cotizacion,1,0);
+        cotizacion->show();
+        qDebug()<<"Cotizacion"<<endl;
     }
 }
 

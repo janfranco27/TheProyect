@@ -75,12 +75,17 @@ INPUT(
 ./debug\object_e_cliente.o
 ./debug\object_e_region.o
 ./debug\ui_opciones_comprobante.o
+<<<<<<< HEAD
 ./debug\ui_new_factura_sistema.o
 ./debug\ui_new_boleta_sistema.o
 ./debug\object_e_igv_sistema.o
 ./debug\object_e_factura_sistema.o
 ./debug\object_e_cambio_dolar_sistema.o
 ./debug\object_e_boleta_sistema.o
+=======
+./debug\ui_new_venta_proforma.o
+./debug\ui_new_venta_cotizacion.o
+>>>>>>> Commit
 ./debug\ui_edit_personalinformation.o
 ./debug\ui_advanced_search_articulo.o
 ./debug\ui_new_compra_orden.o
@@ -123,8 +128,13 @@ INPUT(
 ./debug\moc_ui_newedit_cliente.o
 ./debug\moc_ui_module_clientes.o
 ./debug\moc_ui_opciones_comprobante.o
+<<<<<<< HEAD
 ./debug\moc_ui_new_factura_sistema.o
 ./debug\moc_ui_new_boleta_sistema.o
+=======
+./debug\moc_ui_new_venta_proforma.o
+./debug\moc_ui_new_venta_cotizacion.o
+>>>>>>> Commit
 ./debug\moc_ui_edit_personalinformation.o
 ./debug\moc_ui_advanced_search_articulo.o
 ./debug\moc_ui_new_compra_orden.o

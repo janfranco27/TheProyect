@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_widget_compra_base.h'
 **
+<<<<<<< HEAD:Compras/debug/moc_ui_widget_compra_base.cpp
 ** Created: Sun 10. Mar 17:35:47 2013
+=======
+** Created: Sat 27. Apr 20:46:52 2013
+>>>>>>> Commit:ManagerM/debug/moc_ui_new_venta_proforma.cpp
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

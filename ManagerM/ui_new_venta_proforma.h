@@ -2,7 +2,7 @@
 #define UI_NEW_VENTA_PROFORMA_H
 
 #include <QWidget>
-
+#include "share_include.h"
 namespace Ui {
 class ui_new_venta_proforma;
 }
