@@ -1,36 +1,106 @@
 #include "ui_new_venta.h"
 #include "ui_ui_new_venta.h"
 #include "share_include.h"
+extern const char * e_articulo ;
+extern const char * e_grupo ;
+extern const char * e_marca ;
+extern const char * e_medida ;
+
+//Primary Keys
+
+extern const char * pk_grupo ;
+extern const char * pk_marca ;
+extern const char * pk_medida ;
+
+//campo buscado
+
+extern const char * descripcion ;
+
+QString defaultFilter = "habilitado=1";
+
 ui_new_venta::ui_new_venta(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_new_venta)
 {
     ui->setupUi(this);
 
-    QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
+    table = new QSqlRelationalTableModel();
+    table->setTable("e_articulo");
+     table->select();
 
-    comp->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
-    comp->setCompletionPrefix("pin");
-    ui->le_nombre->setCompleter(comp);
+     table->setRelation(GRUPO,QSqlRelation(e_grupo,pk_grupo,descripcion));
+     table->setRelation(MARCA,QSqlRelation(e_marca,pk_marca,descripcion));
+      table->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
+      table->setJoinMode(QSqlRelationalTableModel::LeftJoin);
+      table->setFilter("habilitado=1");
 
+
+      ui->tableView_articulos_1->setModel(table);
+
+      ui->tableView_articulos_1->setColumnHidden(HABILITADO,true);
 }
 
 ui_new_venta::~ui_new_venta()
 {
+    delete table;
     delete ui;
 }
 
-void ui_new_venta::on_le_nombre_textEdited(const QString &arg1)
+void ui_new_venta::on_le_nombre_textEdited(const QString &nuevoTexto)
 {
 
-    QSqlRelationalTableModel * table = new QSqlRelationalTableModel();
-    //table->setTable("e_articulo");
-    //table->setFilter("descripcion = "+arg1);
-    //table->select();
+
+        QString filtro ;
+        bool hayAnd = false;
+        if(!nuevoTexto.isEmpty())
+        {
+
+            filtro = "e_articulo.descripcion LIKE '"+nuevoTexto+"%'";
+            hayAnd = true;
+        }
+
+        if(!ui->le_marca->text().isEmpty())
+        {
+            if(hayAnd)
+            {
+                filtro+=" AND ";
+            }
+            filtro+="relTblAl_2.descripcion LIKE '%1%' ";
+            filtro=filtro.arg(ui->le_marca->text());
+            hayAnd=true;
+
+
+        }
+
+        if(!ui->le_medida->text().isEmpty())
+        {
+            if(hayAnd)
+            {
+             filtro+=" AND ";
+            }
+            filtro+="relTblAl_3.descripcion LIKE '%1%' ";
+            filtro=filtro.arg(ui->le_medida->text());
+
+            hayAnd=true;
+        }
 
 
 
-    qDebug()<<arg1<<endl;
+        if(hayAnd)
+        {
+         filtro+=" AND ";
+        }
+        filtro+=defaultFilter;
+
+        qDebug()<<filtro;
+        table->setFilter(filtro);
+
+
+    ui->tableView_articulos_1->setModel(table);
+
+
+
+
 
 
 
@@ -38,6 +108,117 @@ void ui_new_venta::on_le_nombre_textEdited(const QString &arg1)
 
 
 }
+
+
+void ui_new_venta::on_le_marca_textEdited(const QString &nuevoTexto)
+{
+
+
+         QString filtro ;
+
+         bool hayAnd = false;
+
+         if(!nuevoTexto.isEmpty())
+         {
+                filtro= "relTblAl_2.descripcion LIKE '"+nuevoTexto+"%'";
+                hayAnd=true;
+         }
+
+         if(!ui->le_nombre->text().isEmpty())
+         {
+             if(hayAnd)
+             {
+                 filtro+=" AND ";
+             }
+
+             filtro+="e_articulo.descripcion LIKE '%1%' ";
+             filtro=filtro.arg(ui->le_nombre->text());
+             hayAnd=true;
+         }
+         if(!ui->le_medida->text().isEmpty())
+         {
+             if(hayAnd)
+             {
+                 filtro+=" AND ";
+             }
+             filtro+="relTblAl_3.descripcion LIKE '%1%' ";
+             filtro=filtro.arg(ui->le_medida->text());
+             hayAnd=true;
+         }
+
+
+
+
+         if(hayAnd)
+         {
+             filtro+=" AND ";
+         }
+
+         filtro+=defaultFilter;
+
+         qDebug()<<filtro;
+
+         table->setFilter(filtro);
+
+
+     ui->tableView_articulos_1->setModel(table);
+}
+
+void ui_new_venta::on_le_medida_textEdited(const QString &nuevoTexto)
+{
+
+
+
+    // Armamos el filtro
+        QString filtro;
+
+        //hayAnd sirve como bandera para armar la consulta y poner los ANDS correspondientes
+
+        bool hayAnd = false;
+
+        if(!nuevoTexto.isEmpty())
+        {
+            filtro= "relTblAl_3.descripcion LIKE '"+nuevoTexto+"%'";
+            hayAnd=true;
+        }
+
+
+        if(!ui->le_nombre->text().isEmpty())
+        {
+            if(hayAnd)
+            {
+                filtro+=" AND ";
+            }
+            filtro+="e_articulo.descripcion LIKE '%1%' ";
+            filtro=filtro.arg(ui->le_nombre->text());
+            hayAnd=true;
+        }
+        if(!ui->le_marca->text().isEmpty())
+        {
+            if(hayAnd)
+            {
+                filtro+=" AND ";
+            }
+            filtro+="relTblAl_2.descripcion LIKE '%1%' ";
+            filtro=filtro.arg(ui->le_marca->text());
+            hayAnd=true;
+        }
+
+
+
+        if(hayAnd)
+        {
+            filtro+=" AND ";
+        }
+        filtro+=defaultFilter;
+
+        qDebug()<<filtro;
+        table->setFilter(filtro);
+
+
+    ui->tableView_articulos_1->setModel(table);
+}
+
 
 void ui_new_venta::on_pushButton_siguiente_clicked()
 {
@@ -72,3 +253,5 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
         qDebug()<<"Factura"<<endl;
     }
 }
+
+

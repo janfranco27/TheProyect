@@ -4,7 +4,7 @@
 #include "share_include.h"
 
 
-enum {PK_ARTICULO,FK_GRUPO,FK_MARCA,FK_MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
+enum {PK_ARTICULO,FK_GRUPO,FK_MARCA,FK_MEDIDA,C_DESCRIPCION,C_PRECIO,C_STOCK,C_HABILITAD};
 QString table_e_marca = "e_marca";
 QString table_e_medida = "e_medida";
 QString col_descripcion = "descripcion";

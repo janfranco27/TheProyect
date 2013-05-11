@@ -134,6 +134,11 @@ enum opciones_articulo{marca,medida,grupo};
 	#define C_CAMBIAR_TITLE "Cambiar datos"
     //CONSULTAS A LA DB
 
+//HEADERS
+enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
+
+
+
 
 
 

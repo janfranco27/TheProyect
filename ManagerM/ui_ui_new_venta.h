@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-** Created: Sun 28. Apr 01:07:44 2013
+** Created: Sun 5. May 01:02:02 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -63,11 +63,11 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_5;
     QLabel *l_marca;
-    QComboBox *cb_marca;
+    QLineEdit *le_marca;
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_7;
     QLabel *l_medida;
-    QComboBox *cb_medida;
+    QLineEdit *le_medida;
     QTableView *tableView_articulos_1;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *pushButton_down;
@@ -112,7 +112,7 @@ public:
     {
         if (ui_new_venta->objectName().isEmpty())
             ui_new_venta->setObjectName(QString::fromUtf8("ui_new_venta"));
-        ui_new_venta->resize(771, 556);
+        ui_new_venta->resize(808, 527);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Stack.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_new_venta->setWindowIcon(icon);
@@ -262,12 +262,10 @@ public:
 
         horizontalLayout_5->addWidget(l_marca);
 
-        cb_marca = new QComboBox(page);
-        cb_marca->setObjectName(QString::fromUtf8("cb_marca"));
-        cb_marca->setMinimumSize(QSize(100, 0));
-        cb_marca->setMaximumSize(QSize(100, 16777215));
+        le_marca = new QLineEdit(page);
+        le_marca->setObjectName(QString::fromUtf8("le_marca"));
 
-        horizontalLayout_5->addWidget(cb_marca);
+        horizontalLayout_5->addWidget(le_marca);
 
 
         horizontalLayout_10->addLayout(horizontalLayout_5);
@@ -285,12 +283,10 @@ public:
 
         horizontalLayout_7->addWidget(l_medida);
 
-        cb_medida = new QComboBox(page);
-        cb_medida->setObjectName(QString::fromUtf8("cb_medida"));
-        cb_medida->setMinimumSize(QSize(100, 0));
-        cb_medida->setMaximumSize(QSize(100, 16777215));
+        le_medida = new QLineEdit(page);
+        le_medida->setObjectName(QString::fromUtf8("le_medida"));
 
-        horizontalLayout_7->addWidget(cb_medida);
+        horizontalLayout_7->addWidget(le_medida);
 
 
         horizontalLayout_10->addLayout(horizontalLayout_7);
@@ -300,6 +296,8 @@ public:
 
         tableView_articulos_1 = new QTableView(page);
         tableView_articulos_1->setObjectName(QString::fromUtf8("tableView_articulos_1"));
+        tableView_articulos_1->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableView_articulos_1->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout->addWidget(tableView_articulos_1, 4, 0, 1, 1);
 
@@ -536,7 +534,7 @@ public:
 
         retranslateUi(ui_new_venta);
 
-        stackedWidget_ventas->setCurrentIndex(2);
+        stackedWidget_ventas->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ui_new_venta);

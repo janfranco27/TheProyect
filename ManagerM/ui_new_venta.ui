@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>771</width>
-    <height>556</height>
+    <width>808</width>
+    <height>527</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -172,7 +172,7 @@
         <enum>QFrame::Plain</enum>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page">
         <layout class="QGridLayout" name="gridLayout">
@@ -277,20 +277,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="cb_marca">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
+              <widget class="QLineEdit" name="le_marca"/>
              </item>
             </layout>
            </item>
@@ -332,27 +319,21 @@
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="cb_medida">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
+              <widget class="QLineEdit" name="le_medida"/>
              </item>
             </layout>
            </item>
           </layout>
          </item>
          <item row="4" column="0">
-          <widget class="QTableView" name="tableView_articulos_1"/>
+          <widget class="QTableView" name="tableView_articulos_1">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+          </widget>
          </item>
          <item row="5" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_8">
