@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_comprobante.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 28. Apr 01:07:45 2013
-=======
-** Created: Sat 27. Apr 20:35:31 2013
->>>>>>> Commit
+** Created: Sat 11. May 15:25:28 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -23,10 +19,7 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QPushButton>
-<<<<<<< HEAD
 #include <QtGui/QSpacerItem>
-=======
->>>>>>> Commit
 #include <QtGui/QSpinBox>
 #include <QtGui/QSplitter>
 #include <QtGui/QTabWidget>
@@ -59,19 +52,12 @@ public:
     QPushButton *pushButton_save_f;
     QPushButton *pushButton_new_f;
     QPushButton *pushButton_delete_f;
-<<<<<<< HEAD
     QSpacerItem *horizontalSpacer;
     QSpacerItem *horizontalSpacer_2;
     QWidget *tab_2;
     QGridLayout *gridLayout_7;
     QGridLayout *gridLayout_5;
     QTableView *tableView_boleta;
-=======
-    QWidget *tab_2;
-    QGridLayout *gridLayout_7;
-    QGridLayout *gridLayout_5;
-    QTableView *tableView_2;
->>>>>>> Commit
     QGridLayout *gridLayout_6;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_4;
@@ -87,11 +73,8 @@ public:
     QPushButton *pushButton_save_b;
     QPushButton *pushButton_new_b;
     QPushButton *pushButton_drop_b;
-<<<<<<< HEAD
     QSpacerItem *horizontalSpacer_3;
     QSpacerItem *horizontalSpacer_4;
-=======
->>>>>>> Commit
 
     void setupUi(QWidget *ui_opciones_comprobante)
     {
@@ -121,13 +104,8 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(tab);
         label->setObjectName(QString::fromUtf8("label"));
-<<<<<<< HEAD
         label->setMinimumSize(QSize(80, 0));
         label->setMaximumSize(QSize(80, 16777215));
-=======
-        label->setMinimumSize(QSize(100, 0));
-        label->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout->addWidget(label);
 
@@ -145,23 +123,14 @@ public:
         pushButton_usar_f = new QPushButton(tab);
         pushButton_usar_f->setObjectName(QString::fromUtf8("pushButton_usar_f"));
 
-<<<<<<< HEAD
         gridLayout_2->addWidget(pushButton_usar_f, 0, 4, 1, 1);
-=======
-        gridLayout_2->addWidget(pushButton_usar_f, 0, 2, 1, 1);
->>>>>>> Commit
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_2 = new QLabel(tab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-<<<<<<< HEAD
         label_2->setMinimumSize(QSize(80, 0));
         label_2->setMaximumSize(QSize(80, 16777215));
-=======
-        label_2->setMinimumSize(QSize(100, 0));
-        label_2->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout_2->addWidget(label_2);
 
@@ -180,13 +149,8 @@ public:
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-<<<<<<< HEAD
         label_3->setMinimumSize(QSize(80, 0));
         label_3->setMaximumSize(QSize(80, 16777215));
-=======
-        label_3->setMinimumSize(QSize(100, 0));
-        label_3->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout_3->addWidget(label_3);
 
@@ -199,19 +163,12 @@ public:
         horizontalLayout_3->addWidget(spinBox_fin_f);
 
 
-<<<<<<< HEAD
         gridLayout_2->addLayout(horizontalLayout_3, 1, 2, 1, 1);
-=======
-        gridLayout_2->addLayout(horizontalLayout_3, 1, 1, 1, 1);
->>>>>>> Commit
 
         splitter = new QSplitter(tab);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
-<<<<<<< HEAD
         splitter->setHandleWidth(1);
-=======
->>>>>>> Commit
         pushButton_save_f = new QPushButton(splitter);
         pushButton_save_f->setObjectName(QString::fromUtf8("pushButton_save_f"));
         QIcon icon;
@@ -234,7 +191,6 @@ public:
         pushButton_delete_f->setFlat(true);
         splitter->addWidget(pushButton_delete_f);
 
-<<<<<<< HEAD
         gridLayout_2->addWidget(splitter, 1, 4, 1, 1);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -244,9 +200,6 @@ public:
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout_2->addItem(horizontalSpacer_2, 1, 3, 1, 1);
-=======
-        gridLayout_2->addWidget(splitter, 1, 2, 1, 1);
->>>>>>> Commit
 
 
         gridLayout_3->addLayout(gridLayout_2, 1, 0, 1, 1);
@@ -261,17 +214,10 @@ public:
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-<<<<<<< HEAD
         tableView_boleta = new QTableView(tab_2);
         tableView_boleta->setObjectName(QString::fromUtf8("tableView_boleta"));
 
         gridLayout_5->addWidget(tableView_boleta, 0, 0, 1, 1);
-=======
-        tableView_2 = new QTableView(tab_2);
-        tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
-
-        gridLayout_5->addWidget(tableView_2, 0, 0, 1, 1);
->>>>>>> Commit
 
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
@@ -279,13 +225,8 @@ public:
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         label_4 = new QLabel(tab_2);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-<<<<<<< HEAD
         label_4->setMinimumSize(QSize(80, 0));
         label_4->setMaximumSize(QSize(80, 16777215));
-=======
-        label_4->setMinimumSize(QSize(100, 0));
-        label_4->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout_6->addWidget(label_4);
 
@@ -303,23 +244,14 @@ public:
         pushButton_usar_b = new QPushButton(tab_2);
         pushButton_usar_b->setObjectName(QString::fromUtf8("pushButton_usar_b"));
 
-<<<<<<< HEAD
         gridLayout_6->addWidget(pushButton_usar_b, 0, 4, 1, 1);
-=======
-        gridLayout_6->addWidget(pushButton_usar_b, 0, 2, 1, 1);
->>>>>>> Commit
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         label_7 = new QLabel(tab_2);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-<<<<<<< HEAD
         label_7->setMinimumSize(QSize(80, 0));
         label_7->setMaximumSize(QSize(80, 16777215));
-=======
-        label_7->setMinimumSize(QSize(100, 0));
-        label_7->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout_7->addWidget(label_7);
 
@@ -338,13 +270,8 @@ public:
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         label_8 = new QLabel(tab_2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-<<<<<<< HEAD
         label_8->setMinimumSize(QSize(80, 0));
         label_8->setMaximumSize(QSize(80, 16777215));
-=======
-        label_8->setMinimumSize(QSize(100, 0));
-        label_8->setMaximumSize(QSize(100, 16777215));
->>>>>>> Commit
 
         horizontalLayout_8->addWidget(label_8);
 
@@ -357,19 +284,12 @@ public:
         horizontalLayout_8->addWidget(spinBox_fin_b);
 
 
-<<<<<<< HEAD
         gridLayout_6->addLayout(horizontalLayout_8, 1, 2, 1, 1);
-=======
-        gridLayout_6->addLayout(horizontalLayout_8, 1, 1, 1, 1);
->>>>>>> Commit
 
         splitter_2 = new QSplitter(tab_2);
         splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
         splitter_2->setOrientation(Qt::Horizontal);
-<<<<<<< HEAD
         splitter_2->setHandleWidth(1);
-=======
->>>>>>> Commit
         pushButton_save_b = new QPushButton(splitter_2);
         pushButton_save_b->setObjectName(QString::fromUtf8("pushButton_save_b"));
         pushButton_save_b->setIcon(icon);
@@ -386,7 +306,6 @@ public:
         pushButton_drop_b->setFlat(true);
         splitter_2->addWidget(pushButton_drop_b);
 
-<<<<<<< HEAD
         gridLayout_6->addWidget(splitter_2, 1, 4, 1, 1);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -396,9 +315,6 @@ public:
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout_6->addItem(horizontalSpacer_4, 1, 3, 1, 1);
-=======
-        gridLayout_6->addWidget(splitter_2, 1, 2, 1, 1);
->>>>>>> Commit
 
 
         gridLayout_5->addLayout(gridLayout_6, 1, 0, 1, 1);
@@ -413,11 +329,7 @@ public:
 
         retranslateUi(ui_opciones_comprobante);
 
-<<<<<<< HEAD
         tabWidget_boleta->setCurrentIndex(1);
-=======
-        tabWidget_boleta->setCurrentIndex(0);
->>>>>>> Commit
 
 
         QMetaObject::connectSlotsByName(ui_opciones_comprobante);

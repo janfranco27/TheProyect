@@ -1,15 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_transportista.h'
 **
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Sun 5. May 00:02:27 2013
-=======
-** Created: Sat 27. Apr 20:45:46 2013
->>>>>>> Commit
-=======
-** Created: Sat 11. May 13:20:35 2013
->>>>>>> articulosVentan con BUG
+** Created: Sat 11. May 15:39:44 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

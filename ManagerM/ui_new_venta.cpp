@@ -24,7 +24,6 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
 {
     ui->setupUi(this);
 
-<<<<<<< HEAD
     table = new QSqlRelationalTableModel();
     table->setTable("e_articulo");
      table->select();
@@ -35,7 +34,7 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
       table->setJoinMode(QSqlRelationalTableModel::LeftJoin);
       table->setFilter("habilitado=1");
 
-=======
+
     //por defecto es una boleta
     QWidget *tmpWidget=ui->gridLayout_6->itemAtPosition(1,0)->widget();
     ui->gridLayout_6->removeItem(ui->gridLayout_6->itemAtPosition(1,0));
@@ -45,7 +44,7 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
     boleta->show();
 
     QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
->>>>>>> Commit
+
 
       ui->tableView_articulos_1->setModel(table);
 

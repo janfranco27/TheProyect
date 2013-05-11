@@ -1,15 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Sun 5. May 01:02:02 2013
-=======
-** Created: Sat 27. Apr 21:06:38 2013
->>>>>>> Commit
-=======
-** Created: Sat 11. May 12:55:35 2013
->>>>>>> articulosVentan con BUG
+** Created: Sat 11. May 15:20:53 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -564,18 +556,13 @@ public:
 
         gridLayout_4->addLayout(gridLayout_3, 0, 0, 1, 1);
 
-        QWidget::setTabOrder(le_nombre, cb_marca);
-        QWidget::setTabOrder(cb_marca, cb_medida);
-        QWidget::setTabOrder(cb_medida, tableView_articulos_1);
+        QWidget::setTabOrder(le_nombre, tableView_articulos_1);
         QWidget::setTabOrder(tableView_articulos_1, pushButton_down);
         QWidget::setTabOrder(pushButton_down, pushButton_up);
-        QWidget::setTabOrder(pushButton_up, tableWidget_articulos_1);
-        QWidget::setTabOrder(tableWidget_articulos_1, lineEdit_total);
-        QWidget::setTabOrder(lineEdit_total, pushButton_atras);
+        QWidget::setTabOrder(pushButton_up, pushButton_atras);
         QWidget::setTabOrder(pushButton_atras, pushButton_siguiente);
         QWidget::setTabOrder(pushButton_siguiente, cb_tipo_comprobante);
-        QWidget::setTabOrder(cb_tipo_comprobante, tableWidget_articulos_2);
-        QWidget::setTabOrder(tableWidget_articulos_2, lineEdit_serie);
+        QWidget::setTabOrder(cb_tipo_comprobante, lineEdit_serie);
         QWidget::setTabOrder(lineEdit_serie, lineEdit_numero);
         QWidget::setTabOrder(lineEdit_numero, dateEdit_fecha_emision);
         QWidget::setTabOrder(dateEdit_fecha_emision, tableView_articulos3);
