@@ -2,10 +2,14 @@
 ** Meta object code from reading C++ file 'ui_edit_articulo.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Sun 5. May 00:02:19 2013
 =======
 ** Created: Sat 27. Apr 20:45:12 2013
 >>>>>>> Commit
+=======
+** Created: Sat 11. May 13:20:26 2013
+>>>>>>> articulosVentan con BUG
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

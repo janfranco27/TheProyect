@@ -121,6 +121,8 @@ enum opciones_articulo{marca,medida,grupo};
 
     #define C_HABILITADO "1"
     #define C_NO_HABILITADO  "0"
+
+    #define C_HEADER_CANTIDAD "Cantidad"
 	
 	//MENSAJES QMessageBox
 	#define C_CAMPOS_VACIOS "Campos Vacios"
@@ -132,10 +134,12 @@ enum opciones_articulo{marca,medida,grupo};
 	#define C_LENGTH_PASSWORD "El pasword debe tener como mínimo 6 caracteres"
 	#define C_CAMBIAR_TEXT "Seguro que desea cambiar sus datos?"
 	#define C_CAMBIAR_TITLE "Cambiar datos"
+    #define C_ERROR "Error"
+    #define C_NO_STOCK "No se puede realizar la operación. No hay suficiente stock"
     //CONSULTAS A LA DB
 
 //HEADERS
-enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO};
+enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO,CANTIDAD};
 
 
 
