@@ -85,6 +85,8 @@ INPUT(
 ./debug\ui_advanced_search_articulo.o
 ./debug\ui_new_compra_orden.o
 ./debug\ui_edit_compra_orden.o
+./debug\ui_new_venta_proforma.o
+./debug\ui_new_venta_cotizacion.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -129,5 +131,7 @@ INPUT(
 ./debug\moc_ui_advanced_search_articulo.o
 ./debug\moc_ui_new_compra_orden.o
 ./debug\moc_ui_edit_compra_orden.o
+./debug\moc_ui_new_venta_proforma.o
+./debug\moc_ui_new_venta_cotizacion.o
 ./debug\qrc_Icons.o
 );

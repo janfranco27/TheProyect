@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 12:56:15 2013
+=======
+** Created: Sat 11. May 15:39:27 2013
+>>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +27,7 @@ static const uint qt_meta_data_ui_new_venta[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -37,6 +41,8 @@ static const uint qt_meta_data_ui_new_venta[] = {
      116,   14,   13,   13, 0x08,
      158,   14,   13,   13, 0x08,
      190,   14,   13,   13, 0x08,
+     223,   13,   13,   13, 0x08,
+     252,   13,   13,   13, 0x08,
 
        0        // eod
 };
@@ -48,6 +54,8 @@ static const char qt_meta_stringdata_ui_new_venta[] = {
     "on_cb_tipo_comprobante_activated(QString)\0"
     "on_le_marca_textEdited(QString)\0"
     "on_le_medida_textEdited(QString)\0"
+    "on_pushButton_down_clicked()\0"
+    "on_pushButton_up_clicked()\0"
 };
 
 void ui_new_venta::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -62,6 +70,8 @@ void ui_new_venta::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 3: _t->on_cb_tipo_comprobante_activated((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 4: _t->on_le_marca_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 5: _t->on_le_medida_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: _t->on_pushButton_down_clicked(); break;
+        case 7: _t->on_pushButton_up_clicked(); break;
         default: ;
         }
     }
@@ -99,9 +109,9 @@ int ui_new_venta::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }

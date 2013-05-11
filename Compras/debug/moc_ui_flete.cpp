@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_flete.h'
 **
+<<<<<<< HEAD:Compras/debug/moc_ui_flete.cpp
 ** Created: Tue 5. Mar 16:53:00 2013
+=======
+** Created: Sat 27. Apr 20:46:59 2013
+>>>>>>> Commit:ManagerM/debug/moc_ui_new_venta_cotizacion.cpp
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

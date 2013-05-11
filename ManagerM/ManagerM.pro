@@ -89,7 +89,7 @@ SOURCES += main.cpp\
     object_e_cliente.cpp \
     object_e_region.cpp \
     ui_opciones_comprobante.cpp \
-    ui_new_factura_sistema.cpp \
+   ui_new_factura_sistema.cpp \
     ui_new_boleta_sistema.cpp \
     object_e_igv_sistema.cpp \
     object_e_factura_sistema.cpp \
@@ -98,7 +98,13 @@ SOURCES += main.cpp\
     ui_edit_personalinformation.cpp \
     ui_advanced_search_articulo.cpp \
     ui_new_compra_orden.cpp \
-    ui_edit_compra_orden.cpp
+    ui_edit_compra_orden.cpp\
+    ui_new_venta_proforma.cpp \
+    ui_new_venta_cotizacion.cpp \
+
+
+
+
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -190,7 +196,9 @@ HEADERS  += ui_main.h \
     ui_edit_personalinformation.h \
     ui_advanced_search_articulo.h \
     ui_new_compra_orden.h \
-    ui_edit_compra_orden.h
+    ui_edit_compra_orden.h\
+      ui_new_venta_proforma.h \
+    ui_new_venta_cotizacion.h \
 
 
 
@@ -236,7 +244,11 @@ FORMS    += ui_main.ui \
     ui_edit_personalinformation.ui \
     ui_advanced_search_articulo.ui \
     ui_new_compra_orden.ui \
-    ui_edit_compra_orden.ui
+    ui_edit_compra_orden.ui\
+    ui_new_venta_proforma.ui \
+    ui_new_venta_cotizacion.ui \
+
+
 
 RESOURCES += \
     Icons.qrc

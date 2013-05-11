@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 12:50:18 2013
+=======
+** Created: Sat 11. May 15:20:53 2013
+>>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -24,10 +28,11 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
+#include <QtGui/QSpinBox>
 #include <QtGui/QSplitter>
 #include <QtGui/QStackedWidget>
 #include <QtGui/QTableView>
-#include <QtGui/QTableWidget>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -42,7 +47,7 @@ public:
     QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_11;
-    QLineEdit *lineEdit_total;
+    QLineEdit *le_total;
     QSpacerItem *horizontalSpacer_6;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_11;
@@ -71,29 +76,35 @@ public:
     QTableView *tableView_articulos_1;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *pushButton_down;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *label_9;
+    QSpinBox *sp_cantidad;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_up;
-    QTableWidget *tableWidget_articulos_1;
     QFrame *line_3;
     QSpacerItem *verticalSpacer_5;
+    QTableView *tableView_seleccionados;
     QWidget *page_2;
     QGridLayout *gridLayout_5;
     QSplitter *splitter_3;
     QLabel *label_2;
+    QFrame *line_2;
+    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_13;
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
     QComboBox *cb_tipo_comprobante;
     QSpacerItem *horizontalSpacer_7;
+    QVBoxLayout *verticalLayout;
     QSplitter *splitter_2;
     QLabel *label_5;
-    QTableWidget *tableWidget_articulos_2;
-    QFrame *line_2;
-    QSpacerItem *verticalSpacer_4;
+    QTableView *tableView_seleccionados2;
     QWidget *page_3;
-    QGridLayout *gridLayout_6;
-    QSplitter *splitter_4;
+    QFrame *line_4;
+    QTableView *tableView_articulos3;
     QLabel *label_3;
+    QWidget *widget;
+    QGridLayout *gridLayout_6;
     QHBoxLayout *horizontalLayout_14;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_6;
@@ -105,8 +116,6 @@ public:
     QLabel *label_8;
     QDateEdit *dateEdit_fecha_emision;
     QWidget *widget_venta;
-    QFrame *line_4;
-    QSpacerItem *verticalSpacer_7;
 
     void setupUi(QWidget *ui_new_venta)
     {
@@ -142,17 +151,18 @@ public:
 
         horizontalLayout_6->addWidget(label_11);
 
-        lineEdit_total = new QLineEdit(ui_new_venta);
-        lineEdit_total->setObjectName(QString::fromUtf8("lineEdit_total"));
+        le_total = new QLineEdit(ui_new_venta);
+        le_total->setObjectName(QString::fromUtf8("le_total"));
+        le_total->setEnabled(false);
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(lineEdit_total->sizePolicy().hasHeightForWidth());
-        lineEdit_total->setSizePolicy(sizePolicy1);
-        lineEdit_total->setMinimumSize(QSize(100, 0));
-        lineEdit_total->setMaximumSize(QSize(100, 16777215));
+        sizePolicy1.setHeightForWidth(le_total->sizePolicy().hasHeightForWidth());
+        le_total->setSizePolicy(sizePolicy1);
+        le_total->setMinimumSize(QSize(100, 0));
+        le_total->setMaximumSize(QSize(100, 16777215));
 
-        horizontalLayout_6->addWidget(lineEdit_total);
+        horizontalLayout_6->addWidget(le_total);
 
 
         horizontalLayout_12->addLayout(horizontalLayout_6);
@@ -314,6 +324,23 @@ public:
 
         horizontalLayout_8->addWidget(pushButton_down);
 
+        horizontalSpacer_9 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_9);
+
+        label_9 = new QLabel(page);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+
+        horizontalLayout_8->addWidget(label_9);
+
+        sp_cantidad = new QSpinBox(page);
+        sp_cantidad->setObjectName(QString::fromUtf8("sp_cantidad"));
+        sp_cantidad->setMinimum(1);
+        sp_cantidad->setMaximum(999);
+        sp_cantidad->setValue(1);
+
+        horizontalLayout_8->addWidget(sp_cantidad);
+
         horizontalSpacer = new QSpacerItem(648, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_8->addItem(horizontalSpacer);
@@ -331,11 +358,6 @@ public:
 
         gridLayout->addLayout(horizontalLayout_8, 5, 0, 1, 1);
 
-        tableWidget_articulos_1 = new QTableWidget(page);
-        tableWidget_articulos_1->setObjectName(QString::fromUtf8("tableWidget_articulos_1"));
-
-        gridLayout->addWidget(tableWidget_articulos_1, 6, 0, 1, 1);
-
         line_3 = new QFrame(page);
         line_3->setObjectName(QString::fromUtf8("line_3"));
         line_3->setFrameShape(QFrame::HLine);
@@ -346,6 +368,13 @@ public:
         verticalSpacer_5 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         gridLayout->addItem(verticalSpacer_5, 2, 0, 1, 1);
+
+        tableView_seleccionados = new QTableView(page);
+        tableView_seleccionados->setObjectName(QString::fromUtf8("tableView_seleccionados"));
+        tableView_seleccionados->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableView_seleccionados->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+        gridLayout->addWidget(tableView_seleccionados, 6, 0, 1, 1);
 
         stackedWidget_ventas->addWidget(page);
         page_2 = new QWidget();
@@ -368,6 +397,17 @@ public:
         splitter_3->addWidget(label_2);
 
         gridLayout_5->addWidget(splitter_3, 0, 0, 1, 1);
+
+        line_2 = new QFrame(page_2);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_5->addWidget(line_2, 1, 0, 2, 2);
+
+        verticalSpacer_4 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_5->addItem(verticalSpacer_4, 2, 1, 1, 1);
 
         horizontalLayout_13 = new QHBoxLayout();
         horizontalLayout_13->setObjectName(QString::fromUtf8("horizontalLayout_13"));
@@ -395,55 +435,55 @@ public:
         horizontalLayout_13->addItem(horizontalSpacer_7);
 
 
-        gridLayout_5->addLayout(horizontalLayout_13, 4, 0, 1, 1);
+        gridLayout_5->addLayout(horizontalLayout_13, 3, 0, 1, 1);
 
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         splitter_2 = new QSplitter(page_2);
         splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
         splitter_2->setOrientation(Qt::Vertical);
         label_5 = new QLabel(splitter_2);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         splitter_2->addWidget(label_5);
-        tableWidget_articulos_2 = new QTableWidget(splitter_2);
-        tableWidget_articulos_2->setObjectName(QString::fromUtf8("tableWidget_articulos_2"));
-        splitter_2->addWidget(tableWidget_articulos_2);
 
-        gridLayout_5->addWidget(splitter_2, 5, 0, 1, 1);
+        verticalLayout->addWidget(splitter_2);
 
-        line_2 = new QFrame(page_2);
-        line_2->setObjectName(QString::fromUtf8("line_2"));
-        line_2->setFrameShape(QFrame::HLine);
-        line_2->setFrameShadow(QFrame::Sunken);
+        tableView_seleccionados2 = new QTableView(page_2);
+        tableView_seleccionados2->setObjectName(QString::fromUtf8("tableView_seleccionados2"));
 
-        gridLayout_5->addWidget(line_2, 2, 0, 1, 1);
+        verticalLayout->addWidget(tableView_seleccionados2);
 
-        verticalSpacer_4 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        gridLayout_5->addItem(verticalSpacer_4, 3, 0, 1, 1);
+        gridLayout_5->addLayout(verticalLayout, 4, 0, 1, 1);
 
         stackedWidget_ventas->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
-        gridLayout_6 = new QGridLayout(page_3);
-        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        splitter_4 = new QSplitter(page_3);
-        splitter_4->setObjectName(QString::fromUtf8("splitter_4"));
-        sizePolicy2.setHeightForWidth(splitter_4->sizePolicy().hasHeightForWidth());
-        splitter_4->setSizePolicy(sizePolicy2);
-        splitter_4->setOrientation(Qt::Vertical);
-        label_3 = new QLabel(splitter_4);
+        line_4 = new QFrame(page_3);
+        line_4->setObjectName(QString::fromUtf8("line_4"));
+        line_4->setGeometry(QRect(10, 29, 729, 16));
+        line_4->setFrameShape(QFrame::HLine);
+        line_4->setFrameShadow(QFrame::Sunken);
+        tableView_articulos3 = new QTableView(page_3);
+        tableView_articulos3->setObjectName(QString::fromUtf8("tableView_articulos3"));
+        tableView_articulos3->setGeometry(QRect(10, 203, 731, 241));
+        label_3 = new QLabel(page_3);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(10, 10, 170, 16));
         sizePolicy3.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy3);
         label_3->setFont(font);
-        splitter_4->addWidget(label_3);
-
-        gridLayout_6->addWidget(splitter_4, 0, 0, 1, 1);
-
+        widget = new QWidget(page_3);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 57, 731, 141));
+        gridLayout_6 = new QGridLayout(widget);
+        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setObjectName(QString::fromUtf8("horizontalLayout_14"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_6 = new QLabel(page_3);
+        label_6 = new QLabel(widget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         sizePolicy2.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
         label_6->setSizePolicy(sizePolicy2);
@@ -452,19 +492,19 @@ public:
 
         horizontalLayout_2->addWidget(label_6);
 
-        lineEdit_serie = new QLineEdit(page_3);
+        lineEdit_serie = new QLineEdit(widget);
         lineEdit_serie->setObjectName(QString::fromUtf8("lineEdit_serie"));
         lineEdit_serie->setMinimumSize(QSize(100, 0));
         lineEdit_serie->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_2->addWidget(lineEdit_serie);
 
-        label_7 = new QLabel(page_3);
+        label_7 = new QLabel(widget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
 
         horizontalLayout_2->addWidget(label_7);
 
-        lineEdit_numero = new QLineEdit(page_3);
+        lineEdit_numero = new QLineEdit(widget);
         lineEdit_numero->setObjectName(QString::fromUtf8("lineEdit_numero"));
         lineEdit_numero->setMinimumSize(QSize(100, 0));
         lineEdit_numero->setMaximumSize(QSize(100, 16777215));
@@ -480,7 +520,7 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_8 = new QLabel(page_3);
+        label_8 = new QLabel(widget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         sizePolicy2.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy2);
@@ -489,7 +529,7 @@ public:
 
         horizontalLayout_3->addWidget(label_8);
 
-        dateEdit_fecha_emision = new QDateEdit(page_3);
+        dateEdit_fecha_emision = new QDateEdit(widget);
         dateEdit_fecha_emision->setObjectName(QString::fromUtf8("dateEdit_fecha_emision"));
         dateEdit_fecha_emision->setMinimumSize(QSize(100, 0));
         dateEdit_fecha_emision->setMaximumSize(QSize(100, 16777215));
@@ -501,9 +541,9 @@ public:
         horizontalLayout_14->addLayout(horizontalLayout_3);
 
 
-        gridLayout_6->addLayout(horizontalLayout_14, 3, 0, 1, 1);
+        gridLayout_6->addLayout(horizontalLayout_14, 0, 0, 1, 1);
 
-        widget_venta = new QWidget(page_3);
+        widget_venta = new QWidget(widget);
         widget_venta->setObjectName(QString::fromUtf8("widget_venta"));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
@@ -511,18 +551,7 @@ public:
         sizePolicy4.setHeightForWidth(widget_venta->sizePolicy().hasHeightForWidth());
         widget_venta->setSizePolicy(sizePolicy4);
 
-        gridLayout_6->addWidget(widget_venta, 4, 0, 1, 1);
-
-        line_4 = new QFrame(page_3);
-        line_4->setObjectName(QString::fromUtf8("line_4"));
-        line_4->setFrameShape(QFrame::HLine);
-        line_4->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_6->addWidget(line_4, 1, 0, 1, 1);
-
-        verticalSpacer_7 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_6->addItem(verticalSpacer_7, 2, 0, 1, 1);
+        gridLayout_6->addWidget(widget_venta, 1, 0, 1, 1);
 
         stackedWidget_ventas->addWidget(page_3);
 
@@ -531,6 +560,16 @@ public:
 
         gridLayout_4->addLayout(gridLayout_3, 0, 0, 1, 1);
 
+        QWidget::setTabOrder(le_nombre, tableView_articulos_1);
+        QWidget::setTabOrder(tableView_articulos_1, pushButton_down);
+        QWidget::setTabOrder(pushButton_down, pushButton_up);
+        QWidget::setTabOrder(pushButton_up, pushButton_atras);
+        QWidget::setTabOrder(pushButton_atras, pushButton_siguiente);
+        QWidget::setTabOrder(pushButton_siguiente, cb_tipo_comprobante);
+        QWidget::setTabOrder(cb_tipo_comprobante, lineEdit_serie);
+        QWidget::setTabOrder(lineEdit_serie, lineEdit_numero);
+        QWidget::setTabOrder(lineEdit_numero, dateEdit_fecha_emision);
+        QWidget::setTabOrder(dateEdit_fecha_emision, tableView_articulos3);
 
         retranslateUi(ui_new_venta);
 
@@ -551,9 +590,17 @@ public:
         l_marca->setText(QApplication::translate("ui_new_venta", "Marca", 0, QApplication::UnicodeUTF8));
         l_medida->setText(QApplication::translate("ui_new_venta", "Medida", 0, QApplication::UnicodeUTF8));
         pushButton_down->setText(QString());
+        label_9->setText(QApplication::translate("ui_new_venta", "Cantidad: ", 0, QApplication::UnicodeUTF8));
         pushButton_up->setText(QString());
         label_2->setText(QApplication::translate("ui_new_venta", "Seleccione tipo de comprobante", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ui_new_venta", "Tipo de comprobante", 0, QApplication::UnicodeUTF8));
+        cb_tipo_comprobante->clear();
+        cb_tipo_comprobante->insertItems(0, QStringList()
+         << QApplication::translate("ui_new_venta", "Boleta", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("ui_new_venta", "Factura", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("ui_new_venta", "Proforma", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("ui_new_venta", "Cotizaci\303\263n", 0, QApplication::UnicodeUTF8)
+        );
         label_5->setText(QApplication::translate("ui_new_venta", "Articulos seleccionados:", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ui_new_venta", "Complete los datos para la venta", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("ui_new_venta", "Serie - N\303\272mero", 0, QApplication::UnicodeUTF8));

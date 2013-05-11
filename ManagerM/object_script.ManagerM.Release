@@ -85,6 +85,8 @@ INPUT(
 ./release\ui_advanced_search_articulo.o
 ./release\ui_new_compra_orden.o
 ./release\ui_edit_compra_orden.o
+./release\ui_new_venta_proforma.o
+./release\ui_new_venta_cotizacion.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -129,5 +131,7 @@ INPUT(
 ./release\moc_ui_advanced_search_articulo.o
 ./release\moc_ui_new_compra_orden.o
 ./release\moc_ui_edit_compra_orden.o
+./release\moc_ui_new_venta_proforma.o
+./release\moc_ui_new_venta_cotizacion.o
 ./release\qrc_Icons.o
 );

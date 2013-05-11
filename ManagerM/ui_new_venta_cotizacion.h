@@ -2,7 +2,7 @@
 #define UI_NEW_VENTA_COTIZACION_H
 
 #include <QWidget>
-
+#include "share_include.h"
 namespace Ui {
 class ui_new_venta_cotizacion;
 }

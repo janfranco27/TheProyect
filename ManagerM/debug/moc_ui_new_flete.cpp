@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_flete.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 12:56:41 2013
+=======
+** Created: Sat 11. May 15:39:57 2013
+>>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
