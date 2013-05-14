@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta_cotizacion.h'
 **
+<<<<<<< HEAD
 ** Created: Mon 13. May 21:58:00 2013
+=======
+** Created: Sat 11. May 15:40:43 2013
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,28 +27,40 @@ static const uint qt_meta_data_ui_new_venta_cotizacion[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
+<<<<<<< HEAD
        2,   14, // methods
+=======
+       0,    0, // methods
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+<<<<<<< HEAD
  // slots: signature, parameters, type, tag, flags
       27,   25,   24,   24, 0x0a,
       52,   24,   24,   24, 0x08,
 
+=======
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
        0        // eod
 };
 
 static const char qt_meta_stringdata_ui_new_venta_cotizacion[] = {
+<<<<<<< HEAD
     "ui_new_venta_cotizacion\0\0,\0"
     "printValues(_QSTR,_QSTR)\0"
     "on_pushButton_clicked()\0"
+=======
+    "ui_new_venta_cotizacion\0"
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 };
 
 void ui_new_venta_cotizacion::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
+<<<<<<< HEAD
     if (_c == QMetaObject::InvokeMetaMethod) {
         Q_ASSERT(staticMetaObject.cast(_o));
         ui_new_venta_cotizacion *_t = static_cast<ui_new_venta_cotizacion *>(_o);
@@ -54,6 +70,12 @@ void ui_new_venta_cotizacion::qt_static_metacall(QObject *_o, QMetaObject::Call 
         default: ;
         }
     }
+=======
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 }
 
 const QMetaObjectExtraData ui_new_venta_cotizacion::staticMetaObjectExtraData = {
@@ -87,11 +109,14 @@ int ui_new_venta_cotizacion::qt_metacall(QMetaObject::Call _c, int _id, void **_
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+<<<<<<< HEAD
     if (_c == QMetaObject::InvokeMetaMethod) {
         if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 2;
     }
+=======
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
     return _id;
 }
 QT_END_MOC_NAMESPACE

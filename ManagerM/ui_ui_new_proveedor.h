@@ -1,7 +1,19 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_proveedor.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 21:01:27 2013
+=======
+<<<<<<< HEAD
+** Created: Sat 11. May 12:50:19 2013
+=======
+<<<<<<< HEAD
+** Created: Sun 28. Apr 01:07:45 2013
+=======
+** Created: Sat 27. Apr 20:35:30 2013
+>>>>>>> Commit
+>>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

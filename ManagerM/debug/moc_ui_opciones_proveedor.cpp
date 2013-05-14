@@ -1,7 +1,15 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_proveedor.h'
 **
+<<<<<<< HEAD
 ** Created: Mon 13. May 21:56:42 2013
+=======
+<<<<<<< HEAD
+** Created: Sat 11. May 12:55:42 2013
+=======
+** Created: Sat 11. May 15:38:58 2013
+>>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

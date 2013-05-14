@@ -89,12 +89,12 @@ using namespace std;
 #include "object_e_transportista_funciones.h"
 #include "object_r_proveedor_articulo.h"
 
-/*
+
 #include "object_e_factura_sistema.h"
 #include "object_e_boleta_sistema.h"
 #include "object_e_igv_sistema.h"
 #include "object_e_cambio_dolar_sistema.h"
-*/
+
 
 
 
@@ -109,17 +109,14 @@ using namespace std;
 #include "ui_new_marca.h"
 #include "ui_new_medida.h"
 
-/*
-#include "ui_new_boleta_sistema.h"
-#include "ui_new_factura_sistema.h"
-*/
+
 
 #include "ui_opciones_tienda.h"
 #include "ui_opciones_base_datos.h"
 #include "ui_opciones_articulo.h"
 #include "ui_opciones_banco.h"
 #include "ui_opciones_proveedor.h"
-//#include "ui_opciones_comprobante.h"
+#include "ui_opciones_comprobante.h"
 #include "ui_opciones_general.h"
 #include "ui_opciones.h"
 
@@ -141,7 +138,16 @@ using namespace std;
 #include "ui_new_venta_factura.h"
 #include "ui_new_venta_proforma.h"
 #include "ui_edit_personalinformation.h"
+<<<<<<< HEAD
 #include "ui_search_cliente.h"
+=======
+
+
+#include "ui_new_boleta_sistema.h"
+#include "ui_new_factura_sistema.h"
+
+//NAMESPACES
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 
 //NAMESPACES
 using namespace module_log;

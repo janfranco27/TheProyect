@@ -125,10 +125,10 @@ void ui_newedit_colaborador::llenarComboBox()
     vector<_QSTR> tiposUsuario=SYSTEM->getAllTiposUsuarios();
     vector<_QSTR> tiendas=SYSTEM->getAllTiendas();
 
-    for(int i=0;i<tiposUsuario.size();i++)
+    for(int i=0;i<(int)tiposUsuario.size();i++)
         ui->comboBox_tipoUsuario->addItem(QString(tiposUsuario[i]));
 
-    for(int i=0;i<tiendas.size();i++)
+    for(int i=0;i<(int)tiendas.size();i++)
         ui->comboBox_tienda->addItem(QString(tiendas[i]));
 }
 

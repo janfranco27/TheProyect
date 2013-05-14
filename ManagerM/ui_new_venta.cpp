@@ -24,7 +24,10 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
 {
     ui->setupUi(this);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
     table = new QSqlRelationalTableModel();
     table->setTable("e_articulo");
      table->select();
@@ -44,19 +47,76 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
     ui->gridLayout_6->addWidget(boleta,1,0);
     boleta->show();
 
+<<<<<<< HEAD
    // QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
+=======
+    QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 
 
       ui->tableView_articulos_1->setModel(table);
 
       ui->tableView_articulos_1->setColumnHidden(HABILITADO,true);
+
+
+
+      //Table view de articulos seleccionados
+     seleccionados_model = new QStandardItemModel();
+
+
+      //Seteamos los nombres de las columnas del nuevo view
+
+
+
+
+      ui->tableView_seleccionados->setModel(seleccionados_model);
+      ui->tableView_seleccionados2->setModel(seleccionados_model);
+
+
+      //Inicializamos
+      montoTotal=0;
+      updatePrecioView();
+
 }
 
 ui_new_venta::~ui_new_venta()
 {
     delete table;
+    delete seleccionados_model;
     delete ui;
 }
+
+
+void ui_new_venta::table_view_seleccionados_addHeaders()
+{
+
+    int n_columns = table->columnCount();
+
+    for(int i=0;i<n_columns;i++)
+    {
+          seleccionados_model->setHeaderData(i,Qt::Horizontal,table->headerData(i,Qt::Horizontal).toString());
+    }
+
+
+    seleccionados_model->setHeaderData(CANTIDAD,Qt::Horizontal,C_HEADER_CANTIDAD);
+
+    hideHabilitadoSeleccionadosColumn(true);
+
+}
+
+void ui_new_venta::hideHabilitadoSeleccionadosColumn(bool hide)
+{
+    ui->tableView_seleccionados->setColumnHidden(HABILITADO,hide);
+    ui->tableView_seleccionados2->setColumnHidden(HABILITADO,hide);
+}
+
+void ui_new_venta::updatePrecioView()
+{
+    ui->le_total->setText(QString::number(montoTotal));
+
+}
+
+
 
 void ui_new_venta::on_le_nombre_textEdited(const QString &nuevoTexto)
 {
@@ -295,3 +355,96 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
 }
 
 
+
+void ui_new_venta::on_pushButton_down_clicked()
+{
+
+
+
+
+    QModelIndexList  list = ui->tableView_articulos_1->selectionModel()->selectedRows();
+
+    QAbstractItemModel * item_model = ui->tableView_articulos_1->model();
+
+    int n_columns = item_model->columnCount();
+
+   QStandardItemModel * select_model = (QStandardItemModel*)ui->tableView_seleccionados->model();
+
+        bool error = false;
+        QString descripcionArticuloError = "";
+
+    foreach(QModelIndex index ,list)
+    {
+        int row = index.row();
+
+        int nueva_row = select_model->rowCount();
+
+
+        int selectedArticuloStock = item_model->data(item_model->index(row,STOCK)).toInt();
+        int cantidad = ui->sp_cantidad->value();
+
+        if(cantidad<=selectedArticuloStock)
+        {
+            for(int i=0;i<n_columns;i++)
+            {
+
+
+                select_model->setItem(nueva_row,i,new QStandardItem(item_model->data(item_model->index(row,i)).toString()));
+
+            }
+
+            //Seteamos la cantidad
+
+            select_model->setItem(nueva_row,CANTIDAD,new QStandardItem(ui->sp_cantidad->text()));
+
+
+            //Actualizamos el monto total
+
+            montoTotal+= (item_model->data(item_model->index(row,PRECIO)).toDouble());
+            updatePrecioView();
+
+            if(nueva_row==0)
+            {
+                    //La tabla de seleccionadas estaba vacia
+                    //Entonces añadimos los labels de las columnas
+
+                table_view_seleccionados_addHeaders();
+
+            }
+        }
+        else
+        {
+            descripcionArticuloError += (item_model->data(item_model->index(row,DESCRIPCION)).toString())+" ";
+            error = true;
+
+        }
+
+    }
+
+
+    if(error)
+    {
+        SYSTEM->messageInformation(C_ERROR,"Error con: "+descripcionArticuloError+"\n "+ C_NO_STOCK );
+    }
+
+
+
+}
+
+
+
+void ui_new_venta::on_pushButton_up_clicked()
+{
+
+    QModelIndexList  list = ui->tableView_seleccionados->selectionModel()->selectedRows();
+
+    foreach(QModelIndex index ,list)
+    {
+        int row = index.row();
+
+         montoTotal-= (seleccionados_model->data(seleccionados_model->index(row,PRECIO)).toDouble());
+         updatePrecioView();
+
+        seleccionados_model->removeRow(row);
+    }
+}

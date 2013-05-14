@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_advanced_search_articulo.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 21:01:27 2013
+=======
+** Created: Sat 11. May 12:50:21 2013
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

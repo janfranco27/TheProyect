@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_boleta_sistema.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 11. May 21:01:27 2013
+=======
+** Created: Sat 11. May 12:50:20 2013
+>>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -50,7 +54,11 @@ public:
     {
         if (ui_new_boleta_sistema->objectName().isEmpty())
             ui_new_boleta_sistema->setObjectName(QString::fromUtf8("ui_new_boleta_sistema"));
+        ui_new_boleta_sistema->setWindowModality(Qt::ApplicationModal);
         ui_new_boleta_sistema->resize(596, 30);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Configure_alt_2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ui_new_boleta_sistema->setWindowIcon(icon);
         gridLayout = new QGridLayout(ui_new_boleta_sistema);
         gridLayout->setSpacing(0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -142,9 +150,9 @@ public:
 
         pushButton_new = new QPushButton(ui_new_boleta_sistema);
         pushButton_new->setObjectName(QString::fromUtf8("pushButton_new"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/sq_plus.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_new->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/sq_plus.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_new->setIcon(icon1);
         pushButton_new->setIconSize(QSize(20, 20));
         pushButton_new->setFlat(true);
 
@@ -161,7 +169,7 @@ public:
 
     void retranslateUi(QWidget *ui_new_boleta_sistema)
     {
-        ui_new_boleta_sistema->setWindowTitle(QApplication::translate("ui_new_boleta_sistema", "Form", 0, QApplication::UnicodeUTF8));
+        ui_new_boleta_sistema->setWindowTitle(QApplication::translate("ui_new_boleta_sistema", "Nueva Boleta", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_new_boleta_sistema", "Serie", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_new_boleta_sistema", "Numero Inicio", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ui_new_boleta_sistema", "Numero Fin", 0, QApplication::UnicodeUTF8));

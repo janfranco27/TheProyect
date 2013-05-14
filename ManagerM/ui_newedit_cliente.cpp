@@ -31,7 +31,7 @@ void ui_newedit_cliente::llenarComboBox()
     ui->comboBox_region->clear();
     vector<_QSTR> regiones=SYSTEM->getAllRegiones();
 
-    for(int i=0;i<regiones.size();i++)
+    for(int i=0;i<(int)regiones.size();i++)
         ui->comboBox_region->addItem(QString(regiones[i]));
 }
 
