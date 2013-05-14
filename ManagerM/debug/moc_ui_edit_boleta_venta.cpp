@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_boleta_venta.h'
 **
-<<<<<<< HEAD
-** Created: Sun 28. Apr 01:15:10 2013
-=======
-** Created: Sat 27. Apr 20:44:25 2013
->>>>>>> Commit
+** Created: Sat 11. May 21:10:51 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

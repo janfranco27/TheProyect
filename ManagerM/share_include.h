@@ -141,8 +141,9 @@ using namespace std;
 #include "ui_new_venta_factura.h"
 #include "ui_new_venta_proforma.h"
 #include "ui_edit_personalinformation.h"
-//NAMESPACES
+#include "ui_search_cliente.h"
 
+//NAMESPACES
 using namespace module_log;
 using namespace module_dbconnection;
 using namespace module_session;

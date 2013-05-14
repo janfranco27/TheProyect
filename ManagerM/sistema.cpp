@@ -497,52 +497,89 @@ QSqlQuery Sistema::getFacturaSistema()
 
 vector<_QSTR> Sistema::getAllTiposUsuarios()
 {
-    _QSTR consulta="SELECT descripcion FROM e_tipo_usuario";
-    TUPLES result=FREEQUERY(consulta);
-    vector<_QSTR> tiposUsuario;
-    for(int i=0;i<result.size();i++)
-    {
-        tiposUsuario.push_back(result[i][0].toString());
-    }
+    vector<_QSTR> select,from;
+    select.push_back("descripcion");
+    from.push_back("e_tipo_usuario");
 
+    QSqlQuery query=getSelectQuery(select,from);
+    vector<_QSTR> tiposUsuario;
+    if(query.exec())
+    {
+        while(query.next())
+        {
+            tiposUsuario.push_back(query.value(0).toString());
+        }
+    }
     return tiposUsuario;
 }
 vector<_QSTR> Sistema::getAllTiendas()
 {
-    _QSTR consulta="SELECT nombre FROM e_tienda";
-    TUPLES result=FREEQUERY(consulta);
+    vector<_QSTR> select,from;
+    select.push_back("nombre");
+    from.push_back("e_tienda");
+    QSqlQuery query=getSelectQuery(select,from);
+
     vector<_QSTR> tiendas;
-    for(int i=0;i<result.size();i++)
+    if(query.exec())
     {
-        tiendas.push_back(result[i][0].toString());
+        while(query.next())
+        {
+            tiendas.push_back(query.value(0).toString());
+        }
     }
     return tiendas;
 }
 
 vector<_QSTR> Sistema::getAllRegiones()
 {
-    _QSTR consulta="SELECT nombre_region FROM e_region";
-    TUPLES result=FREEQUERY(consulta);
+    vector<_QSTR> select,from;
+    select.push_back("nombre_region");
+    from.push_back("e_region");
+    QSqlQuery query=getSelectQuery(select,from);
     vector<_QSTR> region;
-    for(int i=0;i<result.size();i++)
+    if(query.exec())
     {
-        region.push_back(result[i][0].toString());
+        while(query.next())
+        {
+            region.push_back(query.value(0).toString());
+        }
     }
     return region;
 }
 
 _QSTR Sistema::getTienda(_QSTR nombreTienda)
 {
-    _QSTR consulta="SELECT pk_ruc FROM e_tienda where nombre='"+nombreTienda+"'";
-    TUPLES result = FREEQUERY(consulta);
-    return result[0][0].toString();
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where;
+    select.push_back("pk_ruc");
+    from.push_back("e_tienda");
+    where.push_back(make_pair("nombre",nombreTienda));
+    QSqlQuery query=getSelectQuery(select,from,where);
+
+    if(query.exec())
+    {
+        query.next();
+        return query.value(0).toString();
+    }
+    return "";
 }
 
 _QSTR Sistema::getTipoUsuario(_QSTR nombreUsuario)
 {
-    _QSTR consulta="SELECT pk_tipo_usuario FROM e_tipo_usuario where descripcion='"+nombreUsuario+"'";
-    TUPLES result = FREEQUERY(consulta);
-    return result[0][0].toString();
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where;
+    select.push_back("pk_tipo_usuario");
+    from.push_back("e_tipo_usuario");
+    where.push_back(make_pair("descripcion",nombreUsuario));
+    QSqlQuery query=getSelectQuery(select,from,where);
+
+    if(query.exec())
+    {
+        query.next();
+        return query.value(0).toString();
+    }
+    return "";
+
 }
 
 _QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
@@ -799,6 +836,29 @@ bool Sistema::nickColaboradorValido(_QSTR nick)
     if(query.next())
         return query.value(0).toString();
     else return "";*/return true;
+}
+
+QSqlQuery Sistema::getRucNombreClientes(_QSTR filtro)
+{
+    QSqlQuery query;
+    _QSTR cons="SELECT e_cliente.pk_ruc,razon_social FROM e_persona_juridica, e_cliente WHERE e_cliente.pk_ruc=e_persona_juridica.pk_ruc ";
+
+    if(filtro!="")
+        cons+=filtro;
+
+    qDebug()<<cons<<endl<<endl;
+    query.prepare(cons);
+    if(query.exec())
+    {
+        //state OK
+        //w!
+         qDebug()<<"query  OK";
+    }else{
+        //state FAILED
+        //w!
+         qDebug()<<"query  NO";
+    }
+    return query;
 }
 
 _QSTR Sistema::getProveedorPKFromArticulo(_QSTR articuloPK)

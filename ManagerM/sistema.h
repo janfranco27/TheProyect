@@ -81,6 +81,7 @@ public:
    //-----------
    _QSTR getDNIColaborador(_QSTR nick,_QSTR pass="");
    bool nickColaboradorValido(_QSTR nick);
+   QSqlQuery getRucNombreClientes(_QSTR filtro="");
 
 };
 

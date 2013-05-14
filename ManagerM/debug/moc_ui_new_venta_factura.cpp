@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta_factura.h'
 **
-<<<<<<< HEAD
-** Created: Sun 28. Apr 01:16:02 2013
-=======
-** Created: Sat 27. Apr 20:45:27 2013
->>>>>>> Commit
+** Created: Mon 13. May 21:57:12 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -27,26 +23,37 @@ static const uint qt_meta_data_ui_new_venta_factura[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+      24,   22,   21,   21, 0x0a,
+      49,   21,   21,   21, 0x08,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_ui_new_venta_factura[] = {
-    "ui_new_venta_factura\0"
+    "ui_new_venta_factura\0\0,\0"
+    "printValues(_QSTR,_QSTR)\0"
+    "on_pushButton_clicked()\0"
 };
 
 void ui_new_venta_factura::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ui_new_venta_factura *_t = static_cast<ui_new_venta_factura *>(_o);
+        switch (_id) {
+        case 0: _t->printValues((*reinterpret_cast< _QSTR(*)>(_a[1])),(*reinterpret_cast< _QSTR(*)>(_a[2]))); break;
+        case 1: _t->on_pushButton_clicked(); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObjectExtraData ui_new_venta_factura::staticMetaObjectExtraData = {
@@ -80,6 +87,11 @@ int ui_new_venta_factura::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 2)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

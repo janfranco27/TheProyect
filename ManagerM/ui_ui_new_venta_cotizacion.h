@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta_cotizacion.ui'
 **
-** Created: Sat 27. Apr 20:35:31 2013
+** Created: Sun 12. May 11:39:07 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,45 +30,30 @@ public:
     QPushButton *pushButton;
     QWidget *widget;
     QGridLayout *gridLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label;
-    QLineEdit *lineEdit;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
-    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_ruc;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QLineEdit *lineEdit_nombre;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_3;
-    QLineEdit *lineEdit_3;
+    QLineEdit *lineEdit_direccion;
 
     void setupUi(QWidget *ui_new_venta_cotizacion)
     {
         if (ui_new_venta_cotizacion->objectName().isEmpty())
             ui_new_venta_cotizacion->setObjectName(QString::fromUtf8("ui_new_venta_cotizacion"));
-        ui_new_venta_cotizacion->resize(449, 119);
+        ui_new_venta_cotizacion->resize(737, 119);
         pushButton = new QPushButton(ui_new_venta_cotizacion);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(320, 80, 101, 23));
+        pushButton->setGeometry(QRect(620, 80, 101, 23));
         widget = new QWidget(ui_new_venta_cotizacion);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(40, 20, 261, 80));
+        widget->setGeometry(QRect(0, 10, 251, 80));
         gridLayout = new QGridLayout(widget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(widget);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout->addWidget(label);
-
-        lineEdit = new QLineEdit(widget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        horizontalLayout->addWidget(lineEdit);
-
-
-        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_2 = new QLabel(widget);
@@ -76,13 +61,28 @@ public:
 
         horizontalLayout_2->addWidget(label_2);
 
-        lineEdit_2 = new QLineEdit(widget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_ruc = new QLineEdit(widget);
+        lineEdit_ruc->setObjectName(QString::fromUtf8("lineEdit_ruc"));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(lineEdit_ruc);
 
 
-        gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout_2, 0, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        lineEdit_nombre = new QLineEdit(widget);
+        lineEdit_nombre->setObjectName(QString::fromUtf8("lineEdit_nombre"));
+
+        horizontalLayout->addWidget(lineEdit_nombre);
+
+
+        gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -91,10 +91,10 @@ public:
 
         horizontalLayout_3->addWidget(label_3);
 
-        lineEdit_3 = new QLineEdit(widget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_direccion = new QLineEdit(widget);
+        lineEdit_direccion->setObjectName(QString::fromUtf8("lineEdit_direccion"));
 
-        horizontalLayout_3->addWidget(lineEdit_3);
+        horizontalLayout_3->addWidget(lineEdit_direccion);
 
 
         gridLayout->addLayout(horizontalLayout_3, 2, 0, 1, 1);
@@ -109,8 +109,8 @@ public:
     {
         ui_new_venta_cotizacion->setWindowTitle(QApplication::translate("ui_new_venta_cotizacion", "Form", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ui_new_venta_cotizacion", "Buscar cliente...", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("ui_new_venta_cotizacion", "Nombre", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_new_venta_cotizacion", "DNI o RUC", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("ui_new_venta_cotizacion", "Nombre", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ui_new_venta_cotizacion", "Direcci\303\263n", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
