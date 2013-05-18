@@ -2,6 +2,12 @@
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<!-- Written by Qt Creator 2.4.1, 2013-05-17T22:36:04. -->
+=======
+<<<<<<< HEAD
+>>>>>>> asdas
+<<<<<<< HEAD
 <!-- Written by Qt Creator 2.4.1, 2013-05-13T22:04:31. -->
 =======
 <<<<<<< HEAD
@@ -13,6 +19,10 @@
 =======
 <!-- Written by Qt Creator 2.4.1, 2013-05-17T22:04:29. -->
 >>>>>>> <zx
+<<<<<<< HEAD
+=======
+>>>>>>> 630d62b18b5a306a7b97d301c1cd7bf456c03418
+>>>>>>> asdas
 <qtcreator>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -115,10 +125,20 @@
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/Milton/Documents/GitHub/TheProyect/ManagerM</value>
+=======
+<<<<<<< HEAD
+>>>>>>> asdas
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/JanFranco/Documents/GitHub/TheProyect/ManagerM</value>
 =======
     <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/Milton/Documents/GitHub/TheProyect/ManagerM</value>
 >>>>>>> <zx
+<<<<<<< HEAD
+=======
+>>>>>>> 630d62b18b5a306a7b97d301c1cd7bf456c03418
+>>>>>>> asdas
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId">4</value>
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">false</value>
 =======
@@ -230,6 +250,12 @@
   <variable>ProjectExplorer.Project.Updater.EnvironmentId</variable>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  <value type="QString">{5cc0e5d1-85e0-46ac-b662-00ec59e8df20}</value>
+=======
+<<<<<<< HEAD
+>>>>>>> asdas
+<<<<<<< HEAD
   <value type="QString">{e2cd8a73-1570-478d-b1db-f046084e3ed1}</value>
 =======
   <value type="QString">{5cc0e5d1-85e0-46ac-b662-00ec59e8df20}</value>
@@ -237,6 +263,10 @@
 =======
   <value type="QString">{5cc0e5d1-85e0-46ac-b662-00ec59e8df20}</value>
 >>>>>>> <zx
+<<<<<<< HEAD
+=======
+>>>>>>> 630d62b18b5a306a7b97d301c1cd7bf456c03418
+>>>>>>> asdas
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>
