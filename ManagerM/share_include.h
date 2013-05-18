@@ -139,8 +139,11 @@ using namespace std;
 #include "ui_new_venta_proforma.h"
 #include "ui_edit_personalinformation.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "ui_search_cliente.h"
 =======
+=======
+>>>>>>> <zx
 
 
 #include "ui_new_boleta_sistema.h"

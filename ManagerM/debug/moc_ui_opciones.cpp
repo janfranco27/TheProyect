@@ -2,14 +2,20 @@
 ** Meta object code from reading C++ file 'ui_opciones.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Mon 13. May 21:56:16 2013
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> <zx
 ** Created: Sat 11. May 12:55:05 2013
 =======
 ** Created: Sat 11. May 15:38:29 2013
 >>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
+<<<<<<< HEAD
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

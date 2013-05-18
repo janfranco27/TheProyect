@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Written by Qt Creator 2.4.1, 2013-05-13T22:04:31. -->
 =======
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
 <!-- Written by Qt Creator 2.4.1, 2013-05-11T15:49:48. -->
 >>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+<!-- Written by Qt Creator 2.4.1, 2013-05-17T22:04:29. -->
+>>>>>>> <zx
 <qtcreator>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -110,7 +114,11 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/JanFranco/Documents/GitHub/TheProyect/ManagerM</value>
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/Milton/Documents/GitHub/TheProyect/ManagerM</value>
+>>>>>>> <zx
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId">4</value>
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">false</value>
 =======
@@ -221,10 +229,14 @@
  <data>
   <variable>ProjectExplorer.Project.Updater.EnvironmentId</variable>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <value type="QString">{e2cd8a73-1570-478d-b1db-f046084e3ed1}</value>
 =======
   <value type="QString">{5cc0e5d1-85e0-46ac-b662-00ec59e8df20}</value>
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+  <value type="QString">{5cc0e5d1-85e0-46ac-b662-00ec59e8df20}</value>
+>>>>>>> <zx
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>

@@ -6,17 +6,82 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>739</width>
+=======
+    <width>766</width>
+>>>>>>> <zx
     <height>121</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+<<<<<<< HEAD
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>620</x>
+=======
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>261</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Razón Social</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>RUC</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Dirección</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+>>>>>>> <zx
      <y>70</y>
      <width>101</width>
      <height>23</height>
@@ -24,6 +89,7 @@
    </property>
    <property name="text">
     <string>Buscar cliente...</string>
+<<<<<<< HEAD
    </property>
   </widget>
   <widget class="QWidget" name="">
@@ -34,6 +100,8 @@
      <width>261</width>
      <height>80</height>
     </rect>
+=======
+>>>>>>> <zx
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">

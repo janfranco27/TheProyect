@@ -2,14 +2,20 @@
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Sat 11. May 21:01:26 2013
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> <zx
 ** Created: Sat 11. May 12:50:18 2013
 =======
 ** Created: Sat 11. May 15:20:53 2013
 >>>>>>> fa606a52b2bab31aea78aa989b6645b6ad87f82f
+<<<<<<< HEAD
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -107,7 +113,11 @@ public:
     QFrame *line_4;
     QTableView *tableView_articulos3;
     QLabel *label_3;
+<<<<<<< HEAD
     QWidget *layoutWidget;
+=======
+    QWidget *widget;
+>>>>>>> <zx
     QGridLayout *gridLayout_6;
     QHBoxLayout *horizontalLayout_14;
     QHBoxLayout *horizontalLayout_2;
@@ -475,17 +485,28 @@ public:
         sizePolicy3.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy3);
         label_3->setFont(font);
+<<<<<<< HEAD
         layoutWidget = new QWidget(page_3);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(10, 57, 731, 141));
         gridLayout_6 = new QGridLayout(layoutWidget);
+=======
+        widget = new QWidget(page_3);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 57, 731, 141));
+        gridLayout_6 = new QGridLayout(widget);
+>>>>>>> <zx
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setObjectName(QString::fromUtf8("horizontalLayout_14"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+<<<<<<< HEAD
         label_6 = new QLabel(layoutWidget);
+=======
+        label_6 = new QLabel(widget);
+>>>>>>> <zx
         label_6->setObjectName(QString::fromUtf8("label_6"));
         sizePolicy2.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
         label_6->setSizePolicy(sizePolicy2);
@@ -494,19 +515,31 @@ public:
 
         horizontalLayout_2->addWidget(label_6);
 
+<<<<<<< HEAD
         lineEdit_serie = new QLineEdit(layoutWidget);
+=======
+        lineEdit_serie = new QLineEdit(widget);
+>>>>>>> <zx
         lineEdit_serie->setObjectName(QString::fromUtf8("lineEdit_serie"));
         lineEdit_serie->setMinimumSize(QSize(100, 0));
         lineEdit_serie->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_2->addWidget(lineEdit_serie);
 
+<<<<<<< HEAD
         label_7 = new QLabel(layoutWidget);
+=======
+        label_7 = new QLabel(widget);
+>>>>>>> <zx
         label_7->setObjectName(QString::fromUtf8("label_7"));
 
         horizontalLayout_2->addWidget(label_7);
 
+<<<<<<< HEAD
         lineEdit_numero = new QLineEdit(layoutWidget);
+=======
+        lineEdit_numero = new QLineEdit(widget);
+>>>>>>> <zx
         lineEdit_numero->setObjectName(QString::fromUtf8("lineEdit_numero"));
         lineEdit_numero->setMinimumSize(QSize(100, 0));
         lineEdit_numero->setMaximumSize(QSize(100, 16777215));
@@ -522,7 +555,11 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+<<<<<<< HEAD
         label_8 = new QLabel(layoutWidget);
+=======
+        label_8 = new QLabel(widget);
+>>>>>>> <zx
         label_8->setObjectName(QString::fromUtf8("label_8"));
         sizePolicy2.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy2);
@@ -531,7 +568,11 @@ public:
 
         horizontalLayout_3->addWidget(label_8);
 
+<<<<<<< HEAD
         dateEdit_fecha_emision = new QDateEdit(layoutWidget);
+=======
+        dateEdit_fecha_emision = new QDateEdit(widget);
+>>>>>>> <zx
         dateEdit_fecha_emision->setObjectName(QString::fromUtf8("dateEdit_fecha_emision"));
         dateEdit_fecha_emision->setMinimumSize(QSize(100, 0));
         dateEdit_fecha_emision->setMaximumSize(QSize(100, 16777215));
@@ -545,7 +586,11 @@ public:
 
         gridLayout_6->addLayout(horizontalLayout_14, 0, 0, 1, 1);
 
+<<<<<<< HEAD
         widget_venta = new QWidget(layoutWidget);
+=======
+        widget_venta = new QWidget(widget);
+>>>>>>> <zx
         widget_venta->setObjectName(QString::fromUtf8("widget_venta"));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);

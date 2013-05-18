@@ -6,16 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>711</width>
     <height>105</height>
+=======
+    <width>446</width>
+    <height>123</height>
+>>>>>>> <zx
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
+<<<<<<< HEAD
      <x>600</x>
      <y>70</y>
      <width>101</width>
@@ -42,25 +48,56 @@
        <widget class="QLabel" name="label_2">
         <property name="text">
          <string>DNI o RUC</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_ruc"/>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
+=======
+     <x>30</x>
+     <y>20</y>
+     <width>261</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
          <string>Nombre</string>
+>>>>>>> <zx
         </property>
        </widget>
       </item>
       <item>
+<<<<<<< HEAD
+       <widget class="QLineEdit" name="lineEdit_ruc"/>
+=======
+       <widget class="QLineEdit" name="lineEdit"/>
+>>>>>>> <zx
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+<<<<<<< HEAD
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Nombre</string>
+=======
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>DNI o RUC</string>
+>>>>>>> <zx
+        </property>
+       </widget>
+      </item>
+      <item>
+<<<<<<< HEAD
        <widget class="QLineEdit" name="lineEdit_nombre"/>
+=======
+       <widget class="QLineEdit" name="lineEdit_2"/>
+>>>>>>> <zx
       </item>
      </layout>
     </item>
@@ -74,11 +111,31 @@
        </widget>
       </item>
       <item>
+<<<<<<< HEAD
        <widget class="QLineEdit" name="lineEdit_direccion"/>
+=======
+       <widget class="QLineEdit" name="lineEdit_3"/>
+>>>>>>> <zx
       </item>
      </layout>
     </item>
    </layout>
+<<<<<<< HEAD
+=======
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar cliente...</string>
+   </property>
+>>>>>>> <zx
   </widget>
  </widget>
  <resources/>

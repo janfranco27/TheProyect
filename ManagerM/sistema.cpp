@@ -504,10 +504,14 @@ vector<_QSTR> Sistema::getAllTiposUsuarios()
     QSqlQuery query=getSelectQuery(select,from);
     vector<_QSTR> tiposUsuario;
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(query.exec())
 =======
     for(int i=0;i<(int)result.size();i++)
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+    for(int i=0;i<(int)result.size();i++)
+>>>>>>> <zx
     {
         while(query.next())
         {
@@ -525,10 +529,14 @@ vector<_QSTR> Sistema::getAllTiendas()
 
     vector<_QSTR> tiendas;
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(query.exec())
 =======
     for(int i=0;i<(int)result.size();i++)
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+    for(int i=0;i<(int)result.size();i++)
+>>>>>>> <zx
     {
         while(query.next())
         {
@@ -546,10 +554,14 @@ vector<_QSTR> Sistema::getAllRegiones()
     QSqlQuery query=getSelectQuery(select,from);
     vector<_QSTR> region;
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(query.exec())
 =======
     for(int i=0;i<(int)result.size();i++)
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+    for(int i=0;i<(int)result.size();i++)
+>>>>>>> <zx
     {
         while(query.next())
         {

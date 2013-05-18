@@ -91,10 +91,13 @@ INPUT(
 ./debug\ui_new_venta_proforma.o
 ./debug\ui_new_venta_cotizacion.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 ./debug\ui_edit_personalinformation.o
 ./debug\ui_search_cliente.o
 =======
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o
@@ -145,9 +148,12 @@ INPUT(
 ./debug\moc_ui_new_venta_proforma.o
 ./debug\moc_ui_new_venta_cotizacion.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 ./debug\moc_ui_edit_personalinformation.o
 ./debug\moc_ui_search_cliente.o
 =======
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 ./debug\qrc_Icons.o
 );

@@ -6,36 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>553</width>
     <height>105</height>
+=======
+    <width>480</width>
+    <height>116</height>
+>>>>>>> <zx
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget_2">
    <property name="geometry">
     <rect>
+<<<<<<< HEAD
      <x>0</x>
      <y>70</y>
      <width>321</width>
+=======
+     <x>40</x>
+     <y>20</y>
+     <width>151</width>
+>>>>>>> <zx
      <height>22</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Dirección</string>
+       <string>Dni</string>
       </property>
      </widget>
     </item>
     <item>
+<<<<<<< HEAD
      <widget class="QLineEdit" name="lineEdit_direccion"/>
+=======
+     <widget class="QLineEdit" name="lineEdit_3"/>
+>>>>>>> <zx
     </item>
    </layout>
   </widget>
   <widget class="QWidget" name="layoutWidget">
+<<<<<<< HEAD
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -72,6 +88,48 @@
        <widget class="QLineEdit" name="lineEdit_nombre"/>
       </item>
      </layout>
+=======
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>20</y>
+     <width>178</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Nombre</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Dirección</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_2"/>
+>>>>>>> <zx
     </item>
    </layout>
   </widget>

@@ -662,7 +662,11 @@
           <string>Complete los datos para la venta</string>
          </property>
         </widget>
+<<<<<<< HEAD
         <widget class="QWidget" name="layoutWidget">
+=======
+        <widget class="QWidget" name="">
+>>>>>>> <zx
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -826,6 +830,11 @@
  </widget>
  <tabstops>
   <tabstop>le_nombre</tabstop>
+<<<<<<< HEAD
+=======
+  <tabstop>cb_marca</tabstop>
+  <tabstop>cb_medida</tabstop>
+>>>>>>> <zx
   <tabstop>tableView_articulos_1</tabstop>
   <tabstop>pushButton_down</tabstop>
   <tabstop>pushButton_up</tabstop>

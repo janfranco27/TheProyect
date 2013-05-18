@@ -48,10 +48,14 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
     boleta->show();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    // QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
 =======
     QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+    QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
+>>>>>>> <zx
 
 
       ui->tableView_articulos_1->setModel(table);
@@ -352,6 +356,7 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
         cotizacion->show();
         qDebug()<<"Cotizacion"<<endl;
     }
+<<<<<<< HEAD
 }
 
 
@@ -429,10 +434,92 @@ void ui_new_venta::on_pushButton_down_clicked()
 
 
 
+=======
+>>>>>>> <zx
 }
 
 
 
+<<<<<<< HEAD
+=======
+void ui_new_venta::on_pushButton_down_clicked()
+{
+
+
+
+
+    QModelIndexList  list = ui->tableView_articulos_1->selectionModel()->selectedRows();
+
+    QAbstractItemModel * item_model = ui->tableView_articulos_1->model();
+
+    int n_columns = item_model->columnCount();
+
+   QStandardItemModel * select_model = (QStandardItemModel*)ui->tableView_seleccionados->model();
+
+        bool error = false;
+        QString descripcionArticuloError = "";
+
+    foreach(QModelIndex index ,list)
+    {
+        int row = index.row();
+
+        int nueva_row = select_model->rowCount();
+
+
+        int selectedArticuloStock = item_model->data(item_model->index(row,STOCK)).toInt();
+        int cantidad = ui->sp_cantidad->value();
+
+        if(cantidad<=selectedArticuloStock)
+        {
+            for(int i=0;i<n_columns;i++)
+            {
+
+
+                select_model->setItem(nueva_row,i,new QStandardItem(item_model->data(item_model->index(row,i)).toString()));
+
+            }
+
+            //Seteamos la cantidad
+
+            select_model->setItem(nueva_row,CANTIDAD,new QStandardItem(ui->sp_cantidad->text()));
+
+
+            //Actualizamos el monto total
+
+            montoTotal+= (item_model->data(item_model->index(row,PRECIO)).toDouble());
+            updatePrecioView();
+
+            if(nueva_row==0)
+            {
+                    //La tabla de seleccionadas estaba vacia
+                    //Entonces añadimos los labels de las columnas
+
+                table_view_seleccionados_addHeaders();
+
+            }
+        }
+        else
+        {
+            descripcionArticuloError += (item_model->data(item_model->index(row,DESCRIPCION)).toString())+" ";
+            error = true;
+
+        }
+
+    }
+
+
+    if(error)
+    {
+        SYSTEM->messageInformation(C_ERROR,"Error con: "+descripcionArticuloError+"\n "+ C_NO_STOCK );
+    }
+
+
+
+}
+
+
+
+>>>>>>> <zx
 void ui_new_venta::on_pushButton_up_clicked()
 {
 

@@ -90,10 +90,14 @@ SOURCES += main.cpp\
     object_e_region.cpp \
     ui_opciones_comprobante.cpp \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_new_factura_sistema.cpp \
 =======
    ui_new_factura_sistema.cpp \
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+   ui_new_factura_sistema.cpp \
+>>>>>>> <zx
     ui_new_boleta_sistema.cpp \
     object_e_igv_sistema.cpp \
     object_e_factura_sistema.cpp \
@@ -102,12 +106,15 @@ SOURCES += main.cpp\
     ui_advanced_search_articulo.cpp \
     ui_new_compra_orden.cpp \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_edit_compra_orden.cpp \
     ui_new_venta_proforma.cpp \
     ui_new_venta_cotizacion.cpp \
     ui_edit_personalinformation.cpp \
     ui_search_cliente.cpp
 =======
+=======
+>>>>>>> <zx
     ui_edit_compra_orden.cpp\
     ui_new_venta_proforma.cpp \
     ui_new_venta_cotizacion.cpp \
@@ -115,7 +122,10 @@ SOURCES += main.cpp\
 
 
 
+<<<<<<< HEAD
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 
 HEADERS  += ui_main.h \
     share_include.h \
@@ -207,12 +217,15 @@ HEADERS  += ui_main.h \
     ui_advanced_search_articulo.h \
     ui_new_compra_orden.h \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_edit_compra_orden.h \
     ui_new_venta_proforma.h \
     ui_new_venta_cotizacion.h \
     ui_edit_personalinformation.h \
     ui_search_cliente.h
 =======
+=======
+>>>>>>> <zx
     ui_edit_compra_orden.h\
       ui_new_venta_proforma.h \
     ui_new_venta_cotizacion.h \
@@ -262,17 +275,23 @@ FORMS    += ui_main.ui \
     ui_advanced_search_articulo.ui \
     ui_new_compra_orden.ui \
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui_edit_compra_orden.ui \
     ui_new_venta_proforma.ui \
     ui_new_venta_cotizacion.ui \
     ui_edit_personalinformation.ui \
     ui_search_cliente.ui
 =======
+=======
+>>>>>>> <zx
     ui_edit_compra_orden.ui\
     ui_new_venta_proforma.ui \
     ui_new_venta_cotizacion.ui \
 
+<<<<<<< HEAD
 >>>>>>> 28382dcb3dff35f7dad6d3f153e8d2d18c8726be
+=======
+>>>>>>> <zx
 
 
 RESOURCES += \
