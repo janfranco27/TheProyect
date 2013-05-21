@@ -6,7 +6,8 @@ ui_new_boleta_sistema::ui_new_boleta_sistema(QWidget *parent) :
     ui(new Ui::ui_new_boleta_sistema)
 {
     ui->setupUi(this);
-    //obj_boleta = new object_e_boleta_sistema;
+
+    obj_boleta = new object_e_boleta_sistema;
 }
 
 ui_new_boleta_sistema::~ui_new_boleta_sistema()
@@ -39,6 +40,8 @@ int ui_new_boleta_sistema::mf_get_parent()
 void ui_new_boleta_sistema::on_pushButton_new_clicked()
 {
 
+    qDebug()<<"NUEVA BOLETA"<<endl;
+
     obj_boleta->mf_set_serie(ui->spinBox_serie->text());
     obj_boleta->mf_set_numero_inicio(ui->spinBox_numero_i->text());
     obj_boleta->mf_set_numero_fin(ui->spinBox_numero_f->text());
@@ -48,6 +51,7 @@ void ui_new_boleta_sistema::on_pushButton_new_clicked()
 
     if(parent==0)
     {
+        qDebug()<<"FROM OPCIONES_COMPROBANTE"<<endl;
         parent_form->update_table_boletas();
     }
 

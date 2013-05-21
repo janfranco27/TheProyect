@@ -37,8 +37,10 @@ void ui_opciones_comprobante::update_table_facturas()
 void ui_opciones_comprobante::on_pushButton_new_b_clicked()
 {
 
+    qDebug()<<"NUEVA BOLETA"<<endl;
+
     ui_new_boleta_sistema* boleta_form = new ui_new_boleta_sistema;
-    boleta_form->setAttribute(Qt::WA_DeleteOnClose);
+    //boleta_form->setAttribute(Qt::WA_DeleteOnClose);
     boleta_form->mf_set_parent_form(this);
     boleta_form->mf_set_parent(0);
     boleta_form->show();
