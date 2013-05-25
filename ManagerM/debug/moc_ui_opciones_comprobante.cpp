@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_comprobante.h'
 **
-** Created: Fri 17. May 23:53:03 2013
+** Created: Sat 25. May 10:51:59 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_opciones_comprobante[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,7 @@ static const uint qt_meta_data_ui_opciones_comprobante[] = {
 
  // slots: signature, parameters, type, tag, flags
       25,   24,   24,   24, 0x08,
+      55,   24,   24,   24, 0x08,
 
        0        // eod
 };
@@ -39,6 +40,7 @@ static const uint qt_meta_data_ui_opciones_comprobante[] = {
 static const char qt_meta_stringdata_ui_opciones_comprobante[] = {
     "ui_opciones_comprobante\0\0"
     "on_pushButton_new_b_clicked()\0"
+    "on_pushButton_new_f_clicked()\0"
 };
 
 void ui_opciones_comprobante::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -48,6 +50,7 @@ void ui_opciones_comprobante::qt_static_metacall(QObject *_o, QMetaObject::Call 
         ui_opciones_comprobante *_t = static_cast<ui_opciones_comprobante *>(_o);
         switch (_id) {
         case 0: _t->on_pushButton_new_b_clicked(); break;
+        case 1: _t->on_pushButton_new_f_clicked(); break;
         default: ;
         }
     }
@@ -86,9 +89,9 @@ int ui_opciones_comprobante::qt_metacall(QMetaObject::Call _c, int _id, void **_
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

@@ -74,7 +74,7 @@ void ui_advanced_search_articulo::filterTodos()
 
 void ui_advanced_search_articulo::filterCodigo()
 {
-     queryFilter ="pk_articulo LIKE %1% ";
+    queryFilter ="pk_articulo LIKE '%1%' ";
 }
 
 void ui_advanced_search_articulo::filterMarca()

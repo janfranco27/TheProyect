@@ -95,6 +95,7 @@ INPUT(
 ./release\ui_new_compra_nota_debito.o
 ./release\ui_new_compra_nota_credito.o
 ./release\ui_global_manager_articulos.o
+./release\searcher_articulos.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o
@@ -149,5 +150,6 @@ INPUT(
 ./release\moc_ui_new_compra_nota_debito.o
 ./release\moc_ui_new_compra_nota_credito.o
 ./release\moc_ui_global_manager_articulos.o
+./release\moc_searcher_articulos.o
 ./release\qrc_Icons.o
 );

@@ -146,17 +146,21 @@ bool object_e_factura_sistema::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_factura_sistema(";
+	if (md_o_pk_factura_s != "")
 	str_query += "pk_factura_s, ";
-	str_query += "serie, ";
-	str_query += "numero_inicio, ";
-	str_query += "numero_fin, ";
-	str_query += "numero_actual";
+	str_query += "serie";
+	str_query += ", numero_inicio";
+	str_query += ", numero_fin";
+	str_query += ", numero_actual";
 	str_query += ") VALUES(";
+	if (md_o_pk_factura_s!= "")
+	{
 	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
+	}
 	str_query += "?";
+	str_query += ", ?";
+	str_query += ", ?";
+	str_query += ", ?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
@@ -165,8 +169,6 @@ bool object_e_factura_sistema::mf_add()
 	{
 		query.bindValue(integer++, md_o_pk_factura_s);
 	}
-	else
-		query.bindValue(integer++, "NULL");
 	query.bindValue(integer++, md_o_serie);
 	query.bindValue(integer++, md_o_numero_inicio);
 	query.bindValue(integer++, md_o_numero_fin);

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_ventas.ui'
 **
-** Created: Wed 15. May 15:57:47 2013
+** Created: Thu 23. May 22:20:18 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,10 +36,12 @@ public:
     QSplitter *splitter;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer;
     QLabel *label;
     QTreeWidget *treeWidget_ventas;
     QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_nuevo;
     QPushButton *pushButton_editar;
@@ -54,7 +56,10 @@ public:
         if (ui_module_ventas->objectName().isEmpty())
             ui_module_ventas->setObjectName(QString::fromUtf8("ui_module_ventas"));
         ui_module_ventas->resize(800, 258);
+        ui_module_ventas->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         gridLayout = new QGridLayout(ui_module_ventas);
+        gridLayout->setSpacing(0);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         splitter = new QSplitter(ui_module_ventas);
         splitter->setObjectName(QString::fromUtf8("splitter"));
@@ -66,6 +71,10 @@ public:
         verticalLayout->setSpacing(10);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer);
+
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
@@ -109,6 +118,10 @@ public:
         verticalLayout_2->setSpacing(10);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));

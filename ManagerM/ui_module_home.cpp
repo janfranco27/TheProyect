@@ -19,7 +19,7 @@ void ui_module_home::on_pushButton_ventas_clicked()
 {
     ui_module_ventas* form_ventas = new ui_module_ventas;
     APP_MANAGERM->setCentralWidget(form_ventas);
-    APP_TOOL_BAR->setMaximumHeight(63);
+    APP_TOOL_BAR->setMaximumHeight(C_TOOLBAR_SIZE);
 }
 
 void ui_module_home::on_pushButton_sistema_clicked()
@@ -35,21 +35,21 @@ void ui_module_home::on_pushButton_articulo_clicked()
 
     //Revisar
 
-     APP_TOOL_BAR->setMaximumHeight(63);
+     APP_TOOL_BAR->setMaximumHeight(C_TOOLBAR_SIZE);
 }
 
 void ui_module_home::on_pushButton_colaboradores_clicked()
 {
     ui_module_colaboradores* form_colaboradores = new ui_module_colaboradores;
     APP_MANAGERM->setCentralWidget(form_colaboradores);
-    APP_TOOL_BAR->setMaximumHeight(63);
+    APP_TOOL_BAR->setMaximumHeight(C_TOOLBAR_SIZE);
 }
 
 void ui_module_home::on_pushButton_compras_clicked()
 {
     ui_module_compras* form_compras = new ui_module_compras();
     APP_MANAGERM->setCentralWidget(form_compras);
-    APP_TOOL_BAR->setMaximumHeight(63);
+    APP_TOOL_BAR->setMaximumHeight(C_TOOLBAR_SIZE);
 }
 
 void ui_module_home::on_pushButton_usuario_clicked()

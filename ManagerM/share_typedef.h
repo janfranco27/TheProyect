@@ -91,6 +91,7 @@ enum opciones_articulo{marca,medida,grupo};
 
 
 
+
 //CONSTANTES DEL SISTEMA
 
     //sistema en general
@@ -103,6 +104,9 @@ enum opciones_articulo{marca,medida,grupo};
     #define C_LOG_FILE_NAME "managerm"
     #define C_LOG_FILE_ERROR_NAME "managermx"
 
+    //toolbar
+
+    #define C_TOOLBAR_SIZE 80
 
     //base de datos
 

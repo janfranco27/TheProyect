@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_global_manager_articulos.ui'
 **
-** Created: Thu 16. May 22:37:22 2013
+** Created: Sat 25. May 11:00:06 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -24,7 +24,6 @@
 #include <QtGui/QSpacerItem>
 #include <QtGui/QTableView>
 #include <QtGui/QWidget>
-#include "ui_advanced_search_articulo.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -42,22 +41,22 @@ public:
     QComboBox *comboBox_modo;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_4;
-    ui_advanced_search_articulo *busqueda;
+    QLineEdit *lineEdit_descripcion;
     QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_5;
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label;
-    QLineEdit *lineEdit_marca;
+    QComboBox *comboBox_marca;
     QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_2;
-    QLineEdit *lineEdit_medida;
+    QComboBox *comboBox_medida;
     QSpacerItem *horizontalSpacer_7;
     QHBoxLayout *horizontalLayout_8;
-    QLabel *label_4;
-    QLineEdit *lineEdit_grupo;
+    QLabel *label_grupo;
+    QComboBox *comboBox_grupo;
     QSpacerItem *horizontalSpacer_10;
     QHBoxLayout *horizontalLayout_9;
     QFrame *line;
@@ -125,11 +124,10 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        busqueda = new ui_advanced_search_articulo(ui_global_manager_articulos);
-        busqueda->setObjectName(QString::fromUtf8("busqueda"));
-        busqueda->setMinimumSize(QSize(0, 0));
+        lineEdit_descripcion = new QLineEdit(ui_global_manager_articulos);
+        lineEdit_descripcion->setObjectName(QString::fromUtf8("lineEdit_descripcion"));
 
-        horizontalLayout_4->addWidget(busqueda);
+        horizontalLayout_4->addWidget(lineEdit_descripcion);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -160,12 +158,11 @@ public:
 
         horizontalLayout_6->addWidget(label);
 
-        lineEdit_marca = new QLineEdit(ui_global_manager_articulos);
-        lineEdit_marca->setObjectName(QString::fromUtf8("lineEdit_marca"));
-        lineEdit_marca->setMinimumSize(QSize(150, 0));
-        lineEdit_marca->setMaximumSize(QSize(200, 16777215));
+        comboBox_marca = new QComboBox(ui_global_manager_articulos);
+        comboBox_marca->setObjectName(QString::fromUtf8("comboBox_marca"));
+        comboBox_marca->setMinimumSize(QSize(150, 0));
 
-        horizontalLayout_6->addWidget(lineEdit_marca);
+        horizontalLayout_6->addWidget(comboBox_marca);
 
         horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -182,12 +179,11 @@ public:
 
         horizontalLayout_7->addWidget(label_2);
 
-        lineEdit_medida = new QLineEdit(ui_global_manager_articulos);
-        lineEdit_medida->setObjectName(QString::fromUtf8("lineEdit_medida"));
-        lineEdit_medida->setMinimumSize(QSize(150, 0));
-        lineEdit_medida->setMaximumSize(QSize(200, 16777215));
+        comboBox_medida = new QComboBox(ui_global_manager_articulos);
+        comboBox_medida->setObjectName(QString::fromUtf8("comboBox_medida"));
+        comboBox_medida->setMinimumSize(QSize(150, 0));
 
-        horizontalLayout_7->addWidget(lineEdit_medida);
+        horizontalLayout_7->addWidget(comboBox_medida);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -198,18 +194,17 @@ public:
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        label_4 = new QLabel(ui_global_manager_articulos);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setMinimumSize(QSize(40, 0));
+        label_grupo = new QLabel(ui_global_manager_articulos);
+        label_grupo->setObjectName(QString::fromUtf8("label_grupo"));
+        label_grupo->setMinimumSize(QSize(40, 0));
 
-        horizontalLayout_8->addWidget(label_4);
+        horizontalLayout_8->addWidget(label_grupo);
 
-        lineEdit_grupo = new QLineEdit(ui_global_manager_articulos);
-        lineEdit_grupo->setObjectName(QString::fromUtf8("lineEdit_grupo"));
-        lineEdit_grupo->setMinimumSize(QSize(150, 0));
-        lineEdit_grupo->setMaximumSize(QSize(200, 16777215));
+        comboBox_grupo = new QComboBox(ui_global_manager_articulos);
+        comboBox_grupo->setObjectName(QString::fromUtf8("comboBox_grupo"));
+        comboBox_grupo->setMinimumSize(QSize(150, 0));
 
-        horizontalLayout_8->addWidget(lineEdit_grupo);
+        horizontalLayout_8->addWidget(comboBox_grupo);
 
         horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -235,9 +230,6 @@ public:
 
         gridLayout->addWidget(tableView_articulos, 10, 0, 1, 1);
 
-        QWidget::setTabOrder(lineEdit_marca, lineEdit_medida);
-        QWidget::setTabOrder(lineEdit_medida, lineEdit_grupo);
-        QWidget::setTabOrder(lineEdit_grupo, tableView_articulos);
         QWidget::setTabOrder(tableView_articulos, comboBox_modo);
 
         retranslateUi(ui_global_manager_articulos);
@@ -259,7 +251,7 @@ public:
         label_5->setText(QApplication::translate("ui_global_manager_articulos", "Restringe tus resultados por:", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_global_manager_articulos", "Marca", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_global_manager_articulos", "Medida", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("ui_global_manager_articulos", "Grupo", 0, QApplication::UnicodeUTF8));
+        label_grupo->setText(QApplication::translate("ui_global_manager_articulos", "Grupo", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

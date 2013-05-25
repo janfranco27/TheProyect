@@ -2,6 +2,8 @@
 #define UI_GLOBAL_MANAGER_ARTICULOS_H
 
 #include <QWidget>
+#include "share_include.h"
+class Searcher_Articulos;
 
 namespace Ui {
 class ui_global_manager_articulos;
@@ -18,9 +20,10 @@ public:
 private:
     Ui::ui_global_manager_articulos *ui;
 
+    Searcher_Articulos* searcher;
     void update_table_articulos();
 
-    ;
+
 };
 
 #endif // UI_GLOBAL_MANAGER_ARTICULOS_H

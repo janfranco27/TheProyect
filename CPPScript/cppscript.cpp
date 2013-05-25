@@ -489,12 +489,12 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<"\tQSqlQuery query;"<<endl;
     file<<endl;    
     file<<"\tstring str_query = \"INSERT INTO "<<str_class_name<<"(\";"<<endl;
-    //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
-    file<<"\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<"\";"<<endl;
+    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<" != \"\")"<<endl;
+    file<<"\t\tstr_query += \""<<md_o_v_column_names[0].toStdString()<<", \";"<<endl;
     //file<<"\telse"<<endl;
     //file<<"\t\tstr_query += NULL";
-    //file<<"\tstr_query += \""<<md_o_v_column_names[1].toStdString()<<"\";"<<endl;
-    for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
+    file<<"\tstr_query += \""<<md_o_v_column_names[1].toStdString()<<"\";"<<endl;
+    for(unsigned int i = 2; i < md_o_v_column_names.size(); i++)
     {
         string temp = md_o_v_column_names[i].toStdString();
         file<<"\tstr_query += \", "<<temp<<"\";"<<endl;
@@ -502,11 +502,12 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
 
 
     file<<"\tstr_query += \""<<") VALUES(\";"<<endl;
-    //file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
-    //file<<"\t{"<<endl;
+    file<<"\tif ("<<"md_o_"<<md_o_v_column_names[0].toStdString()<<"!= \"\")"<<endl;
+    file<<"\t{"<<endl;
+    file<<"\t\tstr_query += \""<<"?, \";"<<endl;
+    file<<"\t}"<<endl;
     file<<"\tstr_query += \""<<"?\";"<<endl;
-    //file<<"\t}"<<endl;
-    for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
+    for(unsigned int i = 2; i < md_o_v_column_names.size(); i++)
     {
         file<<"\tstr_query += \", "<<"?\";"<<endl;
     }
@@ -522,8 +523,8 @@ void CPPScript::mf_fillFile_cpp(_QSTR& class_name)
     file<<"\t\tquery.bindValue(integer++, "<<"md_o_"<<md_o_v_column_names[0].toStdString()<<");"<<endl;
     //file<<"\t\tinteger++;"<<endl;
     file<<"\t}"<<endl;
-    file<<"\telse"<<endl;
-    file<<"\t\tquery.bindValue(integer++, \"NULL\");"<<endl;
+    //file<<"\telse"<<endl;
+    //file<<"\t\tquery.bindValue(integer++, \"NULL\");"<<endl;
 
     for(unsigned int i = 1; i < md_o_v_column_names.size(); i++)
     {

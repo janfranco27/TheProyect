@@ -52,6 +52,7 @@ using namespace std;
 #include "ui_main.h"
 #include "share_typedef.h"
 
+#include "searcher_articulos.h"
 #include "singleton.h"
 #include "system_log.h"
 #include "database_connection.h"

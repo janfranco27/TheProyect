@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_articulos.ui'
 **
-** Created: Thu 16. May 21:52:02 2013
+** Created: Thu 23. May 22:12:50 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,7 @@ public:
     QSplitter *splitter;
     QWidget *layoutWidget_4;
     QVBoxLayout *verticalLayout_4;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton_nuevo_2;
     QPushButton *pushButton_editar_2;
@@ -48,7 +49,10 @@ public:
         if (ui_module_articulos->objectName().isEmpty())
             ui_module_articulos->setObjectName(QString::fromUtf8("ui_module_articulos"));
         ui_module_articulos->resize(822, 274);
+        ui_module_articulos->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         gridLayout = new QGridLayout(ui_module_articulos);
+        gridLayout->setSpacing(0);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         splitter = new QSplitter(ui_module_articulos);
         splitter->setObjectName(QString::fromUtf8("splitter"));
@@ -57,9 +61,12 @@ public:
         layoutWidget_4 = new QWidget(splitter);
         layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
         verticalLayout_4 = new QVBoxLayout(layoutWidget_4);
-        verticalLayout_4->setSpacing(10);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_4->addItem(verticalSpacer);
+
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));

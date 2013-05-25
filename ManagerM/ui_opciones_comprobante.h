@@ -33,6 +33,8 @@ public:
 private slots:
     void on_pushButton_new_b_clicked();
 
+    void on_pushButton_new_f_clicked();
+
 private:
     Ui::ui_opciones_comprobante *ui;
 };

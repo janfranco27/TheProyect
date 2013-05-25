@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_home.ui'
 **
-** Created: Wed 15. May 15:57:46 2013
+** Created: Tue 21. May 20:31:58 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -31,6 +31,8 @@ public:
     QGridLayout *gridLayout_2;
     QFrame *frame;
     QGridLayout *gridLayout;
+    QSpacerItem *verticalSpacer_5;
+    QSpacerItem *horizontalSpacer_7;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label;
@@ -38,25 +40,34 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_usuario;
     QPushButton *pushButton_usuario;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer_7;
     QGridLayout *gridLayout_5;
     QPushButton *pushButton_compras;
+    QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_ventas;
+    QLabel *label_2;
+    QLabel *label_5;
+    QSpacerItem *verticalSpacer;
     QPushButton *pushButton_articulo;
     QPushButton *pushButton_colaboradores;
+    QLabel *label_3;
+    QLabel *label_6;
+    QSpacerItem *verticalSpacer_3;
     QPushButton *pushButton_facturacion;
     QPushButton *pushButton_sistema;
+    QLabel *label_4;
+    QLabel *label_7;
+    QSpacerItem *verticalSpacer_2;
     QSpacerItem *horizontalSpacer_5;
     QGridLayout *gridLayout_6;
     QPushButton *pushButton_10;
     QPushButton *pushButton_11;
     QPushButton *pushButton_12;
+    QSpacerItem *verticalSpacer_8;
     QSpacerItem *horizontalSpacer_6;
-    QSpacerItem *verticalSpacer_2;
-    QSpacerItem *verticalSpacer_4;
-    QSpacerItem *horizontalSpacer_7;
-    QSpacerItem *verticalSpacer_5;
-    QSpacerItem *verticalSpacer_6;
     QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *verticalSpacer_6;
 
     void setupUi(QWidget *ui_module_home)
     {
@@ -69,11 +80,19 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         frame = new QFrame(ui_module_home);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         gridLayout = new QGridLayout(frame);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
+
+        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
+
         gridLayout_4 = new QGridLayout();
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
@@ -86,7 +105,8 @@ public:
         font.setBold(false);
         font.setWeight(50);
         label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8(""));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
         label->setInputMethodHints(Qt::ImhNone);
 
         horizontalLayout_3->addWidget(label);
@@ -106,11 +126,12 @@ public:
         label_usuario->setSizePolicy(sizePolicy);
         label_usuario->setMinimumSize(QSize(70, 0));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Segoe UI"));
+        font1.setFamily(QString::fromUtf8("Segoe UI Light"));
         font1.setPointSize(16);
         font1.setBold(false);
         font1.setWeight(50);
         label_usuario->setFont(font1);
+        label_usuario->setStyleSheet(QString::fromUtf8("color: rgb(0, 170, 255);"));
 
         horizontalLayout_4->addWidget(label_usuario);
 
@@ -138,8 +159,16 @@ public:
 
         gridLayout_4->addLayout(horizontalLayout_3, 0, 0, 1, 4);
 
+        verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_4->addItem(verticalSpacer_4, 1, 0, 1, 1);
+
+        verticalSpacer_7 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_4->addItem(verticalSpacer_7, 2, 0, 1, 1);
+
         gridLayout_5 = new QGridLayout();
-        gridLayout_5->setSpacing(10);
+        gridLayout_5->setSpacing(0);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         pushButton_compras = new QPushButton(frame);
         pushButton_compras->setObjectName(QString::fromUtf8("pushButton_compras"));
@@ -158,6 +187,10 @@ public:
 
         gridLayout_5->addWidget(pushButton_compras, 0, 0, 1, 1);
 
+        horizontalSpacer = new QSpacerItem(30, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer, 0, 1, 1, 1);
+
         pushButton_ventas = new QPushButton(frame);
         pushButton_ventas->setObjectName(QString::fromUtf8("pushButton_ventas"));
         sizePolicy1.setHeightForWidth(pushButton_ventas->sizePolicy().hasHeightForWidth());
@@ -171,7 +204,39 @@ public:
         pushButton_ventas->setIconSize(QSize(150, 150));
         pushButton_ventas->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_ventas, 0, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_ventas, 0, 2, 1, 1);
+
+        label_2 = new QLabel(frame);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy2);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Segoe UI Symbol"));
+        font2.setPointSize(10);
+        font2.setBold(false);
+        font2.setWeight(50);
+        label_2->setFont(font2);
+        label_2->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_2->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_2, 1, 0, 1, 1);
+
+        label_5 = new QLabel(frame);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font2);
+        label_5->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_5->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_5, 1, 2, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_5->addItem(verticalSpacer, 2, 0, 1, 1);
 
         pushButton_articulo = new QPushButton(frame);
         pushButton_articulo->setObjectName(QString::fromUtf8("pushButton_articulo"));
@@ -186,7 +251,7 @@ public:
         pushButton_articulo->setIconSize(QSize(150, 150));
         pushButton_articulo->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_articulo, 1, 0, 1, 1);
+        gridLayout_5->addWidget(pushButton_articulo, 3, 0, 1, 1);
 
         pushButton_colaboradores = new QPushButton(frame);
         pushButton_colaboradores->setObjectName(QString::fromUtf8("pushButton_colaboradores"));
@@ -201,7 +266,29 @@ public:
         pushButton_colaboradores->setIconSize(QSize(150, 150));
         pushButton_colaboradores->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_colaboradores, 1, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_colaboradores, 3, 2, 1, 1);
+
+        label_3 = new QLabel(frame);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font2);
+        label_3->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_3->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_3, 4, 0, 1, 1);
+
+        label_6 = new QLabel(frame);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font2);
+        label_6->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_6->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_6, 4, 2, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_5->addItem(verticalSpacer_3, 5, 0, 1, 1);
 
         pushButton_facturacion = new QPushButton(frame);
         pushButton_facturacion->setObjectName(QString::fromUtf8("pushButton_facturacion"));
@@ -216,7 +303,7 @@ public:
         pushButton_facturacion->setIconSize(QSize(150, 150));
         pushButton_facturacion->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_facturacion, 2, 0, 1, 1);
+        gridLayout_5->addWidget(pushButton_facturacion, 6, 0, 1, 1);
 
         pushButton_sistema = new QPushButton(frame);
         pushButton_sistema->setObjectName(QString::fromUtf8("pushButton_sistema"));
@@ -228,17 +315,39 @@ public:
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/Iconos/Iconos/Services.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_sistema->setIcon(icon6);
-        pushButton_sistema->setIconSize(QSize(150, 1505));
+        pushButton_sistema->setIconSize(QSize(150, 150));
         pushButton_sistema->setFlat(true);
 
-        gridLayout_5->addWidget(pushButton_sistema, 2, 1, 1, 1);
+        gridLayout_5->addWidget(pushButton_sistema, 6, 2, 1, 1);
+
+        label_4 = new QLabel(frame);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font2);
+        label_4->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_4->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_4, 7, 0, 1, 1);
+
+        label_7 = new QLabel(frame);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setFont(font2);
+        label_7->setStyleSheet(QString::fromUtf8("color: rgb(70, 70, 70);\n"
+""));
+        label_7->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_7, 7, 2, 1, 1);
 
 
-        gridLayout_4->addLayout(gridLayout_5, 2, 0, 2, 1);
+        gridLayout_4->addLayout(gridLayout_5, 3, 0, 2, 1);
 
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        verticalSpacer_2 = new QSpacerItem(17, 308, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_4->addItem(horizontalSpacer_5, 3, 1, 1, 1);
+        gridLayout_4->addItem(verticalSpacer_2, 3, 3, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(13, 114, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_4->addItem(horizontalSpacer_5, 4, 1, 1, 1);
 
         gridLayout_6 = new QGridLayout();
         gridLayout_6->setSpacing(10);
@@ -294,39 +403,27 @@ public:
 
         gridLayout_6->addWidget(pushButton_12, 0, 2, 1, 1);
 
+        verticalSpacer_8 = new QSpacerItem(20, 25, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        gridLayout_4->addLayout(gridLayout_6, 3, 2, 1, 1);
+        gridLayout_6->addItem(verticalSpacer_8, 1, 1, 1, 1);
+
+
+        gridLayout_4->addLayout(gridLayout_6, 4, 2, 1, 1);
 
         horizontalSpacer_6 = new QSpacerItem(78, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        gridLayout_4->addItem(horizontalSpacer_6, 3, 3, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(17, 308, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_4->addItem(verticalSpacer_2, 2, 3, 1, 1);
-
-        verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_4->addItem(verticalSpacer_4, 1, 0, 1, 1);
+        gridLayout_4->addItem(horizontalSpacer_6, 4, 3, 1, 1);
 
 
         gridLayout->addLayout(gridLayout_4, 1, 1, 1, 1);
 
-        horizontalSpacer_7 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_7, 1, 0, 1, 1);
-
-        verticalSpacer_5 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer_5, 0, 1, 1, 1);
+        gridLayout->addItem(horizontalSpacer_8, 1, 2, 1, 1);
 
         verticalSpacer_6 = new QSpacerItem(20, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         gridLayout->addItem(verticalSpacer_6, 2, 1, 1, 1);
-
-        horizontalSpacer_8 = new QSpacerItem(41, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_8, 1, 2, 1, 1);
 
 
         gridLayout_2->addWidget(frame, 0, 0, 1, 1);
@@ -366,6 +463,8 @@ public:
         pushButton_ventas->setToolTip(QApplication::translate("ui_module_home", "Ventas", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         pushButton_ventas->setText(QString());
+        label_2->setText(QApplication::translate("ui_module_home", "Compras", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("ui_module_home", "Ventas", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         pushButton_articulo->setToolTip(QApplication::translate("ui_module_home", "Articulos", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -374,6 +473,8 @@ public:
         pushButton_colaboradores->setToolTip(QApplication::translate("ui_module_home", "Colaboradores", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         pushButton_colaboradores->setText(QString());
+        label_3->setText(QApplication::translate("ui_module_home", "Articulos", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("ui_module_home", "Colaboradores", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         pushButton_facturacion->setToolTip(QApplication::translate("ui_module_home", "Facturacion", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -382,6 +483,8 @@ public:
         pushButton_sistema->setToolTip(QApplication::translate("ui_module_home", "Ajustes", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         pushButton_sistema->setText(QString());
+        label_4->setText(QApplication::translate("ui_module_home", "Facturacion", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ui_module_home", "Opciones", 0, QApplication::UnicodeUTF8));
         pushButton_10->setText(QString());
         pushButton_11->setText(QString());
         pushButton_12->setText(QString());

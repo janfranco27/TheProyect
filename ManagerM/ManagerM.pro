@@ -108,7 +108,8 @@ SOURCES += main.cpp\
     ui_compra_nota_credito.cpp \
     ui_new_compra_nota_debito.cpp \
     ui_new_compra_nota_credito.cpp \
-    ui_global_manager_articulos.cpp
+    ui_global_manager_articulos.cpp \
+    searcher_articulos.cpp
 
 
 HEADERS  += ui_main.h \
@@ -210,7 +211,8 @@ HEADERS  += ui_main.h \
     ui_compra_nota_credito.h \
     ui_new_compra_nota_debito.h \
     ui_new_compra_nota_credito.h \
-    ui_global_manager_articulos.h
+    ui_global_manager_articulos.h \
+    searcher_articulos.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \

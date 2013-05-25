@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_login.ui'
 **
-** Created: Wed 15. May 15:57:45 2013
+** Created: Thu 23. May 22:50:31 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -28,20 +28,19 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_login
 {
 public:
-    QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *horizontalLayout_3;
     QLabel *label_usuario;
     QLineEdit *lineEdit_usuario;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_contrasenia;
     QLineEdit *lineEdit_contrasenia;
-    QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_aceptar;
     QPushButton *pushButton_cancelar;
     QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *verticalSpacer;
 
     void setupUi(QWidget *ui_login)
     {
@@ -50,31 +49,34 @@ public:
         ui_login->resize(270, 117);
         ui_login->setMinimumSize(QSize(270, 117));
         ui_login->setMaximumSize(QSize(270, 117));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Segoe UI"));
+        ui_login->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Personal.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_login->setWindowIcon(icon);
-        gridLayout_2 = new QGridLayout(ui_login);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        gridLayout = new QGridLayout();
+        gridLayout = new QGridLayout(ui_login);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_usuario = new QLabel(ui_login);
         label_usuario->setObjectName(QString::fromUtf8("label_usuario"));
         label_usuario->setMinimumSize(QSize(80, 0));
         label_usuario->setMaximumSize(QSize(80, 16777215));
+        label_usuario->setFont(font);
+        label_usuario->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        horizontalLayout->addWidget(label_usuario);
+        horizontalLayout_3->addWidget(label_usuario);
 
         lineEdit_usuario = new QLineEdit(ui_login);
         lineEdit_usuario->setObjectName(QString::fromUtf8("lineEdit_usuario"));
         lineEdit_usuario->setMinimumSize(QSize(150, 0));
         lineEdit_usuario->setMaximumSize(QSize(150, 16777215));
 
-        horizontalLayout->addWidget(lineEdit_usuario);
+        horizontalLayout_3->addWidget(lineEdit_usuario);
 
 
-        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
@@ -82,6 +84,8 @@ public:
         label_contrasenia->setObjectName(QString::fromUtf8("label_contrasenia"));
         label_contrasenia->setMinimumSize(QSize(80, 0));
         label_contrasenia->setMaximumSize(QSize(80, 16777215));
+        label_contrasenia->setFont(font);
+        label_contrasenia->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_contrasenia);
 
@@ -96,38 +100,39 @@ public:
 
         gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
 
-        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer, 2, 0, 1, 1);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer);
+        horizontalLayout->addItem(horizontalSpacer);
 
         pushButton_aceptar = new QPushButton(ui_login);
         pushButton_aceptar->setObjectName(QString::fromUtf8("pushButton_aceptar"));
+        pushButton_aceptar->setFont(font);
         pushButton_aceptar->setCheckable(false);
         pushButton_aceptar->setAutoDefault(true);
         pushButton_aceptar->setDefault(true);
+        pushButton_aceptar->setFlat(false);
 
-        horizontalLayout_3->addWidget(pushButton_aceptar);
+        horizontalLayout->addWidget(pushButton_aceptar);
 
         pushButton_cancelar = new QPushButton(ui_login);
         pushButton_cancelar->setObjectName(QString::fromUtf8("pushButton_cancelar"));
+        pushButton_cancelar->setFont(font);
+        pushButton_cancelar->setFlat(false);
 
-        horizontalLayout_3->addWidget(pushButton_cancelar);
+        horizontalLayout->addWidget(pushButton_cancelar);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_2);
+        horizontalLayout->addItem(horizontalSpacer_2);
 
 
-        gridLayout->addLayout(horizontalLayout_3, 3, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout, 3, 0, 1, 1);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
+        gridLayout->addItem(verticalSpacer, 2, 0, 1, 1);
 
 
         retranslateUi(ui_login);
