@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_global_manager_articulos.ui'
 **
-** Created: Sat 25. May 11:00:06 2013
+** Created: Sat 1. Jun 21:02:38 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

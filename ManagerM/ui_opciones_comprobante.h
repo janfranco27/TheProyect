@@ -35,6 +35,14 @@ private slots:
 
     void on_pushButton_new_f_clicked();
 
+    void on_tableView_factura_clicked(const QModelIndex &index);
+
+    void on_tableView_boleta_clicked(const QModelIndex &index);
+
+    void on_pushButton_save_b_clicked();
+
+    void on_pushButton_save_f_clicked();
+
 private:
     Ui::ui_opciones_comprobante *ui;
 };

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_comprobante.ui'
 **
-** Created: Tue 21. May 19:19:29 2013
+** Created: Sat 1. Jun 21:02:37 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

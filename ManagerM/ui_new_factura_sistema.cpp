@@ -45,7 +45,7 @@ void ui_new_factura_sistema::on_pushButton_new_clicked()
 
     if(parent==0)
     {
-        parent_form->update_table_boletas();
+        parent_form->update_table_facturas();
     }
 
     close();
