@@ -170,6 +170,7 @@ QSqlQuery Sistema::getSelectQuery(vector<_QSTR> & select,vector<_QSTR> & from,ve
                 if(where[i].second!="")
                 {
                     query.addBindValue(where[i].second);
+                   // qDebug()<<"bindeo: "<<where[i].second;
                 }
             }
 
@@ -503,15 +504,11 @@ vector<_QSTR> Sistema::getAllTiposUsuarios()
 
     QSqlQuery query=getSelectQuery(select,from);
     vector<_QSTR> tiposUsuario;
-
     if(query.exec())
     {
-        for(int i=0;i<(int)query.size();i++)
+        while(query.next())
         {
-            while(query.next())
-            {
-                tiposUsuario.push_back(query.value(0).toString());
-            }
+            tiposUsuario.push_back(query.value(0).toString());
         }
     }
     return tiposUsuario;
@@ -524,15 +521,11 @@ vector<_QSTR> Sistema::getAllTiendas()
     QSqlQuery query=getSelectQuery(select,from);
 
     vector<_QSTR> tiendas;
-
     if(query.exec())
     {
-        for(int i=0;i<(int)query.size();i++)
+        while(query.next())
         {
-            while(query.next())
-            {
-                tiendas.push_back(query.value(0).toString());
-            }
+            tiendas.push_back(query.value(0).toString());
         }
     }
     return tiendas;
@@ -541,19 +534,16 @@ vector<_QSTR> Sistema::getAllTiendas()
 vector<_QSTR> Sistema::getAllRegiones()
 {
     vector<_QSTR> select,from;
-    select.push_back("nombre_region");
+    select.push_back("region");
     from.push_back("e_region");
     QSqlQuery query=getSelectQuery(select,from);
     vector<_QSTR> region;
 
     if(query.exec())
     {
-        for(int i=0;i<(int)query.size();i++)
+        while(query.next())
         {
-            while(query.next())
-            {
-                region.push_back(query.value(0).toString());
-            }
+            region.push_back(query.value(0).toString());
         }
     }
     return region;
@@ -688,9 +678,9 @@ bool Sistema::updateProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK, _QST
 QSqlQuery Sistema::getClientes()
 {
     QSqlQuery query;
-    _QSTR cons="SELECT e_cliente.pk_ruc,nombre_region,razon_social,direccion,telefono_fijo,telefono_celular, fax, "
+    _QSTR cons="SELECT e_cliente.pk_ruc,fk_region,razon_social,direccion,telefono_fijo, fax, "
             "representante, email,pagina_web,comentario FROM e_persona_juridica, e_cliente,e_region "
-            "WHERE e_cliente.pk_ruc=e_persona_juridica.pk_ruc AND fk_region=pk_codigo_region";
+            "WHERE e_cliente.pk_ruc=e_persona_juridica.pk_ruc AND fk_region=pk_region";
     query.prepare(cons);
     if(query.exec())
     {
@@ -709,7 +699,7 @@ _QSTR Sistema::getRegion(_QSTR codigo_region)
 {
     QSqlQuery query;
 
-    query.prepare("SELECT nombre_region FROM e_region WHERE pk_codigo_region="+codigo_region);
+    query.prepare("SELECT region FROM e_region WHERE pk_region="+codigo_region);
     query.exec();
 
     query.next();
@@ -765,7 +755,7 @@ _QSTR Sistema::getCodigoRegion(_QSTR region)
 {
     QSqlQuery query;
 
-    query.prepare("SELECT pk_codigo_region FROM e_region WHERE nombre_region='"+region+"'");
+    query.prepare("SELECT pk_region FROM e_region WHERE region='"+region+"'");
     query.exec();
 
     query.next();
@@ -871,6 +861,67 @@ QSqlQuery Sistema::getRucNombreClientes(_QSTR filtro)
          qDebug()<<"query  NO";
     }
     return query;
+}
+
+int Sistema::getNumeroComprobante()
+{
+    vector<_QSTR> select,from;
+    select.push_back("COUNT(*)");
+    from.push_back("e_comprobante");
+    QSqlQuery query=getSelectQuery(select,from);
+    if(query.next())
+        return query.value(0).toInt()+1;
+
+}
+
+vector<_QSTR> Sistema::getSerieNumero(int tipoComprobante)
+{
+    vector<_QSTR> serie_numero;
+    QSqlQuery query;
+    if(tipoComprobante==boleta)
+        query.prepare("SELECT serie,numero_actual FROM e_sistema,e_boleta_sistema WHERE pk_boleta_s = fk_boleta_s");
+    else if(tipoComprobante==factura)
+        query.prepare("SELECT serie,numero_actual FROM e_sistema,e_factura_sistema WHERE pk_factura_s = fk_factura_s");
+
+    if(query.exec())
+    {
+        //state OK
+        //w!
+        if(query.next())
+        {
+            serie_numero.push_back(query.value(0).toString());
+            serie_numero.push_back(query.value(1).toString());
+        }
+        else
+        {
+            serie_numero.push_back("");
+            serie_numero.push_back("");
+        }
+    }
+    else
+    {
+        serie_numero.push_back("");
+        serie_numero.push_back("");
+    }
+
+    return serie_numero;
+}
+
+_QSTR Sistema::getIGV()
+{
+
+    QSqlQuery query;
+
+    query.prepare("SELECT valor FROM e_sistema,e_igv_sistema WHERE pk_igv_s = fk_igv_s");
+
+    if(query.exec())
+    {
+        //state OK
+        //w!
+        if(query.next())
+            return query.value(0).toString();
+
+    }else return "";
 }
 
 _QSTR Sistema::getProveedorPKFromArticulo(_QSTR articuloPK)

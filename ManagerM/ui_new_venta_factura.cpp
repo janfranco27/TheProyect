@@ -8,6 +8,15 @@ ui_new_venta_factura::ui_new_venta_factura(QWidget *parent) :
     ui->setupUi(this);
 }
 
+vector<_QSTR> ui_new_venta_factura::getValores()
+{
+    vector<_QSTR> valores;
+    valores.push_back(ui->lineEdit_ruc->text());
+    valores.push_back(ui->lineEdit_nombre->text());
+    valores.push_back(ui->lineEdit_direccion->text());
+    return valores;
+}
+
 ui_new_venta_factura::~ui_new_venta_factura()
 {
     delete ui;
@@ -17,6 +26,7 @@ void ui_new_venta_factura::printValues(_QSTR a1,_QSTR a2)
 {
     ui->lineEdit_ruc->setText(a1);
     ui->lineEdit_nombre->setText(a2);
+    qDebug()<<a1<<" "<<a2;
 }
 void ui_new_venta_factura::on_pushButton_clicked()
 {

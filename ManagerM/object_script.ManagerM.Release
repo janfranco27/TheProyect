@@ -96,6 +96,10 @@ INPUT(
 ./release\ui_new_compra_nota_credito.o
 ./release\ui_global_manager_articulos.o
 ./release\searcher_articulos.o
+./release\object_e_proforma_venta.o
+./release\object_e_factura_venta.o
+./release\object_e_cotizacion_venta.o
+./release\object_e_boleta_venta.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o

@@ -1,5 +1,5 @@
 #include "object_e_persona_juridica.h"
-
+#include <QSqlError>
 object_e_persona_juridica::object_e_persona_juridica()
 {
 	//file e_persona_juridica
@@ -302,7 +302,7 @@ bool object_e_persona_juridica::mf_add()
 	}else{
 		//state FAILED
 		//w!
-
+        qDebug()<<query.lastError();
 		return false;
 	}
 }

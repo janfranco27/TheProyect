@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_compra_nota_credito.h'
 **
-** Created: Fri 17. May 23:53:38 2013
+** Created: Sat 1. Jun 15:41:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

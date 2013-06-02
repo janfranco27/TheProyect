@@ -96,6 +96,10 @@ INPUT(
 ./debug\ui_new_compra_nota_credito.o
 ./debug\ui_global_manager_articulos.o
 ./debug\searcher_articulos.o
+./debug\object_e_proforma_venta.o
+./debug\object_e_factura_venta.o
+./debug\object_e_cotizacion_venta.o
+./debug\object_e_boleta_venta.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o

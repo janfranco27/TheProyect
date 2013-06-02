@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-** Created: Wed 15. May 15:57:49 2013
+** Created: Sat 1. Jun 18:58:09 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,22 +36,7 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_new_venta
 {
 public:
-    QGridLayout *gridLayout_4;
     QGridLayout *gridLayout_3;
-    QGridLayout *gridLayout_2;
-    QHBoxLayout *horizontalLayout_12;
-    QSpacerItem *horizontalSpacer_4;
-    QHBoxLayout *horizontalLayout_6;
-    QLabel *label_11;
-    QLineEdit *le_total;
-    QSpacerItem *horizontalSpacer_6;
-    QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *horizontalLayout_11;
-    QSpacerItem *horizontalSpacer_3;
-    QHBoxLayout *horizontalLayout_9;
-    QPushButton *pushButton_atras;
-    QPushButton *pushButton_siguiente;
-    QFrame *line;
     QStackedWidget *stackedWidget_ventas;
     QWidget *page;
     QGridLayout *gridLayout;
@@ -81,20 +66,19 @@ public:
     QSpacerItem *verticalSpacer_5;
     QTableView *tableView_seleccionados;
     QWidget *page_2;
-    QGridLayout *gridLayout_5;
-    QSplitter *splitter_3;
-    QLabel *label_2;
+    QGridLayout *gridLayout_4;
     QFrame *line_2;
-    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_13;
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
     QComboBox *cb_tipo_comprobante;
     QSpacerItem *horizontalSpacer_7;
     QVBoxLayout *verticalLayout;
-    QSplitter *splitter_2;
     QLabel *label_5;
     QTableView *tableView_seleccionados2;
+    QSplitter *splitter_3;
+    QLabel *label_2;
     QWidget *page_3;
     QFrame *line_4;
     QTableView *tableView_articulos3;
@@ -112,102 +96,31 @@ public:
     QLabel *label_8;
     QDateEdit *dateEdit_fecha_emision;
     QWidget *widget_venta;
+    QGridLayout *gridLayout_2;
+    QHBoxLayout *horizontalLayout_12;
+    QSpacerItem *horizontalSpacer_4;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_11;
+    QLineEdit *le_total;
+    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *verticalSpacer_2;
+    QHBoxLayout *horizontalLayout_11;
+    QSpacerItem *horizontalSpacer_3;
+    QHBoxLayout *horizontalLayout_9;
+    QPushButton *pushButton_atras;
+    QPushButton *pushButton_siguiente;
+    QFrame *line;
 
     void setupUi(QWidget *ui_new_venta)
     {
         if (ui_new_venta->objectName().isEmpty())
             ui_new_venta->setObjectName(QString::fromUtf8("ui_new_venta"));
-        ui_new_venta->resize(771, 556);
+        ui_new_venta->resize(827, 556);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Stack.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_new_venta->setWindowIcon(icon);
-        gridLayout_4 = new QGridLayout(ui_new_venta);
-        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        gridLayout_3 = new QGridLayout();
+        gridLayout_3 = new QGridLayout(ui_new_venta);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        horizontalLayout_12 = new QHBoxLayout();
-        horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
-        horizontalSpacer_4 = new QSpacerItem(1000, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_12->addItem(horizontalSpacer_4);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        label_11 = new QLabel(ui_new_venta);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
-        label_11->setSizePolicy(sizePolicy);
-        label_11->setMinimumSize(QSize(80, 0));
-        label_11->setMaximumSize(QSize(80, 16777215));
-
-        horizontalLayout_6->addWidget(label_11);
-
-        le_total = new QLineEdit(ui_new_venta);
-        le_total->setObjectName(QString::fromUtf8("le_total"));
-        le_total->setEnabled(false);
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(le_total->sizePolicy().hasHeightForWidth());
-        le_total->setSizePolicy(sizePolicy1);
-        le_total->setMinimumSize(QSize(100, 0));
-        le_total->setMaximumSize(QSize(100, 16777215));
-
-        horizontalLayout_6->addWidget(le_total);
-
-
-        horizontalLayout_12->addLayout(horizontalLayout_6);
-
-        horizontalSpacer_6 = new QSpacerItem(10, 10, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_12->addItem(horizontalSpacer_6);
-
-
-        gridLayout_2->addLayout(horizontalLayout_12, 0, 0, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_2->addItem(verticalSpacer_2, 1, 0, 1, 1);
-
-        horizontalLayout_11 = new QHBoxLayout();
-        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
-        horizontalSpacer_3 = new QSpacerItem(618, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_11->addItem(horizontalSpacer_3);
-
-        horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
-        pushButton_atras = new QPushButton(ui_new_venta);
-        pushButton_atras->setObjectName(QString::fromUtf8("pushButton_atras"));
-
-        horizontalLayout_9->addWidget(pushButton_atras);
-
-        pushButton_siguiente = new QPushButton(ui_new_venta);
-        pushButton_siguiente->setObjectName(QString::fromUtf8("pushButton_siguiente"));
-
-        horizontalLayout_9->addWidget(pushButton_siguiente);
-
-
-        horizontalLayout_11->addLayout(horizontalLayout_9);
-
-
-        gridLayout_2->addLayout(horizontalLayout_11, 3, 0, 1, 1);
-
-        line = new QFrame(ui_new_venta);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_2->addWidget(line, 2, 0, 1, 1);
-
-
-        gridLayout_3->addLayout(gridLayout_2, 1, 0, 1, 1);
-
         stackedWidget_ventas = new QStackedWidget(ui_new_venta);
         stackedWidget_ventas->setObjectName(QString::fromUtf8("stackedWidget_ventas"));
         stackedWidget_ventas->setFrameShadow(QFrame::Plain);
@@ -217,11 +130,11 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         splitter = new QSplitter(page);
         splitter->setObjectName(QString::fromUtf8("splitter"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(splitter->sizePolicy().hasHeightForWidth());
-        splitter->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(splitter->sizePolicy().hasHeightForWidth());
+        splitter->setSizePolicy(sizePolicy);
         splitter->setOrientation(Qt::Vertical);
         label = new QLabel(splitter);
         label->setObjectName(QString::fromUtf8("label"));
@@ -302,6 +215,8 @@ public:
 
         tableView_articulos_1 = new QTableView(page);
         tableView_articulos_1->setObjectName(QString::fromUtf8("tableView_articulos_1"));
+        tableView_articulos_1->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView_articulos_1->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout->addWidget(tableView_articulos_1, 4, 0, 1, 1);
 
@@ -366,6 +281,7 @@ public:
         tableView_seleccionados = new QTableView(page);
         tableView_seleccionados->setObjectName(QString::fromUtf8("tableView_seleccionados"));
         tableView_seleccionados->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableView_seleccionados->setSelectionMode(QAbstractItemView::SingleSelection);
         tableView_seleccionados->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout->addWidget(tableView_seleccionados, 6, 0, 1, 1);
@@ -373,35 +289,18 @@ public:
         stackedWidget_ventas->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
-        gridLayout_5 = new QGridLayout(page_2);
-        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        splitter_3 = new QSplitter(page_2);
-        splitter_3->setObjectName(QString::fromUtf8("splitter_3"));
-        sizePolicy2.setHeightForWidth(splitter_3->sizePolicy().hasHeightForWidth());
-        splitter_3->setSizePolicy(sizePolicy2);
-        splitter_3->setOrientation(Qt::Vertical);
-        label_2 = new QLabel(splitter_3);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy3);
-        label_2->setFont(font);
-        splitter_3->addWidget(label_2);
-
-        gridLayout_5->addWidget(splitter_3, 0, 0, 1, 1);
-
+        gridLayout_4 = new QGridLayout(page_2);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         line_2 = new QFrame(page_2);
         line_2->setObjectName(QString::fromUtf8("line_2"));
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
-        gridLayout_5->addWidget(line_2, 1, 0, 2, 2);
+        gridLayout_4->addWidget(line_2, 2, 1, 1, 1);
 
-        verticalSpacer_4 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        gridLayout_5->addItem(verticalSpacer_4, 2, 1, 1, 1);
+        gridLayout_4->addItem(verticalSpacer, 3, 1, 1, 1);
 
         horizontalLayout_13 = new QHBoxLayout();
         horizontalLayout_13->setObjectName(QString::fromUtf8("horizontalLayout_13"));
@@ -429,47 +328,66 @@ public:
         horizontalLayout_13->addItem(horizontalSpacer_7);
 
 
-        gridLayout_5->addLayout(horizontalLayout_13, 3, 0, 1, 1);
+        gridLayout_4->addLayout(horizontalLayout_13, 4, 1, 1, 1);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        splitter_2 = new QSplitter(page_2);
-        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
-        splitter_2->setOrientation(Qt::Vertical);
-        label_5 = new QLabel(splitter_2);
+        label_5 = new QLabel(page_2);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        splitter_2->addWidget(label_5);
 
-        verticalLayout->addWidget(splitter_2);
+        verticalLayout->addWidget(label_5);
 
         tableView_seleccionados2 = new QTableView(page_2);
         tableView_seleccionados2->setObjectName(QString::fromUtf8("tableView_seleccionados2"));
+        tableView_seleccionados2->setMinimumSize(QSize(0, 0));
+        tableView_seleccionados2->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView_seleccionados2->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         verticalLayout->addWidget(tableView_seleccionados2);
 
 
-        gridLayout_5->addLayout(verticalLayout, 4, 0, 1, 1);
+        gridLayout_4->addLayout(verticalLayout, 5, 0, 1, 2);
+
+        splitter_3 = new QSplitter(page_2);
+        splitter_3->setObjectName(QString::fromUtf8("splitter_3"));
+        sizePolicy.setHeightForWidth(splitter_3->sizePolicy().hasHeightForWidth());
+        splitter_3->setSizePolicy(sizePolicy);
+        splitter_3->setOrientation(Qt::Vertical);
+        label_2 = new QLabel(splitter_3);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy);
+        label_2->setFont(font);
+        splitter_3->addWidget(label_2);
+
+        gridLayout_4->addWidget(splitter_3, 1, 1, 1, 1);
 
         stackedWidget_ventas->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
         line_4 = new QFrame(page_3);
         line_4->setObjectName(QString::fromUtf8("line_4"));
-        line_4->setGeometry(QRect(10, 29, 729, 16));
+        line_4->setGeometry(QRect(9, 28, 791, 16));
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
         tableView_articulos3 = new QTableView(page_3);
         tableView_articulos3->setObjectName(QString::fromUtf8("tableView_articulos3"));
-        tableView_articulos3->setGeometry(QRect(10, 203, 731, 241));
+        tableView_articulos3->setGeometry(QRect(9, 247, 791, 192));
+        tableView_articulos3->setMaximumSize(QSize(16777215, 192));
+        tableView_articulos3->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView_articulos3->setSelectionBehavior(QAbstractItemView::SelectRows);
         label_3 = new QLabel(page_3);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 10, 170, 16));
-        sizePolicy3.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
-        label_3->setSizePolicy(sizePolicy3);
+        label_3->setGeometry(QRect(9, 9, 170, 16));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy1);
         label_3->setFont(font);
         layoutWidget = new QWidget(page_3);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 57, 731, 141));
+        layoutWidget->setGeometry(QRect(9, 59, 791, 182));
         gridLayout_6 = new QGridLayout(layoutWidget);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -479,8 +397,8 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        sizePolicy2.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
-        label_6->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
+        label_6->setSizePolicy(sizePolicy);
         label_6->setMinimumSize(QSize(100, 0));
         label_6->setMaximumSize(QSize(100, 16777215));
 
@@ -516,8 +434,8 @@ public:
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_8 = new QLabel(layoutWidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        sizePolicy2.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
-        label_8->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
+        label_8->setSizePolicy(sizePolicy);
         label_8->setMinimumSize(QSize(80, 0));
         label_8->setMaximumSize(QSize(80, 16777215));
 
@@ -539,11 +457,12 @@ public:
 
         widget_venta = new QWidget(layoutWidget);
         widget_venta->setObjectName(QString::fromUtf8("widget_venta"));
-        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(widget_venta->sizePolicy().hasHeightForWidth());
-        widget_venta->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(widget_venta->sizePolicy().hasHeightForWidth());
+        widget_venta->setSizePolicy(sizePolicy2);
+        widget_venta->setMinimumSize(QSize(0, 150));
 
         gridLayout_6->addWidget(widget_venta, 1, 0, 1, 1);
 
@@ -551,8 +470,88 @@ public:
 
         gridLayout_3->addWidget(stackedWidget_ventas, 0, 0, 1, 1);
 
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
+        horizontalSpacer_4 = new QSpacerItem(1000, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_4->addLayout(gridLayout_3, 0, 0, 1, 1);
+        horizontalLayout_12->addItem(horizontalSpacer_4);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        label_11 = new QLabel(ui_new_venta);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
+        label_11->setSizePolicy(sizePolicy3);
+        label_11->setMinimumSize(QSize(80, 0));
+        label_11->setMaximumSize(QSize(80, 16777215));
+
+        horizontalLayout_6->addWidget(label_11);
+
+        le_total = new QLineEdit(ui_new_venta);
+        le_total->setObjectName(QString::fromUtf8("le_total"));
+        le_total->setEnabled(false);
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(le_total->sizePolicy().hasHeightForWidth());
+        le_total->setSizePolicy(sizePolicy4);
+        le_total->setMinimumSize(QSize(100, 0));
+        le_total->setMaximumSize(QSize(100, 16777215));
+
+        horizontalLayout_6->addWidget(le_total);
+
+
+        horizontalLayout_12->addLayout(horizontalLayout_6);
+
+        horizontalSpacer_6 = new QSpacerItem(10, 10, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_12->addItem(horizontalSpacer_6);
+
+
+        gridLayout_2->addLayout(horizontalLayout_12, 0, 0, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_2->addItem(verticalSpacer_2, 1, 0, 1, 1);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalSpacer_3 = new QSpacerItem(618, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_3);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        pushButton_atras = new QPushButton(ui_new_venta);
+        pushButton_atras->setObjectName(QString::fromUtf8("pushButton_atras"));
+
+        horizontalLayout_9->addWidget(pushButton_atras);
+
+        pushButton_siguiente = new QPushButton(ui_new_venta);
+        pushButton_siguiente->setObjectName(QString::fromUtf8("pushButton_siguiente"));
+
+        horizontalLayout_9->addWidget(pushButton_siguiente);
+
+
+        horizontalLayout_11->addLayout(horizontalLayout_9);
+
+
+        gridLayout_2->addLayout(horizontalLayout_11, 3, 0, 1, 1);
+
+        line = new QFrame(ui_new_venta);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_2->addWidget(line, 2, 0, 1, 1);
+
+
+        gridLayout_3->addLayout(gridLayout_2, 1, 0, 1, 1);
 
         QWidget::setTabOrder(le_nombre, tableView_articulos_1);
         QWidget::setTabOrder(tableView_articulos_1, pushButton_down);
@@ -576,9 +575,6 @@ public:
     void retranslateUi(QWidget *ui_new_venta)
     {
         ui_new_venta->setWindowTitle(QApplication::translate("ui_new_venta", "Ventas", 0, QApplication::UnicodeUTF8));
-        label_11->setText(QApplication::translate("ui_new_venta", "Total", 0, QApplication::UnicodeUTF8));
-        pushButton_atras->setText(QApplication::translate("ui_new_venta", "<<Atras", 0, QApplication::UnicodeUTF8));
-        pushButton_siguiente->setText(QApplication::translate("ui_new_venta", "Siguiente>>", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_new_venta", "Agregue art\303\255culos a la venta", 0, QApplication::UnicodeUTF8));
         l_nombre->setText(QApplication::translate("ui_new_venta", "Nombre", 0, QApplication::UnicodeUTF8));
         l_marca->setText(QApplication::translate("ui_new_venta", "Marca", 0, QApplication::UnicodeUTF8));
@@ -586,7 +582,6 @@ public:
         pushButton_down->setText(QString());
         label_9->setText(QApplication::translate("ui_new_venta", "Cantidad: ", 0, QApplication::UnicodeUTF8));
         pushButton_up->setText(QString());
-        label_2->setText(QApplication::translate("ui_new_venta", "Seleccione tipo de comprobante", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ui_new_venta", "Tipo de comprobante", 0, QApplication::UnicodeUTF8));
         cb_tipo_comprobante->clear();
         cb_tipo_comprobante->insertItems(0, QStringList()
@@ -596,10 +591,14 @@ public:
          << QApplication::translate("ui_new_venta", "Cotizaci\303\263n", 0, QApplication::UnicodeUTF8)
         );
         label_5->setText(QApplication::translate("ui_new_venta", "Articulos seleccionados:", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("ui_new_venta", "Seleccione tipo de comprobante", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ui_new_venta", "Complete los datos para la venta", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("ui_new_venta", "Serie - N\303\272mero", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("ui_new_venta", "-", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ui_new_venta", "Fecha Emisi\303\263n", 0, QApplication::UnicodeUTF8));
+        label_11->setText(QApplication::translate("ui_new_venta", "Total", 0, QApplication::UnicodeUTF8));
+        pushButton_atras->setText(QApplication::translate("ui_new_venta", "<<Atras", 0, QApplication::UnicodeUTF8));
+        pushButton_siguiente->setText(QApplication::translate("ui_new_venta", "Siguiente>>", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

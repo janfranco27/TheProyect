@@ -11,6 +11,7 @@
 #include <time.h>
 #include <ostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <ctime>
 #include <vector>
@@ -96,7 +97,10 @@ using namespace std;
 #include "object_e_igv_sistema.h"
 #include "object_e_cambio_dolar_sistema.h"
 
-
+#include "object_e_boleta_venta.h"
+#include "object_e_factura_venta.h"
+#include "object_e_cotizacion_venta.h"
+#include "object_e_proforma_venta.h"
 
 
 
@@ -133,10 +137,13 @@ using namespace std;
 #include "ui_newedit_cliente.h"
 
 
+
 #include "ui_new_venta_boleta.h"
 #include "ui_new_venta_cotizacion.h"
 #include "ui_new_venta_factura.h"
 #include "ui_new_venta_proforma.h"
+
+
 #include "ui_edit_personalinformation.h"
 #include "ui_search_cliente.h"
 
@@ -145,9 +152,9 @@ using namespace std;
 #include "ui_new_factura_sistema.h"
 
 #include "ui_global_manager_articulos.h"
-
 //NAMESPACES
 
+//NAMESPACES
 using namespace module_log;
 using namespace module_dbconnection;
 using namespace module_session;

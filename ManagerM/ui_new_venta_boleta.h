@@ -4,7 +4,7 @@
 #include <QWidget>
 #include "share_include.h"
 namespace Ui {
-class ui_new_venta_boleta;
+    class ui_new_venta_boleta;
 }
 
 class ui_new_venta_boleta : public QWidget
@@ -13,9 +13,10 @@ class ui_new_venta_boleta : public QWidget
     
 public:
     explicit ui_new_venta_boleta(QWidget *parent = 0);
+    vector<_QSTR> getValores();
     ~ui_new_venta_boleta();
     
-private:
+//private:
     Ui::ui_new_venta_boleta *ui;
 };
 

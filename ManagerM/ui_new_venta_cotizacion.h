@@ -13,6 +13,7 @@ class ui_new_venta_cotizacion : public QWidget
     
 public:
     explicit ui_new_venta_cotizacion(QWidget *parent = 0);
+    vector<_QSTR> getValores();
     ~ui_new_venta_cotizacion();
 
 public slots:

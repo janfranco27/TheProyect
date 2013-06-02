@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta_cotizacion.h'
 **
-** Created: Sat 25. May 10:52:24 2013
+** Created: Sat 1. Jun 17:47:15 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

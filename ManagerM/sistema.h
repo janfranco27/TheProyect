@@ -83,6 +83,10 @@ public:
    bool nickColaboradorValido(_QSTR nick);
    QSqlQuery getRucNombreClientes(_QSTR filtro="");
 
+    int getNumeroComprobante();
+    vector<_QSTR> getSerieNumero(int tipoComprobante);
+    _QSTR getIGV();
+
 };
 
 

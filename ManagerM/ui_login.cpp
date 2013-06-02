@@ -59,6 +59,7 @@ void ui_login::on_pushButton_aceptar_clicked()
         // Cargar datos de colaborador
         object_e_colaborador* colaboradorActual=new object_e_colaborador;
         _QSTR dniColaborador=SYSTEM->getDNIColaborador(usuario,text);
+        USER_SET_DNI(dniColaborador.toStdString());
         colaboradorActual->mf_load(dniColaborador);
         USER_SET_NAME(colaboradorActual->mf_get_nombres().toStdString());
         qDebug()<<"USUARIO: "<<QString::fromStdString(USER_GET_NAME);

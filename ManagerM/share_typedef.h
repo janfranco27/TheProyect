@@ -16,7 +16,7 @@ typedef vector<vector<QVariant> > TUPLES;
 
 enum opciones_categoria{articulo,proveedor,banco,tienda,comprobante,general,base_datos};
 enum opciones_articulo{marca,medida,grupo};
-
+enum tipos_comprobante{boleta=1,factura,proforma,cotizacion};
 //MACROS DEL SISTEMA
 
 //APP MANAGERM
@@ -67,10 +67,12 @@ enum opciones_articulo{marca,medida,grupo};
     #define USER_GET_NAME SINGLETON(session)->mf_get_name()
     #define USER_GET_NICK_NAME SINGLETON(session)->mf_get_nick_name()
     #define USER_GET_PERMISSIONS SINGLETON(session)->mf_get_permissions()
+    #define USER_GET_DNI SINGLETON(session)->mf_get_code()
 
     #define USER_SET_NAME(X) SINGLETON(session)->mf_set_name(X)
     #define USER_SET_NICK_NAME(X) SINGLETON(session)->mf_set_nick_name(X)
     #define USER_SET_PERMISSIONS(X) SINGLETON(session)->mf_set_permissions(X)
+    #define USER_SET_DNI(X) SINGLETON(session)->mf_set_code(X)
 
     //Free Query
     #define FREEQUERY(X) SINGLETON(FreeQuery)->ejecutar(X)
@@ -85,7 +87,6 @@ enum opciones_articulo{marca,medida,grupo};
     #define MESSAGE_INFORMATION(X,Y) SYSTEM->messageInformation(X,Y)
     #define MESSAGE_QUESTION(X,Y) SYSTEM->messageQuestion(X,Y)
     #define MESSAGE_CRITICAL(X,Y) SYSTEM->messageCritical(X,Y)
-
 
 
 
@@ -140,7 +141,13 @@ enum opciones_articulo{marca,medida,grupo};
 	#define C_CAMBIAR_TITLE "Cambiar datos"
     #define C_ERROR "Error"
     #define C_NO_STOCK "No se puede realizar la operación. No hay suficiente stock"
-    //CONSULTAS A LA DB
+    #define C_WRONG_COMPROBANTE "Error en almacenamiento"
+    #define C_WRONG_COMPROBANTE_TEXT "No se pudo guardar el comprobante. Vuelva a intentar"
+    #define C_COMPROBANTE "Comprobante guardado"
+    #define C_COMPROBANTE_TEXT "El registro de comprobante fue exitoso"
+
+
+//CONSULTAS A LA DB
 
 //HEADERS
 enum{COD,GRUPO,MARCA,MEDIDA,DESCRIPCION,PRECIO,STOCK,HABILITADO,CANTIDAD};

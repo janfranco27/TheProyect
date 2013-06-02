@@ -13,6 +13,7 @@ class ui_new_venta_proforma : public QWidget
     
 public:
     explicit ui_new_venta_proforma(QWidget *parent = 0);
+    vector<_QSTR> getValores();
     ~ui_new_venta_proforma();
     
 
