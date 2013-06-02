@@ -16,6 +16,9 @@ public:
     explicit ui_opciones_general(QWidget *parent = 0);
     ~ui_opciones_general();
 
+private slots:
+    void on_pushButton_guardar_igv_clicked();
+
 private:
     Ui::ui_opciones_general *ui;
 };

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_general.h'
 **
-** Created: Sat 1. Jun 17:45:31 2013
+** Created: Sat 1. Jun 22:28:18 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -38,7 +38,7 @@ static const uint qt_meta_data_ui_opciones_general[] = {
 
 static const char qt_meta_stringdata_ui_opciones_general[] = {
     "ui_opciones_general\0\0"
-    "on_pushButton_guardar_clicked()\0"
+    "on_pushButton_guardar_igv_clicked()\0"
 };
 
 void ui_opciones_general::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,7 +47,7 @@ void ui_opciones_general::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         Q_ASSERT(staticMetaObject.cast(_o));
         ui_opciones_general *_t = static_cast<ui_opciones_general *>(_o);
         switch (_id) {
-        case 0: _t->on_pushButton_guardar_clicked(); break;
+        case 0: _t->on_pushButton_guardar_igv_clicked(); break;
         default: ;
         }
     }

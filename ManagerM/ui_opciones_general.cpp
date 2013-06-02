@@ -13,13 +13,8 @@ ui_opciones_general::~ui_opciones_general()
     delete ui;
 }
 
-void ui_opciones_general::on_pushButton_guardar_clicked()
+
+void ui_opciones_general::on_pushButton_guardar_igv_clicked()
 {
-
-  //  object_e_sistema* sistema = new object_e_sistema;
-  //  sistema->mf_set_igv(ui->lineEdit_igv->text().toStdString());
-
-
-   // sistema->mf_add();
 
 }
