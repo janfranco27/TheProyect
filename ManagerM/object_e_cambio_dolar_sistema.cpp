@@ -129,15 +129,19 @@ bool object_e_cambio_dolar_sistema::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_cambio_dolar_sistema(";
+	if (md_o_pk_cambio_dolar_s != "")
 	str_query += "pk_cambio_dolar_s, ";
-	str_query += "valor_dolar_soles, ";
-	str_query += "valor_soler_dolar, ";
-	str_query += "fecha";
+	str_query += "valor_dolar_soles";
+	str_query += ", valor_soler_dolar";
+	str_query += ", fecha";
 	str_query += ") VALUES(";
+	if (md_o_pk_cambio_dolar_s!= "")
+	{
 	str_query += "?, ";
-	str_query += "?, ";
-	str_query += "?, ";
+	}
 	str_query += "?";
+	str_query += ", ?";
+	str_query += ", ?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
@@ -146,8 +150,6 @@ bool object_e_cambio_dolar_sistema::mf_add()
 	{
 		query.bindValue(integer++, md_o_pk_cambio_dolar_s);
 	}
-	else
-		query.bindValue(integer++, "NULL");
 	query.bindValue(integer++, md_o_valor_dolar_soles);
 	query.bindValue(integer++, md_o_valor_soler_dolar);
 	query.bindValue(integer++, md_o_fecha);

@@ -112,13 +112,17 @@ bool object_e_igv_sistema::mf_add()
 	QSqlQuery query;
 
 	string str_query = "INSERT INTO e_igv_sistema(";
+	if (md_o_pk_igv_s != "")
 	str_query += "pk_igv_s, ";
-	str_query += "valor, ";
-	str_query += "fecha";
+	str_query += "valor";
+	str_query += ", fecha";
 	str_query += ") VALUES(";
+	if (md_o_pk_igv_s!= "")
+	{
 	str_query += "?, ";
-	str_query += "?, ";
+	}
 	str_query += "?";
+	str_query += ", ?";
 	str_query += ")";
 
 	query.prepare(QString(str_query.c_str()));
@@ -127,8 +131,6 @@ bool object_e_igv_sistema::mf_add()
 	{
 		query.bindValue(integer++, md_o_pk_igv_s);
 	}
-	else
-		query.bindValue(integer++, "NULL");
 	query.bindValue(integer++, md_o_valor);
 	query.bindValue(integer++, md_o_fecha);
 
