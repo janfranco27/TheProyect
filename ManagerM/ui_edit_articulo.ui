@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Editar Articulo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Icons.qrc">
+    <normaloff>:/Iconos/Iconos/doc_edit.png</normaloff>:/Iconos/Iconos/doc_edit.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -62,14 +66,20 @@
      <item row="0" column="0">
       <widget class="QLabel" name="l_codigo_2">
        <property name="text">
-        <string>Código:</string>
+        <string>Código</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="4">
       <widget class="QLabel" name="l_marca_2">
        <property name="text">
-        <string>Marca:</string>
+        <string>Marca</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -81,22 +91,29 @@
        <property name="text">
         <string/>
        </property>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
+       </property>
       </widget>
      </item>
      <item row="0" column="8">
       <widget class="QLabel" name="l_precio_2">
        <property name="text">
-        <string>Precio:  S/.</string>
+        <string>Precio  S/.</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
-     </item>
-     <item row="0" column="9" colspan="2">
-      <widget class="QLineEdit" name="le_precio_2"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="l_nombre_2">
        <property name="text">
-        <string>Nombre:</string>
+        <string>Nombre</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -106,7 +123,10 @@
      <item row="1" column="4">
       <widget class="QLabel" name="l_medida_2">
        <property name="text">
-        <string>Medida:</string>
+        <string>Medida</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -118,12 +138,19 @@
        <property name="text">
         <string/>
        </property>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
+       </property>
       </widget>
      </item>
      <item row="1" column="8">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Proveedor:</string>
+        <string>Proveedor</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -135,34 +162,11 @@
        <property name="text">
         <string/>
        </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="l_grupo_2">
-       <property name="text">
-        <string>Grupo:</string>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
        </property>
       </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="cb_grupo"/>
-     </item>
-     <item row="2" column="3">
-      <widget class="QPushButton" name="btn_add_grupo">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="4">
-      <widget class="QLabel" name="l_stock_2">
-       <property name="text">
-        <string>Stock:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="5" colspan="3">
-      <widget class="QLineEdit" name="le_stock_2"/>
      </item>
      <item row="2" column="2">
       <spacer name="horizontalSpacer_5">
@@ -194,6 +198,46 @@
       <widget class="QLabel" name="l_codigoop">
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="8">
+      <widget class="QLabel" name="l_grupo_2">
+       <property name="text">
+        <string>Grupo</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="9">
+      <widget class="QComboBox" name="cb_grupo"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="l_stock_2">
+       <property name="text">
+        <string>Stock</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="10">
+      <widget class="QPushButton" name="btn_add_grupo">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="le_stock_2"/>
+     </item>
+     <item row="0" column="9">
+      <widget class="QDoubleSpinBox" name="le_precio_2">
+       <property name="maximum">
+        <double>100000000.000000000000000</double>
        </property>
       </widget>
      </item>
@@ -232,6 +276,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

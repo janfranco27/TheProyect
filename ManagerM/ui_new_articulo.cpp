@@ -2,7 +2,7 @@
 #include "ui_ui_new_articulo.h"
 #include "share_include.h"
 const int numHeaders = 8;
-
+#include "ui_new_proveedor.h"
 
 
 
@@ -273,6 +273,15 @@ void ui_new_articulo::on_btn_add_medida_clicked()
 
 }
 
+void ui_new_articulo::on_btn_add_proveedor_clicked()
+{
+    ui_new_proveedor * form_new_proveedor = new ui_new_proveedor();
+    form_new_proveedor->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(update_comboBox_Proveedor()));
+    form_new_proveedor->show();
+}
+
 //void ui_new_articulo::openOpcionesArticuloWith(int tab)
 //{
 //    ui_opciones_articulo * form_opciones = new ui_opciones_articulo();
@@ -364,9 +373,12 @@ void ui_new_articulo::clear_input()
     ui->cb_marca->setCurrentIndex(0);
     ui->cb_medida->setCurrentIndex(0);
     ui->cb_proveedor->setCurrentIndex(0);
-    ui->le_precio_2->clear();
-    ui->le_stock_2->clear();
+    ui->le_precio_2->cleanText();
+
+    ui->le_stock_2->cleanText();
     ui->l_resultado_2->setVisible(false);
 
     ui->le_nombre_2->setFocus(Qt::OtherFocusReason);
 }
+
+

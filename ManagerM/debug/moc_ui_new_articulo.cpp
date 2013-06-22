@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_articulo.h'
 **
+<<<<<<< HEAD
 ** Created: Fri 21. Jun 22:37:49 2013
+=======
+** Created: Sat 22. Jun 15:03:18 2013
+>>>>>>> Cambios modulo articulo
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +27,7 @@ static const uint qt_meta_data_ui_new_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -47,6 +51,7 @@ static const uint qt_meta_data_ui_new_articulo[] = {
      283,   16,   16,   16, 0x08,
      308,   16,   16,   16, 0x08,
      339,  336,   16,   16, 0x08,
+     364,   16,   16,   16, 0x08,
 
        0        // eod
 };
@@ -65,6 +70,7 @@ static const char qt_meta_stringdata_ui_new_articulo[] = {
     "update_comboBox_Medida()\0"
     "update_comboBox_Proveedor()\0ev\0"
     "closeEvent(QCloseEvent*)\0"
+    "on_btn_add_proveedor_clicked()\0"
 };
 
 void ui_new_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -88,6 +94,7 @@ void ui_new_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 11: _t->update_comboBox_Medida(); break;
         case 12: _t->update_comboBox_Proveedor(); break;
         case 13: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
+        case 14: _t->on_btn_add_proveedor_clicked(); break;
         default: ;
         }
     }
@@ -125,9 +132,9 @@ int ui_new_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }

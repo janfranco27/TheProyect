@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_boleta_sistema.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 00:16:52 2013
+=======
+** Created: Thu 20. Jun 19:43:10 2013
+>>>>>>> Cambios modulo articulo
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

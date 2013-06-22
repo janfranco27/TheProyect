@@ -44,6 +44,8 @@ private slots:
 
     void closeEvent(QCloseEvent *ev );
 
+    void on_btn_add_proveedor_clicked();
+
 signals:
     void closing();
 private:

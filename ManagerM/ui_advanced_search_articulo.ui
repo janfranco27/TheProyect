@@ -24,7 +24,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="placeholderText">
+        <string>Texto a buscar ...</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QToolButton" name="toolButton">

@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_advanced_search_articulo.ui'
 **
+<<<<<<< HEAD
 ** Created: Fri 21. Jun 22:03:28 2013
+=======
+** Created: Sat 22. Jun 15:10:15 2013
+>>>>>>> Cambios modulo articulo
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -79,6 +83,7 @@ public:
     {
         ui_advanced_search_articulo->setWindowTitle(QApplication::translate("ui_advanced_search_articulo", "Form", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_advanced_search_articulo", "B\303\272squeda:", 0, QApplication::UnicodeUTF8));
+        lineEdit->setPlaceholderText(QApplication::translate("ui_advanced_search_articulo", "Texto a buscar ...", 0, QApplication::UnicodeUTF8));
         toolButton->setText(QString());
         tb_borrar->setText(QApplication::translate("ui_advanced_search_articulo", "R", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

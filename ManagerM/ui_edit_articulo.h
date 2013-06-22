@@ -31,6 +31,8 @@ private slots:
     void update_comboBox_Medida();
     void update_comboBox_Proveedor();
 
+    void on_btn_add_proveedor_clicked();
+
 private:
     Ui::ui_edit_articulos *ui;
     void update_form();

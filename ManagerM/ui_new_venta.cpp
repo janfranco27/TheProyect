@@ -17,6 +17,9 @@ extern const char * pk_medida ;
 
 extern const char * descripcion ;
 
+const int headerTam = 7;
+QString articulosHeader[headerTam] = {"Codigo","Grupo","Marca","Medida","Descripcion","Precio","Stock"};
+
 QString defaultFilter = "habilitado=1";
 
 ui_new_venta::ui_new_venta(QWidget *parent) :
@@ -35,6 +38,11 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
     table->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
     table->setJoinMode(QSqlRelationalTableModel::LeftJoin);
     table->setFilter("habilitado=1");
+
+    for(int i=0;i<headerTam;i++)
+    {
+        table->setHeaderData(i,Qt::Horizontal,articulosHeader[i]);
+    }
 
 
     //por defecto es una boleta
@@ -57,6 +65,7 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
       ui->tableView_articulos_1->setModel(table);
 
       ui->tableView_articulos_1->setColumnHidden(HABILITADO,true);
+      ui->tableView_articulos_1->setColumnHidden(GRUPO,true);
 
 
 

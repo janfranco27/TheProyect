@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_articulo.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 00:14:33 2013
+=======
+** Created: Sat 22. Jun 15:29:08 2013
+>>>>>>> Cambios modulo articulo
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +27,7 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -38,6 +42,7 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
      124,   17,   17,   17, 0x08,
      148,   17,   17,   17, 0x08,
      173,   17,   17,   17, 0x08,
+     201,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -50,6 +55,7 @@ static const char qt_meta_stringdata_ui_edit_articulo[] = {
     "update_comboBox_Marca()\0"
     "update_comboBox_Medida()\0"
     "update_comboBox_Proveedor()\0"
+    "on_btn_add_proveedor_clicked()\0"
 };
 
 void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -65,6 +71,7 @@ void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 4: _t->update_comboBox_Marca(); break;
         case 5: _t->update_comboBox_Medida(); break;
         case 6: _t->update_comboBox_Proveedor(); break;
+        case 7: _t->on_btn_add_proveedor_clicked(); break;
         default: ;
         }
     }
@@ -103,9 +110,9 @@ int ui_edit_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }

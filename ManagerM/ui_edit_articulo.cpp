@@ -1,6 +1,6 @@
 #include "ui_edit_articulo.h"
 #include "ui_ui_edit_articulo.h"
-
+#include "ui_new_proveedor.h"
 
 const int op_default = 0;
 const int not_found = -1;
@@ -49,8 +49,8 @@ void ui_edit_articulo::load_selected_articulo(object_e_articulo *ar)
     //Cargamos los line edit
     ui->l_codigoop->setText(ar->mf_get_pk_articulo());
     ui->le_nombre_2->setText(ar->mf_get_descripcion());
-    ui->le_precio_2->setText(ar->mf_get_precio_lista());
-    ui->le_stock_2->setText(ar->mf_get_stock());
+    ui->le_precio_2->setValue(ar->mf_get_precio_lista().toDouble());
+    ui->le_stock_2->setValue(ar->mf_get_stock().toInt());
 
 
     //Obtenemos el nombre de proveedor
@@ -223,6 +223,14 @@ void ui_edit_articulo::on_btn_add_medida_clicked()
     form_new_medida->show();
 }
 
+void ui_edit_articulo::on_btn_add_proveedor_clicked()
+{
+    ui_new_proveedor * form_new_proveedor = new ui_new_proveedor();
+    form_new_proveedor->setAttribute(Qt::WA_DeleteOnClose);
+    connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(update_comboBox_Proveedor()));
+    form_new_proveedor->show();
+
+}
 void ui_edit_articulo::update_comboBox_Marca()
 {
 
@@ -246,3 +254,5 @@ void ui_edit_articulo::update_comboBox_Proveedor()
 
      SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
 }
+
+
