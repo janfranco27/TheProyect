@@ -16,11 +16,26 @@ public:
     explicit ui_edit_proveedor(QWidget *parent = 0);
     ~ui_edit_proveedor();
     
+    QString currentRUC;
+    void update_data(QString ruc);
+
+    void setTableView(QTableView*);
 private slots:
-    void on_pushButton_aceptar_clicked();
+
+
+    void on_pushButton_cancelar_clicked();
+
+    void on_pushButton_guardar_clicked();
+
+    void on_pushButton_link_clicked();
 
 private:
     Ui::ui_edit_proveedor *ui;
+
+    QTableView* table;
+    map<QString, QString > regiones;
 };
 
 #endif // UI_EDIT_PROVEEDOR_H
+
+

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_transportista.h'
 **
-** Created: Sat 1. Jun 22:28:22 2013
+** Created: Sat 22. Jun 00:15:09 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -33,7 +33,7 @@ static const uint qt_meta_data_ui_new_transportista[] = {
  // slots: signature, parameters, type, tag, flags
       22,   21,   21,   21, 0x08,
       56,   21,   21,   21, 0x08,
-      87,   21,   21,   21, 0x08,
+      89,   21,   21,   21, 0x08,
 
        0        // eod
 };
@@ -41,8 +41,8 @@ static const uint qt_meta_data_ui_new_transportista[] = {
 static const char qt_meta_stringdata_ui_new_transportista[] = {
     "ui_new_transportista\0\0"
     "on_pushButton_registrar_clicked()\0"
-    "on_pushButton_editar_clicked()\0"
     "on_pushButton_cancelar_clicked()\0"
+    "on_pushButton_link_clicked()\0"
 };
 
 void ui_new_transportista::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -52,8 +52,8 @@ void ui_new_transportista::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
         ui_new_transportista *_t = static_cast<ui_new_transportista *>(_o);
         switch (_id) {
         case 0: _t->on_pushButton_registrar_clicked(); break;
-        case 1: _t->on_pushButton_editar_clicked(); break;
-        case 2: _t->on_pushButton_cancelar_clicked(); break;
+        case 1: _t->on_pushButton_cancelar_clicked(); break;
+        case 2: _t->on_pushButton_link_clicked(); break;
         default: ;
         }
     }

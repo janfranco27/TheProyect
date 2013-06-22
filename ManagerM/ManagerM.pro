@@ -113,7 +113,12 @@ SOURCES += main.cpp\
     object_e_proforma_venta.cpp \
     object_e_factura_venta.cpp \
     object_e_cotizacion_venta.cpp \
-    object_e_boleta_venta.cpp
+    object_e_boleta_venta.cpp \
+    ui_tipo_cambio_dolar.cpp \
+    ui_new_igv.cpp \
+    ui_search_transportista.cpp \
+    ui_search_proveedor.cpp \
+    ui_edit_transportista.cpp
 
 
 HEADERS  += ui_main.h \
@@ -220,7 +225,12 @@ HEADERS  += ui_main.h \
     object_e_proforma_venta.h \
     object_e_factura_venta.h \
     object_e_cotizacion_venta.h \
-    object_e_boleta_venta.h
+    object_e_boleta_venta.h \
+    ui_tipo_cambio_dolar.h \
+    ui_new_igv.h \
+    ui_search_transportista.h \
+    ui_search_proveedor.h \
+    ui_edit_transportista.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \
@@ -274,7 +284,12 @@ FORMS    += ui_main.ui \
     ui_compra_nota_credito.ui \
     ui_new_compra_nota_debito.ui \
     ui_new_compra_nota_credito.ui \
-    ui_global_manager_articulos.ui
+    ui_global_manager_articulos.ui \
+    ui_tipo_cambio_dolar.ui \
+    ui_new_igv.ui \
+    ui_search_transportista.ui \
+    ui_search_proveedor.ui \
+    ui_edit_transportista.ui
 
 
 

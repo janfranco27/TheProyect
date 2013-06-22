@@ -14,7 +14,8 @@ public:
     _STR code_medida;
 
     //QMessageBox* message_box;
-
+    double igv;
+    double cambioDolar;
 public:
     Sistema();
 
@@ -87,6 +88,12 @@ public:
     vector<_QSTR> getSerieNumero(int tipoComprobante);
     _QSTR getIGV();
 
+    // funciones
+
+    double conversion(vector<double> values, bool old_hasIGV, int old_typeCoin
+                      , bool hasIGV, int typeCoin);
+    double conversion(double value, bool old_hasIGV, int old_typeCoin
+                      , bool hasIGV, int typeCoin);
 };
 
 

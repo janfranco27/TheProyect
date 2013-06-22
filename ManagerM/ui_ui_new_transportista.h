@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_transportista.ui'
 **
-** Created: Sat 1. Jun 21:02:36 2013
+** Created: Fri 21. Jun 22:49:56 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,7 +15,6 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
-#include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -31,14 +30,13 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_new_transportista
 {
 public:
-    QGridLayout *gridLayout_2;
-    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_2;
     QGroupBox *groupBox;
-    QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_14;
     QLabel *label_ruc;
     QLineEdit *lineEdit_ruc;
+    QPushButton *pushButton_link;
     QSpacerItem *horizontalSpacer_12;
     QLabel *label_razon_social;
     QLineEdit *lineEdit_razon_social;
@@ -52,13 +50,12 @@ public:
     QHBoxLayout *horizontalLayout_16;
     QLabel *label_29;
     QLineEdit *lineEdit_direccion;
-    QHBoxLayout *horizontalLayout_17;
+    QHBoxLayout *horizontalLayout_3;
     QLabel *label_27;
     QLineEdit *lineEdit_telefono;
     QSpacerItem *horizontalSpacer_11;
     QLabel *label_32;
     QLineEdit *lineEdit_fax;
-    QHBoxLayout *horizontalLayout_18;
     QHBoxLayout *horizontalLayout_19;
     QLabel *label_34;
     QLineEdit *lineEdit_pagina_web;
@@ -68,7 +65,7 @@ public:
     QHBoxLayout *horizontalLayout_21;
     QLabel *label_26;
     QLineEdit *lineEdit_comentario;
-    QHBoxLayout *horizontalLayout_22;
+    QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_7;
     QPushButton *pushButton_registrar;
     QPushButton *pushButton_cancelar;
@@ -78,16 +75,12 @@ public:
     {
         if (ui_new_transportista->objectName().isEmpty())
             ui_new_transportista->setObjectName(QString::fromUtf8("ui_new_transportista"));
-        ui_new_transportista->resize(641, 312);
-        gridLayout_2 = new QGridLayout(ui_new_transportista);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        ui_new_transportista->resize(718, 303);
+        verticalLayout_2 = new QVBoxLayout(ui_new_transportista);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         groupBox = new QGroupBox(ui_new_transportista);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        gridLayout = new QGridLayout(groupBox);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalLayout = new QVBoxLayout();
+        verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout_14 = new QHBoxLayout();
         horizontalLayout_14->setObjectName(QString::fromUtf8("horizontalLayout_14"));
@@ -104,6 +97,11 @@ public:
         lineEdit_ruc->setMaximumSize(QSize(200, 16777215));
 
         horizontalLayout_14->addWidget(lineEdit_ruc);
+
+        pushButton_link = new QPushButton(groupBox);
+        pushButton_link->setObjectName(QString::fromUtf8("pushButton_link"));
+
+        horizontalLayout_14->addWidget(pushButton_link);
 
         horizontalSpacer_12 = new QSpacerItem(13, 14, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
@@ -185,47 +183,42 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_16);
 
-        horizontalLayout_17 = new QHBoxLayout();
-        horizontalLayout_17->setObjectName(QString::fromUtf8("horizontalLayout_17"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_27 = new QLabel(groupBox);
         label_27->setObjectName(QString::fromUtf8("label_27"));
         label_27->setMinimumSize(QSize(80, 0));
         label_27->setMaximumSize(QSize(80, 16777215));
 
-        horizontalLayout_17->addWidget(label_27);
+        horizontalLayout_3->addWidget(label_27);
 
         lineEdit_telefono = new QLineEdit(groupBox);
         lineEdit_telefono->setObjectName(QString::fromUtf8("lineEdit_telefono"));
         lineEdit_telefono->setMinimumSize(QSize(200, 0));
         lineEdit_telefono->setMaximumSize(QSize(200, 16777215));
 
-        horizontalLayout_17->addWidget(lineEdit_telefono);
+        horizontalLayout_3->addWidget(lineEdit_telefono);
 
-        horizontalSpacer_11 = new QSpacerItem(13, 14, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer_11 = new QSpacerItem(90, 14, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_17->addItem(horizontalSpacer_11);
+        horizontalLayout_3->addItem(horizontalSpacer_11);
 
         label_32 = new QLabel(groupBox);
         label_32->setObjectName(QString::fromUtf8("label_32"));
         label_32->setMinimumSize(QSize(80, 0));
         label_32->setMaximumSize(QSize(80, 16777215));
 
-        horizontalLayout_17->addWidget(label_32);
+        horizontalLayout_3->addWidget(label_32);
 
         lineEdit_fax = new QLineEdit(groupBox);
         lineEdit_fax->setObjectName(QString::fromUtf8("lineEdit_fax"));
         lineEdit_fax->setMinimumSize(QSize(200, 0));
         lineEdit_fax->setMaximumSize(QSize(200, 16777215));
 
-        horizontalLayout_17->addWidget(lineEdit_fax);
+        horizontalLayout_3->addWidget(lineEdit_fax);
 
 
-        verticalLayout->addLayout(horizontalLayout_17);
-
-        horizontalLayout_18 = new QHBoxLayout();
-        horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
-
-        verticalLayout->addLayout(horizontalLayout_18);
+        verticalLayout->addLayout(horizontalLayout_3);
 
         horizontalLayout_19 = new QHBoxLayout();
         horizontalLayout_19->setObjectName(QString::fromUtf8("horizontalLayout_19"));
@@ -282,36 +275,30 @@ public:
         verticalLayout->addLayout(horizontalLayout_21);
 
 
-        gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
+        verticalLayout_2->addWidget(groupBox);
 
-
-        verticalLayout_3->addWidget(groupBox);
-
-        horizontalLayout_22 = new QHBoxLayout();
-        horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_22->addItem(horizontalSpacer_7);
+        horizontalLayout->addItem(horizontalSpacer_7);
 
         pushButton_registrar = new QPushButton(ui_new_transportista);
         pushButton_registrar->setObjectName(QString::fromUtf8("pushButton_registrar"));
 
-        horizontalLayout_22->addWidget(pushButton_registrar);
+        horizontalLayout->addWidget(pushButton_registrar);
 
         pushButton_cancelar = new QPushButton(ui_new_transportista);
         pushButton_cancelar->setObjectName(QString::fromUtf8("pushButton_cancelar"));
 
-        horizontalLayout_22->addWidget(pushButton_cancelar);
+        horizontalLayout->addWidget(pushButton_cancelar);
 
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_22->addItem(horizontalSpacer_8);
+        horizontalLayout->addItem(horizontalSpacer_8);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_22);
-
-
-        gridLayout_2->addLayout(verticalLayout_3, 0, 0, 1, 1);
+        verticalLayout_2->addLayout(horizontalLayout);
 
 
         retranslateUi(ui_new_transportista);
@@ -324,6 +311,7 @@ public:
         ui_new_transportista->setWindowTitle(QApplication::translate("ui_new_transportista", "Form", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("ui_new_transportista", "Transportista", 0, QApplication::UnicodeUTF8));
         label_ruc->setText(QApplication::translate("ui_new_transportista", "RUC:", 0, QApplication::UnicodeUTF8));
+        pushButton_link->setText(QApplication::translate("ui_new_transportista", "web", 0, QApplication::UnicodeUTF8));
         label_razon_social->setText(QApplication::translate("ui_new_transportista", "Raz\303\263n Social:", 0, QApplication::UnicodeUTF8));
         label_representante->setText(QApplication::translate("ui_new_transportista", "Representante:", 0, QApplication::UnicodeUTF8));
         label_region->setText(QApplication::translate("ui_new_transportista", "Regi\303\263n:", 0, QApplication::UnicodeUTF8));

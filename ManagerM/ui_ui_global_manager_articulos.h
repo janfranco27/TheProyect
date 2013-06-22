@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_global_manager_articulos.ui'
 **
-** Created: Sat 1. Jun 21:02:38 2013
+** Created: Fri 21. Jun 22:03:28 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,14 +15,17 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
-#include <QtGui/QFrame>
+#include <QtGui/QDoubleSpinBox>
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QTableView>
+#include <QtGui/QTableWidget>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -48,25 +51,33 @@ public:
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label;
-    QComboBox *comboBox_marca;
-    QSpacerItem *horizontalSpacer_6;
-    QHBoxLayout *horizontalLayout_7;
+    QLineEdit *lineEdit_marca;
     QLabel *label_2;
-    QComboBox *comboBox_medida;
-    QSpacerItem *horizontalSpacer_7;
-    QHBoxLayout *horizontalLayout_8;
-    QLabel *label_grupo;
-    QComboBox *comboBox_grupo;
-    QSpacerItem *horizontalSpacer_10;
-    QHBoxLayout *horizontalLayout_9;
-    QFrame *line;
+    QLineEdit *lineEdit_medida;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *pushButton_new;
+    QPushButton *pushButton_edit;
+    QVBoxLayout *verticalLayout;
     QTableView *tableView_articulos;
+    QHBoxLayout *horizontalLayout_7;
+    QPushButton *pushButton_down;
+    QLabel *label_4;
+    QDoubleSpinBox *doubleSpinBox_cantidad;
+    QLabel *label_7;
+    QDoubleSpinBox *doubleSpinBox_precio;
+    QSpacerItem *horizontalSpacer_8;
+    QPushButton *pushButton_up;
+    QTableWidget *tableWidget_articulos;
+    QHBoxLayout *horizontalLayout_9;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_7;
+    QPushButton *pushButton_add;
 
     void setupUi(QWidget *ui_global_manager_articulos)
     {
         if (ui_global_manager_articulos->objectName().isEmpty())
             ui_global_manager_articulos->setObjectName(QString::fromUtf8("ui_global_manager_articulos"));
-        ui_global_manager_articulos->resize(534, 525);
+        ui_global_manager_articulos->resize(712, 551);
         gridLayout = new QGridLayout(ui_global_manager_articulos);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -126,6 +137,8 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         lineEdit_descripcion = new QLineEdit(ui_global_manager_articulos);
         lineEdit_descripcion->setObjectName(QString::fromUtf8("lineEdit_descripcion"));
+        lineEdit_descripcion->setMinimumSize(QSize(300, 0));
+        lineEdit_descripcion->setMaximumSize(QSize(300, 16777215));
 
         horizontalLayout_4->addWidget(lineEdit_descripcion);
 
@@ -158,79 +171,141 @@ public:
 
         horizontalLayout_6->addWidget(label);
 
-        comboBox_marca = new QComboBox(ui_global_manager_articulos);
-        comboBox_marca->setObjectName(QString::fromUtf8("comboBox_marca"));
-        comboBox_marca->setMinimumSize(QSize(150, 0));
+        lineEdit_marca = new QLineEdit(ui_global_manager_articulos);
+        lineEdit_marca->setObjectName(QString::fromUtf8("lineEdit_marca"));
+        lineEdit_marca->setMinimumSize(QSize(150, 0));
+        lineEdit_marca->setMaximumSize(QSize(150, 16777215));
 
-        horizontalLayout_6->addWidget(comboBox_marca);
+        horizontalLayout_6->addWidget(lineEdit_marca);
+
+        label_2 = new QLabel(ui_global_manager_articulos);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setMinimumSize(QSize(40, 0));
+
+        horizontalLayout_6->addWidget(label_2);
+
+        lineEdit_medida = new QLineEdit(ui_global_manager_articulos);
+        lineEdit_medida->setObjectName(QString::fromUtf8("lineEdit_medida"));
+        lineEdit_medida->setMinimumSize(QSize(150, 0));
+        lineEdit_medida->setMaximumSize(QSize(150, 16777215));
+
+        horizontalLayout_6->addWidget(lineEdit_medida);
 
         horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_6);
 
+        pushButton_new = new QPushButton(ui_global_manager_articulos);
+        pushButton_new->setObjectName(QString::fromUtf8("pushButton_new"));
+
+        horizontalLayout_6->addWidget(pushButton_new);
+
+        pushButton_edit = new QPushButton(ui_global_manager_articulos);
+        pushButton_edit->setObjectName(QString::fromUtf8("pushButton_edit"));
+
+        horizontalLayout_6->addWidget(pushButton_edit);
+
 
         gridLayout->addLayout(horizontalLayout_6, 5, 0, 1, 1);
 
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        tableView_articulos = new QTableView(ui_global_manager_articulos);
+        tableView_articulos->setObjectName(QString::fromUtf8("tableView_articulos"));
+        tableView_articulos->setMinimumSize(QSize(0, 0));
+
+        verticalLayout->addWidget(tableView_articulos);
+
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        label_2 = new QLabel(ui_global_manager_articulos);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setMinimumSize(QSize(40, 0));
+        pushButton_down = new QPushButton(ui_global_manager_articulos);
+        pushButton_down->setObjectName(QString::fromUtf8("pushButton_down"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/sq_br_down.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_down->setIcon(icon);
+        pushButton_down->setIconSize(QSize(20, 20));
+        pushButton_down->setFlat(true);
 
-        horizontalLayout_7->addWidget(label_2);
+        horizontalLayout_7->addWidget(pushButton_down);
 
-        comboBox_medida = new QComboBox(ui_global_manager_articulos);
-        comboBox_medida->setObjectName(QString::fromUtf8("comboBox_medida"));
-        comboBox_medida->setMinimumSize(QSize(150, 0));
+        label_4 = new QLabel(ui_global_manager_articulos);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
 
-        horizontalLayout_7->addWidget(comboBox_medida);
+        horizontalLayout_7->addWidget(label_4);
 
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        doubleSpinBox_cantidad = new QDoubleSpinBox(ui_global_manager_articulos);
+        doubleSpinBox_cantidad->setObjectName(QString::fromUtf8("doubleSpinBox_cantidad"));
+        doubleSpinBox_cantidad->setMaximum(999.99);
+        doubleSpinBox_cantidad->setValue(1);
 
-        horizontalLayout_7->addItem(horizontalSpacer_7);
+        horizontalLayout_7->addWidget(doubleSpinBox_cantidad);
+
+        label_7 = new QLabel(ui_global_manager_articulos);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+
+        horizontalLayout_7->addWidget(label_7);
+
+        doubleSpinBox_precio = new QDoubleSpinBox(ui_global_manager_articulos);
+        doubleSpinBox_precio->setObjectName(QString::fromUtf8("doubleSpinBox_precio"));
+        doubleSpinBox_precio->setMaximum(100000);
+
+        horizontalLayout_7->addWidget(doubleSpinBox_precio);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_8);
+
+        pushButton_up = new QPushButton(ui_global_manager_articulos);
+        pushButton_up->setObjectName(QString::fromUtf8("pushButton_up"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/sq_br_up.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_up->setIcon(icon1);
+        pushButton_up->setIconSize(QSize(20, 20));
+        pushButton_up->setFlat(true);
+
+        horizontalLayout_7->addWidget(pushButton_up);
 
 
-        gridLayout->addLayout(horizontalLayout_7, 6, 0, 1, 1);
+        verticalLayout->addLayout(horizontalLayout_7);
 
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        label_grupo = new QLabel(ui_global_manager_articulos);
-        label_grupo->setObjectName(QString::fromUtf8("label_grupo"));
-        label_grupo->setMinimumSize(QSize(40, 0));
+        tableWidget_articulos = new QTableWidget(ui_global_manager_articulos);
+        tableWidget_articulos->setObjectName(QString::fromUtf8("tableWidget_articulos"));
+        tableWidget_articulos->setMinimumSize(QSize(0, 0));
 
-        horizontalLayout_8->addWidget(label_grupo);
-
-        comboBox_grupo = new QComboBox(ui_global_manager_articulos);
-        comboBox_grupo->setObjectName(QString::fromUtf8("comboBox_grupo"));
-        comboBox_grupo->setMinimumSize(QSize(150, 0));
-
-        horizontalLayout_8->addWidget(comboBox_grupo);
-
-        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_8->addItem(horizontalSpacer_10);
-
-
-        gridLayout->addLayout(horizontalLayout_8, 7, 0, 1, 1);
+        verticalLayout->addWidget(tableWidget_articulos);
 
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        pushButton = new QPushButton(ui_global_manager_articulos);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        gridLayout->addLayout(horizontalLayout_9, 8, 0, 1, 1);
+        horizontalLayout_9->addWidget(pushButton);
 
-        line = new QFrame(ui_global_manager_articulos);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addWidget(line, 9, 0, 1, 1);
+        horizontalLayout_9->addItem(horizontalSpacer_7);
 
-        tableView_articulos = new QTableView(ui_global_manager_articulos);
-        tableView_articulos->setObjectName(QString::fromUtf8("tableView_articulos"));
+        pushButton_add = new QPushButton(ui_global_manager_articulos);
+        pushButton_add->setObjectName(QString::fromUtf8("pushButton_add"));
 
-        gridLayout->addWidget(tableView_articulos, 10, 0, 1, 1);
+        horizontalLayout_9->addWidget(pushButton_add);
 
-        QWidget::setTabOrder(tableView_articulos, comboBox_modo);
+
+        verticalLayout->addLayout(horizontalLayout_9);
+
+
+        gridLayout->addLayout(verticalLayout, 6, 0, 1, 1);
+
+        QWidget::setTabOrder(lineEdit_descripcion, lineEdit_marca);
+        QWidget::setTabOrder(lineEdit_marca, lineEdit_medida);
+        QWidget::setTabOrder(lineEdit_medida, tableView_articulos);
+        QWidget::setTabOrder(tableView_articulos, doubleSpinBox_cantidad);
+        QWidget::setTabOrder(doubleSpinBox_cantidad, doubleSpinBox_precio);
+        QWidget::setTabOrder(doubleSpinBox_precio, pushButton_add);
+        QWidget::setTabOrder(pushButton_add, tableWidget_articulos);
+        QWidget::setTabOrder(tableWidget_articulos, pushButton_down);
+        QWidget::setTabOrder(pushButton_down, pushButton_up);
+        QWidget::setTabOrder(pushButton_up, comboBox_modo);
 
         retranslateUi(ui_global_manager_articulos);
 
@@ -240,7 +315,7 @@ public:
     void retranslateUi(QWidget *ui_global_manager_articulos)
     {
         ui_global_manager_articulos->setWindowTitle(QApplication::translate("ui_global_manager_articulos", "Form", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("ui_global_manager_articulos", "Busqueda Avanzada", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("ui_global_manager_articulos", "Busqueda", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("ui_global_manager_articulos", "Eliga el modo de busqueda para la descripcion\n"
 " y realize su busqueda:", 0, QApplication::UnicodeUTF8));
         comboBox_modo->clear();
@@ -251,7 +326,14 @@ public:
         label_5->setText(QApplication::translate("ui_global_manager_articulos", "Restringe tus resultados por:", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_global_manager_articulos", "Marca", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ui_global_manager_articulos", "Medida", 0, QApplication::UnicodeUTF8));
-        label_grupo->setText(QApplication::translate("ui_global_manager_articulos", "Grupo", 0, QApplication::UnicodeUTF8));
+        pushButton_new->setText(QApplication::translate("ui_global_manager_articulos", "Nuevo", 0, QApplication::UnicodeUTF8));
+        pushButton_edit->setText(QApplication::translate("ui_global_manager_articulos", "Modificar", 0, QApplication::UnicodeUTF8));
+        pushButton_down->setText(QString());
+        label_4->setText(QApplication::translate("ui_global_manager_articulos", "Cantidad", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ui_global_manager_articulos", "Precio", 0, QApplication::UnicodeUTF8));
+        pushButton_up->setText(QString());
+        pushButton->setText(QApplication::translate("ui_global_manager_articulos", "Clear", 0, QApplication::UnicodeUTF8));
+        pushButton_add->setText(QApplication::translate("ui_global_manager_articulos", "A\303\261adir", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

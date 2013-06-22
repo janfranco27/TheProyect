@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_newedit_colaborador.ui'
 **
-** Created: Sat 1. Jun 21:02:36 2013
+** Created: Fri 21. Jun 22:03:27 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

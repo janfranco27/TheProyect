@@ -3,6 +3,8 @@
 
 Sistema::Sistema()
 {
+    igv=0.18;
+    cambioDolar=2.5;
 }
 
 
@@ -961,4 +963,55 @@ bool Sistema::deleteProveedor_Articulo(_QSTR proveedorPK, _QSTR articuloPK)
 
 }
 
+// Funcion sirve asumiendo q la entrada de values no tiene igv, y esta en soles
+double Sistema::conversion(vector<double> values, bool old_hasIGV, int old_typeCoin, bool hasIGV, int typeCoin)
+{
+    double r=0.0;
+
+    for(unsigned int i=0; i<values.size(); i++)
+    {
+        r+=values[i];
+    }
+    switch(typeCoin)
+    {
+    // En soles
+    case 0:
+        break;
+    // En dolares
+    case 1:
+        r*=cambioDolar;
+        break;
+    default:
+        ;
+    }
+    if(hasIGV)
+    {
+        r+=r*igv;
+    }
+
+    return r;
+}
+
+// Funcion para tranformar value(precio) a otro tipo de moneda con otra modalidad.
+double Sistema::conversion(double value, bool old_hasIGV, int old_typeCoin, bool hasIGV, int typeCoin)
+{
+    switch(typeCoin)
+    {
+    // En soles
+    case 0:
+        break;
+    // En dolares
+    case 1:
+        value*=cambioDolar;
+        break;
+    default:
+        ;
+    }
+    if(hasIGV)
+    {
+        value*=igv;
+    }
+
+    return value;
+}
 

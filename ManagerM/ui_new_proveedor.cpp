@@ -1,6 +1,7 @@
 #include "ui_new_proveedor.h"
 #include "ui_ui_new_proveedor.h"
 
+#include <QDesktopServices>
 
 ui_new_proveedor::ui_new_proveedor(QWidget *parent) :
     QWidget(parent),
@@ -83,6 +84,10 @@ void ui_new_proveedor::setUiModuleCompras(ui_module_compras *w)
     module_compras = w;
 }
 
+void ui_new_proveedor::setTableView(QTableView *t)
+{
+    table = t;
+}
 
 
 void ui_new_proveedor::on_pushButton_registrar_clicked()
@@ -127,6 +132,10 @@ void ui_new_proveedor::on_pushButton_registrar_clicked()
 
         obj_e_proveedor.mf_add();
 
+        QSqlQueryModel* model = new QSqlQueryModel;
+        // update
+        model->setQuery("SELECT * FROM getProveedores ORDER BY pro_razon_social");
+        table->setModel(model);
         //module_compras->mf_updateModel_proveedor();
         this->close();
     } else {
@@ -150,4 +159,9 @@ void ui_new_proveedor::on_pushButton_editar_clicked()
 void ui_new_proveedor::on_pushButton_cancelar_clicked()
 {
     this->close();
+}
+
+void ui_new_proveedor::on_pushButton_link_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias"));
 }

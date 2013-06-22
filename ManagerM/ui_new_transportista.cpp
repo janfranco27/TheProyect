@@ -1,6 +1,8 @@
 #include "ui_new_transportista.h"
 #include "ui_ui_new_transportista.h"
 
+#include <QDesktopServices>
+
 ui_new_transportista::ui_new_transportista(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_new_transportista)
@@ -87,6 +89,7 @@ ui_new_transportista::~ui_new_transportista()
     delete ui;
 }
 
+/*
 void ui_new_transportista::setType(int mode)
 {
     if(mode == COMPRAS_NEW)
@@ -112,6 +115,11 @@ void ui_new_transportista::setType(int mode)
 void ui_new_transportista::setUiModuleCompras(ui_module_compras *w)
 {
     module_compras = w;
+}
+*/
+void ui_new_transportista::setTableView(QTableView *t)
+{
+    table = t;
 }
 
 void ui_new_transportista::on_pushButton_registrar_clicked()
@@ -162,7 +170,10 @@ void ui_new_transportista::on_pushButton_registrar_clicked()
 
         obj_transportista.mf_add();
 
-
+        QSqlQueryModel* model = new QSqlQueryModel;
+        // update
+        model->setQuery("SELECT * FROM getTransportistas ORDER BY tra_razon_social");
+        table->setModel(model);
         //module_compras->mf_updateModel_transportista();
         this->close();
     } else {
@@ -170,7 +181,7 @@ void ui_new_transportista::on_pushButton_registrar_clicked()
     }
 
 }
-
+/*
 void ui_new_transportista::on_pushButton_editar_clicked()
 {
     int rpta = QMessageBox::question(this,"Confirmación","Desea guardar los cambios hechos en la orden?","Aceptar","Cancelar");
@@ -182,8 +193,13 @@ void ui_new_transportista::on_pushButton_editar_clicked()
 
     }
 }
-
+*/
 void ui_new_transportista::on_pushButton_cancelar_clicked()
 {
     this->close();
+}
+
+void ui_new_transportista::on_pushButton_link_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias"));
 }

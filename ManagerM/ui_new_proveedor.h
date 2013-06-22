@@ -21,7 +21,7 @@ public:
     
     void setType(int);
     void setUiModuleCompras(ui_module_compras*);
-
+    void setTableView(QTableView*);
 private slots:
     void on_pushButton_registrar_clicked();
 
@@ -29,9 +29,12 @@ private slots:
 
     void on_pushButton_cancelar_clicked();    
 
+    void on_pushButton_link_clicked();
+
 private:
     Ui::ui_new_proveedor *ui;
 
+    QTableView* table;
     ui_module_compras* module_compras;
     map<QString, QString > regiones;
 };

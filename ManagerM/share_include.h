@@ -110,6 +110,7 @@ using namespace std;
 #include "ui_login.h"
 
 #include "ui_edit_proveedor.h"
+#include "ui_edit_transportista.h"
 
 #include "ui_new_marca.h"
 #include "ui_new_medida.h"
@@ -137,12 +138,15 @@ using namespace std;
 #include "ui_newedit_cliente.h"
 
 
-
+#include "ui_new_proveedor.h"
+#include "ui_new_transportista.h"
 #include "ui_new_venta_boleta.h"
 #include "ui_new_venta_cotizacion.h"
 #include "ui_new_venta_factura.h"
 #include "ui_new_venta_proforma.h"
 
+#include "ui_search_proveedor.h"
+#include "ui_search_transportista.h"
 
 #include "ui_edit_personalinformation.h"
 #include "ui_search_cliente.h"
@@ -150,6 +154,8 @@ using namespace std;
 
 #include "ui_new_boleta_sistema.h"
 #include "ui_new_factura_sistema.h"
+
+#include "ui_tipo_cambio_dolar.h"
 
 #include "ui_global_manager_articulos.h"
 //NAMESPACES

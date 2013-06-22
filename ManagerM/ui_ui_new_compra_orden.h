@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_compra_orden.ui'
 **
-** Created: Sat 1. Jun 21:02:37 2013
+** Created: Fri 21. Jun 22:03:28 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -17,14 +17,13 @@
 #include <QtGui/QComboBox>
 #include <QtGui/QDateEdit>
 #include <QtGui/QFrame>
-#include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
-#include <QtGui/QTableView>
+#include <QtGui/QTableWidget>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 #include <lineedit.h>
@@ -34,8 +33,7 @@ QT_BEGIN_NAMESPACE
 class Ui_ui_new_compra_orden
 {
 public:
-    QGridLayout *gridLayout_2;
-    QVBoxLayout *verticalLayout;
+    QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_codigo;
     QLineEdit *lineEdit_codigo;
@@ -68,6 +66,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_tipo_moneda;
     QComboBox *comboBox_tipo_moneda;
+    QLineEdit *lineEdit_cambio;
     QSpacerItem *horizontalSpacer_10;
     QLabel *label_modalidad;
     QComboBox *comboBox_modalidad;
@@ -76,35 +75,36 @@ public:
     QComboBox *comboBox;
     QFrame *line;
     QHBoxLayout *horizontalLayout_3;
-    LineEdit *lineEdit_ingresarArticulo;
-    QPushButton *pushButton_ingresarArticulos;
     QSpacerItem *horizontalSpacer_6;
-    QTableView *tableView_articulos;
-    QHBoxLayout *horizontalLayout_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_ingresarArticulos;
+    QTableWidget *tableWidget_articulos;
+    QHBoxLayout *horizontalLayout_11;
     QSpacerItem *horizontalSpacer_7;
-    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *label_subtotal;
-    QLabel *label_igv;
-    QLabel *label_total;
     QLineEdit *lineEdit_subtotal;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_igv;
     QLineEdit *lineEdit_igv;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_total;
     QLineEdit *lineEdit_total;
     QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_8;
     QPushButton *pushButton_registrar;
     QPushButton *pushButton_mail;
     QPushButton *pushButton_imprimir;
     QPushButton *pushButton_cancelar;
-    QSpacerItem *horizontalSpacer_8;
 
     void setupUi(QWidget *ui_new_compra_orden)
     {
         if (ui_new_compra_orden->objectName().isEmpty())
             ui_new_compra_orden->setObjectName(QString::fromUtf8("ui_new_compra_orden"));
-        ui_new_compra_orden->resize(653, 480);
-        gridLayout_2 = new QGridLayout(ui_new_compra_orden);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        ui_new_compra_orden->resize(758, 584);
+        verticalLayout_2 = new QVBoxLayout(ui_new_compra_orden);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         label_codigo = new QLabel(ui_new_compra_orden);
@@ -149,7 +149,7 @@ public:
         horizontalLayout_8->addWidget(dateEdit_sistema);
 
 
-        verticalLayout->addLayout(horizontalLayout_8);
+        verticalLayout_2->addLayout(horizontalLayout_8);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
@@ -181,7 +181,7 @@ public:
         horizontalLayout_7->addItem(horizontalSpacer_2);
 
 
-        verticalLayout->addLayout(horizontalLayout_7);
+        verticalLayout_2->addLayout(horizontalLayout_7);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
@@ -224,7 +224,7 @@ public:
         horizontalLayout_6->addItem(horizontalSpacer_3);
 
 
-        verticalLayout->addLayout(horizontalLayout_6);
+        verticalLayout_2->addLayout(horizontalLayout_6);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
@@ -265,7 +265,7 @@ public:
         horizontalLayout_5->addItem(horizontalSpacer_4);
 
 
-        verticalLayout->addLayout(horizontalLayout_5);
+        verticalLayout_2->addLayout(horizontalLayout_5);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -280,6 +280,13 @@ public:
         comboBox_tipo_moneda->setEditable(false);
 
         horizontalLayout_4->addWidget(comboBox_tipo_moneda);
+
+        lineEdit_cambio = new QLineEdit(ui_new_compra_orden);
+        lineEdit_cambio->setObjectName(QString::fromUtf8("lineEdit_cambio"));
+        lineEdit_cambio->setMaximumSize(QSize(50, 16777215));
+        lineEdit_cambio->setReadOnly(true);
+
+        horizontalLayout_4->addWidget(lineEdit_cambio);
 
         horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -314,86 +321,124 @@ public:
         horizontalLayout_4->addWidget(comboBox);
 
 
-        verticalLayout->addLayout(horizontalLayout_4);
+        verticalLayout_2->addLayout(horizontalLayout_4);
 
         line = new QFrame(ui_new_compra_orden);
         line->setObjectName(QString::fromUtf8("line"));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
-        verticalLayout->addWidget(line);
+        verticalLayout_2->addWidget(line);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        lineEdit_ingresarArticulo = new LineEdit(ui_new_compra_orden);
-        lineEdit_ingresarArticulo->setObjectName(QString::fromUtf8("lineEdit_ingresarArticulo"));
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addWidget(lineEdit_ingresarArticulo);
+        horizontalLayout_3->addItem(horizontalSpacer_6);
+
+        pushButton = new QPushButton(ui_new_compra_orden);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout_3->addWidget(pushButton);
 
         pushButton_ingresarArticulos = new QPushButton(ui_new_compra_orden);
         pushButton_ingresarArticulos->setObjectName(QString::fromUtf8("pushButton_ingresarArticulos"));
 
         horizontalLayout_3->addWidget(pushButton_ingresarArticulos);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_6);
+        verticalLayout_2->addLayout(horizontalLayout_3);
 
+        tableWidget_articulos = new QTableWidget(ui_new_compra_orden);
+        tableWidget_articulos->setObjectName(QString::fromUtf8("tableWidget_articulos"));
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout_2->addWidget(tableWidget_articulos);
 
-        tableView_articulos = new QTableView(ui_new_compra_orden);
-        tableView_articulos->setObjectName(QString::fromUtf8("tableView_articulos"));
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalSpacer_7 = new QSpacerItem(478, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        verticalLayout->addWidget(tableView_articulos);
+        horizontalLayout_11->addItem(horizontalSpacer_7);
 
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_7);
-
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label_subtotal = new QLabel(ui_new_compra_orden);
         label_subtotal->setObjectName(QString::fromUtf8("label_subtotal"));
+        label_subtotal->setMinimumSize(QSize(80, 0));
+        label_subtotal->setMaximumSize(QSize(80, 16777215));
+        label_subtotal->setLayoutDirection(Qt::RightToLeft);
+        label_subtotal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout->addWidget(label_subtotal, 0, 0, 1, 1);
-
-        label_igv = new QLabel(ui_new_compra_orden);
-        label_igv->setObjectName(QString::fromUtf8("label_igv"));
-
-        gridLayout->addWidget(label_igv, 0, 1, 1, 1);
-
-        label_total = new QLabel(ui_new_compra_orden);
-        label_total->setObjectName(QString::fromUtf8("label_total"));
-
-        gridLayout->addWidget(label_total, 0, 2, 1, 1);
+        horizontalLayout_2->addWidget(label_subtotal);
 
         lineEdit_subtotal = new QLineEdit(ui_new_compra_orden);
         lineEdit_subtotal->setObjectName(QString::fromUtf8("lineEdit_subtotal"));
+        lineEdit_subtotal->setMaximumSize(QSize(80, 16777215));
+        lineEdit_subtotal->setLayoutDirection(Qt::RightToLeft);
 
-        gridLayout->addWidget(lineEdit_subtotal, 1, 0, 1, 1);
-
-        lineEdit_igv = new QLineEdit(ui_new_compra_orden);
-        lineEdit_igv->setObjectName(QString::fromUtf8("lineEdit_igv"));
-        lineEdit_igv->setReadOnly(false);
-
-        gridLayout->addWidget(lineEdit_igv, 1, 1, 1, 1);
-
-        lineEdit_total = new QLineEdit(ui_new_compra_orden);
-        lineEdit_total->setObjectName(QString::fromUtf8("lineEdit_total"));
-
-        gridLayout->addWidget(lineEdit_total, 1, 2, 1, 1);
-
-
-        horizontalLayout_2->addLayout(gridLayout);
+        horizontalLayout_2->addWidget(lineEdit_subtotal);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
 
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        label_igv = new QLabel(ui_new_compra_orden);
+        label_igv->setObjectName(QString::fromUtf8("label_igv"));
+        label_igv->setMinimumSize(QSize(80, 0));
+        label_igv->setMaximumSize(QSize(80, 16777215));
+        label_igv->setLayoutDirection(Qt::RightToLeft);
+        label_igv->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        horizontalLayout_9->addWidget(label_igv);
+
+        lineEdit_igv = new QLineEdit(ui_new_compra_orden);
+        lineEdit_igv->setObjectName(QString::fromUtf8("lineEdit_igv"));
+        lineEdit_igv->setMaximumSize(QSize(80, 16777215));
+        lineEdit_igv->setLayoutDirection(Qt::RightToLeft);
+        lineEdit_igv->setReadOnly(false);
+
+        horizontalLayout_9->addWidget(lineEdit_igv);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        label_total = new QLabel(ui_new_compra_orden);
+        label_total->setObjectName(QString::fromUtf8("label_total"));
+        label_total->setMinimumSize(QSize(80, 0));
+        label_total->setMaximumSize(QSize(80, 16777215));
+        label_total->setLayoutDirection(Qt::RightToLeft);
+        label_total->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        horizontalLayout_10->addWidget(label_total);
+
+        lineEdit_total = new QLineEdit(ui_new_compra_orden);
+        lineEdit_total->setObjectName(QString::fromUtf8("lineEdit_total"));
+        lineEdit_total->setMaximumSize(QSize(80, 16777215));
+        lineEdit_total->setLayoutDirection(Qt::RightToLeft);
+
+        horizontalLayout_10->addWidget(lineEdit_total);
+
+
+        verticalLayout->addLayout(horizontalLayout_10);
+
+
+        horizontalLayout_11->addLayout(verticalLayout);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_11);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_8);
+
         pushButton_registrar = new QPushButton(ui_new_compra_orden);
         pushButton_registrar->setObjectName(QString::fromUtf8("pushButton_registrar"));
 
@@ -414,15 +459,8 @@ public:
 
         horizontalLayout->addWidget(pushButton_cancelar);
 
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_8);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-
-        gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
+        verticalLayout_2->addLayout(horizontalLayout);
 
 
         retranslateUi(ui_new_compra_orden);
@@ -435,6 +473,7 @@ public:
         ui_new_compra_orden->setWindowTitle(QApplication::translate("ui_new_compra_orden", "Form", 0, QApplication::UnicodeUTF8));
         label_codigo->setText(QApplication::translate("ui_new_compra_orden", "C\303\263digo:", 0, QApplication::UnicodeUTF8));
         label_emision->setText(QApplication::translate("ui_new_compra_orden", "Fecha de emisi\303\263n:", 0, QApplication::UnicodeUTF8));
+        dateEdit_emision->setDisplayFormat(QApplication::translate("ui_new_compra_orden", "dd/MM/yyyy", 0, QApplication::UnicodeUTF8));
         label_sistema->setText(QApplication::translate("ui_new_compra_orden", "Fecha de sistema:", 0, QApplication::UnicodeUTF8));
         label_serie_numero->setText(QApplication::translate("ui_new_compra_orden", "Serie y n\303\272mero:", 0, QApplication::UnicodeUTF8));
         lineEdit_serie->setPlaceholderText(QApplication::translate("ui_new_compra_orden", "Serie", 0, QApplication::UnicodeUTF8));
@@ -467,11 +506,12 @@ public:
          << QApplication::translate("ui_new_compra_orden", "Contado", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("ui_new_compra_orden", "Vuelta de viaje", 0, QApplication::UnicodeUTF8)
         );
+        pushButton->setText(QApplication::translate("ui_new_compra_orden", "Ayuda", 0, QApplication::UnicodeUTF8));
         pushButton_ingresarArticulos->setText(QApplication::translate("ui_new_compra_orden", "Ingresar art\303\255culo", 0, QApplication::UnicodeUTF8));
         label_subtotal->setText(QApplication::translate("ui_new_compra_orden", "Sub Total:", 0, QApplication::UnicodeUTF8));
         label_igv->setText(QApplication::translate("ui_new_compra_orden", "IGV:", 0, QApplication::UnicodeUTF8));
+        lineEdit_igv->setText(QApplication::translate("ui_new_compra_orden", "0.18", 0, QApplication::UnicodeUTF8));
         label_total->setText(QApplication::translate("ui_new_compra_orden", "Total:", 0, QApplication::UnicodeUTF8));
-        lineEdit_igv->setText(QString());
         pushButton_registrar->setText(QApplication::translate("ui_new_compra_orden", "Registrar", 0, QApplication::UnicodeUTF8));
         pushButton_mail->setText(QApplication::translate("ui_new_compra_orden", "Mail", 0, QApplication::UnicodeUTF8));
         pushButton_imprimir->setText(QApplication::translate("ui_new_compra_orden", "Imprimir", 0, QApplication::UnicodeUTF8));

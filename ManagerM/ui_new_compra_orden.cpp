@@ -1,19 +1,25 @@
 #include "ui_new_compra_orden.h"
 #include "ui_ui_new_compra_orden.h"
 
-#include "share_include.h"
 ui_new_compra_orden::ui_new_compra_orden(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_new_compra_orden)
 {
     ui->setupUi(this);
 
+    global = new ui_global_manager_articulos;
+    search_proveedor = new ui_search_proveedor;
+    search_transportista = new ui_search_transportista;
+    widget_tipo_cambio = new ui_tipo_cambio_dolar;
+
     numRowsVisible = 0;
-    md_c = new QCompleter(this);
-    md_c->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
-    md_c->setCaseSensitivity(Qt::CaseInsensitive);
-    md_c->setWrapAround(false);
-    ui->lineEdit_ingresarArticulo->setCompleter(md_c);
+    QPushButton *pb = ((ui_global_manager_articulos*)global)->getPB_add();
+    connect(pb, SIGNAL(clicked()), this, SLOT(on_external_pushButton_add()));
+
+    ((ui_global_manager_articulos*)global)->set_cb_modalidad(ui->comboBox_modalidad);
+    ((ui_global_manager_articulos*)global)->set_cb_tipo_moneda(ui->comboBox_tipo_moneda);
+
+    connect(((ui_tipo_cambio_dolar*)widget_tipo_cambio), SIGNAL(cerrar()), this, SLOT(on_widget_tipo_cambio_closing()));
 
     QRegExp regExp_ruc("[0-9]{11,11}");
     ui->lineEdit_codigoProveedor->setValidator(new QRegExpValidator(regExp_ruc));
@@ -43,12 +49,45 @@ ui_new_compra_orden::ui_new_compra_orden(QWidget *parent) :
     ui->lineEdit_igv->setValidator(new QRegExpValidator(regExp_decimal));
     ui->lineEdit_total->setValidator(new QRegExpValidator(regExp_decimal));
 
+    ui->tableWidget_articulos->setColumnCount(7);
+    ui->tableWidget_articulos->setColumnWidth(0, 80);
+    ui->tableWidget_articulos->setColumnWidth(1, 120);
+    ui->tableWidget_articulos->setColumnWidth(2, 80);
+    ui->tableWidget_articulos->setColumnWidth(3, 80);
+    ui->tableWidget_articulos->setColumnWidth(4, 80);
+    ui->tableWidget_articulos->setColumnWidth(5, 80);
+    ui->tableWidget_articulos->setColumnWidth(6, 80);
+    //ui->tableWidget_articulos->setColumnWidth(7, 80);
+    ui->tableWidget_articulos->setHorizontalHeaderItem(0, new QTableWidgetItem("Codigo"));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(1, new QTableWidgetItem("Descripcion"));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(2, new QTableWidgetItem("Marca"));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(3, new QTableWidgetItem("Medida"));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(4, new QTableWidgetItem("Cantidad"));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(5, new QTableWidgetItem("Precio Unit."));
+    ui->tableWidget_articulos->setHorizontalHeaderItem(6, new QTableWidgetItem("Precio Total"));
+    //ui->tableWidget_articulos->setHorizontalHeaderItem(7, new QTableWidgetItem("Precio Total"));
 
+
+    //global->setAttribute(Qt::WA_DeleteOnClose);
+    ((ui_global_manager_articulos*)(global))->setTableWidget(ui->tableWidget_articulos);
+
+    /*
+    cart = new ui_shopping_cart;
+    cart->setAttribute(Qt::WA_DeleteOnClose);
+
+    shoppingCart = new shoppingCart;
+    shoppingCart->carritoDeCompras(global, cart, );
+    */
+    //global->show();
 }
 
 ui_new_compra_orden::~ui_new_compra_orden()
 {
     delete ui;
+    delete global;
+    delete search_proveedor;
+    delete search_transportista;
+    delete widget_tipo_cambio;
 }
 
 
@@ -149,18 +188,17 @@ void ui_new_compra_orden::init_lineEdit_transportistaNombre()
     connect(c1, SIGNAL(activated(QString)), this, SLOT(on_lineEdit_transportistaNombre_activated(QString)));
 }
 
-void ui_new_compra_orden::on_pushButton_buscarProveedor_clicked()
-{
-
-}
-
-void ui_new_compra_orden::on_pushButton_buscarTransportista_clicked()
-{
-
-}
 
 void ui_new_compra_orden::on_pushButton_ingresarArticulos_clicked()
 {
+    if(ui->lineEdit_codigoProveedor->text().length() != 11)
+    {
+        SYSTEM->messageWarning("Error","Ingrese un proveedor ");
+        return;
+    }
+    ((ui_global_manager_articulos*)(global))->setProveedor(ui->lineEdit_codigoProveedor->text());
+    ((ui_global_manager_articulos*)(global))->init_focus();
+    global->show();
     /*
     ui_new_compra_orden_ingresar_articulos* w = new ui_new_compra_orden_ingresar_articulos;
     w->setAttribute(Qt::WA_DeleteOnClose);
@@ -261,21 +299,14 @@ void ui_new_compra_orden::on_pushButton_cancelar_clicked()
 
 void ui_new_compra_orden::on_pushButton_proveedor_clicked()
 {
-    /*
-    ui_search_simple_proveedor* w = new ui_search_simple_proveedor;
-    w->setAttribute(Qt::WA_DeleteOnClose);
-    //w->setParent_new_orden(this);
-    w->show();
-    */
+    //w->setAttribute(Qt::WA_DeleteOnClose);
+    search_proveedor->show();
 }
 
 void ui_new_compra_orden::on_pushButton_transportista_clicked()
 {
-    /*
-    ui_search_transportista* obj = new ui_search_transportista;
-    obj->setAttribute(Qt::WA_DeleteOnClose);
-    obj->show();
-    */
+    //obj->setAttribute(Qt::WA_DeleteOnClose);
+    search_transportista->show();
 }
 
 void ui_new_compra_orden::on_lineEdit_codigoProveedor_textChanged(const QString &arg1)
@@ -441,6 +472,30 @@ void ui_new_compra_orden::on_lineEdit_transportistaNombre_activated(const QStrin
     if(query.next())
         ui->lineEdit_codigoTransportista->setText(query.value(0).toString());
 }
+
+void ui_new_compra_orden::on_external_pushButton_add()
+{
+    vector<double> values;
+    int numRows=ui->tableWidget_articulos->rowCount();
+    for(unsigned int i=0; i<numRows; i++)
+    {
+        QModelIndex index = ui->tableWidget_articulos->model()->index(i,6);
+        values.push_back(index.data(0).toDouble());
+    }
+    bool hasIGV = ui->comboBox_modalidad->currentIndex();
+    hasIGV = !hasIGV;
+
+    double subTotal = SYSTEM->conversion(values, 0, 1, 0, ui->comboBox_tipo_moneda->currentIndex());
+    double total = SYSTEM->conversion(values, 0, 1, 1, ui->comboBox_tipo_moneda->currentIndex());
+    QString str_total;
+    str_total.setNum(total);
+    QString str_subTotal;
+    str_subTotal.setNum(subTotal);
+    ui->lineEdit_total->setText(str_total);
+    ui->lineEdit_subtotal->setText(str_subTotal);
+
+}
+
 /*
 void ui_new_compra_orden::on_lineEdit_ingresarArticulo_textChanged(const QString &arg1)
 {
@@ -507,9 +562,77 @@ void ui_new_compra_orden::on_lineEdit_ingresarArticulo_textChanged(const QString
     }
 }
 */
+/*
 void ui_new_compra_orden::on_lineEdit_ingresarArticulo_returnPressed()
 {
-    ui_global_manager_articulos *w = new ui_global_manager_articulos;
+    global->show();
+}
+*/
+
+void ui_new_compra_orden::on_comboBox_tipo_moneda_currentIndexChanged(int index)
+{
+    on_dateEdit_emision_dateChanged(ui->dateEdit_emision->date());
+}
+
+void ui_new_compra_orden::on_comboBox_modalidad_currentIndexChanged(int index)
+{
+
+}
+/*
+void ui_new_compra_orden::on_pushButton_add_proveedor_clicked()
+{
+    ui_new_proveedor *w = new ui_new_proveedor;
     w->setAttribute(Qt::WA_DeleteOnClose);
     w->show();
+}
+
+void ui_new_compra_orden::on_pushButton_add_transportista_clicked()
+{
+    ui_new_transportista *w = new ui_new_transportista;
+    w->setAttribute(Qt::WA_DeleteOnClose);
+    w->show();
+}
+*/
+
+void ui_new_compra_orden::on_dateEdit_emision_dateChanged(const QDate &date)
+{
+    if(ui->comboBox_tipo_moneda->currentIndex()==1)
+    {
+        QSqlQuery query;
+        query.prepare("SELECT valor_soles_dolar FROM e_cambio_dolar_sistema WHERE fecha='"+date.toString("yyyy/MM/dd")+"'");
+        qDebug()<<"date: "<<date.toString("yyyy/MM/dd")<<endl;
+
+        if(!query.exec())return;
+        if(query.next())
+        {
+
+            qDebug()<<"cambio: "<<query.value(0).toString()<<endl;
+            float value=query.value(0).toFloat();
+
+            if(value==0.0f)
+            {
+                ((ui_tipo_cambio_dolar*)widget_tipo_cambio)->setDate(ui->dateEdit_emision->date());
+                ((ui_tipo_cambio_dolar*)widget_tipo_cambio)->select();
+                widget_tipo_cambio->show();
+            }else{
+                ui->lineEdit_cambio->setText(query.value(0).toString());
+            }
+        }else{
+            ((ui_tipo_cambio_dolar*)widget_tipo_cambio)->setDate(ui->dateEdit_emision->date());
+            ((ui_tipo_cambio_dolar*)widget_tipo_cambio)->select();
+            widget_tipo_cambio->show();
+        }
+    }
+}
+
+void ui_new_compra_orden::on_widget_tipo_cambio_closing()
+{
+    QSqlQuery query;
+    query.prepare("SELECT valor_soles_dolar FROM e_cambio_dolar_sistema WHERE fecha="
+                  +ui->dateEdit_emision->date().toString("yyyy/MM/dd")+"");
+    if(!query.exec())return;
+    if(query.next())
+    {
+        ui->lineEdit_cambio->setText(query.value(0).toString());
+    }
 }

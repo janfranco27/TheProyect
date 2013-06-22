@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_proveedor.h'
 **
-** Created: Sat 1. Jun 22:28:26 2013
+** Created: Sat 22. Jun 00:15:16 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_new_proveedor[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,7 @@ static const uint qt_meta_data_ui_new_proveedor[] = {
       18,   17,   17,   17, 0x08,
       52,   17,   17,   17, 0x08,
       83,   17,   17,   17, 0x08,
+     116,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -42,6 +43,7 @@ static const char qt_meta_stringdata_ui_new_proveedor[] = {
     "ui_new_proveedor\0\0on_pushButton_registrar_clicked()\0"
     "on_pushButton_editar_clicked()\0"
     "on_pushButton_cancelar_clicked()\0"
+    "on_pushButton_link_clicked()\0"
 };
 
 void ui_new_proveedor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -53,6 +55,7 @@ void ui_new_proveedor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 0: _t->on_pushButton_registrar_clicked(); break;
         case 1: _t->on_pushButton_editar_clicked(); break;
         case 2: _t->on_pushButton_cancelar_clicked(); break;
+        case 3: _t->on_pushButton_link_clicked(); break;
         default: ;
         }
     }
@@ -91,9 +94,9 @@ int ui_new_proveedor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
