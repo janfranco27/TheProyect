@@ -1,7 +1,15 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_advanced_search_articulo.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 18:44:37 2013
+=======
+
+** Created: Fri 21. Jun 22:03:28 2013
+
+** Created: Sat 22. Jun 15:10:15 2013
+
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

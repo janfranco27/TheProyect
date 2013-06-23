@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Clientes</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Icons.qrc">
+    <normaloff>:/Iconos/Iconos/Live_Messenger.png</normaloff>:/Iconos/Iconos/Live_Messenger.png</iconset>
+  </property>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>

@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_tool_bar.h'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 17:07:07 2013
+=======
+** Created: Sat 22. Jun 20:06:42 2013
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

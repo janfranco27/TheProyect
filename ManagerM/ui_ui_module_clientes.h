@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_clientes.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 16:59:16 2013
+=======
+** Created: Sat 22. Jun 19:35:58 2013
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,13 +20,11 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QSplitter>
 #include <QtGui/QTableView>
-#include <QtGui/QTreeWidget>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -33,11 +35,6 @@ class Ui_ui_module_clientes
 public:
     QHBoxLayout *horizontalLayout_2;
     QSplitter *splitter;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
-    QLabel *label;
-    QTreeWidget *treeWidget_ventas;
     QWidget *layoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_2;
@@ -63,41 +60,6 @@ public:
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
         splitter->setHandleWidth(1);
-        layoutWidget = new QWidget(splitter);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setSpacing(10);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        label = new QLabel(layoutWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
-        label->setMinimumSize(QSize(0, 24));
-        label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-
-        verticalLayout->addWidget(label);
-
-        treeWidget_ventas = new QTreeWidget(layoutWidget);
-        treeWidget_ventas->setObjectName(QString::fromUtf8("treeWidget_ventas"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(treeWidget_ventas->sizePolicy().hasHeightForWidth());
-        treeWidget_ventas->setSizePolicy(sizePolicy1);
-        treeWidget_ventas->setHeaderHidden(false);
-        treeWidget_ventas->setExpandsOnDoubleClick(true);
-
-        verticalLayout->addWidget(treeWidget_ventas);
-
-        splitter->addWidget(layoutWidget);
         layoutWidget_2 = new QWidget(splitter);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
         verticalLayout_2 = new QVBoxLayout(layoutWidget_2);
@@ -114,11 +76,11 @@ public:
         horizontalLayout->setContentsMargins(0, -1, -1, -1);
         pushButton_nuevo = new QPushButton(layoutWidget_2);
         pushButton_nuevo->setObjectName(QString::fromUtf8("pushButton_nuevo"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(pushButton_nuevo->sizePolicy().hasHeightForWidth());
-        pushButton_nuevo->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton_nuevo->sizePolicy().hasHeightForWidth());
+        pushButton_nuevo->setSizePolicy(sizePolicy);
         pushButton_nuevo->setStyleSheet(QString::fromUtf8(""));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Black_New-Page.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -132,8 +94,8 @@ public:
 
         pushButton_editar = new QPushButton(layoutWidget_2);
         pushButton_editar->setObjectName(QString::fromUtf8("pushButton_editar"));
-        sizePolicy2.setHeightForWidth(pushButton_editar->sizePolicy().hasHeightForWidth());
-        pushButton_editar->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(pushButton_editar->sizePolicy().hasHeightForWidth());
+        pushButton_editar->setSizePolicy(sizePolicy);
         pushButton_editar->setStyleSheet(QString::fromUtf8(""));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/doc_edit.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -149,11 +111,11 @@ public:
 
         lineEdit_buscar = new QLineEdit(layoutWidget_2);
         lineEdit_buscar->setObjectName(QString::fromUtf8("lineEdit_buscar"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(lineEdit_buscar->sizePolicy().hasHeightForWidth());
-        lineEdit_buscar->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(lineEdit_buscar->sizePolicy().hasHeightForWidth());
+        lineEdit_buscar->setSizePolicy(sizePolicy1);
         lineEdit_buscar->setMinimumSize(QSize(250, 0));
         lineEdit_buscar->setMaximumSize(QSize(250, 16777215));
         lineEdit_buscar->setFrame(true);
@@ -165,8 +127,8 @@ public:
 
         pushButton_buscar = new QPushButton(layoutWidget_2);
         pushButton_buscar->setObjectName(QString::fromUtf8("pushButton_buscar"));
-        sizePolicy2.setHeightForWidth(pushButton_buscar->sizePolicy().hasHeightForWidth());
-        pushButton_buscar->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(pushButton_buscar->sizePolicy().hasHeightForWidth());
+        pushButton_buscar->setSizePolicy(sizePolicy);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/monotone_search_zoom.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_buscar->setIcon(icon2);
@@ -181,7 +143,7 @@ public:
         tableView_clientes = new QTableView(layoutWidget_2);
         tableView_clientes->setObjectName(QString::fromUtf8("tableView_clientes"));
         tableView_clientes->setAlternatingRowColors(true);
-        tableView_clientes->setSelectionMode(QAbstractItemView::MultiSelection);
+        tableView_clientes->setSelectionMode(QAbstractItemView::ExtendedSelection);
         tableView_clientes->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableView_clientes->setShowGrid(false);
         tableView_clientes->setGridStyle(Qt::NoPen);
@@ -201,9 +163,6 @@ public:
     void retranslateUi(QWidget *ui_module_clientes)
     {
         ui_module_clientes->setWindowTitle(QApplication::translate("ui_module_clientes", "Form", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("ui_module_clientes", "  Navegaci\303\263n ", 0, QApplication::UnicodeUTF8));
-        QTreeWidgetItem *___qtreewidgetitem = treeWidget_ventas->headerItem();
-        ___qtreewidgetitem->setText(0, QApplication::translate("ui_module_clientes", "Clientes", 0, QApplication::UnicodeUTF8));
         pushButton_nuevo->setText(QApplication::translate("ui_module_clientes", "Nuevo", 0, QApplication::UnicodeUTF8));
         pushButton_editar->setText(QApplication::translate("ui_module_clientes", "Editar", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_STATUSTIP

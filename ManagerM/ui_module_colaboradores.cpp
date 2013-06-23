@@ -1,13 +1,23 @@
 #include "ui_module_colaboradores.h"
 #include "ui_ui_module_colaboradores.h"
 
+
+const int campos = 14;
+const char * e_colaborador = "e_colaborador";
+const char * e_tienda = "e_tienda";
+
+//Primary Keys
+const char * pk_tienda = "pk_ruc";
+const char * tiendaDescripcion = "nombre";
+const char * colaboradorCampos[campos] = {"DNI","Tienda","Nombres","Ap. Paterno","Ap. Materno","Direccion",
+                                         "Fecha de Nac.","Sexo","Estado Civil","Celular","Tfno. Fijo","E-mail",
+                                         "Comentario","Habilitado"};
+
 ui_module_colaboradores::ui_module_colaboradores(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ui_module_colaboradores)
 {
     ui->setupUi(this);
-    model = new QSqlQueryModel;
-
     updateContentFrame();
 }
 
@@ -18,8 +28,40 @@ ui_module_colaboradores::~ui_module_colaboradores()
 
 void ui_module_colaboradores::updateContentFrame()
 {
-    model->setQuery(SYSTEM->getColaboradores());
-    ui->tableView_colaboradores->setModel(model);
+    /*model->setQuery(SYSTEM->getColaboradores());
+
+    ui->tableView_colaboradores->setModel(model);*/
+
+    //Limipiamos el model anterior
+    QAbstractItemModel * anteriorModel = ui->tableView_colaboradores->model();
+    if(anteriorModel)
+            delete anteriorModel;
+
+    //Creamos el nuevo model
+    model = new QSqlRelationalTableModel;
+    model->setTable(e_colaborador);
+    model->setRelation(COL_TIENDA,QSqlRelation(e_tienda,pk_tienda,tiendaDescripcion));
+    model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
+    model->setFilter("habilitado=1");
+
+
+    for(int i=0;i<campos;i++)
+    {
+        model->setHeaderData(i,Qt::Horizontal,colaboradorCampos[i]);
+    }
+
+    if(model->select())
+    {
+         ui->tableView_colaboradores->setModel(model);
+    }
+    else
+    {
+        SYSTEM->messageInformation("Error","Problema al cargar colaboradores");
+    }
+
+    //Ocultamos columnas
+    ui->tableView_colaboradores->setColumnHidden(COL_HABILITADO,true);
+
 }
 
 void ui_module_colaboradores::on_pushButton_nuevo_clicked()

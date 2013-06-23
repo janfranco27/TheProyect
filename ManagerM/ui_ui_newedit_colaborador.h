@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_newedit_colaborador.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 16:55:23 2013
+=======
+** Created: Sat 22. Jun 21:55:02 2013
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -69,28 +73,28 @@ public:
     QHBoxLayout *horizontalLayout_28;
     QLabel *label_27;
     QComboBox *comboBox_genero;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QHBoxLayout *horizontalLayout_26;
     QLabel *label_25;
     QLineEdit *lineEdit_apMaterno;
     QSpacerItem *horizontalSpacer_4;
     QLabel *label_apMatEsCorrecto;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout_19;
     QLabel *label_18;
     QLineEdit *lineEdit_apPaterno;
     QSpacerItem *horizontalSpacer_3;
     QLabel *label_apPatEsCorrecto;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
     QHBoxLayout *horizontalLayout_23;
     QLabel *label_22;
     QLineEdit *lineEdit_nombres;
     QSpacerItem *horizontalSpacer_2;
     QLabel *label_nombreEsCorrecto;
-    QWidget *widget3;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_4;
     QHBoxLayout *horizontalLayout_21;
     QLabel *label_20;
@@ -130,15 +134,21 @@ public:
         ui_newedit_colaborador->resize(489, 450);
         ui_newedit_colaborador->setMinimumSize(QSize(489, 450));
         ui_newedit_colaborador->setMaximumSize(QSize(489, 450));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/myspace_alt.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ui_newedit_colaborador->setWindowIcon(icon);
         toolBox = new QToolBox(ui_newedit_colaborador);
         toolBox->setObjectName(QString::fromUtf8("toolBox"));
         toolBox->setGeometry(QRect(10, 10, 461, 431));
+        toolBox->setFrameShadow(QFrame::Plain);
+        toolBox->setLineWidth(1);
+        toolBox->setMidLineWidth(0);
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
         page->setGeometry(QRect(0, 0, 461, 371));
         layoutWidget_18 = new QWidget(page);
         layoutWidget_18->setObjectName(QString::fromUtf8("layoutWidget_18"));
-        layoutWidget_18->setGeometry(QRect(10, 310, 254, 23));
+        layoutWidget_18->setGeometry(QRect(10, 310, 254, 33));
         horizontalLayout_17 = new QHBoxLayout(layoutWidget_18);
         horizontalLayout_17->setObjectName(QString::fromUtf8("horizontalLayout_17"));
         horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
@@ -156,7 +166,7 @@ public:
 
         layoutWidget_19 = new QWidget(page);
         layoutWidget_19->setObjectName(QString::fromUtf8("layoutWidget_19"));
-        layoutWidget_19->setGeometry(QRect(10, 280, 254, 23));
+        layoutWidget_19->setGeometry(QRect(10, 280, 254, 33));
         horizontalLayout_18 = new QHBoxLayout(layoutWidget_19);
         horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
         horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
@@ -174,7 +184,7 @@ public:
 
         layoutWidget_21 = new QWidget(page);
         layoutWidget_21->setObjectName(QString::fromUtf8("layoutWidget_21"));
-        layoutWidget_21->setGeometry(QRect(10, 340, 441, 23));
+        layoutWidget_21->setGeometry(QRect(10, 340, 441, 33));
         horizontalLayout_20 = new QHBoxLayout(layoutWidget_21);
         horizontalLayout_20->setObjectName(QString::fromUtf8("horizontalLayout_20"));
         horizontalLayout_20->setContentsMargins(0, 0, 0, 0);
@@ -191,7 +201,7 @@ public:
 
         layoutWidget_23 = new QWidget(page);
         layoutWidget_23->setObjectName(QString::fromUtf8("layoutWidget_23"));
-        layoutWidget_23->setGeometry(QRect(10, 250, 241, 23));
+        layoutWidget_23->setGeometry(QRect(10, 250, 241, 33));
         horizontalLayout_22 = new QHBoxLayout(layoutWidget_23);
         horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
         horizontalLayout_22->setContentsMargins(0, 0, 0, 0);
@@ -209,7 +219,7 @@ public:
 
         layoutWidget_25 = new QWidget(page);
         layoutWidget_25->setObjectName(QString::fromUtf8("layoutWidget_25"));
-        layoutWidget_25->setGeometry(QRect(10, 160, 411, 23));
+        layoutWidget_25->setGeometry(QRect(10, 160, 411, 33));
         horizontalLayout_24 = new QHBoxLayout(layoutWidget_25);
         horizontalLayout_24->setObjectName(QString::fromUtf8("horizontalLayout_24"));
         horizontalLayout_24->setContentsMargins(0, 0, 0, 0);
@@ -226,7 +236,7 @@ public:
 
         layoutWidget_26 = new QWidget(page);
         layoutWidget_26->setObjectName(QString::fromUtf8("layoutWidget_26"));
-        layoutWidget_26->setGeometry(QRect(10, 190, 221, 22));
+        layoutWidget_26->setGeometry(QRect(10, 190, 272, 33));
         horizontalLayout_25 = new QHBoxLayout(layoutWidget_26);
         horizontalLayout_25->setObjectName(QString::fromUtf8("horizontalLayout_25"));
         horizontalLayout_25->setContentsMargins(0, 0, 0, 0);
@@ -243,7 +253,7 @@ public:
 
         layoutWidget_28 = new QWidget(page);
         layoutWidget_28->setObjectName(QString::fromUtf8("layoutWidget_28"));
-        layoutWidget_28->setGeometry(QRect(10, 10, 311, 23));
+        layoutWidget_28->setGeometry(QRect(10, 10, 311, 33));
         horizontalLayout_27 = new QHBoxLayout(layoutWidget_28);
         horizontalLayout_27->setObjectName(QString::fromUtf8("horizontalLayout_27"));
         horizontalLayout_27->setContentsMargins(0, 0, 0, 0);
@@ -261,7 +271,7 @@ public:
 
         layoutWidget_29 = new QWidget(page);
         layoutWidget_29->setObjectName(QString::fromUtf8("layoutWidget_29"));
-        layoutWidget_29->setGeometry(QRect(10, 220, 241, 23));
+        layoutWidget_29->setGeometry(QRect(10, 220, 241, 33));
         horizontalLayout_28 = new QHBoxLayout(layoutWidget_29);
         horizontalLayout_28->setObjectName(QString::fromUtf8("horizontalLayout_28"));
         horizontalLayout_28->setContentsMargins(0, 0, 0, 0);
@@ -277,21 +287,21 @@ public:
 
         horizontalLayout_28->addWidget(comboBox_genero);
 
-        widget = new QWidget(page);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 130, 441, 24));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(page);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 130, 441, 35));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_26 = new QHBoxLayout();
         horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
-        label_25 = new QLabel(widget);
+        label_25 = new QLabel(layoutWidget);
         label_25->setObjectName(QString::fromUtf8("label_25"));
         label_25->setMinimumSize(QSize(113, 0));
 
         horizontalLayout_26->addWidget(label_25);
 
-        lineEdit_apMaterno = new QLineEdit(widget);
+        lineEdit_apMaterno = new QLineEdit(layoutWidget);
         lineEdit_apMaterno->setObjectName(QString::fromUtf8("lineEdit_apMaterno"));
 
         horizontalLayout_26->addWidget(lineEdit_apMaterno);
@@ -303,26 +313,26 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_4);
 
-        label_apMatEsCorrecto = new QLabel(widget);
+        label_apMatEsCorrecto = new QLabel(layoutWidget);
         label_apMatEsCorrecto->setObjectName(QString::fromUtf8("label_apMatEsCorrecto"));
 
         horizontalLayout->addWidget(label_apMatEsCorrecto);
 
-        widget1 = new QWidget(page);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(10, 100, 441, 24));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(page);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 100, 441, 35));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_19 = new QHBoxLayout();
         horizontalLayout_19->setObjectName(QString::fromUtf8("horizontalLayout_19"));
-        label_18 = new QLabel(widget1);
+        label_18 = new QLabel(layoutWidget1);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setMinimumSize(QSize(113, 0));
 
         horizontalLayout_19->addWidget(label_18);
 
-        lineEdit_apPaterno = new QLineEdit(widget1);
+        lineEdit_apPaterno = new QLineEdit(layoutWidget1);
         lineEdit_apPaterno->setObjectName(QString::fromUtf8("lineEdit_apPaterno"));
 
         horizontalLayout_19->addWidget(lineEdit_apPaterno);
@@ -334,26 +344,26 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        label_apPatEsCorrecto = new QLabel(widget1);
+        label_apPatEsCorrecto = new QLabel(layoutWidget1);
         label_apPatEsCorrecto->setObjectName(QString::fromUtf8("label_apPatEsCorrecto"));
 
         horizontalLayout_2->addWidget(label_apPatEsCorrecto);
 
-        widget2 = new QWidget(page);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(10, 70, 441, 24));
-        horizontalLayout_3 = new QHBoxLayout(widget2);
+        layoutWidget2 = new QWidget(page);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(10, 70, 441, 35));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_23 = new QHBoxLayout();
         horizontalLayout_23->setObjectName(QString::fromUtf8("horizontalLayout_23"));
-        label_22 = new QLabel(widget2);
+        label_22 = new QLabel(layoutWidget2);
         label_22->setObjectName(QString::fromUtf8("label_22"));
         label_22->setMinimumSize(QSize(113, 0));
 
         horizontalLayout_23->addWidget(label_22);
 
-        lineEdit_nombres = new QLineEdit(widget2);
+        lineEdit_nombres = new QLineEdit(layoutWidget2);
         lineEdit_nombres->setObjectName(QString::fromUtf8("lineEdit_nombres"));
 
         horizontalLayout_23->addWidget(lineEdit_nombres);
@@ -365,26 +375,26 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_2);
 
-        label_nombreEsCorrecto = new QLabel(widget2);
+        label_nombreEsCorrecto = new QLabel(layoutWidget2);
         label_nombreEsCorrecto->setObjectName(QString::fromUtf8("label_nombreEsCorrecto"));
 
         horizontalLayout_3->addWidget(label_nombreEsCorrecto);
 
-        widget3 = new QWidget(page);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        widget3->setGeometry(QRect(10, 40, 441, 24));
-        horizontalLayout_4 = new QHBoxLayout(widget3);
+        layoutWidget3 = new QWidget(page);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(10, 40, 441, 35));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_21 = new QHBoxLayout();
         horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
-        label_20 = new QLabel(widget3);
+        label_20 = new QLabel(layoutWidget3);
         label_20->setObjectName(QString::fromUtf8("label_20"));
         label_20->setMinimumSize(QSize(113, 0));
 
         horizontalLayout_21->addWidget(label_20);
 
-        lineEdit_dni = new QLineEdit(widget3);
+        lineEdit_dni = new QLineEdit(layoutWidget3);
         lineEdit_dni->setObjectName(QString::fromUtf8("lineEdit_dni"));
         lineEdit_dni->setMinimumSize(QSize(100, 0));
         lineEdit_dni->setMaxLength(8);
@@ -398,34 +408,34 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer);
 
-        label_DNIesCorrecto = new QLabel(widget3);
+        label_DNIesCorrecto = new QLabel(layoutWidget3);
         label_DNIesCorrecto->setObjectName(QString::fromUtf8("label_DNIesCorrecto"));
         label_DNIesCorrecto->setCursor(QCursor(Qt::ArrowCursor));
         label_DNIesCorrecto->setMidLineWidth(0);
 
         horizontalLayout_4->addWidget(label_DNIesCorrecto);
 
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Contacts_Folder.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolBox->addItem(page, icon, QString::fromUtf8("Informaci\303\263n Personal"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/Contacts_Folder.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolBox->addItem(page, icon1, QString::fromUtf8("Informaci\303\263n Personal"));
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
         page_2->setGeometry(QRect(0, 0, 461, 371));
         pushButton_save = new QPushButton(page_2);
         pushButton_save->setObjectName(QString::fromUtf8("pushButton_save"));
         pushButton_save->setGeometry(QRect(360, 330, 26, 26));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/save.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_save->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_save->setIcon(icon2);
         pushButton_save->setIconSize(QSize(23, 23));
         pushButton_save->setDefault(false);
         pushButton_save->setFlat(true);
         pushButton_cancel = new QPushButton(page_2);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
         pushButton_cancel->setGeometry(QRect(410, 330, 26, 26));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_cancel->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_cancel->setIcon(icon3);
         pushButton_cancel->setIconSize(QSize(23, 23));
         pushButton_cancel->setFlat(true);
         line_2 = new QFrame(page_2);
@@ -525,13 +535,13 @@ public:
         pushButton_generateAccess = new QPushButton(page_2);
         pushButton_generateAccess->setObjectName(QString::fromUtf8("pushButton_generateAccess"));
         pushButton_generateAccess->setGeometry(QRect(370, 80, 81, 31));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Iconos/Iconos/Services.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_generateAccess->setIcon(icon3);
-        pushButton_generateAccess->setIconSize(QSize(24, 24));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolBox->addItem(page_2, icon4, QString::fromUtf8("Informaci\303\263n laboral"));
+        icon4.addFile(QString::fromUtf8(":/Iconos/Iconos/Services.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_generateAccess->setIcon(icon4);
+        pushButton_generateAccess->setIconSize(QSize(24, 24));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/Iconos/Iconos/Windows_Mobility_Center.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolBox->addItem(page_2, icon5, QString::fromUtf8("Informaci\303\263n laboral"));
         QWidget::setTabOrder(comboBox_tienda, lineEdit_dni);
         QWidget::setTabOrder(lineEdit_dni, lineEdit_nombres);
         QWidget::setTabOrder(lineEdit_nombres, lineEdit_apPaterno);

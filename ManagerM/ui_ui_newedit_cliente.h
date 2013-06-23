@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_newedit_cliente.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 16:59:16 2013
+=======
+** Created: Sat 22. Jun 21:55:02 2013
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -81,6 +85,9 @@ public:
         if (ui_newedit_cliente->objectName().isEmpty())
             ui_newedit_cliente->setObjectName(QString::fromUtf8("ui_newedit_cliente"));
         ui_newedit_cliente->resize(385, 452);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Live_Messenger.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ui_newedit_cliente->setWindowIcon(icon);
         layoutWidget = new QWidget(ui_newedit_cliente);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(20, 270, 285, 22));
@@ -120,9 +127,9 @@ public:
         pushButton_save = new QPushButton(ui_newedit_cliente);
         pushButton_save->setObjectName(QString::fromUtf8("pushButton_save"));
         pushButton_save->setGeometry(QRect(279, 410, 35, 31));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Iconos/Iconos/save.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_save->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_save->setIcon(icon1);
         pushButton_save->setIconSize(QSize(23, 23));
         pushButton_save->setDefault(false);
         pushButton_save->setFlat(true);
@@ -252,9 +259,9 @@ public:
         pushButton_cancel = new QPushButton(ui_newedit_cliente);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
         pushButton_cancel->setGeometry(QRect(320, 410, 35, 31));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_cancel->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/Iconos/Iconos/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_cancel->setIcon(icon2);
         pushButton_cancel->setIconSize(QSize(23, 23));
         pushButton_cancel->setFlat(true);
         layoutWidget_10 = new QWidget(ui_newedit_cliente);

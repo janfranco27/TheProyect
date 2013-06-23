@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::ui_module_clientes *ui;
-    QSqlQueryModel* model;
+    QSqlRelationalTableModel* model;
 };
 
 #endif // UI_MODULE_CLIENTES_H

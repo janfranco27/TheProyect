@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_proveedor.ui'
 **
+<<<<<<< HEAD
 ** Created: Sat 22. Jun 16:59:16 2013
+=======
+** Created: Sat 22. Jun 17:28:04 2013
+>>>>>>> Cambios modulos colaborador-cliente I
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
