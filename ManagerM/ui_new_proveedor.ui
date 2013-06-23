@@ -9,13 +9,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-<<<<<<< HEAD
+
     <width>718</width>
     <height>392</height>
-=======
+
     <width>653</width>
     <height>448</height>
->>>>>>> Cambios modulo articulo
    </rect>
   </property>
   <property name="windowTitle">

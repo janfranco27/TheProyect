@@ -286,9 +286,15 @@ bool object_e_articulo::mf_update()
 
 	query.prepare("UPDATE e_articulo SET fk_grupo = ?, fk_marca = ?, fk_medida = ?, descripcion = ?, precio_lista = ?, stock = ?, habilitado = ? WHERE pk_articulo = ?");
     if(md_o_fk_grupo=="")
+    {
+        qDebug()<<"Grupo NUll";
       query.bindValue(0,QVariant());
+    }
   else
+    {
+        qDebug()<<"Grupo"<<md_o_fk_grupo;
       query.bindValue(0, md_o_fk_grupo);
+    }
   if(md_o_fk_marca=="")
           query.bindValue(1,QVariant());
   else
@@ -315,6 +321,7 @@ bool object_e_articulo::mf_update()
 	}else{
 		//state FAILED
 		//w!
+        qDebug()<<query.lastQuery();
         qDebug()<<query.lastError().databaseText()<<endl;
 		return false;
 	}

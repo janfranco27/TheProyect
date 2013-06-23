@@ -29,13 +29,13 @@ private slots:
 
     void on_pushButton_cancelar_clicked();    
 
-<<<<<<< HEAD
+
     void on_pushButton_link_clicked();
-=======
+
     void closeEvent(QCloseEvent *);
 signals:
     void closing();
->>>>>>> Cambios modulo articulo
+
 
 private:
     Ui::ui_new_proveedor *ui;

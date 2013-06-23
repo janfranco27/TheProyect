@@ -161,13 +161,14 @@ void ui_new_proveedor::on_pushButton_cancelar_clicked()
     this->close();
 }
 
-<<<<<<< HEAD
+
 void ui_new_proveedor::on_pushButton_link_clicked()
 {
     QDesktopServices::openUrl(QUrl("http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias"));
-=======
-void ui_new_proveedor::closeEvent(QCloseEvent *)
+
+}
+void ui_new_proveedor::closeEvent(QCloseEvent *ev)
 {
     emit closing();
->>>>>>> Cambios modulo articulo
+
 }

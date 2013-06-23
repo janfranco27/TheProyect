@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_articulo.h'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:37:49 2013
-=======
-** Created: Sat 22. Jun 15:03:18 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 18:15:17 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

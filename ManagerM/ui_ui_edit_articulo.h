@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:03:27 2013
-=======
-** Created: Sat 22. Jun 15:25:14 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 17:31:36 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -37,8 +33,6 @@ class Ui_ui_edit_articulos
 public:
     QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_2;
-    QLabel *title_label;
     QSpacerItem *horizontalSpacer_3;
     QGridLayout *gridLayout_2;
     QLabel *l_codigo_2;
@@ -80,19 +74,6 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer_2 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_2);
-
-        title_label = new QLabel(ui_edit_articulos);
-        title_label->setObjectName(QString::fromUtf8("title_label"));
-        QFont font;
-        font.setBold(true);
-        font.setWeight(75);
-        title_label->setFont(font);
-
-        horizontalLayout_2->addWidget(title_label);
-
         horizontalSpacer_3 = new QSpacerItem(180, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
@@ -255,7 +236,6 @@ public:
     void retranslateUi(QDialog *ui_edit_articulos)
     {
         ui_edit_articulos->setWindowTitle(QApplication::translate("ui_edit_articulos", "Editar Articulo", 0, QApplication::UnicodeUTF8));
-        title_label->setText(QApplication::translate("ui_edit_articulos", "Modifique los datos del art\303\255culo seleccionado", 0, QApplication::UnicodeUTF8));
         l_codigo_2->setText(QApplication::translate("ui_edit_articulos", "C\303\263digo", 0, QApplication::UnicodeUTF8));
         l_marca_2->setText(QApplication::translate("ui_edit_articulos", "Marca", 0, QApplication::UnicodeUTF8));
         btn_add_marca->setText(QString());

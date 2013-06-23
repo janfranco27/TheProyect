@@ -43,8 +43,15 @@
      </item>
      <item>
       <widget class="QToolButton" name="tb_borrar">
+       <property name="toolTip">
+        <string>Mostrar todos</string>
+       </property>
        <property name="text">
-        <string>R</string>
+        <string>Mostrar Todos</string>
+       </property>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/Mac_Spaces.png</normaloff>:/Iconos/Iconos/Mac_Spaces.png</iconset>
        </property>
       </widget>
      </item>

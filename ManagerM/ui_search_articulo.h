@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'search_articulo.ui'
 **
-** Created: Sat 1. Jun 21:02:37 2013
+** Created: Sat 22. Jun 16:59:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

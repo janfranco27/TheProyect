@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_orden.ui'
 **
-** Created: Fri 21. Jun 22:03:27 2013
+** Created: Sat 22. Jun 16:59:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

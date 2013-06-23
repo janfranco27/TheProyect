@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_banco.h'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 00:13:44 2013
-=======
-** Created: Thu 20. Jun 19:41:36 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 17:07:12 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

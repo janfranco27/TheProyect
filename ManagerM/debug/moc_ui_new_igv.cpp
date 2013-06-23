@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_igv.h'
 **
-** Created: Fri 21. Jun 22:41:19 2013
+** Created: Sat 22. Jun 17:09:37 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

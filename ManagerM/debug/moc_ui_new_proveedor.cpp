@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_proveedor.h'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 00:15:16 2013
-=======
-** Created: Sat 22. Jun 15:03:20 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 17:08:11 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -27,11 +23,7 @@ static const uint qt_meta_data_ui_new_proveedor[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-<<<<<<< HEAD
-       4,   14, // methods
-=======
-       5,   14, // methods
->>>>>>> Cambios modulo articulo
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -42,17 +34,11 @@ static const uint qt_meta_data_ui_new_proveedor[] = {
       18,   17,   17,   17, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-<<<<<<< HEAD
-      18,   17,   17,   17, 0x08,
-      52,   17,   17,   17, 0x08,
-      83,   17,   17,   17, 0x08,
-     116,   17,   17,   17, 0x08,
-=======
       28,   17,   17,   17, 0x08,
       62,   17,   17,   17, 0x08,
       93,   17,   17,   17, 0x08,
      126,   17,   17,   17, 0x08,
->>>>>>> Cambios modulo articulo
+     155,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -62,11 +48,8 @@ static const char qt_meta_stringdata_ui_new_proveedor[] = {
     "on_pushButton_registrar_clicked()\0"
     "on_pushButton_editar_clicked()\0"
     "on_pushButton_cancelar_clicked()\0"
-<<<<<<< HEAD
     "on_pushButton_link_clicked()\0"
-=======
     "closeEvent(QCloseEvent*)\0"
->>>>>>> Cambios modulo articulo
 };
 
 void ui_new_proveedor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -75,18 +58,12 @@ void ui_new_proveedor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_ASSERT(staticMetaObject.cast(_o));
         ui_new_proveedor *_t = static_cast<ui_new_proveedor *>(_o);
         switch (_id) {
-<<<<<<< HEAD
-        case 0: _t->on_pushButton_registrar_clicked(); break;
-        case 1: _t->on_pushButton_editar_clicked(); break;
-        case 2: _t->on_pushButton_cancelar_clicked(); break;
-        case 3: _t->on_pushButton_link_clicked(); break;
-=======
         case 0: _t->closing(); break;
         case 1: _t->on_pushButton_registrar_clicked(); break;
         case 2: _t->on_pushButton_editar_clicked(); break;
         case 3: _t->on_pushButton_cancelar_clicked(); break;
-        case 4: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
->>>>>>> Cambios modulo articulo
+        case 4: _t->on_pushButton_link_clicked(); break;
+        case 5: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -124,15 +101,9 @@ int ui_new_proveedor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-<<<<<<< HEAD
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
-=======
-        if (_id < 5)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
->>>>>>> Cambios modulo articulo
+        _id -= 6;
     }
     return _id;
 }

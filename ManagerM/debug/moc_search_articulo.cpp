@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'search_articulo.h'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:39:39 2013
-=======
-** Created: Thu 6. Jun 11:07:17 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 17:08:33 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

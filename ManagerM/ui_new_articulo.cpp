@@ -233,7 +233,13 @@ void ui_new_articulo::on_btn_aceptar_clicked()
 
 void ui_new_articulo::on_btn_borrar_clicked()
 {
-    reset_form();
+   QModelIndexList indexList = ui->tableWidget->selectionModel()->selectedRows();
+
+
+   foreach(QModelIndex index,indexList)
+   {
+       ui->tableWidget->removeRow(index.row());
+   }
 
 }
 
@@ -320,18 +326,22 @@ void ui_new_articulo::update_comboBox_Marca()
 {
       vector<_QSTR> marca = SYSTEM->getDescripcion("e_marca");
       SYSTEM->loadComboBoxFromVector(ui->cb_marca,marca,false);
+
+      ui->cb_marca->setCurrentIndex(ui->cb_marca->count()-1);
 }
 
 void ui_new_articulo::update_comboBox_Medida()
 {
     vector<_QSTR> medida = SYSTEM->getDescripcion("e_medida");
       SYSTEM->loadComboBoxFromVector(ui->cb_medida,medida,false);
+      ui->cb_medida->setCurrentIndex(ui->cb_medida->count()-1);
 }
 
 void ui_new_articulo::update_comboBox_Proveedor()
 {
     QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
    SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+   ui->cb_proveedor->setCurrentIndex(ui->cb_proveedor->count()-1);
 }
 
 

@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_compra_flete.h'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:40:56 2013
-=======
-** Created: Thu 6. Jun 11:08:13 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 17:09:21 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

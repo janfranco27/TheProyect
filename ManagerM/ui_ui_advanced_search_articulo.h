@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_advanced_search_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:03:28 2013
-=======
-** Created: Sat 22. Jun 15:10:15 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 18:44:37 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -67,6 +63,9 @@ public:
 
         tb_borrar = new QToolButton(ui_advanced_search_articulo);
         tb_borrar->setObjectName(QString::fromUtf8("tb_borrar"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Iconos/Iconos/Mac_Spaces.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tb_borrar->setIcon(icon1);
 
         horizontalLayout->addWidget(tb_borrar);
 
@@ -85,7 +84,10 @@ public:
         label->setText(QApplication::translate("ui_advanced_search_articulo", "B\303\272squeda:", 0, QApplication::UnicodeUTF8));
         lineEdit->setPlaceholderText(QApplication::translate("ui_advanced_search_articulo", "Texto a buscar ...", 0, QApplication::UnicodeUTF8));
         toolButton->setText(QString());
-        tb_borrar->setText(QApplication::translate("ui_advanced_search_articulo", "R", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        tb_borrar->setToolTip(QApplication::translate("ui_advanced_search_articulo", "Mostrar todos", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        tb_borrar->setText(QApplication::translate("ui_advanced_search_articulo", "Mostrar Todos", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

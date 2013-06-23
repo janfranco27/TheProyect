@@ -73,10 +73,14 @@ void ui_edit_articulo::load_selected_articulo(object_e_articulo *ar)
     int medida_index = ui->cb_medida->findText(ar->mf_get_fk_medida());
     int proveedor_index = ui->cb_proveedor->findText(nombre_vendedor);
 
+
     grupo_index = (grupo_index==not_found)?op_default:grupo_index;
     marca_index = (marca_index==not_found)?op_default:marca_index;
     medida_index = (medida_index==not_found)?op_default:medida_index;
     proveedor_index = (proveedor_index==not_found)?op_default:proveedor_index;
+
+
+
 
 
 
@@ -122,12 +126,15 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
         obj.mf_set_stock(ui->le_stock_2->text());
 
         int grupo_index = ui->cb_grupo->currentIndex();
+
+        qDebug()<<"grupo index"<<grupo_index;
         int marca_index = ui->cb_marca->currentIndex();
         int medida_index = ui->cb_medida->currentIndex();
         int proveedor_index = ui->cb_proveedor->currentIndex();
 
 
-        if(grupo_index==0)
+        //Menor o igual a 0 indica que no existe
+        if(grupo_index<=0)
         {
             obj.mf_set_fk_grupo("");
         }
@@ -136,7 +143,7 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
             obj.mf_set_fk_grupo(QString::number(grupo_index));
         }
 
-        if(marca_index==0)
+        if(marca_index<=0)
         {
             obj.mf_set_fk_marca("");
         }
@@ -145,7 +152,7 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
             obj.mf_set_fk_marca(QString::number(marca_index));
         }
 
-        if(medida_index==0)
+        if(medida_index<=0)
         {
             obj.mf_set_fk_medida("");
         }
@@ -154,7 +161,7 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
          obj.mf_set_fk_medida(QString::number(medida_index));
         }
 
-        if(proveedor_index==0)
+        if(proveedor_index<=0)
         {
             //Quitamos el proveedor del articulo
             SYSTEM->deleteProveedor_Articulo(this->pk_proveedor,ui->l_codigoop->text());

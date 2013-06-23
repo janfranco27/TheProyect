@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_module_articulos.ui'
 **
-** Created: Fri 21. Jun 22:03:26 2013
+** Created: Sat 22. Jun 18:37:51 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -139,6 +139,7 @@ public:
         tableView_articulos->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableView_articulos->setShowGrid(false);
         tableView_articulos->setGridStyle(Qt::NoPen);
+        tableView_articulos->setSortingEnabled(true);
 
         verticalLayout_4->addWidget(tableView_articulos);
 

@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_proveedor.ui'
 **
-<<<<<<< HEAD
-** Created: Fri 21. Jun 22:03:27 2013
-=======
-** Created: Sat 22. Jun 15:05:24 2013
->>>>>>> Cambios modulo articulo
+** Created: Sat 22. Jun 16:59:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -87,16 +83,9 @@ public:
     {
         if (ui_new_proveedor->objectName().isEmpty())
             ui_new_proveedor->setObjectName(QString::fromUtf8("ui_new_proveedor"));
-<<<<<<< HEAD
-        ui_new_proveedor->resize(718, 392);
-        verticalLayout_3 = new QVBoxLayout(ui_new_proveedor);
-=======
         ui_new_proveedor->setWindowModality(Qt::ApplicationModal);
         ui_new_proveedor->resize(653, 448);
-        gridLayout = new QGridLayout(ui_new_proveedor);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        verticalLayout_3 = new QVBoxLayout();
->>>>>>> Cambios modulo articulo
+        verticalLayout_3 = new QVBoxLayout(ui_new_proveedor);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         groupBox = new QGroupBox(ui_new_proveedor);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));

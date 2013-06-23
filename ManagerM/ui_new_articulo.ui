@@ -70,18 +70,7 @@
      <item row="0" column="5">
       <widget class="QComboBox" name="cb_marca"/>
      </item>
-     <item row="0" column="7">
-      <widget class="QPushButton" name="btn_add_marca">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="8">
+     <item row="0" column="9">
       <widget class="QLabel" name="l_precio_2">
        <property name="text">
         <string>Precio  S/.</string>
@@ -117,18 +106,7 @@
      <item row="1" column="5">
       <widget class="QComboBox" name="cb_medida"/>
      </item>
-     <item row="1" column="7">
-      <widget class="QPushButton" name="btn_add_medida">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="Icons.qrc">
-         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="8">
+     <item row="1" column="9">
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Proveedor</string>
@@ -138,10 +116,10 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="9">
+     <item row="1" column="10">
       <widget class="QComboBox" name="cb_proveedor"/>
      </item>
-     <item row="1" column="10">
+     <item row="1" column="11">
       <widget class="QPushButton" name="btn_add_proveedor">
        <property name="text">
         <string/>
@@ -154,19 +132,6 @@
      </item>
      <item row="2" column="2">
       <spacer name="horizontalSpacer_5">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="6">
-      <spacer name="horizontalSpacer_6">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -201,6 +166,16 @@
      <item row="2" column="5">
       <widget class="QComboBox" name="cb_grupo"/>
      </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="le_stock_2"/>
+     </item>
+     <item row="0" column="10">
+      <widget class="QDoubleSpinBox" name="le_precio_2">
+       <property name="maximum">
+        <double>100000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="7">
       <widget class="QPushButton" name="btn_add_grupo">
        <property name="text">
@@ -208,13 +183,25 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QSpinBox" name="le_stock_2"/>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="btn_add_marca">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
+       </property>
+      </widget>
      </item>
-     <item row="0" column="9">
-      <widget class="QDoubleSpinBox" name="le_precio_2">
-       <property name="maximum">
-        <double>100000000.000000000000000</double>
+     <item row="1" column="6">
+      <widget class="QPushButton" name="btn_add_medida">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="Icons.qrc">
+         <normaloff>:/Iconos/Iconos/sq_plus.png</normaloff>:/Iconos/Iconos/sq_plus.png</iconset>
        </property>
       </widget>
      </item>
@@ -257,6 +244,12 @@
       <widget class="QTableWidget" name="tableWidget">
        <property name="editTriggers">
         <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
        </property>
        <column>
         <property name="text">
@@ -360,8 +353,6 @@
   <tabstop>btn_aceptar</tabstop>
   <tabstop>btn_borrar</tabstop>
   <tabstop>btn_cancelar</tabstop>
-  <tabstop>btn_add_marca</tabstop>
-  <tabstop>btn_add_medida</tabstop>
   <tabstop>btn_add_proveedor</tabstop>
  </tabstops>
  <resources>
