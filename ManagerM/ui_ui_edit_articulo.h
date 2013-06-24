@@ -1,15 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 17:31:36 2013
-=======
-
-** Created: Fri 21. Jun 22:03:27 2013
-
-** Created: Sat 22. Jun 15:25:14 2013
-
->>>>>>> Cambios modulos colaborador-cliente I
+** Created: Sun 23. Jun 20:48:21 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

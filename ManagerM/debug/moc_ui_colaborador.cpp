@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_colaborador.h'
 **
-** Created: Sat 22. Jun 17:06:45 2013
+** Created: Sun 23. Jun 20:57:03 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta.h'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 17:07:47 2013
-=======
-** Created: Sat 22. Jun 20:07:49 2013
->>>>>>> Cambios modulos colaborador-cliente I
+** Created: Sun 23. Jun 20:58:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

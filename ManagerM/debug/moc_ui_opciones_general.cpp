@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_opciones_general.h'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 17:08:03 2013
-=======
-** Created: Sat 22. Jun 20:08:09 2013
->>>>>>> Cambios modulos colaborador-cliente I
+** Created: Sun 23. Jun 20:59:10 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

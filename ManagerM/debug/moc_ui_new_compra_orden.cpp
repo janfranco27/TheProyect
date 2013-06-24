@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_compra_orden.h'
 **
-<<<<<<< HEAD
-** Created: Sat 22. Jun 17:08:57 2013
-=======
-** Created: Sat 22. Jun 20:09:14 2013
->>>>>>> Cambios modulos colaborador-cliente I
+** Created: Sun 23. Jun 21:00:42 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
