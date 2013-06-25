@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'generado.h'
 **
+<<<<<<< HEAD
 ** Created: Sun 23. Jun 20:59:03 2013
+=======
+** Created: Sat 22. Jun 10:16:28 2013
+>>>>>>> check
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

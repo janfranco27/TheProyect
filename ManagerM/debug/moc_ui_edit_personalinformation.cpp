@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_personalinformation.h'
 **
+<<<<<<< HEAD
 ** Created: Sun 23. Jun 21:01:04 2013
+=======
+** Created: Sat 22. Jun 10:18:12 2013
+>>>>>>> check
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

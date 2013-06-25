@@ -8,7 +8,7 @@ ui_edit_proveedor::ui_edit_proveedor(QWidget *parent) :
 {
     ui->setupUi(this);
     QRegExp regExp_numero("[0-9]{11,11}");
-    ui->lineEdit_ruc->setValidator(new QRegExpValidator(regExp_numero));
+    ui->lineEdit_ruc->setValidator(new QRegExpValidator(regExp_numero,this));
 
     for(int i=0; i<25; i++)
         ui->comboBox_regiones->addItem("");
