@@ -1,13 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_opciones_comprobante.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:49:30 2013
+** Created: Wed 26. Jun 11:48:41 2013
 **      by: Qt User Interface Compiler version 4.8.1
-=======
-** Created: Sat 22. Jun 10:02:12 2013
-**      by: Qt User Interface Compiler version 4.7.4
->>>>>>> check
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -100,6 +95,8 @@ public:
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         tableView_factura = new QTableView(tab);
         tableView_factura->setObjectName(QString::fromUtf8("tableView_factura"));
+        tableView_factura->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView_factura->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout_3->addWidget(tableView_factura, 0, 0, 1, 1);
 
@@ -111,6 +108,7 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setMinimumSize(QSize(80, 0));
         label->setMaximumSize(QSize(80, 16777215));
+        label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout->addWidget(label);
 
@@ -136,6 +134,7 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setMinimumSize(QSize(80, 0));
         label_2->setMaximumSize(QSize(80, 16777215));
+        label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_2);
 
@@ -156,6 +155,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setMinimumSize(QSize(80, 0));
         label_3->setMaximumSize(QSize(80, 16777215));
+        label_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_3->addWidget(label_3);
 
@@ -221,6 +221,8 @@ public:
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         tableView_boleta = new QTableView(tab_2);
         tableView_boleta->setObjectName(QString::fromUtf8("tableView_boleta"));
+        tableView_boleta->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView_boleta->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout_5->addWidget(tableView_boleta, 0, 0, 1, 1);
 
@@ -232,6 +234,7 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setMinimumSize(QSize(80, 0));
         label_4->setMaximumSize(QSize(80, 16777215));
+        label_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_6->addWidget(label_4);
 
@@ -257,6 +260,7 @@ public:
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setMinimumSize(QSize(80, 0));
         label_7->setMaximumSize(QSize(80, 16777215));
+        label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_7->addWidget(label_7);
 
@@ -277,6 +281,7 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setMinimumSize(QSize(80, 0));
         label_8->setMaximumSize(QSize(80, 16777215));
+        label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_8->addWidget(label_8);
 

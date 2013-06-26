@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_orden.h'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:59:30 2013
-=======
-** Created: Sat 22. Jun 10:16:51 2013
->>>>>>> check
+** Created: Wed 26. Jun 12:12:37 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

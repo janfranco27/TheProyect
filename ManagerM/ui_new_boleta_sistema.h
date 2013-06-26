@@ -35,6 +35,8 @@ public:
 private slots:
     void on_pushButton_new_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::ui_new_boleta_sistema *ui;
 };

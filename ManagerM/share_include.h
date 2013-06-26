@@ -91,7 +91,7 @@ using namespace std;
 #include "object_e_transportista_funciones.h"
 #include "object_r_proveedor_articulo.h"
 
-
+#include "object_e_sistema.h"
 #include "object_e_factura_sistema.h"
 #include "object_e_boleta_sistema.h"
 #include "object_e_igv_sistema.h"

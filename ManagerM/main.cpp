@@ -35,6 +35,10 @@ int main(int argc, char *argv[])
             ui_opciones_tienda *tienda_form = new ui_opciones_tienda;
             tienda_form->mf_set_parent(0);
             tienda_form->show();
+
+            SYSTEM->init_e_sistema();
+
+
         }else{
             // Buscando administrador
             if(SYSTEM->getAdministrador() == "")

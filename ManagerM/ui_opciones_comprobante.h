@@ -43,6 +43,10 @@ private slots:
 
     void on_pushButton_save_f_clicked();
 
+    void on_pushButton_usar_f_clicked();
+
+    void on_pushButton_usar_b_clicked();
+
 private:
     Ui::ui_opciones_comprobante *ui;
 };

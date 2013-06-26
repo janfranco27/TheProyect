@@ -50,3 +50,8 @@ void ui_new_factura_sistema::on_pushButton_new_clicked()
 
     close();
 }
+
+void ui_new_factura_sistema::on_pushButton_cancelar_clicked()
+{
+    close();
+}

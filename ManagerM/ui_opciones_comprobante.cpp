@@ -113,3 +113,15 @@ void ui_opciones_comprobante::on_pushButton_save_f_clicked()
 
     update_table_facturas();
 }
+
+void ui_opciones_comprobante::on_pushButton_usar_f_clicked()
+{
+    if(SYSTEM->setFacturaSistema(pk_factura))
+        SYSTEM->code_factura = pk_factura.toStdString();
+}
+
+void ui_opciones_comprobante::on_pushButton_usar_b_clicked()
+{
+    if(SYSTEM->setBoletaSistema(pk_boleta))
+        SYSTEM->code_boleta = pk_boleta.toStdString();
+}

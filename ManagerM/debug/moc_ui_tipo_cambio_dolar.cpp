@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_tipo_cambio_dolar.h'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 21:01:43 2013
-=======
-** Created: Sat 22. Jun 10:18:51 2013
->>>>>>> check
+** Created: Tue 25. Jun 21:44:03 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

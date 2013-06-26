@@ -498,6 +498,114 @@ QSqlQuery Sistema::getFacturaSistema()
     return getSelectQuery(select,from);
 }
 
+QSqlQuery Sistema::getDatosSistema()
+{
+     vector<_QSTR> select,from;
+     select.push_back("*");
+     from.push_back("e_sistema");
+
+     return getSelectQuery(select,from);
+}
+
+bool Sistema::setBoletaSistema(_QSTR pk_boleta)
+{
+    QSqlQuery query;
+    query.prepare("UPDATE e_sistema SET fk_boleta_s="+pk_boleta+" WHERE pk_code=1");
+    return query.exec();
+
+}
+
+bool Sistema::setFacturaSistema(_QSTR pk_factura)
+{
+    QSqlQuery query;
+    query.prepare("UPDATE e_sistema SET fk_factura_s="+pk_factura+" WHERE pk_code=1");
+    return query.exec();
+}
+
+_QSTR Sistema::getSerieBoletaSistema()
+{
+    object_e_boleta_sistema* boleta = new object_e_boleta_sistema;
+    boleta->mf_load(QString::fromStdString(code_boleta));
+    return boleta->mf_get_serie();
+}
+
+_QSTR Sistema::getCurrentNumeroBoletaSistema()
+{
+    object_e_boleta_sistema* boleta = new object_e_boleta_sistema;
+    boleta->mf_load(QString::fromStdString(code_boleta));
+
+    if(boleta->mf_get_numero_actual().toInt() == boleta->mf_get_numero_fin().toInt())
+    {
+        return boleta->mf_get_numero_fin();
+    }else{
+        return QString::number(boleta->mf_get_numero_actual().toInt()+1);
+    }
+}
+
+_QSTR Sistema::getMaxNumeroBoletaSistema()
+{
+    object_e_boleta_sistema* boleta = new object_e_boleta_sistema;
+    boleta->mf_load(QString::fromStdString(code_boleta));
+
+    return boleta->mf_get_numero_fin();
+}
+
+bool Sistema::setNumeroBoletaSistema(_QSTR numero_boleta)
+{
+
+
+    object_e_boleta_sistema* boleta = new object_e_boleta_sistema;
+    boleta->mf_load(QString::fromStdString(code_boleta));
+    boleta->mf_set_numero_actual(numero_boleta);
+
+    if(numero_boleta > boleta->mf_get_numero_fin())
+        return false;
+
+    return boleta->mf_update();
+}
+
+_QSTR Sistema::getSerieFacturaSistema()
+{
+    object_e_factura_sistema* factura = new object_e_factura_sistema;
+    factura->mf_load(QString::fromStdString(code_factura));
+    return factura->mf_get_serie();
+}
+
+_QSTR Sistema::getCurrentNumeroFacturaSistema()
+{
+    object_e_factura_sistema* factura = new object_e_factura_sistema;
+    factura->mf_load(QString::fromStdString(code_factura));
+    if(factura->mf_get_numero_actual().toInt() == factura->mf_get_numero_fin().toInt())
+    {
+        return factura->mf_get_numero_fin();
+    }else{
+        return QString::number(factura->mf_get_numero_actual().toInt()+1);
+    }
+
+}
+
+_QSTR Sistema::getMaxNumeroFacturaSistema()
+{
+    object_e_factura_sistema* factura = new object_e_factura_sistema;
+    factura->mf_load(QString::fromStdString(code_factura));
+    return factura->mf_get_numero_fin();
+}
+
+bool Sistema::setNumeroFacturaSistema(_QSTR numero_factura)
+{
+    object_e_factura_sistema* factura = new object_e_factura_sistema;
+    factura->mf_load(QString::fromStdString(code_factura));
+    factura->mf_set_numero_actual(numero_factura);
+
+    if(numero_factura > factura->mf_get_numero_fin());
+        return false;
+
+    return factura->mf_update();
+}
+
+
+
+
 vector<_QSTR> Sistema::getAllTiposUsuarios()
 {
     vector<_QSTR> select,from;
@@ -781,6 +889,12 @@ void Sistema::init_e_tipo_usuario()
 
     //inicializar todos los tipos de usuarios;
 
+}
+
+void Sistema::init_e_sistema()
+{
+    object_e_sistema* e_sistema = new object_e_sistema;
+    e_sistema->mf_add();
 }
 
 int Sistema::messageInformation(_QSTR title, _QSTR message)

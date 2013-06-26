@@ -13,6 +13,9 @@ public:
     _STR code_marca;
     _STR code_medida;
 
+    _STR code_boleta;
+    _STR code_factura;
+
     //QMessageBox* message_box;
     double igv;
     double cambioDolar;
@@ -47,9 +50,20 @@ public:
     //---
     QSqlQuery getBoletaSistema();
     QSqlQuery getFacturaSistema();
-
+    QSqlQuery getDatosSistema();
     //--
+    bool setBoletaSistema(_QSTR pk_boleta);
+    bool setFacturaSistema(_QSTR pk_factura);
 
+    _QSTR getSerieBoletaSistema();
+    _QSTR getCurrentNumeroBoletaSistema();
+    _QSTR getMaxNumeroBoletaSistema();
+    bool setNumeroBoletaSistema(_QSTR numero_boleta);
+
+    _QSTR getSerieFacturaSistema();
+    _QSTR getCurrentNumeroFacturaSistema();
+    _QSTR getMaxNumeroFacturaSistema();
+    bool setNumeroFacturaSistema(_QSTR numero_factura);
 
    vector<_QSTR> getAllTiposUsuarios();
    vector<_QSTR> getAllTiendas();
@@ -72,7 +86,10 @@ public:
    _QSTR getTienda();
    _QSTR getAdministrador();
    _QSTR getCodigoRegion(_QSTR region);
+
    void init_e_tipo_usuario();
+   void init_e_sistema();
+
 
    int messageInformation(_QSTR title,_QSTR message);
    int messageQuestion(_QSTR title,_QSTR message);

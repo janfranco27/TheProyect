@@ -1,11 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_boleta_sistema.h'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 21:00:32 2013
-=======
-** Created: Sat 22. Jun 10:17:43 2013
->>>>>>> check
+** Created: Wed 26. Jun 12:13:08 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -27,7 +23,7 @@ static const uint qt_meta_data_ui_new_boleta_sistema[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -36,6 +32,7 @@ static const uint qt_meta_data_ui_new_boleta_sistema[] = {
 
  // slots: signature, parameters, type, tag, flags
       23,   22,   22,   22, 0x08,
+      51,   22,   22,   22, 0x08,
 
        0        // eod
 };
@@ -43,6 +40,7 @@ static const uint qt_meta_data_ui_new_boleta_sistema[] = {
 static const char qt_meta_stringdata_ui_new_boleta_sistema[] = {
     "ui_new_boleta_sistema\0\0"
     "on_pushButton_new_clicked()\0"
+    "on_pushButton_clicked()\0"
 };
 
 void ui_new_boleta_sistema::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -52,6 +50,7 @@ void ui_new_boleta_sistema::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         ui_new_boleta_sistema *_t = static_cast<ui_new_boleta_sistema *>(_o);
         switch (_id) {
         case 0: _t->on_pushButton_new_clicked(); break;
+        case 1: _t->on_pushButton_clicked(); break;
         default: ;
         }
     }
@@ -90,9 +89,9 @@ int ui_new_boleta_sistema::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

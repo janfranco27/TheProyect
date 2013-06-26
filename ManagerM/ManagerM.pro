@@ -118,7 +118,8 @@ SOURCES += main.cpp\
     ui_new_igv.cpp \
     ui_search_transportista.cpp \
     ui_search_proveedor.cpp \
-    ui_edit_transportista.cpp
+    ui_edit_transportista.cpp \
+    object_e_sistema.cpp
 
 
 HEADERS  += ui_main.h \
@@ -230,7 +231,8 @@ HEADERS  += ui_main.h \
     ui_new_igv.h \
     ui_search_transportista.h \
     ui_search_proveedor.h \
-    ui_edit_transportista.h
+    ui_edit_transportista.h \
+    object_e_sistema.h
 
 FORMS    += ui_main.ui \
     ui_login.ui \

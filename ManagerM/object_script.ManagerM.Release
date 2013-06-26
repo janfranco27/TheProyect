@@ -105,6 +105,7 @@ INPUT(
 ./release\ui_search_transportista.o
 ./release\ui_search_proveedor.o
 ./release\ui_edit_transportista.o
+./release\object_e_sistema.o
 ./release\moc_ui_main.o
 ./release\moc_ui_login.o
 ./release\moc_ui_colaborador.o

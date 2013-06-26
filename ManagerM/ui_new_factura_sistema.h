@@ -33,6 +33,8 @@ public:
 private slots:
     void on_pushButton_new_clicked();
 
+    void on_pushButton_cancelar_clicked();
+
 private:
     Ui::ui_new_factura_sistema *ui;
 };

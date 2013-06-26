@@ -58,3 +58,8 @@ void ui_new_boleta_sistema::on_pushButton_new_clicked()
     close();
 
 }
+
+void ui_new_boleta_sistema::on_pushButton_clicked()
+{
+    close();
+}
