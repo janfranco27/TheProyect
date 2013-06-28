@@ -1,13 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:48:21 2013
+** Created: Fri 28. Jun 16:02:30 2013
 **      by: Qt User Interface Compiler version 4.8.1
-=======
-** Created: Sat 22. Jun 10:02:11 2013
-**      by: Qt User Interface Compiler version 4.7.4
->>>>>>> check
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -571,7 +566,7 @@ public:
 
         retranslateUi(ui_new_venta);
 
-        stackedWidget_ventas->setCurrentIndex(0);
+        stackedWidget_ventas->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ui_new_venta);

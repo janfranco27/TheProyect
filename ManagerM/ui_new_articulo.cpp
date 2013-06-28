@@ -17,11 +17,11 @@ ui_new_articulo::ui_new_articulo(QWidget *parent) :
 
     update_form();
 
-    ui->l_grupo_2->setVisible(false);
-    ui->cb_grupo->setVisible(false);
-    ui->btn_add_grupo->setVisible(false);
+    //ui->l_grupo_2->setVisible(false);
+    //ui->cb_grupo->setVisible(false);
+    //ui->btn_add_grupo->setVisible(false);
 
-    ui->tableWidget->setColumnHidden(H_GRUPO,true);
+    //ui->tableWidget->setColumnHidden(H_GRUPO,true);
 }
 
 ui_new_articulo::~ui_new_articulo()
@@ -59,14 +59,17 @@ void ui_new_articulo::on_pushButton_agregar_clicked()
 
     articulo[0] = ui->l_codigoop->text();
     articulo[1] = ui->le_nombre_2->text();
+    /*
     if(ui->cb_grupo->currentIndex()==0)
     {
         articulo[2] = "";
     }
+
     else
     {
         articulo[2] = ui->cb_grupo->currentText();
     }
+    */
     if(ui->cb_marca->currentIndex()==0)
     {
         articulo[3] = "";
@@ -136,13 +139,13 @@ void ui_new_articulo::on_btn_aceptar_clicked()
 
                     proveedor = ui->tableWidget->item(i,H_PROVEEDOR)->text();
 
-                    int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,H_GRUPO)->text());
+                    ///int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,H_GRUPO)->text());
 
                     int marca_index = ui->cb_marca->findText(ui->tableWidget->item(i,H_MARCA)->text());
                     int medida_index = ui->cb_medida->findText(ui->tableWidget->item(i,H_MEDIDA)->text());
                     int proveedor_index = ui->cb_proveedor->findText(proveedor);
 
-
+/*
                      //No selecciono grupo
                     if(grupo_index==-1)
                     {
@@ -152,7 +155,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     {
                         grupo = QString::number(grupo_index);
                     }
-
+*/
                     //No selecciono grupo
                     if(marca_index==-1)
                     {
@@ -379,7 +382,7 @@ void ui_new_articulo::clear_input()
     //Borra todos los line edits y deselecciona los combobox
 
     ui->le_nombre_2->clear();
-    ui->cb_grupo->setCurrentIndex(0);
+    //ui->cb_grupo->setCurrentIndex(0);
     ui->cb_marca->setCurrentIndex(0);
     ui->cb_medida->setCurrentIndex(0);
     ui->cb_proveedor->setCurrentIndex(0);
