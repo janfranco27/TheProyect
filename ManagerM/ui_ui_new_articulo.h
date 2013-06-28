@@ -1,13 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:48:20 2013
+** Created: Wed 26. Jun 15:37:09 2013
 **      by: Qt User Interface Compiler version 4.8.1
-=======
-** Created: Sat 22. Jun 10:02:11 2013
-**      by: Qt User Interface Compiler version 4.7.4
->>>>>>> check
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -80,7 +75,7 @@ public:
         if (ui_new_articulo->objectName().isEmpty())
             ui_new_articulo->setObjectName(QString::fromUtf8("ui_new_articulo"));
         ui_new_articulo->setWindowModality(Qt::ApplicationModal);
-        ui_new_articulo->resize(729, 497);
+        ui_new_articulo->resize(829, 424);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Iconos/Iconos/Tune-Up_Utilities.png"), QSize(), QIcon::Normal, QIcon::Off);
         ui_new_articulo->setWindowIcon(icon);
