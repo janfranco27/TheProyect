@@ -6,7 +6,7 @@ const int numHeaders = 8;
 
 
 
-
+const int NO_SELECTION = 0;
 //enum {MEDIDA,GRUPO,MARCA};
 enum {H_CODIGO, H_NOMBRE, H_GRUPO, H_MARCA, H_MEDIDA, H_STOCK,H_PRECIO, H_PROVEEDOR};
 ui_new_articulo::ui_new_articulo(QWidget *parent) :
@@ -21,7 +21,15 @@ ui_new_articulo::ui_new_articulo(QWidget *parent) :
     //ui->cb_grupo->setVisible(false);
     //ui->btn_add_grupo->setVisible(false);
 
+<<<<<<< HEAD
     //ui->tableWidget->setColumnHidden(H_GRUPO,true);
+=======
+    ui->le_precio_2->setMaximum(MAX_VALUE_PRECIO);
+
+    ui->le_stock_2->setMaximum(MAX_VALUE_STOCK);
+
+    ui->tableWidget->setColumnHidden(H_GRUPO,true);
+>>>>>>> modificacion articulos tabla
 }
 
 ui_new_articulo::~ui_new_articulo()
@@ -107,10 +115,53 @@ void ui_new_articulo::on_pushButton_agregar_clicked()
         ui->tableWidget->insertRow(count);
 
         ui->l_resultado_2->setVisible(true);
-        for(int i=0;i<numHeaders;i++)
-         {
-            ui->tableWidget->setItem(count,i,new QTableWidgetItem(articulo[i]));
-         }
+
+        //Agregamos los items a la tabla
+
+
+        //Codigo como texto
+        QTableWidgetItem * item_codigo = new QTableWidgetItem(articulo[H_CODIGO]);
+        //Columna codigo no editable
+        item_codigo->setFlags(item_codigo->flags() ^ Qt::ItemIsEditable);
+        ui->tableWidget->setItem(count,H_CODIGO,item_codigo);
+
+        //Nombre como texto
+        QTableWidgetItem * item_nombre = new QTableWidgetItem(articulo[H_NOMBRE]);
+        ui->tableWidget->setItem(count,H_NOMBRE,item_nombre);
+
+
+
+        //Insertamos los Combobox y SpinBox  en la Tabla temporal
+        QComboBox * marcaBox =  new QComboBox();
+        marcaBox->setModel(ui->cb_marca->model());
+        marcaBox->setCurrentIndex(ui->cb_marca->currentIndex());
+
+        ui->tableWidget->setCellWidget(count,H_MARCA,marcaBox);
+
+        QComboBox * medidaBox = new QComboBox();
+        medidaBox->setModel(ui->cb_medida->model());
+        medidaBox->setCurrentIndex(ui->cb_medida->currentIndex());
+
+        ui->tableWidget->setCellWidget(count,H_MEDIDA,medidaBox);
+
+        QComboBox * proveedorBox = new QComboBox();
+        proveedorBox->setModel(ui->cb_proveedor->model());
+        proveedorBox->setCurrentIndex(ui->cb_proveedor->currentIndex());
+        ui->tableWidget->setCellWidget(count,H_PROVEEDOR,proveedorBox);
+
+
+        QSpinBox * stockBox = new QSpinBox();
+        stockBox->setValue(ui->le_stock_2->value());
+        stockBox->setMaximum(MAX_VALUE_STOCK);
+        ui->tableWidget->setCellWidget(count,H_STOCK,stockBox);
+
+        QSpinBox * precioBox = new QSpinBox();
+        precioBox->setValue(ui->le_precio_2->value());
+        precioBox->setMaximum(MAX_VALUE_PRECIO);
+
+        ui->tableWidget->setCellWidget(count,H_PRECIO,precioBox);
+
+
 
         //Incrementamos el codigo del articulo en 1
         incrementar_codigo();
@@ -135,19 +186,31 @@ void ui_new_articulo::on_btn_aceptar_clicked()
 
 
 
-                    QString grupo,marca,medida,proveedor,pk_proveedor;
+                    QString grupo,marca,medida,proveedor,pk_proveedor,precio,stock;
 
-                    proveedor = ui->tableWidget->item(i,H_PROVEEDOR)->text();
+                    proveedor = ((QComboBox*)ui->tableWidget->cellWidget(i,H_PROVEEDOR))->currentText();
 
+<<<<<<< HEAD
                     ///int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,H_GRUPO)->text());
+=======
+                    int grupo_index =NO_SELECTION;
+>>>>>>> modificacion articulos tabla
 
-                    int marca_index = ui->cb_marca->findText(ui->tableWidget->item(i,H_MARCA)->text());
-                    int medida_index = ui->cb_medida->findText(ui->tableWidget->item(i,H_MEDIDA)->text());
-                    int proveedor_index = ui->cb_proveedor->findText(proveedor);
+                    int marca_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_MARCA))->currentIndex();
+                    int medida_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_MEDIDA))->currentIndex();
 
+<<<<<<< HEAD
 /*
+=======
+
+                    precio = ((QSpinBox*)ui->tableWidget->cellWidget(i,H_PRECIO))->text();
+                    stock = ((QSpinBox*)ui->tableWidget->cellWidget(i,H_STOCK))->text();
+
+
+                     int proveedor_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_PROVEEDOR))->currentIndex();
+>>>>>>> modificacion articulos tabla
                      //No selecciono grupo
-                    if(grupo_index==-1)
+                    if(grupo_index==NO_SELECTION)
                     {
                         grupo="";
                     }
@@ -157,7 +220,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     }
 */
                     //No selecciono grupo
-                    if(marca_index==-1)
+                    if(marca_index==NO_SELECTION)
                     {
                        marca="";
                     }
@@ -167,7 +230,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     }
 
                     //No selecciono grupo
-                    if(medida_index==-1)
+                    if(medida_index==NO_SELECTION)
                     {
                       medida="";
                     }
@@ -182,8 +245,8 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     articulo.mf_set_fk_grupo(grupo);
                     articulo.mf_set_fk_marca(marca);
                     articulo.mf_set_fk_medida(medida);
-                    articulo.mf_set_stock(ui->tableWidget->item(i,H_STOCK)->text());
-                    articulo.mf_set_precio_lista(ui->tableWidget->item(i,H_PRECIO)->text());
+                    articulo.mf_set_stock(stock);
+                    articulo.mf_set_precio_lista(precio);
                     articulo.mf_set_habilitado(C_HABILITADO);
 
 
@@ -194,7 +257,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                         break;
                     }
                     //Tiene proveedor
-                    if(proveedor_index!=-1)
+                    if(proveedor_index!=NO_SELECTION)
                     {
                         pk_proveedor = SYSTEM->getProveedorPK(proveedor);
 
@@ -238,11 +301,25 @@ void ui_new_articulo::on_btn_borrar_clicked()
 {
    QModelIndexList indexList = ui->tableWidget->selectionModel()->selectedRows();
 
-
-   foreach(QModelIndex index,indexList)
+   if(!indexList.empty())
    {
-       ui->tableWidget->removeRow(index.row());
+       foreach(QModelIndex index,indexList)
+       {
+
+            ui->tableWidget->removeRow(index.row());
+       }
+
+
+
+    }
+
+   if(ui->tableWidget->rowCount()==0)
+   {
+        ui->l_resultado_2->setVisible(false);
    }
+
+   ui->tableWidget->setFocus(Qt::OtherFocusReason);
+   ui->tableWidget->selectRow(0);
 
 }
 
@@ -261,8 +338,8 @@ void ui_new_articulo::on_btn_add_marca_clicked()
     //openOpcionesArticuloWith(MARCA);
     ui_new_marca * form_new_marca = new ui_new_marca();
     form_new_marca->setAttribute(Qt::WA_DeleteOnClose);
-
     connect(form_new_marca,SIGNAL(closing()),this,SLOT(update_comboBox_Marca()));
+    connect(form_new_marca,SIGNAL(closing()),this,SLOT(select_last_inserted_Marca()));
 
     form_new_marca->show();
 
@@ -277,6 +354,7 @@ void ui_new_articulo::on_btn_add_medida_clicked()
 
 
     connect(form_new_medida,SIGNAL(closing()),this,SLOT(update_comboBox_Medida()));
+    connect(form_new_medida,SIGNAL(closing()),this,SLOT(select_last_inserted_Medida()));
 
     form_new_medida->show();
 
@@ -288,24 +366,18 @@ void ui_new_articulo::on_btn_add_proveedor_clicked()
     form_new_proveedor->setAttribute(Qt::WA_DeleteOnClose);
 
     connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(update_comboBox_Proveedor()));
+    connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(select_last_inserted_Proveedor()));
     form_new_proveedor->show();
 }
 
-//void ui_new_articulo::openOpcionesArticuloWith(int tab)
-//{
-//    ui_opciones_articulo * form_opciones = new ui_opciones_articulo();
-//    connect(form_opciones,SIGNAL(closing()),this,SLOT(update_form()));
-//    form_opciones->setCurrentTab(tab);
-//    form_opciones->setAttribute(Qt::WA_DeleteOnClose);
-//    form_opciones->show();
-//}
 
 void ui_new_articulo::update_form()
 {
 
-    //Obtenemos el valor correcto del codigo de articulo
+
     ui->l_resultado_2->setVisible(false);
-    ui->l_codigoop->setText(QString::number(SYSTEM->getAutoIncrement("e_articulo")));
+    //Obtenemos el valor correcto del codigo de articulo
+    update_codigo_text(QString::number(SYSTEM->getAutoIncrement("e_articulo")));
 
 
 
@@ -330,22 +402,40 @@ void ui_new_articulo::update_comboBox_Marca()
       vector<_QSTR> marca = SYSTEM->getDescripcion("e_marca");
       SYSTEM->loadComboBoxFromVector(ui->cb_marca,marca,false);
 
-      ui->cb_marca->setCurrentIndex(ui->cb_marca->count()-1);
+
 }
 
 void ui_new_articulo::update_comboBox_Medida()
 {
     vector<_QSTR> medida = SYSTEM->getDescripcion("e_medida");
       SYSTEM->loadComboBoxFromVector(ui->cb_medida,medida,false);
-      ui->cb_medida->setCurrentIndex(ui->cb_medida->count()-1);
+
 }
 
 void ui_new_articulo::update_comboBox_Proveedor()
 {
-    QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
-   SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
-   ui->cb_proveedor->setCurrentIndex(ui->cb_proveedor->count()-1);
+   // QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
+    vector<_QSTR> proveedor = SYSTEM->getRazonSocial_Proveedores();
+    SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+
 }
+
+void ui_new_articulo::select_last_inserted_Marca()
+{
+    ui->cb_marca->setCurrentIndex(ui->cb_marca->count()-1);
+}
+
+void ui_new_articulo::select_last_inserted_Medida()
+{
+    ui->cb_medida->setCurrentIndex(ui->cb_medida->count()-1);
+}
+
+void ui_new_articulo::select_last_inserted_Proveedor()
+{
+    ui->cb_proveedor->setCurrentIndex(ui->cb_proveedor->count()-1);
+}
+
+
 
 
 
@@ -372,9 +462,10 @@ void ui_new_articulo::reset_form()
 
 void ui_new_articulo::incrementar_codigo()
 {
-    //Incrementamos la numeracion del codigo de articullo
+    //Incrementamos la numeracion del codigo de articulo
+    int prox_codigo = ui->l_codigoop->text().toInt()+1;
 
-    ui->l_codigoop->setText(QString::number(ui->l_codigoop->text().toInt()+1));
+    update_codigo_text(QString::number(prox_codigo));
 }
 
 void ui_new_articulo::clear_input()
@@ -388,10 +479,32 @@ void ui_new_articulo::clear_input()
     ui->cb_proveedor->setCurrentIndex(0);
     ui->le_precio_2->cleanText();
 
-    ui->le_stock_2->cleanText();
-    ui->l_resultado_2->setVisible(false);
+    ui->le_stock_2->cleanText();    
 
     ui->le_nombre_2->setFocus(Qt::OtherFocusReason);
+}
+
+void ui_new_articulo::update_codigo_text(QString nuevo_codigo)
+{
+    ui->l_codigoop->setText(nuevo_codigo);
+}
+
+void ui_new_articulo::keyPressEvent(QKeyEvent *ev)
+{
+
+    //Borra las filas seleccionadas con tecla Supr/Delete
+    if(ui->tableWidget->hasFocus())
+    {
+
+        if(ev->type() ==QEvent::KeyPress)
+        {
+            QKeyEvent * keyEvent = (QKeyEvent*) ev;
+            if(keyEvent->key()==Qt::Key_Delete)
+            {
+                on_btn_borrar_clicked();
+            }
+        }
+    }
 }
 
 

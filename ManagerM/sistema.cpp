@@ -507,6 +507,24 @@ QSqlQuery Sistema::getDatosSistema()
      return getSelectQuery(select,from);
 }
 
+vector<_QSTR> Sistema::getRazonSocial_Proveedores()
+{
+    vector<_QSTR> select,from;
+    vector<_QSTR> salida;
+    select.push_back("razon_social");
+
+    from.push_back("e_persona_juridica as PJ INNER JOIN e_proveedor as P ON PJ.pk_ruc=P.pk_ruc");
+
+    QSqlQuery query = getSelectQuery(select,from);
+
+    while(query.next())
+    {
+        salida.push_back(query.value(0).toString());
+    }
+
+    return salida;
+}
+
 bool Sistema::setBoletaSistema(_QSTR pk_boleta)
 {
     QSqlQuery query;
@@ -694,9 +712,9 @@ _QSTR Sistema::getTipoUsuario(_QSTR nombreUsuario)
 
 }
 
-_QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
+_QSTR Sistema::getProveedorPK(_QSTR razonSocial)
 {
-    vector<_QSTR> select;
+    /*vector<_QSTR> select;
     select.push_back("pk_ruc");
 
     vector<_QSTR> from;
@@ -715,17 +733,38 @@ _QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
         return query.value(0).toString();
     }
     else
-        return "";
+        return "";*/
+
+        vector<_QSTR> select;
+        select.push_back("pk_ruc");
+
+        vector<_QSTR> from;
+        from.push_back("e_persona_juridica");
+
+        vector<pair<_QSTR,_QSTR> > where;
+
+        where.push_back(make_pair("razon_social",razonSocial));
+
+
+        QSqlQuery query = getSelectQuery(select,from,where);
+
+        if(query.exec())
+        {
+            query.next();
+            return query.value(0).toString();
+        }
+        else
+            return "";
 
 }
 
 _QSTR Sistema::getNombreProveedor(_QSTR proveedorPK)
 {
     vector<_QSTR> select;
-    select.push_back("nombre_vendedor");
+    select.push_back("razon_social");
 
     vector<_QSTR> from;
-    from.push_back("e_proveedor");
+    from.push_back("e_persona_juridica");
 
     vector<pair<_QSTR,_QSTR> > where;
 

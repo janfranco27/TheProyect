@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_articulo.h'
 **
-** Created: Tue 25. Jun 21:41:38 2013
+** Created: Thu 27. Jun 20:20:34 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ui_new_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -46,8 +46,11 @@ static const uint qt_meta_data_ui_new_articulo[] = {
      259,   16,   16,   16, 0x08,
      283,   16,   16,   16, 0x08,
      308,   16,   16,   16, 0x08,
-     339,  336,   16,   16, 0x08,
-     364,   16,   16,   16, 0x08,
+     336,   16,   16,   16, 0x08,
+     365,   16,   16,   16, 0x08,
+     395,   16,   16,   16, 0x08,
+     431,  428,   16,   16, 0x08,
+     456,   16,   16,   16, 0x08,
 
        0        // eod
 };
@@ -64,7 +67,10 @@ static const char qt_meta_stringdata_ui_new_articulo[] = {
     "on_btn_add_medida_clicked()\0update_form()\0"
     "update_comboBox_Marca()\0"
     "update_comboBox_Medida()\0"
-    "update_comboBox_Proveedor()\0ev\0"
+    "update_comboBox_Proveedor()\0"
+    "select_last_inserted_Marca()\0"
+    "select_last_inserted_Medida()\0"
+    "select_last_inserted_Proveedor()\0ev\0"
     "closeEvent(QCloseEvent*)\0"
     "on_btn_add_proveedor_clicked()\0"
 };
@@ -89,8 +95,11 @@ void ui_new_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 10: _t->update_comboBox_Marca(); break;
         case 11: _t->update_comboBox_Medida(); break;
         case 12: _t->update_comboBox_Proveedor(); break;
-        case 13: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
-        case 14: _t->on_btn_add_proveedor_clicked(); break;
+        case 13: _t->select_last_inserted_Marca(); break;
+        case 14: _t->select_last_inserted_Medida(); break;
+        case 15: _t->select_last_inserted_Proveedor(); break;
+        case 16: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
+        case 17: _t->on_btn_add_proveedor_clicked(); break;
         default: ;
         }
     }
@@ -128,9 +137,9 @@ int ui_new_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 18;
     }
     return _id;
 }

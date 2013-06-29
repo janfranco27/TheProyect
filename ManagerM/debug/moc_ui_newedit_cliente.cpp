@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_newedit_cliente.h'
 **
-** Created: Wed 26. Jun 12:12:50 2013
+** Created: Thu 27. Jun 23:09:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

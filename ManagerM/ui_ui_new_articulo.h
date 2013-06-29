@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 15:47:25 2013
+=======
+** Created: Thu 27. Jun 20:27:19 2013
+>>>>>>> modificacion articulos tabla
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -67,8 +71,12 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_agregar;
+<<<<<<< HEAD
     QGridLayout *gridLayout_2;
     QLabel *l_resultado_2;
+=======
+    QVBoxLayout *verticalLayout;
+>>>>>>> modificacion articulos tabla
     QTableWidget *tableWidget;
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_3;
@@ -76,6 +84,7 @@ public:
     QPushButton *btn_aceptar;
     QPushButton *btn_borrar;
     QPushButton *btn_cancelar;
+    QLabel *l_resultado_2;
 
     void setupUi(QWidget *ui_new_articulo)
     {
@@ -261,6 +270,12 @@ public:
 
         gridLayout_4->addWidget(label, 0, 2, 1, 1);
 
+<<<<<<< HEAD
+=======
+        le_stock_2 = new QSpinBox(ui_new_articulo);
+        le_stock_2->setObjectName(QString::fromUtf8("le_stock_2"));
+        le_stock_2->setMaximum(10000);
+>>>>>>> modificacion articulos tabla
 
         gridLayout_5->addLayout(gridLayout_4, 0, 2, 1, 1);
 
@@ -301,6 +316,7 @@ public:
 
         gridLayout_7->addLayout(horizontalLayout_2, 1, 0, 1, 1);
 
+<<<<<<< HEAD
 
         gridLayout_8->addLayout(gridLayout_7, 0, 0, 1, 1);
 
@@ -311,6 +327,10 @@ public:
 
         gridLayout_2->addWidget(l_resultado_2, 0, 0, 1, 1);
 
+=======
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+>>>>>>> modificacion articulos tabla
         tableWidget = new QTableWidget(ui_new_articulo);
         if (tableWidget->columnCount() < 8)
             tableWidget->setColumnCount(8);
@@ -331,8 +351,11 @@ public:
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+<<<<<<< HEAD
         tableWidget->setMinimumSize(QSize(820, 0));
         tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+=======
+>>>>>>> modificacion articulos tabla
         tableWidget->setAlternatingRowColors(true);
         tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -376,7 +399,16 @@ public:
         gridLayout_8->addLayout(horizontalLayout_3, 3, 0, 1, 1);
 
 
+<<<<<<< HEAD
         gridLayout_9->addLayout(gridLayout_8, 0, 0, 1, 1);
+=======
+        gridLayout_2->addLayout(verticalLayout, 4, 0, 1, 1);
+
+        l_resultado_2 = new QLabel(ui_new_articulo);
+        l_resultado_2->setObjectName(QString::fromUtf8("l_resultado_2"));
+
+        gridLayout_2->addWidget(l_resultado_2, 3, 0, 1, 1);
+>>>>>>> modificacion articulos tabla
 
         QWidget::setTabOrder(le_nombre_2, cb_marca);
         QWidget::setTabOrder(cb_marca, cb_medida);
@@ -408,7 +440,6 @@ public:
         l_stock_2->setText(QApplication::translate("ui_new_articulo", "Stock", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_new_articulo", "Soles", 0, QApplication::UnicodeUTF8));
         pushButton_agregar->setText(QApplication::translate("ui_new_articulo", "Agregar", 0, QApplication::UnicodeUTF8));
-        l_resultado_2->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ui_new_articulo", "C\303\263digo", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -428,6 +459,7 @@ public:
         btn_aceptar->setText(QApplication::translate("ui_new_articulo", "Aceptar", 0, QApplication::UnicodeUTF8));
         btn_borrar->setText(QApplication::translate("ui_new_articulo", "Borrar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_new_articulo", "Cancelar", 0, QApplication::UnicodeUTF8));
+        l_resultado_2->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

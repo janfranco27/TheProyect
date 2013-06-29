@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 15:47:25 2013
+=======
+** Created: Thu 27. Jun 20:27:19 2013
+>>>>>>> modificacion articulos tabla
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -242,6 +246,7 @@ public:
 
         le_stock_2 = new QSpinBox(ui_edit_articulos);
         le_stock_2->setObjectName(QString::fromUtf8("le_stock_2"));
+<<<<<<< HEAD
         le_stock_2->setMinimumSize(QSize(80, 0));
         le_stock_2->setMaximumSize(QSize(80, 16777215));
 
@@ -253,6 +258,9 @@ public:
         l_precio_2->setMaximumSize(QSize(80, 16777215));
         l_precio_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         l_precio_2->setIndent(5);
+=======
+        le_stock_2->setMaximum(10000);
+>>>>>>> modificacion articulos tabla
 
         gridLayout_3->addWidget(l_precio_2, 1, 0, 1, 1);
 
