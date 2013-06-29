@@ -42,6 +42,10 @@ private slots:
     void update_comboBox_Medida();
     void update_comboBox_Proveedor();
 
+    void select_last_inserted_Marca();
+    void select_last_inserted_Medida();
+    void select_last_inserted_Proveedor();
+
     void closeEvent(QCloseEvent *ev );
 
     void on_btn_add_proveedor_clicked();
@@ -56,6 +60,8 @@ private:
     void reset_form();
     void incrementar_codigo();
     void clear_input();
+    void update_codigo_text(QString nuevo_codigo);
+    void keyPressEvent(QKeyEvent *);
 };
 
 #endif // UI_NEW_ARTICULO_H

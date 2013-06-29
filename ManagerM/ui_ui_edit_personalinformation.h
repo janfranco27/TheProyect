@@ -1,13 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_personalinformation.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:49:30 2013
+** Created: Fri 28. Jun 16:12:28 2013
 **      by: Qt User Interface Compiler version 4.8.1
-=======
-** Created: Sat 22. Jun 10:02:12 2013
-**      by: Qt User Interface Compiler version 4.7.4
->>>>>>> check
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -42,43 +37,43 @@ public:
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_2;
     QSplitter *splitter;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_20;
     QLineEdit *lineEdit_dni;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_22;
     QLineEdit *lineEdit_nombres;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_18;
     QLineEdit *lineEdit_apPaterno;
-    QWidget *widget3;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_25;
     QLineEdit *lineEdit_apMaterno;
-    QWidget *widget4;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_24;
     QDateEdit *dateEdit_nacimiento;
-    QWidget *widget5;
+    QWidget *layoutWidget5;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_27;
     QComboBox *comboBox_genero;
-    QWidget *widget6;
+    QWidget *layoutWidget6;
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_21;
     QComboBox *comboBox_estCivil;
-    QWidget *widget7;
+    QWidget *layoutWidget7;
     QHBoxLayout *horizontalLayout_10;
     QLabel *label_15;
     QLineEdit *lineEdit_celular;
-    QWidget *widget8;
+    QWidget *layoutWidget8;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_14;
     QLineEdit *lineEdit_telefonoFijo;
-    QWidget *widget9;
+    QWidget *layoutWidget9;
     QHBoxLayout *horizontalLayout_12;
     QLabel *label_23;
     QLineEdit *lineEdit_direccion;
@@ -90,8 +85,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_8;
     QLineEdit *lineEdit_pass1;
-    QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_change;
+    QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_13;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *pushButton_save;
@@ -102,7 +97,7 @@ public:
     {
         if (ui_edit_personalInformation->objectName().isEmpty())
             ui_edit_personalInformation->setObjectName(QString::fromUtf8("ui_edit_personalInformation"));
-        ui_edit_personalInformation->resize(305, 466);
+        ui_edit_personalInformation->resize(315, 492);
         QFont font;
         font.setFamily(QString::fromUtf8("Segoe UI"));
         ui_edit_personalInformation->setFont(font);
@@ -125,21 +120,21 @@ public:
         splitter = new QSplitter(groupBox_2);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Vertical);
-        widget = new QWidget(splitter);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        horizontalLayout_3 = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(splitter);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget);
         horizontalLayout_3->setSpacing(15);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_20 = new QLabel(widget);
+        label_20 = new QLabel(layoutWidget);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setMinimumSize(QSize(100, 0));
-        label_20->setMaximumSize(QSize(100, 16777215));
+        label_20->setMinimumSize(QSize(110, 0));
+        label_20->setMaximumSize(QSize(111005, 16777215));
         label_20->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_3->addWidget(label_20);
 
-        lineEdit_dni = new QLineEdit(widget);
+        lineEdit_dni = new QLineEdit(layoutWidget);
         lineEdit_dni->setObjectName(QString::fromUtf8("lineEdit_dni"));
         lineEdit_dni->setMinimumSize(QSize(150, 0));
         lineEdit_dni->setMaximumSize(QSize(150, 16777215));
@@ -147,154 +142,155 @@ public:
 
         horizontalLayout_3->addWidget(lineEdit_dni);
 
-        splitter->addWidget(widget);
-        widget1 = new QWidget(splitter);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        horizontalLayout_4 = new QHBoxLayout(widget1);
+        splitter->addWidget(layoutWidget);
+        layoutWidget1 = new QWidget(splitter);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setSpacing(15);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_22 = new QLabel(widget1);
+        label_22 = new QLabel(layoutWidget1);
         label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setMinimumSize(QSize(100, 0));
-        label_22->setMaximumSize(QSize(100, 16777215));
+        label_22->setMinimumSize(QSize(110, 0));
+        label_22->setMaximumSize(QSize(111005, 16777215));
         label_22->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_4->addWidget(label_22);
 
-        lineEdit_nombres = new QLineEdit(widget1);
+        lineEdit_nombres = new QLineEdit(layoutWidget1);
         lineEdit_nombres->setObjectName(QString::fromUtf8("lineEdit_nombres"));
         lineEdit_nombres->setMinimumSize(QSize(150, 0));
         lineEdit_nombres->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_4->addWidget(lineEdit_nombres);
 
-        splitter->addWidget(widget1);
-        widget2 = new QWidget(splitter);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        horizontalLayout_5 = new QHBoxLayout(widget2);
+        splitter->addWidget(layoutWidget1);
+        layoutWidget2 = new QWidget(splitter);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_5->setSpacing(15);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_18 = new QLabel(widget2);
+        label_18 = new QLabel(layoutWidget2);
         label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setMinimumSize(QSize(100, 0));
-        label_18->setMaximumSize(QSize(100, 16777215));
+        label_18->setMinimumSize(QSize(110, 0));
+        label_18->setMaximumSize(QSize(111005, 16777215));
         label_18->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_5->addWidget(label_18);
 
-        lineEdit_apPaterno = new QLineEdit(widget2);
+        lineEdit_apPaterno = new QLineEdit(layoutWidget2);
         lineEdit_apPaterno->setObjectName(QString::fromUtf8("lineEdit_apPaterno"));
         lineEdit_apPaterno->setMinimumSize(QSize(150, 0));
         lineEdit_apPaterno->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_5->addWidget(lineEdit_apPaterno);
 
-        splitter->addWidget(widget2);
-        widget3 = new QWidget(splitter);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        horizontalLayout_6 = new QHBoxLayout(widget3);
+        splitter->addWidget(layoutWidget2);
+        layoutWidget3 = new QWidget(splitter);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_6->setSpacing(15);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        label_25 = new QLabel(widget3);
+        label_25 = new QLabel(layoutWidget3);
         label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setMinimumSize(QSize(100, 0));
-        label_25->setMaximumSize(QSize(100, 16777215));
+        label_25->setMinimumSize(QSize(110, 0));
+        label_25->setMaximumSize(QSize(111005, 16777215));
         label_25->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_6->addWidget(label_25);
 
-        lineEdit_apMaterno = new QLineEdit(widget3);
+        lineEdit_apMaterno = new QLineEdit(layoutWidget3);
         lineEdit_apMaterno->setObjectName(QString::fromUtf8("lineEdit_apMaterno"));
         lineEdit_apMaterno->setMinimumSize(QSize(150, 0));
         lineEdit_apMaterno->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_6->addWidget(lineEdit_apMaterno);
 
-        splitter->addWidget(widget3);
-        widget4 = new QWidget(splitter);
-        widget4->setObjectName(QString::fromUtf8("widget4"));
-        horizontalLayout_7 = new QHBoxLayout(widget4);
+        splitter->addWidget(layoutWidget3);
+        layoutWidget4 = new QWidget(splitter);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        horizontalLayout_7 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_7->setSpacing(15);
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        label_24 = new QLabel(widget4);
+        label_24 = new QLabel(layoutWidget4);
         label_24->setObjectName(QString::fromUtf8("label_24"));
-        label_24->setMinimumSize(QSize(100, 0));
-        label_24->setMaximumSize(QSize(100, 16777215));
+        label_24->setMinimumSize(QSize(110, 0));
+        label_24->setMaximumSize(QSize(111005, 16777215));
         label_24->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_7->addWidget(label_24);
 
-        dateEdit_nacimiento = new QDateEdit(widget4);
+        dateEdit_nacimiento = new QDateEdit(layoutWidget4);
         dateEdit_nacimiento->setObjectName(QString::fromUtf8("dateEdit_nacimiento"));
         dateEdit_nacimiento->setMinimumSize(QSize(150, 0));
         dateEdit_nacimiento->setMaximumSize(QSize(150, 16777215));
+        dateEdit_nacimiento->setCalendarPopup(true);
 
         horizontalLayout_7->addWidget(dateEdit_nacimiento);
 
-        splitter->addWidget(widget4);
-        widget5 = new QWidget(splitter);
-        widget5->setObjectName(QString::fromUtf8("widget5"));
-        horizontalLayout_8 = new QHBoxLayout(widget5);
+        splitter->addWidget(layoutWidget4);
+        layoutWidget5 = new QWidget(splitter);
+        layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_8->setSpacing(15);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        label_27 = new QLabel(widget5);
+        label_27 = new QLabel(layoutWidget5);
         label_27->setObjectName(QString::fromUtf8("label_27"));
-        label_27->setMinimumSize(QSize(100, 0));
-        label_27->setMaximumSize(QSize(100, 16777215));
+        label_27->setMinimumSize(QSize(110, 0));
+        label_27->setMaximumSize(QSize(111005, 16777215));
         label_27->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_8->addWidget(label_27);
 
-        comboBox_genero = new QComboBox(widget5);
+        comboBox_genero = new QComboBox(layoutWidget5);
         comboBox_genero->setObjectName(QString::fromUtf8("comboBox_genero"));
         comboBox_genero->setMinimumSize(QSize(150, 0));
         comboBox_genero->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_8->addWidget(comboBox_genero);
 
-        splitter->addWidget(widget5);
-        widget6 = new QWidget(splitter);
-        widget6->setObjectName(QString::fromUtf8("widget6"));
-        horizontalLayout_9 = new QHBoxLayout(widget6);
+        splitter->addWidget(layoutWidget5);
+        layoutWidget6 = new QWidget(splitter);
+        layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
+        horizontalLayout_9 = new QHBoxLayout(layoutWidget6);
         horizontalLayout_9->setSpacing(15);
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
-        label_21 = new QLabel(widget6);
+        label_21 = new QLabel(layoutWidget6);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setMinimumSize(QSize(100, 0));
-        label_21->setMaximumSize(QSize(100, 16777215));
+        label_21->setMinimumSize(QSize(110, 0));
+        label_21->setMaximumSize(QSize(111005, 16777215));
         label_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_9->addWidget(label_21);
 
-        comboBox_estCivil = new QComboBox(widget6);
+        comboBox_estCivil = new QComboBox(layoutWidget6);
         comboBox_estCivil->setObjectName(QString::fromUtf8("comboBox_estCivil"));
         comboBox_estCivil->setMinimumSize(QSize(150, 0));
         comboBox_estCivil->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_9->addWidget(comboBox_estCivil);
 
-        splitter->addWidget(widget6);
-        widget7 = new QWidget(splitter);
-        widget7->setObjectName(QString::fromUtf8("widget7"));
-        horizontalLayout_10 = new QHBoxLayout(widget7);
+        splitter->addWidget(layoutWidget6);
+        layoutWidget7 = new QWidget(splitter);
+        layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
+        horizontalLayout_10 = new QHBoxLayout(layoutWidget7);
         horizontalLayout_10->setSpacing(15);
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
-        label_15 = new QLabel(widget7);
+        label_15 = new QLabel(layoutWidget7);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setMinimumSize(QSize(100, 0));
-        label_15->setMaximumSize(QSize(100, 16777215));
+        label_15->setMinimumSize(QSize(110, 0));
+        label_15->setMaximumSize(QSize(111005, 16777215));
         label_15->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_10->addWidget(label_15);
 
-        lineEdit_celular = new QLineEdit(widget7);
+        lineEdit_celular = new QLineEdit(layoutWidget7);
         lineEdit_celular->setObjectName(QString::fromUtf8("lineEdit_celular"));
         lineEdit_celular->setMinimumSize(QSize(150, 0));
         lineEdit_celular->setMaximumSize(QSize(150, 16777215));
@@ -302,22 +298,22 @@ public:
 
         horizontalLayout_10->addWidget(lineEdit_celular);
 
-        splitter->addWidget(widget7);
-        widget8 = new QWidget(splitter);
-        widget8->setObjectName(QString::fromUtf8("widget8"));
-        horizontalLayout_11 = new QHBoxLayout(widget8);
+        splitter->addWidget(layoutWidget7);
+        layoutWidget8 = new QWidget(splitter);
+        layoutWidget8->setObjectName(QString::fromUtf8("layoutWidget8"));
+        horizontalLayout_11 = new QHBoxLayout(layoutWidget8);
         horizontalLayout_11->setSpacing(15);
         horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
         horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
-        label_14 = new QLabel(widget8);
+        label_14 = new QLabel(layoutWidget8);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setMinimumSize(QSize(100, 0));
-        label_14->setMaximumSize(QSize(100, 16777215));
+        label_14->setMinimumSize(QSize(110, 0));
+        label_14->setMaximumSize(QSize(111005, 16777215));
         label_14->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_11->addWidget(label_14);
 
-        lineEdit_telefonoFijo = new QLineEdit(widget8);
+        lineEdit_telefonoFijo = new QLineEdit(layoutWidget8);
         lineEdit_telefonoFijo->setObjectName(QString::fromUtf8("lineEdit_telefonoFijo"));
         lineEdit_telefonoFijo->setMinimumSize(QSize(150, 0));
         lineEdit_telefonoFijo->setMaximumSize(QSize(150, 16777215));
@@ -325,29 +321,29 @@ public:
 
         horizontalLayout_11->addWidget(lineEdit_telefonoFijo);
 
-        splitter->addWidget(widget8);
-        widget9 = new QWidget(splitter);
-        widget9->setObjectName(QString::fromUtf8("widget9"));
-        horizontalLayout_12 = new QHBoxLayout(widget9);
+        splitter->addWidget(layoutWidget8);
+        layoutWidget9 = new QWidget(splitter);
+        layoutWidget9->setObjectName(QString::fromUtf8("layoutWidget9"));
+        horizontalLayout_12 = new QHBoxLayout(layoutWidget9);
         horizontalLayout_12->setSpacing(15);
         horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
         horizontalLayout_12->setContentsMargins(0, 0, 0, 0);
-        label_23 = new QLabel(widget9);
+        label_23 = new QLabel(layoutWidget9);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setMinimumSize(QSize(100, 0));
-        label_23->setMaximumSize(QSize(100, 16777215));
+        label_23->setMinimumSize(QSize(110, 0));
+        label_23->setMaximumSize(QSize(111005, 16777215));
         label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_12->addWidget(label_23);
 
-        lineEdit_direccion = new QLineEdit(widget9);
+        lineEdit_direccion = new QLineEdit(layoutWidget9);
         lineEdit_direccion->setObjectName(QString::fromUtf8("lineEdit_direccion"));
         lineEdit_direccion->setMinimumSize(QSize(150, 0));
         lineEdit_direccion->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout_12->addWidget(lineEdit_direccion);
 
-        splitter->addWidget(widget9);
+        splitter->addWidget(layoutWidget9);
 
         gridLayout_2->addWidget(splitter, 0, 0, 1, 1);
 
@@ -363,8 +359,8 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setMinimumSize(QSize(100, 0));
-        label_6->setMaximumSize(QSize(100, 16777215));
+        label_6->setMinimumSize(QSize(110, 0));
+        label_6->setMaximumSize(QSize(111005, 16777215));
         label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_6);
@@ -384,8 +380,8 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label_8 = new QLabel(groupBox);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setMinimumSize(QSize(100, 0));
-        label_8->setMaximumSize(QSize(100, 16777215));
+        label_8->setMinimumSize(QSize(110, 0));
+        label_8->setMaximumSize(QSize(111005, 16777215));
         label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout->addWidget(label_8);
@@ -400,10 +396,6 @@ public:
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 2);
 
-        horizontalSpacer = new QSpacerItem(135, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 2, 0, 1, 1);
-
         pushButton_change = new QPushButton(groupBox);
         pushButton_change->setObjectName(QString::fromUtf8("pushButton_change"));
         QIcon icon1;
@@ -413,7 +405,11 @@ public:
 
         gridLayout->addWidget(pushButton_change, 2, 1, 1, 1);
 
-        groupBox_2->raise();
+        horizontalSpacer = new QSpacerItem(135, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 2, 0, 1, 1);
+
+        pushButton_change->raise();
 
         gridLayout_3->addWidget(groupBox, 1, 0, 1, 1);
 

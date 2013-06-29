@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'searcher_articulos.h'
 **
-** Created: Wed 26. Jun 12:13:40 2013
+<<<<<<< HEAD
+** Created: Fri 28. Jun 20:56:05 2013
+=======
+** Created: Thu 27. Jun 23:10:30 2013
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

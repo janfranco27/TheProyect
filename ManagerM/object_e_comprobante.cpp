@@ -1,4 +1,5 @@
 #include "object_e_comprobante.h"
+#include <QSqlError>
 
 object_e_comprobante::object_e_comprobante()
 {
@@ -7,7 +8,7 @@ object_e_comprobante::object_e_comprobante()
 	//w!
 }
 
-object_e_comprobante::object_e_comprobante(_QSTR pk_comprobante, _QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR habilitado)
+object_e_comprobante::object_e_comprobante(_QSTR pk_comprobante, _QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR anulado)
 {
 	//file e_comprobante
 	//function construct_1
@@ -21,9 +22,9 @@ object_e_comprobante::object_e_comprobante(_QSTR pk_comprobante, _QSTR pk_tienda
 	md_o_fecha_sistema = fecha_sistema;
 	md_o_fecha_emision = fecha_emision;
 	md_o_emitido = emitido;
-	md_o_habilitado = habilitado;
+    md_o_anulado = anulado;
 }
-object_e_comprobante::object_e_comprobante(_QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR habilitado)
+object_e_comprobante::object_e_comprobante(_QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR anulado)
 {
 	//file e_comprobante
 	//function construct_2
@@ -36,7 +37,7 @@ object_e_comprobante::object_e_comprobante(_QSTR pk_tienda, _QSTR tipo, _QSTR nu
 	md_o_fecha_sistema = fecha_sistema;
 	md_o_fecha_emision = fecha_emision;
 	md_o_emitido = emitido;
-	md_o_habilitado = habilitado;
+    md_o_anulado = anulado;
 }
 object_e_comprobante::~object_e_comprobante()
 {
@@ -100,12 +101,12 @@ void object_e_comprobante::mf_set_emitido(_QSTR emitido)
 
 	md_o_emitido = emitido;
 }
-void object_e_comprobante::mf_set_habilitado(_QSTR habilitado)
+void object_e_comprobante::mf_set_anulado(_QSTR anulado)
 {
-	//function mf_set_habilitado
+    //function mf_set_anulado
 	//w!
 
-	md_o_habilitado = habilitado;
+    md_o_anulado = anulado;
 }
 
 _QSTR object_e_comprobante::mf_get_pk_comprobante()
@@ -164,12 +165,12 @@ _QSTR object_e_comprobante::mf_get_emitido()
 
 	return md_o_emitido;
 }
-_QSTR object_e_comprobante::mf_get_habilitado()
+_QSTR object_e_comprobante::mf_get_anulado()
 {
-	//function mf_get_habilitado
+    //function mf_get_anulado
 	//w!
 
-	return md_o_habilitado;
+    return md_o_anulado;
 }
 
 bool object_e_comprobante::mf_load(_QSTR pk)
@@ -193,7 +194,7 @@ bool object_e_comprobante::mf_load(_QSTR pk)
 		md_o_fecha_sistema = query.value(5).toString();
 		md_o_fecha_emision = query.value(6).toString();
 		md_o_emitido = query.value(7).toString();
-		md_o_habilitado = query.value(8).toString();
+        md_o_anulado = query.value(8).toString();
 
 		//state OK
 		//w!
@@ -223,7 +224,7 @@ bool object_e_comprobante::mf_add()
 	str_query += "fecha_sistema, ";
 	str_query += "fecha_emision, ";
 	str_query += "emitido, ";
-	str_query += "habilitado";
+    str_query += "anulado";
 	str_query += ") VALUES(";
 	if (md_o_pk_comprobante!= "")
 	{
@@ -253,7 +254,7 @@ bool object_e_comprobante::mf_add()
 	query.bindValue(integer++, md_o_fecha_sistema);
 	query.bindValue(integer++, md_o_fecha_emision);
 	query.bindValue(integer++, md_o_emitido);
-	query.bindValue(integer++, md_o_habilitado);
+    query.bindValue(integer++, md_o_anulado);
 
 	if(query.exec())
 	{
@@ -265,7 +266,8 @@ bool object_e_comprobante::mf_add()
 	}else{
 		//state FAILED
 		//w!
-
+        qDebug()<<query.lastError().databaseText()<<endl;
+        qDebug()<<query.lastQuery()<<endl;
 		return false;
 	}
 }
@@ -277,7 +279,7 @@ bool object_e_comprobante::mf_update()
 
 	QSqlQuery query;
 
-	query.prepare("UPDATE e_comprobante SET pk_tienda = ?, tipo = ?, numero = ?, serie = ?, fecha_sistema = ?, fecha_emision = ?, emitido = ?, habilitado = ? WHERE pk_comprobante = ?");
+    query.prepare("UPDATE e_comprobante SET pk_tienda = ?, tipo = ?, numero = ?, serie = ?, fecha_sistema = ?, fecha_emision = ?, emitido = ?, anulado = ? WHERE pk_comprobante = ?");
 	query.bindValue(0, md_o_pk_tienda);
 	query.bindValue(1, md_o_tipo);
 	query.bindValue(2, md_o_numero);
@@ -285,7 +287,7 @@ bool object_e_comprobante::mf_update()
 	query.bindValue(4, md_o_fecha_sistema);
 	query.bindValue(5, md_o_fecha_emision);
 	query.bindValue(6, md_o_emitido);
-	query.bindValue(7, md_o_habilitado);
+    query.bindValue(7, md_o_anulado);
 	query.bindValue(8, md_o_pk_comprobante);
 
 	if(query.exec())

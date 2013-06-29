@@ -16,12 +16,12 @@ private:
 	_QSTR md_o_fecha_sistema;
 	_QSTR md_o_fecha_emision;
 	_QSTR md_o_emitido;
-	_QSTR md_o_habilitado;
+    _QSTR md_o_anulado;
 
 public:
 	object_e_comprobante();
-	object_e_comprobante(_QSTR pk_comprobante, _QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR habilitado);
-	object_e_comprobante(_QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR habilitado);
+    object_e_comprobante(_QSTR pk_comprobante, _QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR anulado);
+    object_e_comprobante(_QSTR pk_tienda, _QSTR tipo, _QSTR numero, _QSTR serie, _QSTR fecha_sistema, _QSTR fecha_emision, _QSTR emitido, _QSTR anulado);
 
 	void mf_set_pk_comprobante(_QSTR pk_comprobante);
 	void mf_set_pk_tienda(_QSTR pk_tienda);
@@ -31,7 +31,7 @@ public:
 	void mf_set_fecha_sistema(_QSTR fecha_sistema);
 	void mf_set_fecha_emision(_QSTR fecha_emision);
 	void mf_set_emitido(_QSTR emitido);
-	void mf_set_habilitado(_QSTR habilitado);
+    void mf_set_anulado(_QSTR anulado);
 
 	_QSTR mf_get_pk_comprobante();
 	_QSTR mf_get_pk_tienda();
@@ -41,7 +41,7 @@ public:
 	_QSTR mf_get_fecha_sistema();
 	_QSTR mf_get_fecha_emision();
 	_QSTR mf_get_emitido();
-	_QSTR mf_get_habilitado();
+    _QSTR mf_get_anulado();
 
 	bool mf_load(_QSTR pk);
 	bool mf_add();
@@ -61,7 +61,7 @@ public:
 	obj_e_comprobante.mf_set_fecha_sistema();
 	obj_e_comprobante.mf_set_fecha_emision();
 	obj_e_comprobante.mf_set_emitido();
-	obj_e_comprobante.mf_set_habilitado();
+    obj_e_comprobante.mf_set_anulado();
 
 	obj_e_comprobante.mf_get_pk_comprobante();
 	obj_e_comprobante.mf_get_pk_tienda();
@@ -71,5 +71,5 @@ public:
 	obj_e_comprobante.mf_get_fecha_sistema();
 	obj_e_comprobante.mf_get_fecha_emision();
 	obj_e_comprobante.mf_get_emitido();
-	obj_e_comprobante.mf_get_habilitado();
+    obj_e_comprobante.mf_get_anulado();
 	*/

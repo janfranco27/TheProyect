@@ -5,6 +5,29 @@ Sistema::Sistema()
 {
     igv=0.18;
     cambioDolar=2.5;
+    vector<_QSTR> select,from;
+    vector<pair<_QSTR,_QSTR> > where;
+    select.push_back("fk_boleta_s");
+    from.push_back("e_sistema");
+    where.push_back(make_pair("pk_code","1"));
+    QSqlQuery query=getSelectQuery(select,from,where);
+    if(query.exec())
+    {
+        query.next();
+        code_boleta=query.value(0).toString().toStdString();
+    }
+    else code_boleta="";
+
+    select.clear();
+    select.push_back("fk_factura_s");
+    query.clear();
+    query=getSelectQuery(select,from,where);
+    if(query.exec())
+    {
+        query.next();
+        code_factura=query.value(0).toString().toStdString();
+    }
+    else code_factura="";
 }
 
 
@@ -507,6 +530,24 @@ QSqlQuery Sistema::getDatosSistema()
      return getSelectQuery(select,from);
 }
 
+vector<_QSTR> Sistema::getRazonSocial_Proveedores()
+{
+    vector<_QSTR> select,from;
+    vector<_QSTR> salida;
+    select.push_back("razon_social");
+
+    from.push_back("e_persona_juridica as PJ INNER JOIN e_proveedor as P ON PJ.pk_ruc=P.pk_ruc");
+
+    QSqlQuery query = getSelectQuery(select,from);
+
+    while(query.next())
+    {
+        salida.push_back(query.value(0).toString());
+    }
+
+    return salida;
+}
+
 bool Sistema::setBoletaSistema(_QSTR pk_boleta)
 {
     QSqlQuery query;
@@ -538,7 +579,7 @@ _QSTR Sistema::getCurrentNumeroBoletaSistema()
     {
         return boleta->mf_get_numero_fin();
     }else{
-        return QString::number(boleta->mf_get_numero_actual().toInt()+1);
+        return QString::number(boleta->mf_get_numero_actual().toInt());
     }
 }
 
@@ -557,10 +598,11 @@ bool Sistema::setNumeroBoletaSistema(_QSTR numero_boleta)
     object_e_boleta_sistema* boleta = new object_e_boleta_sistema;
     boleta->mf_load(QString::fromStdString(code_boleta));
     boleta->mf_set_numero_actual(numero_boleta);
-
-    if(numero_boleta > boleta->mf_get_numero_fin())
+    qDebug()<<boleta->mf_get_numero_actual();
+    if(numero_boleta.toInt() > boleta->mf_get_numero_fin().toInt())
+    {
         return false;
-
+    }
     return boleta->mf_update();
 }
 
@@ -579,7 +621,7 @@ _QSTR Sistema::getCurrentNumeroFacturaSistema()
     {
         return factura->mf_get_numero_fin();
     }else{
-        return QString::number(factura->mf_get_numero_actual().toInt()+1);
+        return QString::number(factura->mf_get_numero_actual().toInt());
     }
 
 }
@@ -597,8 +639,12 @@ bool Sistema::setNumeroFacturaSistema(_QSTR numero_factura)
     factura->mf_load(QString::fromStdString(code_factura));
     factura->mf_set_numero_actual(numero_factura);
 
-    if(numero_factura > factura->mf_get_numero_fin());
+    if(numero_factura.toInt() > factura->mf_get_numero_fin().toInt())
+    {
+        qDebug()<<numero_factura.toInt();
+        qDebug()<<factura->mf_get_numero_fin().toInt();
         return false;
+    }
 
     return factura->mf_update();
 }
@@ -694,9 +740,9 @@ _QSTR Sistema::getTipoUsuario(_QSTR nombreUsuario)
 
 }
 
-_QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
+_QSTR Sistema::getProveedorPK(_QSTR razonSocial)
 {
-    vector<_QSTR> select;
+    /*vector<_QSTR> select;
     select.push_back("pk_ruc");
 
     vector<_QSTR> from;
@@ -715,17 +761,38 @@ _QSTR Sistema::getProveedorPK(_QSTR nombreVendedor)
         return query.value(0).toString();
     }
     else
-        return "";
+        return "";*/
+
+        vector<_QSTR> select;
+        select.push_back("pk_ruc");
+
+        vector<_QSTR> from;
+        from.push_back("e_persona_juridica");
+
+        vector<pair<_QSTR,_QSTR> > where;
+
+        where.push_back(make_pair("razon_social",razonSocial));
+
+
+        QSqlQuery query = getSelectQuery(select,from,where);
+
+        if(query.exec())
+        {
+            query.next();
+            return query.value(0).toString();
+        }
+        else
+            return "";
 
 }
 
 _QSTR Sistema::getNombreProveedor(_QSTR proveedorPK)
 {
     vector<_QSTR> select;
-    select.push_back("nombre_vendedor");
+    select.push_back("razon_social");
 
     vector<_QSTR> from;
-    from.push_back("e_proveedor");
+    from.push_back("e_persona_juridica");
 
     vector<pair<_QSTR,_QSTR> > where;
 

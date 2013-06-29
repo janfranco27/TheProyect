@@ -55,9 +55,10 @@ ui_new_venta::ui_new_venta(QWidget *parent) :
     tipoComprobante=boleta;
 
     //llenamos serie y numero de acuerdo al sistema
-    vector<_QSTR> serie_numero=SYSTEM->getSerieNumero(boleta);
-    ui->lineEdit_serie->setText(serie_numero[0]);
-    ui->lineEdit_numero->setText(serie_numero[0]);
+
+    //vector<_QSTR> serie_numero=SYSTEM->getSerieNumero(boleta);
+    ui->lineEdit_serie->setText(SYSTEM->getSerieBoletaSistema());
+    ui->lineEdit_numero->setText(SYSTEM->getCurrentNumeroBoletaSistema());
 
 
    // QCompleter * comp = new QCompleter(SYSTEM->getListOfValues("e_articulo","descripcion"));
@@ -97,6 +98,10 @@ ui_new_venta::~ui_new_venta()
 {
     delete table;
     delete seleccionados_model;
+    delete venta_facturas;
+    delete venta_boletas;
+    delete venta_proformas;
+    delete venta_cotizaciones;
     delete ui;
 }
 
@@ -329,6 +334,37 @@ void ui_new_venta::on_pushButton_siguiente_clicked()
             SYSTEM->messageCritical(C_WRONG_COMPROBANTE,C_WRONG_COMPROBANTE_TEXT);
     }
 }
+void ui_new_venta::guardarArticulos(_QSTR codigoComp)
+{
+    int itemsList = seleccionados_model->rowCount();
+
+    for(int i=0;i<itemsList;i++)
+    {
+        _QSTR codArticulo=seleccionados_model->data(seleccionados_model->index(i,COD)).toString();
+        _QSTR cantidad=seleccionados_model->data(seleccionados_model->index(i,CANTIDAD)).toString();
+        _QSTR precioCompra=seleccionados_model->data(seleccionados_model->index(i,PRECIO)).toString();
+        object_r_comprobante_articulo* articulosComprobante=new object_r_comprobante_articulo;
+        articulosComprobante->mf_set_cantidad(cantidad);
+        articulosComprobante->mf_set_pk_articulo(codArticulo);
+        articulosComprobante->mf_set_pk_comprobante(codigoComp);
+        articulosComprobante->mf_set_precio_compra(precioCompra);
+        if(articulosComprobante->mf_add())
+        {
+            qDebug()<<"articulos almacenados";
+            //descontamos el stock
+            object_e_articulo* articuloComprado=new object_e_articulo;
+            articuloComprado->mf_load(codArticulo);
+            double stockActual=articuloComprado->mf_get_stock().toDouble();
+            articuloComprado->mf_set_stock(QString::number(stockActual-cantidad.toDouble()));
+            articuloComprado->mf_update();
+            delete articuloComprado;
+        }
+        else
+            SYSTEM->messageInformation("ERROR","No se pudieron almacenar los articulos del comprobante!");
+
+        delete articulosComprobante;
+    }
+}
 
 bool ui_new_venta::guardarComprobante()
 {
@@ -350,13 +386,14 @@ bool ui_new_venta::guardarComprobante()
     _QSTR fecha_sistema=QDate::currentDate().toString("yyyy-MM-dd");
     _QSTR fecha_emision=ui->dateEdit_fecha_emision->date().toString("yyyy-MM-dd");
     _QSTR emitido=C_NO_HABILITADO;
-    _QSTR habilitado=C_NO_HABILITADO;
+    _QSTR anulado=C_NO_HABILITADO;
     //GET IGV
     _QSTR igv=SYSTEM->getIGV();
     object_e_comprobante* comprobante=new object_e_comprobante(codigoComprobante,fk_tienda,
                                           tipoComp,numero,serie,fecha_sistema,fecha_emision,
-                                          emitido,habilitado);
+                                          emitido,anulado);
     _QSTR total=ui->le_total->text();
+
     if(comprobante->mf_add())
     {
         qDebug()<<"sin problemas"<<endl;
@@ -368,7 +405,11 @@ bool ui_new_venta::guardarComprobante()
                                                                             valores[2],total);
             if(boletaAsociada->mf_add())
             {
-                qDebug()<<"boelta guardada"<<endl;
+                //luego de guardar la boleta, se actualiza el numero para la sigte venta
+                if(SYSTEM->setNumeroBoletaSistema(QString::number(numero.toInt()+1)))
+                    qDebug()<<"numero boleta cambiada";
+                else
+                    qDebug()<<"numero boleta no cambiada";
             }
             else return false;
         }
@@ -379,6 +420,10 @@ bool ui_new_venta::guardarComprobante()
             if(facturaAsociada->mf_add())
             {
                 qDebug()<<"factura guardada"<<endl;
+                if(SYSTEM->setNumeroFacturaSistema(QString::number(numero.toInt()+1)))
+                    qDebug()<<"numero factura cambiada";
+                else
+                    qDebug()<<"numero factura no cambiada";
             }
             else return false;
 
@@ -409,6 +454,9 @@ bool ui_new_venta::guardarComprobante()
             }
             else return false;
         }
+        if(tipoComprobante==boleta||tipoComprobante==factura)
+            guardarArticulos(codigoComprobante);
+
         return true;
     }
     else return false;
@@ -441,10 +489,7 @@ void ui_new_venta::actualizaContenido()
 
 void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
 {
-    /*QWidget* widget = ui.TPCheckBoxLayout_G->itemAtPosition(i,j)->widget();	 ui.TPCheckBoxLayout_G->removeItem(ui.TPCheckBoxLayout_G->itemAtPosition(i,j));
-    delete ui.TPCheckBoxLayout_G->itemAtPosition(i,j);
-    delete widget;
-    */
+
     if(arg1=="Boleta")
     {
         tipoComprobante=boleta;
@@ -457,9 +502,8 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
         ui->gridLayout_6->addWidget(venta_boletas,1,0);
         venta_boletas->show();
         qDebug()<<"boleta"<<endl;
-        vector<_QSTR> serie_numero=SYSTEM->getSerieNumero(boleta);
-        ui->lineEdit_serie->setText(serie_numero[0]);
-        ui->lineEdit_numero->setText(serie_numero[0]);
+        ui->lineEdit_serie->setText(SYSTEM->getSerieBoletaSistema());
+        ui->lineEdit_numero->setText(SYSTEM->getCurrentNumeroBoletaSistema());
     }
     else if(arg1=="Factura")
     {
@@ -471,9 +515,8 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
         ui->gridLayout_6->addWidget(venta_facturas,1,0);
         venta_facturas->show();
         qDebug()<<"Factura"<<endl;
-        vector<_QSTR> serie_numero=SYSTEM->getSerieNumero(factura);
-        ui->lineEdit_serie->setText(serie_numero[0]);
-        ui->lineEdit_numero->setText(serie_numero[0]);
+        ui->lineEdit_serie->setText(SYSTEM->getSerieFacturaSistema());
+        ui->lineEdit_numero->setText(SYSTEM->getCurrentNumeroFacturaSistema());
     }
     else if(arg1=="Proforma")
     {
@@ -508,76 +551,85 @@ void ui_new_venta::on_cb_tipo_comprobante_activated(const QString &arg1)
 void ui_new_venta::on_pushButton_down_clicked()
 {
 
-
-
-
     QModelIndexList  list = ui->tableView_articulos_1->selectionModel()->selectedRows();
-
     QAbstractItemModel * item_model = ui->tableView_articulos_1->model();
 
     int n_columns = item_model->columnCount();
+    int cantidad = ui->sp_cantidad->value();
+    QStandardItemModel * select_model = (QStandardItemModel*)ui->tableView_seleccionados->model();
 
-   QStandardItemModel * select_model = (QStandardItemModel*)ui->tableView_seleccionados->model();
+    bool error = false,articuloEncontrado=false;
+    QString descripcionArticuloError = "";
 
-        bool error = false;
-        QString descripcionArticuloError = "";
-
-    foreach(QModelIndex index ,list)
+    foreach(QModelIndex index,list)
     {
-        int row = index.row();
-
-        int nueva_row = select_model->rowCount();
-
-
+        int row=index.row();
+        int codigoArticulo=item_model->data(item_model->index(row,COD)).toInt();
+        int nueva_row=select_model->rowCount();
         int selectedArticuloStock = item_model->data(item_model->index(row,STOCK)).toInt();
-        int cantidad = ui->sp_cantidad->value();
-
-        if(cantidad<=selectedArticuloStock)
+        double precio=item_model->data(item_model->index(row,PRECIO)).toDouble();
+        for(int i=0;i<nueva_row;i++)
         {
-            for(int i=0;i<n_columns;i++)
+
+            //esta en la lista ya seleccionada
+            if(codigoArticulo==select_model->data(select_model->index(i,COD)).toInt())
             {
+                articuloEncontrado=true;
+                qDebug()<<"articulo encontrado";
 
 
-                select_model->setItem(nueva_row,i,new QStandardItem(item_model->data(item_model->index(row,i)).toString()));
-
+                int foundArticuloCantidad = select_model->data(select_model->index(i,CANTIDAD)).toInt();
+                if(cantidad+foundArticuloCantidad<=selectedArticuloStock)
+                {
+                    montoTotal+= (cantidad*precio);
+                    updatePrecioView();
+                    select_model->setData(select_model->index(i,CANTIDAD),QVariant::fromValue(cantidad+foundArticuloCantidad));
+                }
+                else
+                {
+                    //añadir mensaje de error
+                    descripcionArticuloError += (item_model->data(item_model->index(row,DESCRIPCION)).toString())+" ";
+                    error = true;
+                }
             }
-
-            //Seteamos la cantidad
-
-            select_model->setItem(nueva_row,CANTIDAD,new QStandardItem(ui->sp_cantidad->text()));
-
-
-            //Actualizamos el monto total
-
-            montoTotal+= (item_model->data(item_model->index(row,PRECIO)).toDouble());
-            updatePrecioView();
-
-            if(nueva_row==0)
+        }
+        if(!articuloEncontrado)
+        {
+            if(cantidad<=selectedArticuloStock)
             {
+                for(int i=0;i<n_columns;i++)
+                {
+                    select_model->setItem(nueva_row,i,new QStandardItem(item_model->data(item_model->index(row,i)).toString()));
+                }
+
+                //Seteamos la cantidad
+                select_model->setItem(nueva_row,CANTIDAD,new QStandardItem(ui->sp_cantidad->text()));
+
+
+                //Actualizamos el monto total
+                montoTotal+= (cantidad*precio);
+                updatePrecioView();
+
+                if(nueva_row==0)
+                {
                     //La tabla de seleccionadas estaba vacia
                     //Entonces añadimos los labels de las columnas
-
-                table_view_seleccionados_addHeaders();
-
+                    table_view_seleccionados_addHeaders();
+                }
             }
+            else
+            {
+                descripcionArticuloError += (item_model->data(item_model->index(row,DESCRIPCION)).toString())+" ";
+                error = true;
+            }
+
         }
-        else
+
+        if(error)
         {
-            descripcionArticuloError += (item_model->data(item_model->index(row,DESCRIPCION)).toString())+" ";
-            error = true;
-
+            SYSTEM->messageInformation(C_ERROR,"Error con: "+descripcionArticuloError+"\n "+ C_NO_STOCK );
         }
-
     }
-
-
-    if(error)
-    {
-        SYSTEM->messageInformation(C_ERROR,"Error con: "+descripcionArticuloError+"\n "+ C_NO_STOCK );
-    }
-
-
-
 }
 
 
@@ -591,7 +643,8 @@ void ui_new_venta::on_pushButton_up_clicked()
     {
         int row = index.row();
 
-         montoTotal-= (seleccionados_model->data(seleccionados_model->index(row,PRECIO)).toDouble());
+         montoTotal-= ((seleccionados_model->data(seleccionados_model->index(row,CANTIDAD)).toDouble())*
+                 (seleccionados_model->data(seleccionados_model->index(row,PRECIO)).toDouble()));
          updatePrecioView();
 
         seleccionados_model->removeRow(row);

@@ -1,7 +1,11 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_module_ventas.h'
 **
-** Created: Wed 26. Jun 12:11:09 2013
+<<<<<<< HEAD
+** Created: Fri 28. Jun 20:51:38 2013
+=======
+** Created: Thu 27. Jun 23:08:25 2013
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

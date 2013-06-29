@@ -87,7 +87,7 @@ void ui_opciones_comprobante::on_pushButton_save_b_clicked()
 {
     object_e_boleta_sistema* boleta_form = new object_e_boleta_sistema;
 
-    boleta_form->mf_set_pk_boleta_s(pk_boleta);
+    boleta_form->mf_load(pk_boleta);
 
     boleta_form->mf_set_serie(QString::number(ui->spinBox_serie_b->value()));
     boleta_form->mf_set_numero_inicio(QString::number(ui->spinBox_inicio_b->value()));
@@ -103,7 +103,7 @@ void ui_opciones_comprobante::on_pushButton_save_f_clicked()
 {
     object_e_factura_sistema* factura_form = new object_e_factura_sistema;
 
-    factura_form->mf_set_pk_factura_s(pk_factura);
+    factura_form->mf_load(pk_factura);
 
     factura_form->mf_set_serie(QString::number(ui->spinBox_serie_f->value()));
     factura_form->mf_set_numero_inicio(QString::number(ui->spinBox_inicio_f->value()));

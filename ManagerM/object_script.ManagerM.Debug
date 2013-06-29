@@ -106,6 +106,7 @@ INPUT(
 ./debug\ui_search_proveedor.o
 ./debug\ui_edit_transportista.o
 ./debug\object_e_sistema.o
+./debug\object_r_comprobante_articulo.o
 ./debug\moc_ui_main.o
 ./debug\moc_ui_login.o
 ./debug\moc_ui_colaborador.o

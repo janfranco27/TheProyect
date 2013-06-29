@@ -13,9 +13,9 @@ ui_edit_articulo::ui_edit_articulo(object_e_articulo *ar, QWidget *parent) :
 
     update_form();
 
-    ui->l_grupo_2->setVisible(false);
-    ui->cb_grupo->setVisible(false);
-    ui->btn_add_grupo->setVisible(false);
+    //ui->l_grupo_2->setVisible(false);
+   // ui->cb_grupo->setVisible(false);
+    //ui->btn_add_grupo->setVisible(false);
 
     load_selected_articulo(ar);
 
@@ -56,25 +56,25 @@ void ui_edit_articulo::load_selected_articulo(object_e_articulo *ar)
     //Obtenemos el nombre de proveedor
     _QSTR pk_proveedor = SYSTEM->getProveedorPKFromArticulo(ar->mf_get_pk_articulo());
 
-    _QSTR nombre_vendedor;
+    _QSTR nombre_proveedor;
 
     if(pk_proveedor!="")
-        nombre_vendedor = SYSTEM->getNombreProveedor(pk_proveedor);
+        nombre_proveedor = SYSTEM->getNombreProveedor(pk_proveedor);
     else
-        nombre_vendedor="";
+        nombre_proveedor="";
 
 
 
     this->pk_proveedor = pk_proveedor;
 
     //Se marca la opcion correcta en los combobox
-     int grupo_index = ui->cb_grupo->findText(ar->mf_get_fk_grupo());
+     //int grupo_index = ui->cb_grupo->findText(ar->mf_get_fk_grupo());
      int marca_index =ui->cb_marca->findText(ar->mf_get_fk_marca());
     int medida_index = ui->cb_medida->findText(ar->mf_get_fk_medida());
-    int proveedor_index = ui->cb_proveedor->findText(nombre_vendedor);
+    int proveedor_index = ui->cb_proveedor->findText(nombre_proveedor);
 
 
-    grupo_index = (grupo_index==not_found)?op_default:grupo_index;
+   // grupo_index = (grupo_index==not_found)?op_default:grupo_index;
     marca_index = (marca_index==not_found)?op_default:marca_index;
     medida_index = (medida_index==not_found)?op_default:medida_index;
     proveedor_index = (proveedor_index==not_found)?op_default:proveedor_index;
@@ -84,7 +84,7 @@ void ui_edit_articulo::load_selected_articulo(object_e_articulo *ar)
 
 
 
-    ui->cb_grupo->setCurrentIndex(grupo_index);
+    //ui->cb_grupo->setCurrentIndex(grupo_index);
     ui->cb_marca->setCurrentIndex(marca_index);
     ui->cb_medida->setCurrentIndex(medida_index);
     ui->cb_proveedor->setCurrentIndex(proveedor_index);
@@ -125,15 +125,16 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
         obj.mf_set_precio_lista(ui->le_precio_2->text());
         obj.mf_set_stock(ui->le_stock_2->text());
 
-        int grupo_index = ui->cb_grupo->currentIndex();
+        //int grupo_index = ui->cb_grupo->currentIndex();
 
-        qDebug()<<"grupo index"<<grupo_index;
+        //qDebug()<<"grupo index"<<grupo_index;
         int marca_index = ui->cb_marca->currentIndex();
         int medida_index = ui->cb_medida->currentIndex();
         int proveedor_index = ui->cb_proveedor->currentIndex();
 
 
         //Menor o igual a 0 indica que no existe
+        /*
         if(grupo_index<=0)
         {
             obj.mf_set_fk_grupo("");
@@ -141,7 +142,7 @@ void ui_edit_articulo::on_btn_aceptar_clicked()
         else
         {
             obj.mf_set_fk_grupo(QString::number(grupo_index));
-        }
+        }*/
 
         if(marca_index<=0)
         {
@@ -257,9 +258,12 @@ void ui_edit_articulo::update_comboBox_Medida()
 
 void ui_edit_articulo::update_comboBox_Proveedor()
 {
-     QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
+     //QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
+    vector<_QSTR> proveedor = SYSTEM->getRazonSocial_Proveedores();
 
      SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
 }
+
+
 
 

@@ -102,6 +102,8 @@ using namespace std;
 #include "object_e_cotizacion_venta.h"
 #include "object_e_proforma_venta.h"
 
+#include "object_r_comprobante_articulo.h"
+
 
 
 

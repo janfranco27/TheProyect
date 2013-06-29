@@ -20,6 +20,7 @@ class ui_new_venta : public QWidget
 public:
     explicit ui_new_venta(QWidget *parent = 0);
     void actualizaContenido();
+    void guardarArticulos(_QSTR codigoComp);
     bool guardarComprobante();
     ~ui_new_venta();
     

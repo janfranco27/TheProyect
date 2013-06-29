@@ -1,5 +1,5 @@
 #include "object_e_boleta_sistema.h"
-
+#include <QSqlError>
 object_e_boleta_sistema::object_e_boleta_sistema()
 {
 	//file e_boleta_sistema
@@ -195,7 +195,6 @@ bool object_e_boleta_sistema::mf_update()
 	//w!
 
 	QSqlQuery query;
-
 	query.prepare("UPDATE e_boleta_sistema SET serie = ?, numero_inicio = ?, numero_fin = ?, numero_actual = ? WHERE pk_boleta_s = ?");
 	query.bindValue(0, md_o_serie);
 	query.bindValue(1, md_o_numero_inicio);
@@ -213,7 +212,8 @@ bool object_e_boleta_sistema::mf_update()
 	}else{
 		//state FAILED
 		//w!
-
+        qDebug()<<query.lastError().databaseText()<<endl;
+        qDebug()<<query.lastQuery()<<endl;
 		return false;
 	}
 }

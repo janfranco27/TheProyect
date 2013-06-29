@@ -34,10 +34,13 @@ public:
     QStringList getListOfValues(_QSTR tableName,_QSTR columnName);
     QStringList getListOfValuesNotSorted(_QSTR tableName,_QSTR columnName);
 
+
     int getAutoIncrement(const _QSTR tablename);
     void loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio);
     void loadComboBoxFromVector(QComboBox *box, QStringList nombres, bool obligatorio);
     vector<_QSTR> getDescripcion(const char *tablename);
+
+
     QSqlQuery getBoletas();
     QSqlQuery getFacturas();
     QSqlQuery getBancos();
@@ -51,6 +54,8 @@ public:
     QSqlQuery getBoletaSistema();
     QSqlQuery getFacturaSistema();
     QSqlQuery getDatosSistema();
+
+    vector<_QSTR> getRazonSocial_Proveedores();
     //--
     bool setBoletaSistema(_QSTR pk_boleta);
     bool setFacturaSistema(_QSTR pk_factura);
@@ -70,7 +75,7 @@ public:
    vector<_QSTR> getAllRegiones();
    _QSTR getTienda(_QSTR nombreTienda);
    _QSTR getTipoUsuario(_QSTR nombreUsuario);
-   _QSTR getProveedorPK(_QSTR nombreVendedor);
+   _QSTR getProveedorPK(_QSTR razonSocial);
    _QSTR getNombreProveedor(_QSTR proveedorPK);
    _QSTR getProveedorPKFromArticulo(_QSTR articuloPK);
 

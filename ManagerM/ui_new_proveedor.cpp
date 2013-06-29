@@ -48,6 +48,8 @@ ui_new_proveedor::ui_new_proveedor(QWidget *parent) :
     }
     ui->comboBox_regiones->setCurrentIndex(0);
 
+    table = NULL;
+
 
 
 }
@@ -132,10 +134,13 @@ void ui_new_proveedor::on_pushButton_registrar_clicked()
 
         obj_e_proveedor.mf_add();
 
-        QSqlQueryModel* model = new QSqlQueryModel;
-        // update
-        model->setQuery("SELECT * FROM getProveedores ORDER BY pro_razon_social");
-        table->setModel(model);
+        if(table)
+        {
+            QSqlQueryModel* model = new QSqlQueryModel;
+            // update
+            model->setQuery("SELECT * FROM getProveedores ORDER BY pro_razon_social");
+            table->setModel(model);
+        }
         //module_compras->mf_updateModel_proveedor();
         this->close();
     } else {
