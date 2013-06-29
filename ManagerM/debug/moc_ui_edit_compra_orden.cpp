@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_compra_orden.h'
 **
-** Created: Tue 25. Jun 21:43:14 2013
+** Created: Sat 29. Jun 16:24:21 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_new_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Fri 28. Jun 15:47:25 2013
-=======
-** Created: Thu 27. Jun 20:27:19 2013
->>>>>>> modificacion articulos tabla
+** Created: Sat 29. Jun 16:09:24 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,6 +26,7 @@
 #include <QtGui/QSpinBox>
 #include <QtGui/QSplitter>
 #include <QtGui/QTableWidget>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -71,20 +68,28 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_agregar;
-<<<<<<< HEAD
     QGridLayout *gridLayout_2;
     QLabel *l_resultado_2;
-=======
-    QVBoxLayout *verticalLayout;
->>>>>>> modificacion articulos tabla
     QTableWidget *tableWidget;
-    QSpacerItem *verticalSpacer_3;
+    QLabel *l_stock_21;
+    QLabel *l_grupo_2;
+    QComboBox *cb_grupo;
+    QSpinBox *le_stock_21;
+    QDoubleSpinBox *le_precio_21;
+    QPushButton *btn_add_grupo;
+    QPushButton *btn_add_marca1;
+    QPushButton *btn_add_medida1;
+    QHBoxLayout *horizontalLayout_21;
+    QSpacerItem *horizontalSpacer_31;
+    QPushButton *pushButton_agregar1;
+    QVBoxLayout *verticalLayout;
+    QTableWidget *tableWidget1;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *btn_aceptar;
     QPushButton *btn_borrar;
     QPushButton *btn_cancelar;
-    QLabel *l_resultado_2;
+    QLabel *l_resultado_21;
 
     void setupUi(QWidget *ui_new_articulo)
     {
@@ -270,12 +275,6 @@ public:
 
         gridLayout_4->addWidget(label, 0, 2, 1, 1);
 
-<<<<<<< HEAD
-=======
-        le_stock_2 = new QSpinBox(ui_new_articulo);
-        le_stock_2->setObjectName(QString::fromUtf8("le_stock_2"));
-        le_stock_2->setMaximum(10000);
->>>>>>> modificacion articulos tabla
 
         gridLayout_5->addLayout(gridLayout_4, 0, 2, 1, 1);
 
@@ -316,7 +315,6 @@ public:
 
         gridLayout_7->addLayout(horizontalLayout_2, 1, 0, 1, 1);
 
-<<<<<<< HEAD
 
         gridLayout_8->addLayout(gridLayout_7, 0, 0, 1, 1);
 
@@ -327,10 +325,6 @@ public:
 
         gridLayout_2->addWidget(l_resultado_2, 0, 0, 1, 1);
 
-=======
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
->>>>>>> modificacion articulos tabla
         tableWidget = new QTableWidget(ui_new_articulo);
         if (tableWidget->columnCount() < 8)
             tableWidget->setColumnCount(8);
@@ -351,11 +345,8 @@ public:
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-<<<<<<< HEAD
         tableWidget->setMinimumSize(QSize(820, 0));
         tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
-=======
->>>>>>> modificacion articulos tabla
         tableWidget->setAlternatingRowColors(true);
         tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -364,9 +355,95 @@ public:
 
         gridLayout_8->addLayout(gridLayout_2, 1, 0, 1, 1);
 
-        verticalSpacer_3 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        l_stock_21 = new QLabel(ui_new_articulo);
+        l_stock_21->setObjectName(QString::fromUtf8("l_stock_21"));
+        l_stock_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_8->addItem(verticalSpacer_3, 2, 0, 1, 1);
+        gridLayout_8->addWidget(l_stock_21, 2, 0, 1, 1);
+
+        l_grupo_2 = new QLabel(ui_new_articulo);
+        l_grupo_2->setObjectName(QString::fromUtf8("l_grupo_2"));
+        l_grupo_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_8->addWidget(l_grupo_2, 2, 4, 1, 1);
+
+        cb_grupo = new QComboBox(ui_new_articulo);
+        cb_grupo->setObjectName(QString::fromUtf8("cb_grupo"));
+
+        gridLayout_8->addWidget(cb_grupo, 2, 5, 1, 1);
+
+        le_stock_21 = new QSpinBox(ui_new_articulo);
+        le_stock_21->setObjectName(QString::fromUtf8("le_stock_21"));
+        le_stock_21->setMaximum(10000);
+
+        gridLayout_8->addWidget(le_stock_21, 2, 1, 1, 1);
+
+        le_precio_21 = new QDoubleSpinBox(ui_new_articulo);
+        le_precio_21->setObjectName(QString::fromUtf8("le_precio_21"));
+        le_precio_21->setMaximum(1e+08);
+
+        gridLayout_8->addWidget(le_precio_21, 0, 10, 1, 1);
+
+        btn_add_grupo = new QPushButton(ui_new_articulo);
+        btn_add_grupo->setObjectName(QString::fromUtf8("btn_add_grupo"));
+
+        gridLayout_8->addWidget(btn_add_grupo, 2, 7, 1, 1);
+
+        btn_add_marca1 = new QPushButton(ui_new_articulo);
+        btn_add_marca1->setObjectName(QString::fromUtf8("btn_add_marca1"));
+        btn_add_marca1->setIcon(icon1);
+
+        gridLayout_8->addWidget(btn_add_marca1, 0, 6, 1, 1);
+
+        btn_add_medida1 = new QPushButton(ui_new_articulo);
+        btn_add_medida1->setObjectName(QString::fromUtf8("btn_add_medida1"));
+        btn_add_medida1->setIcon(icon1);
+
+        gridLayout_8->addWidget(btn_add_medida1, 1, 6, 1, 1);
+
+
+        gridLayout_9->addLayout(gridLayout_8, 0, 0, 1, 1);
+
+        horizontalLayout_21 = new QHBoxLayout();
+        horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
+        horizontalSpacer_31 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        horizontalLayout_21->addItem(horizontalSpacer_31);
+
+        pushButton_agregar1 = new QPushButton(ui_new_articulo);
+        pushButton_agregar1->setObjectName(QString::fromUtf8("pushButton_agregar1"));
+
+        horizontalLayout_21->addWidget(pushButton_agregar1);
+
+
+        gridLayout_9->addLayout(horizontalLayout_21, 2, 0, 1, 1);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        tableWidget1 = new QTableWidget(ui_new_articulo);
+        if (tableWidget1->columnCount() < 8)
+            tableWidget1->setColumnCount(8);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(0, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(1, __qtablewidgetitem9);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(2, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(3, __qtablewidgetitem11);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(4, __qtablewidgetitem12);
+        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(5, __qtablewidgetitem13);
+        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(6, __qtablewidgetitem14);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        tableWidget1->setHorizontalHeaderItem(7, __qtablewidgetitem15);
+        tableWidget1->setObjectName(QString::fromUtf8("tableWidget1"));
+        tableWidget1->setAlternatingRowColors(true);
+        tableWidget1->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+        verticalLayout->addWidget(tableWidget1);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -396,19 +473,15 @@ public:
         horizontalLayout_3->addWidget(btn_cancelar);
 
 
-        gridLayout_8->addLayout(horizontalLayout_3, 3, 0, 1, 1);
+        verticalLayout->addLayout(horizontalLayout_3);
 
 
-<<<<<<< HEAD
-        gridLayout_9->addLayout(gridLayout_8, 0, 0, 1, 1);
-=======
-        gridLayout_2->addLayout(verticalLayout, 4, 0, 1, 1);
+        gridLayout_9->addLayout(verticalLayout, 4, 0, 1, 1);
 
-        l_resultado_2 = new QLabel(ui_new_articulo);
-        l_resultado_2->setObjectName(QString::fromUtf8("l_resultado_2"));
+        l_resultado_21 = new QLabel(ui_new_articulo);
+        l_resultado_21->setObjectName(QString::fromUtf8("l_resultado_21"));
 
-        gridLayout_2->addWidget(l_resultado_2, 3, 0, 1, 1);
->>>>>>> modificacion articulos tabla
+        gridLayout_9->addWidget(l_resultado_21, 3, 0, 1, 1);
 
         QWidget::setTabOrder(le_nombre_2, cb_marca);
         QWidget::setTabOrder(cb_marca, cb_medida);
@@ -440,6 +513,7 @@ public:
         l_stock_2->setText(QApplication::translate("ui_new_articulo", "Stock", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_new_articulo", "Soles", 0, QApplication::UnicodeUTF8));
         pushButton_agregar->setText(QApplication::translate("ui_new_articulo", "Agregar", 0, QApplication::UnicodeUTF8));
+        l_resultado_2->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ui_new_articulo", "C\303\263digo", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -456,10 +530,32 @@ public:
         ___qtablewidgetitem6->setText(QApplication::translate("ui_new_articulo", "Precio", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem7 = tableWidget->horizontalHeaderItem(7);
         ___qtablewidgetitem7->setText(QApplication::translate("ui_new_articulo", "Proveedor", 0, QApplication::UnicodeUTF8));
+        l_stock_21->setText(QApplication::translate("ui_new_articulo", "Stock", 0, QApplication::UnicodeUTF8));
+        l_grupo_2->setText(QApplication::translate("ui_new_articulo", "Grupo", 0, QApplication::UnicodeUTF8));
+        btn_add_grupo->setText(QString());
+        btn_add_marca1->setText(QString());
+        btn_add_medida1->setText(QString());
+        pushButton_agregar1->setText(QApplication::translate("ui_new_articulo", "Agregar", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem8 = tableWidget1->horizontalHeaderItem(0);
+        ___qtablewidgetitem8->setText(QApplication::translate("ui_new_articulo", "C\303\263digo", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem9 = tableWidget1->horizontalHeaderItem(1);
+        ___qtablewidgetitem9->setText(QApplication::translate("ui_new_articulo", "Nombre", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem10 = tableWidget1->horizontalHeaderItem(2);
+        ___qtablewidgetitem10->setText(QApplication::translate("ui_new_articulo", "Grupo", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem11 = tableWidget1->horizontalHeaderItem(3);
+        ___qtablewidgetitem11->setText(QApplication::translate("ui_new_articulo", "Marca", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem12 = tableWidget1->horizontalHeaderItem(4);
+        ___qtablewidgetitem12->setText(QApplication::translate("ui_new_articulo", "Medida", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem13 = tableWidget1->horizontalHeaderItem(5);
+        ___qtablewidgetitem13->setText(QApplication::translate("ui_new_articulo", "Stock", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem14 = tableWidget1->horizontalHeaderItem(6);
+        ___qtablewidgetitem14->setText(QApplication::translate("ui_new_articulo", "Precio", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem15 = tableWidget1->horizontalHeaderItem(7);
+        ___qtablewidgetitem15->setText(QApplication::translate("ui_new_articulo", "Proveedor", 0, QApplication::UnicodeUTF8));
         btn_aceptar->setText(QApplication::translate("ui_new_articulo", "Aceptar", 0, QApplication::UnicodeUTF8));
         btn_borrar->setText(QApplication::translate("ui_new_articulo", "Borrar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_new_articulo", "Cancelar", 0, QApplication::UnicodeUTF8));
-        l_resultado_2->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
+        l_resultado_21->setText(QApplication::translate("ui_new_articulo", "Art\303\255culos a registrar :", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

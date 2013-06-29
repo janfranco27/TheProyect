@@ -33,7 +33,7 @@ private slots:
 
     void on_btn_add_proveedor_clicked();
 
-    void on_btn_add_grupo_clicked();
+  //  void on_btn_add_grupo_clicked();
 
 private:
     Ui::ui_edit_articulos *ui;

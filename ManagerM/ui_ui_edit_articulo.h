@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
-<<<<<<< HEAD
-** Created: Fri 28. Jun 15:47:25 2013
-=======
-** Created: Thu 27. Jun 20:27:19 2013
->>>>>>> modificacion articulos tabla
+** Created: Sat 29. Jun 16:16:10 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -69,6 +65,10 @@ public:
     QFrame *line;
     QFrame *line_2;
     QSpacerItem *verticalSpacer;
+    QLabel *l_stock_21;
+    QPushButton *btn_add_grupo;
+    QSpinBox *le_stock_21;
+    QDoubleSpinBox *le_precio_21;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *btn_aceptar;
@@ -246,7 +246,6 @@ public:
 
         le_stock_2 = new QSpinBox(ui_edit_articulos);
         le_stock_2->setObjectName(QString::fromUtf8("le_stock_2"));
-<<<<<<< HEAD
         le_stock_2->setMinimumSize(QSize(80, 0));
         le_stock_2->setMaximumSize(QSize(80, 16777215));
 
@@ -258,9 +257,6 @@ public:
         l_precio_2->setMaximumSize(QSize(80, 16777215));
         l_precio_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         l_precio_2->setIndent(5);
-=======
-        le_stock_2->setMaximum(10000);
->>>>>>> modificacion articulos tabla
 
         gridLayout_3->addWidget(l_precio_2, 1, 0, 1, 1);
 
@@ -308,6 +304,32 @@ public:
 
         gridLayout_5->addItem(verticalSpacer, 1, 0, 1, 1);
 
+        l_stock_21 = new QLabel(ui_edit_articulos);
+        l_stock_21->setObjectName(QString::fromUtf8("l_stock_21"));
+        l_stock_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_5->addWidget(l_stock_21, 2, 0, 1, 1);
+
+        btn_add_grupo = new QPushButton(ui_edit_articulos);
+        btn_add_grupo->setObjectName(QString::fromUtf8("btn_add_grupo"));
+
+        gridLayout_5->addWidget(btn_add_grupo, 2, 10, 1, 1);
+
+        le_stock_21 = new QSpinBox(ui_edit_articulos);
+        le_stock_21->setObjectName(QString::fromUtf8("le_stock_21"));
+        le_stock_21->setMaximum(10000);
+
+        gridLayout_5->addWidget(le_stock_21, 2, 1, 1, 1);
+
+        le_precio_21 = new QDoubleSpinBox(ui_edit_articulos);
+        le_precio_21->setObjectName(QString::fromUtf8("le_precio_21"));
+        le_precio_21->setMaximum(1e+08);
+
+        gridLayout_5->addWidget(le_precio_21, 0, 9, 1, 1);
+
+
+        gridLayout_6->addLayout(gridLayout_5, 0, 0, 1, 1);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -325,10 +347,7 @@ public:
         horizontalLayout_3->addWidget(btn_cancelar);
 
 
-        gridLayout_5->addLayout(horizontalLayout_3, 2, 0, 1, 1);
-
-
-        gridLayout_6->addLayout(gridLayout_5, 0, 0, 1, 1);
+        gridLayout_6->addLayout(horizontalLayout_3, 2, 0, 1, 1);
 
 
         retranslateUi(ui_edit_articulos);
@@ -351,6 +370,8 @@ public:
         l_stock_2->setText(QApplication::translate("ui_edit_articulos", "Stock", 0, QApplication::UnicodeUTF8));
         l_precio_2->setText(QApplication::translate("ui_edit_articulos", "Precio ", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_edit_articulos", "Soles", 0, QApplication::UnicodeUTF8));
+        l_stock_21->setText(QApplication::translate("ui_edit_articulos", "Stock", 0, QApplication::UnicodeUTF8));
+        btn_add_grupo->setText(QString());
         btn_aceptar->setText(QApplication::translate("ui_edit_articulos", "Aceptar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_edit_articulos", "Cancelar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

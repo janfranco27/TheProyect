@@ -3,6 +3,7 @@
 **
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 21:30:50 2013
 =======
 ** Created: Fri 28. Jun 16:02:30 2013
@@ -10,6 +11,9 @@
 =======
 ** Created: Fri 28. Jun 16:02:30 2013
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
+=======
+** Created: Sat 29. Jun 16:16:10 2013
+>>>>>>> Se jodieron las interfaces <<<<< Revisa MILTON
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

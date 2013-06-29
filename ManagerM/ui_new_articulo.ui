@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ui_new_articulo</class>
  <widget class="QWidget" name="ui_new_articulo">
@@ -531,11 +531,8 @@
         </widget>
        </item>
       </layout>
-     </item>
+     </item>	
      <item row="2" column="0">
-<<<<<<< HEAD
-      <spacer name="verticalSpacer_3">
-=======
       <widget class="QLabel" name="l_stock_2">
        <property name="text">
         <string>Stock</string>
@@ -607,7 +604,6 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <spacer name="horizontalSpacer_3">
->>>>>>> modificacion articulos tabla
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -622,9 +618,6 @@
        </property>
       </spacer>
      </item>
-<<<<<<< HEAD
-     <item row="3" column="0">
-=======
      <item>
       <widget class="QPushButton" name="pushButton_agregar">
        <property name="text">
@@ -687,7 +680,6 @@
       </widget>
      </item>
      <item>
->>>>>>> modificacion articulos tabla
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <spacer name="horizontalSpacer_4">

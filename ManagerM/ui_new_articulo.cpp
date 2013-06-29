@@ -21,15 +21,15 @@ ui_new_articulo::ui_new_articulo(QWidget *parent) :
     //ui->cb_grupo->setVisible(false);
     //ui->btn_add_grupo->setVisible(false);
 
-<<<<<<< HEAD
+
     //ui->tableWidget->setColumnHidden(H_GRUPO,true);
-=======
+
     ui->le_precio_2->setMaximum(MAX_VALUE_PRECIO);
 
     ui->le_stock_2->setMaximum(MAX_VALUE_STOCK);
 
     ui->tableWidget->setColumnHidden(H_GRUPO,true);
->>>>>>> modificacion articulos tabla
+
 }
 
 ui_new_articulo::~ui_new_articulo()
@@ -190,25 +190,25 @@ void ui_new_articulo::on_btn_aceptar_clicked()
 
                     proveedor = ((QComboBox*)ui->tableWidget->cellWidget(i,H_PROVEEDOR))->currentText();
 
-<<<<<<< HEAD
+
                     ///int grupo_index = ui->cb_grupo->findText(ui->tableWidget->item(i,H_GRUPO)->text());
-=======
+
                     int grupo_index =NO_SELECTION;
->>>>>>> modificacion articulos tabla
+
 
                     int marca_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_MARCA))->currentIndex();
                     int medida_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_MEDIDA))->currentIndex();
 
-<<<<<<< HEAD
-/*
-=======
+
+
+
 
                     precio = ((QSpinBox*)ui->tableWidget->cellWidget(i,H_PRECIO))->text();
                     stock = ((QSpinBox*)ui->tableWidget->cellWidget(i,H_STOCK))->text();
 
 
                      int proveedor_index = ((QComboBox*)ui->tableWidget->cellWidget(i,H_PROVEEDOR))->currentIndex();
->>>>>>> modificacion articulos tabla
+
                      //No selecciono grupo
                     if(grupo_index==NO_SELECTION)
                     {
@@ -218,7 +218,7 @@ void ui_new_articulo::on_btn_aceptar_clicked()
                     {
                         grupo = QString::number(grupo_index);
                     }
-*/
+
                     //No selecciono grupo
                     if(marca_index==NO_SELECTION)
                     {

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_personalinformation.ui'
 **
-** Created: Fri 28. Jun 16:12:28 2013
+** Created: Sat 29. Jun 16:16:11 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

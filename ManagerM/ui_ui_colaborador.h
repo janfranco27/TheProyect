@@ -1,13 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_colaborador.ui'
 **
-<<<<<<< HEAD
-** Created: Sun 23. Jun 20:48:20 2013
+** Created: Sat 29. Jun 15:43:52 2013
 **      by: Qt User Interface Compiler version 4.8.1
-=======
-** Created: Sat 22. Jun 10:02:11 2013
-**      by: Qt User Interface Compiler version 4.7.4
->>>>>>> check
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/

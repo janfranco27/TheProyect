@@ -3,6 +3,7 @@
 **
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 20:52:51 2013
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
+=======
+** Created: Sat 29. Jun 16:27:43 2013
+>>>>>>> Se jodieron las interfaces <<<<< Revisa MILTON
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -37,7 +41,7 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -53,7 +57,6 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
      148,   17,   17,   17, 0x08,
      173,   17,   17,   17, 0x08,
      201,   17,   17,   17, 0x08,
-     232,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -67,7 +70,6 @@ static const char qt_meta_stringdata_ui_edit_articulo[] = {
     "update_comboBox_Medida()\0"
     "update_comboBox_Proveedor()\0"
     "on_btn_add_proveedor_clicked()\0"
-    "on_btn_add_grupo_clicked()\0"
 };
 
 void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -122,9 +124,9 @@ int ui_edit_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 8;
     }
     return _id;
 }
