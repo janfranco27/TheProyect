@@ -2,7 +2,11 @@
 ** Meta object code from reading C++ file 'ui_tool_bar.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 20:51:45 2013
+=======
+** Created: Thu 27. Jun 23:08:29 2013
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
 ** Created: Thu 27. Jun 23:08:29 2013
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8

@@ -2,13 +2,19 @@
 ** Meta object code from reading C++ file 'ui_edit_articulo.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 20:52:51 2013
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 ** Created: Fri 28. Jun 15:23:26 2013
 =======
 ** Created: Thu 27. Jun 23:09:03 2013
 >>>>>>> modificacion articulos tabla
+<<<<<<< HEAD
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
+=======
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **

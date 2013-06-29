@@ -2,7 +2,11 @@
 ** Form generated from reading UI file 'ui_new_venta.ui'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 21:30:50 2013
+=======
+** Created: Fri 28. Jun 16:02:30 2013
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
 ** Created: Fri 28. Jun 16:02:30 2013
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8

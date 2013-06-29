@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Written by Qt Creator 2.4.1, 2013-06-29T15:31:28. -->
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 <!-- Written by Qt Creator 2.4.1, 2013-06-28T16:56:53. -->
 =======
 <!-- Written by Qt Creator 2.4.1, 2013-06-28T10:31:42. -->
 >>>>>>> modificacion articulos tabla
+<<<<<<< HEAD
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
+=======
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 <qtcreator>
  <data>
@@ -110,8 +116,13 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/JanFranco/Documents/GitHub/TheProyect/ManagerM</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId">4</value>
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/USER/Documents/GitHub/TheProyect/ManagerM</value>
+    <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId">2</value>
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
     <value type="QString" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory">C:/Users/USER/Documents/GitHub/TheProyect/ManagerM</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId">2</value>
@@ -220,7 +231,11 @@
  <data>
   <variable>ProjectExplorer.Project.Updater.EnvironmentId</variable>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <value type="QString">{e2cd8a73-1570-478d-b1db-f046084e3ed1}</value>
+=======
+  <value type="QString">{7cfa1fa2-31e4-46dd-942c-774c7c6f4b8d}</value>
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
   <value type="QString">{7cfa1fa2-31e4-46dd-942c-774c7c6f4b8d}</value>
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8

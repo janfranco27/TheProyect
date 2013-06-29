@@ -2,7 +2,11 @@
 ** Meta object code from reading C++ file 'ui_opciones_general.h'
 **
 <<<<<<< HEAD
+<<<<<<< HEAD
 ** Created: Fri 28. Jun 20:53:28 2013
+=======
+** Created: Thu 27. Jun 23:09:20 2013
+>>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
 =======
 ** Created: Thu 27. Jun 23:09:20 2013
 >>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
