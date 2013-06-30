@@ -1,19 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_transportista.h'
 **
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Fri 28. Jun 20:53:38 2013
-=======
-** Created: Thu 27. Jun 23:09:24 2013
->>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
-=======
-** Created: Thu 27. Jun 23:09:24 2013
->>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
-=======
-** Created: Sat 29. Jun 16:23:27 2013
->>>>>>> Se jodieron las interfaces <<<<< Revisa MILTON
+** Created: Sun 30. Jun 16:54:42 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

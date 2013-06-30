@@ -1,25 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_edit_articulo.h'
 **
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Created: Fri 28. Jun 20:52:51 2013
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
-** Created: Fri 28. Jun 15:23:26 2013
-=======
-** Created: Thu 27. Jun 23:09:03 2013
->>>>>>> modificacion articulos tabla
-<<<<<<< HEAD
->>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
-=======
->>>>>>> 822853736d658c17163f92d7ff1fd6f9bb017fd8
-=======
-** Created: Sat 29. Jun 16:27:43 2013
->>>>>>> Se jodieron las interfaces <<<<< Revisa MILTON
+** Created: Sun 30. Jun 17:53:18 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -41,7 +23,7 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,6 +39,9 @@ static const uint qt_meta_data_ui_edit_articulo[] = {
      148,   17,   17,   17, 0x08,
      173,   17,   17,   17, 0x08,
      201,   17,   17,   17, 0x08,
+     230,   17,   17,   17, 0x08,
+     260,   17,   17,   17, 0x08,
+     293,   17,   17,   17, 0x08,
 
        0        // eod
 };
@@ -69,6 +54,9 @@ static const char qt_meta_stringdata_ui_edit_articulo[] = {
     "update_comboBox_Marca()\0"
     "update_comboBox_Medida()\0"
     "update_comboBox_Proveedor()\0"
+    "select_last_inserted_Marca()\0"
+    "select_last_inserted_Medida()\0"
+    "select_last_inserted_Proveedor()\0"
     "on_btn_add_proveedor_clicked()\0"
 };
 
@@ -85,7 +73,10 @@ void ui_edit_articulo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 4: _t->update_comboBox_Marca(); break;
         case 5: _t->update_comboBox_Medida(); break;
         case 6: _t->update_comboBox_Proveedor(); break;
-        case 7: _t->on_btn_add_proveedor_clicked(); break;
+        case 7: _t->select_last_inserted_Marca(); break;
+        case 8: _t->select_last_inserted_Medida(); break;
+        case 9: _t->select_last_inserted_Proveedor(); break;
+        case 10: _t->on_btn_add_proveedor_clicked(); break;
         default: ;
         }
     }
@@ -124,9 +115,9 @@ int ui_edit_articulo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 11;
     }
     return _id;
 }

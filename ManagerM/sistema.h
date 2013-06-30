@@ -35,6 +35,8 @@ public:
     QStringList getListOfValuesNotSorted(_QSTR tableName,_QSTR columnName);
 
 
+
+
     int getAutoIncrement(const _QSTR tablename);
     void loadComboBoxFromVector(QComboBox *box, vector<_QSTR> &nombres, bool obligatorio);
     void loadComboBoxFromVector(QComboBox *box, QStringList nombres, bool obligatorio);

@@ -219,6 +219,7 @@ void ui_edit_articulo::on_btn_add_marca_clicked()
     ui_new_marca * form_new_marca = new ui_new_marca();
     form_new_marca->setAttribute(Qt::WA_DeleteOnClose);
     connect(form_new_marca,SIGNAL(closing()),this,SLOT(update_comboBox_Marca()));
+     connect(form_new_marca,SIGNAL(closing()),this,SLOT(select_last_inserted_Marca()));
     form_new_marca->show();
 
 }
@@ -228,6 +229,7 @@ void ui_edit_articulo::on_btn_add_medida_clicked()
     ui_new_medida * form_new_medida = new ui_new_medida();
     form_new_medida->setAttribute(Qt::WA_DeleteOnClose);
     connect(form_new_medida,SIGNAL(closing()),this,SLOT(update_comboBox_Medida()));
+     connect(form_new_medida,SIGNAL(closing()),this,SLOT(select_last_inserted_Medida()));
     form_new_medida->show();
 }
 
@@ -236,6 +238,7 @@ void ui_edit_articulo::on_btn_add_proveedor_clicked()
     ui_new_proveedor * form_new_proveedor = new ui_new_proveedor();
     form_new_proveedor->setAttribute(Qt::WA_DeleteOnClose);
     connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(update_comboBox_Proveedor()));
+     connect(form_new_proveedor,SIGNAL(closing()),this,SLOT(select_last_inserted_Proveedor()));
     form_new_proveedor->show();
 
 }
@@ -261,7 +264,22 @@ void ui_edit_articulo::update_comboBox_Proveedor()
      //QStringList proveedor = SYSTEM->getListOfValuesNotSorted("e_proveedor","nombre_vendedor");
     vector<_QSTR> proveedor = SYSTEM->getRazonSocial_Proveedores();
 
-     SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+    SYSTEM->loadComboBoxFromVector(ui->cb_proveedor,proveedor,false);
+}
+
+void ui_edit_articulo::select_last_inserted_Marca()
+{
+     ui->cb_marca->setCurrentIndex(ui->cb_marca->count()-1);
+}
+
+void ui_edit_articulo::select_last_inserted_Medida()
+{
+     ui->cb_medida->setCurrentIndex(ui->cb_medida->count()-1);
+}
+
+void ui_edit_articulo::select_last_inserted_Proveedor()
+{
+     ui->cb_proveedor->setCurrentIndex(ui->cb_proveedor->count()-1);
 }
 
 

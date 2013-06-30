@@ -356,6 +356,9 @@ QStringList Sistema::getListOfValuesNotSorted(_QSTR tableName, _QSTR columnName)
 }
 
 
+
+
+
 int Sistema::getAutoIncrement(const _QSTR tablename)
 {
     QSqlQuery query;

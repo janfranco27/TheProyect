@@ -31,6 +31,10 @@ private slots:
     void update_comboBox_Medida();
     void update_comboBox_Proveedor();
 
+    void select_last_inserted_Marca();
+    void select_last_inserted_Medida();
+    void select_last_inserted_Proveedor();
+
     void on_btn_add_proveedor_clicked();
 
   //  void on_btn_add_grupo_clicked();

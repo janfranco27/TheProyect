@@ -6,14 +6,15 @@
 #include <QSqlRelationalTableModel>
 #include <QModelIndexList>
 #include <QSortFilterProxyModel>
-
-const int num_header = 7;
+#include <QSqlError>
+const int num_header = 9;
 
 const char * e_articulo = "e_articulo";
 const char * e_grupo = "e_grupo";
 const char * e_marca = "e_marca";
 const char * e_medida = "e_medida";
-
+        //" e_articulo as A LEFT JOIN r_proveedor_articulo as R on A.pk_articulo = R.pk_articulo LEFT JOIN e_persona_juridica as PJ on R.pk_proveedor = PJ.pk_ruc";
+const char * v_articuloProveedor = "v_articuloProveedor";
 //Primary Keys
 
 const char * pk_grupo = "pk_grupo";
@@ -26,7 +27,7 @@ const char * descripcion = "descripcion";
 
 //Headers tabla
 
-const char * tableHeaders[num_header] = {"Código","Grupo","Marca","Medida","Descripción","Precio","Stock"};
+const char * tableHeaders[num_header] = {"Código","Grupo","Marca","Medida","Descripción","Precio","Stock","Habilitado","Proveedor"};
 
 ui_module_articulos::ui_module_articulos(QWidget *parent) :
     QWidget(parent),
@@ -68,13 +69,14 @@ void ui_module_articulos::update_table_articulos()
 
     //Creamos el nuevo model
     QSqlRelationalTableModel * model = new QSqlRelationalTableModel();
-    model->setTable(e_articulo);
+    model->setTable(v_articuloProveedor);
 
-   model->setRelation(GRUPO,QSqlRelation(e_grupo,pk_grupo,descripcion));
+
+  /* model->setRelation(GRUPO,QSqlRelation(e_grupo,pk_grupo,descripcion));
    model->setRelation(MARCA,QSqlRelation(e_marca,pk_marca,descripcion));
     model->setRelation(MEDIDA,QSqlRelation(e_medida,pk_medida,descripcion));
     model->setJoinMode(QSqlRelationalTableModel::LeftJoin);
-    model->setFilter("habilitado=1");
+    model->setFilter("habilitado=1");*/
 
 
     for(int i=0;i<num_header;i++)
@@ -92,13 +94,15 @@ void ui_module_articulos::update_table_articulos()
     }
     else
     {
+        qDebug()<<model->query().lastError();
+        qDebug()<<model->query().lastQuery();
         QMessageBox::information(this,"Error","Ocurrio un error al cargar la información");
     }
 
     //Ocultamos columnas
     ui->tableView_articulos->setColumnHidden(GRUPO,true);
     ui->tableView_articulos->setColumnHidden(HABILITADO,true);
-
+    ui->tableView_articulos->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
     //qDebug()<<model->query().lastQuery()<<endl;
 }
 
