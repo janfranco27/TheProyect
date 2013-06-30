@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ui_edit_articulo.ui'
 **
-** Created: Sat 29. Jun 16:16:10 2013
+** Created: Sun 30. Jun 14:58:18 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,8 +40,8 @@ public:
     QLabel *l_codigo_2;
     QLabel *l_codigoop;
     QGridLayout *gridLayout_2;
-    QLabel *l_nombre_2;
     QLineEdit *le_nombre_2;
+    QLabel *l_nombre_2;
     QHBoxLayout *horizontalLayout;
     QGridLayout *gridLayout;
     QLabel *l_marca_2;
@@ -65,10 +65,7 @@ public:
     QFrame *line;
     QFrame *line_2;
     QSpacerItem *verticalSpacer;
-    QLabel *l_stock_21;
-    QPushButton *btn_add_grupo;
-    QSpinBox *le_stock_21;
-    QDoubleSpinBox *le_precio_21;
+    QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *btn_aceptar;
@@ -79,7 +76,7 @@ public:
         if (ui_edit_articulos->objectName().isEmpty())
             ui_edit_articulos->setObjectName(QString::fromUtf8("ui_edit_articulos"));
         ui_edit_articulos->setWindowModality(Qt::ApplicationModal);
-        ui_edit_articulos->resize(310, 278);
+        ui_edit_articulos->resize(537, 360);
         QFont font;
         font.setFamily(QString::fromUtf8("Segoe UI"));
         ui_edit_articulos->setFont(font);
@@ -119,15 +116,6 @@ public:
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        l_nombre_2 = new QLabel(ui_edit_articulos);
-        l_nombre_2->setObjectName(QString::fromUtf8("l_nombre_2"));
-        l_nombre_2->setMinimumSize(QSize(80, 0));
-        l_nombre_2->setMaximumSize(QSize(80, 16777215));
-        l_nombre_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        l_nombre_2->setIndent(5);
-
-        gridLayout_2->addWidget(l_nombre_2, 0, 0, 1, 1);
-
         le_nombre_2 = new QLineEdit(ui_edit_articulos);
         le_nombre_2->setObjectName(QString::fromUtf8("le_nombre_2"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -139,6 +127,15 @@ public:
         le_nombre_2->setMaximumSize(QSize(200, 16777215));
 
         gridLayout_2->addWidget(le_nombre_2, 0, 1, 1, 1);
+
+        l_nombre_2 = new QLabel(ui_edit_articulos);
+        l_nombre_2->setObjectName(QString::fromUtf8("l_nombre_2"));
+        l_nombre_2->setMinimumSize(QSize(80, 0));
+        l_nombre_2->setMaximumSize(QSize(80, 16777215));
+        l_nombre_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        l_nombre_2->setIndent(5);
+
+        gridLayout_2->addWidget(l_nombre_2, 0, 0, 1, 1);
 
 
         gridLayout_4->addLayout(gridLayout_2, 1, 0, 1, 1);
@@ -304,28 +301,9 @@ public:
 
         gridLayout_5->addItem(verticalSpacer, 1, 0, 1, 1);
 
-        l_stock_21 = new QLabel(ui_edit_articulos);
-        l_stock_21->setObjectName(QString::fromUtf8("l_stock_21"));
-        l_stock_21->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_5->addWidget(l_stock_21, 2, 0, 1, 1);
-
-        btn_add_grupo = new QPushButton(ui_edit_articulos);
-        btn_add_grupo->setObjectName(QString::fromUtf8("btn_add_grupo"));
-
-        gridLayout_5->addWidget(btn_add_grupo, 2, 10, 1, 1);
-
-        le_stock_21 = new QSpinBox(ui_edit_articulos);
-        le_stock_21->setObjectName(QString::fromUtf8("le_stock_21"));
-        le_stock_21->setMaximum(10000);
-
-        gridLayout_5->addWidget(le_stock_21, 2, 1, 1, 1);
-
-        le_precio_21 = new QDoubleSpinBox(ui_edit_articulos);
-        le_precio_21->setObjectName(QString::fromUtf8("le_precio_21"));
-        le_precio_21->setMaximum(1e+08);
-
-        gridLayout_5->addWidget(le_precio_21, 0, 9, 1, 1);
+        gridLayout_5->addItem(horizontalSpacer_4, 0, 1, 1, 1);
 
 
         gridLayout_6->addLayout(gridLayout_5, 0, 0, 1, 1);
@@ -370,8 +348,6 @@ public:
         l_stock_2->setText(QApplication::translate("ui_edit_articulos", "Stock", 0, QApplication::UnicodeUTF8));
         l_precio_2->setText(QApplication::translate("ui_edit_articulos", "Precio ", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ui_edit_articulos", "Soles", 0, QApplication::UnicodeUTF8));
-        l_stock_21->setText(QApplication::translate("ui_edit_articulos", "Stock", 0, QApplication::UnicodeUTF8));
-        btn_add_grupo->setText(QString());
         btn_aceptar->setText(QApplication::translate("ui_edit_articulos", "Aceptar", 0, QApplication::UnicodeUTF8));
         btn_cancelar->setText(QApplication::translate("ui_edit_articulos", "Cancelar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
