@@ -288,7 +288,7 @@ QSqlQuery Sistema::getUpdateQuery(_QSTR from, vector<pair<_QSTR, _QSTR> > set, v
         }
         else
         {
-            consulta+=", "+ where[i].first + " = "+ where[i].second;
+            consulta+=" AND "+ where[i].first + " = "+ where[i].second;
         }
     }
 
