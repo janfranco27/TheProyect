@@ -101,6 +101,9 @@ void ui_edit_proveedor::on_pushButton_guardar_clicked()
 
     if(rpta == 0)
     {
+        QSqlQuery query;
+        QString str_query;
+
         object_e_persona_juridica o_pj;
         o_pj.mf_set_comentario(ui->lineEdit_comentario->text());
         o_pj.mf_set_direccion(ui->lineEdit_direccion->text());
@@ -116,8 +119,7 @@ void ui_edit_proveedor::on_pushButton_guardar_clicked()
         o_pj.mf_set_habilitado("1");
         o_pj.mf_set_pk_ruc(ui->lineEdit_ruc->text());
 
-        QSqlQuery query;
-        QString str_query;
+
         str_query = "UPDATE e_persona_juridica ";
         str_query += QString("SET comentario = '")+o_pj.mf_get_comentario()+QString("'");
         str_query += QString(", pk_ruc = '")+o_pj.mf_get_pk_ruc()+QString("'");
@@ -133,9 +135,13 @@ void ui_edit_proveedor::on_pushButton_guardar_clicked()
         str_query += QString(" WHERE pk_ruc='")+currentRUC+QString("'");
         query.prepare(str_query);
 
+        qDebug()<<str_query<<endl;
+
+
         if(query.exec()){
            //this->close();
         }else{
+            qDebug()<<"error 1"<<endl;
             SYSTEM->messageCritical("Modificar", "Hubo un conflicto al intentar modificar los datos");
         }
 
@@ -145,12 +151,14 @@ void ui_edit_proveedor::on_pushButton_guardar_clicked()
         o_p.mf_set_celular_vendedor(ui->lineEdit_celular->text());
 
         str_query = "UPDATE e_proveedor ";
-        str_query += QString("SET pk_ruc = '")+o_p.mf_get_pk_ruc()+QString("'");
-        str_query += QString(", nombre_vendedor = '")+o_p.mf_get_nombre_vendedor()+QString("'");
+        //str_query += QString("SET pk_ruc = '")+o_p.mf_get_pk_ruc()+QString("'");
+        str_query += QString("SET nombre_vendedor = '")+o_p.mf_get_nombre_vendedor()+QString("'");
         str_query += QString(", celular_vendedor = '")+o_p.mf_get_celular_vendedor()+QString("'");
-        str_query += QString(" WHERE pk_ruc='")+currentRUC+QString("'");
+        str_query += QString(" WHERE pk_ruc='")+ui->lineEdit_ruc->text()+QString("'");
 
         query.prepare(str_query);
+
+
         if(query.exec()){
             QSqlQueryModel* model = new QSqlQueryModel;
             model->setQuery("SELECT * FROM getProveedores ORDER BY pro_razon_social");

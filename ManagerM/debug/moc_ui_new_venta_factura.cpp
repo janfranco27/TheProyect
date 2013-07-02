@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_new_venta_factura.h'
 **
-** Created: Sun 30. Jun 16:54:34 2013
+** Created: Tue Jul 2 11:10:36 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

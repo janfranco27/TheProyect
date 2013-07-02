@@ -45,6 +45,7 @@ void ui_search_proveedor::on_pushButton_change_clicked()
         QModelIndex index = indexList[0];
         QString ruc = index.sibling(index.row(), 0).data().toString();
         ui_edit_proveedor *w = new ui_edit_proveedor;
+        qDebug()<<ruc<<endl;
         w->update_data(ruc);
         w->setAttribute(Qt::WA_DeleteOnClose);
         w->setTableView(ui->tableView);
