@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ui_advanced_search_articulo.h'
 **
-** Created: Sat 29. Jun 16:24:15 2013
+** Created: Thu Jul 4 21:42:20 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
